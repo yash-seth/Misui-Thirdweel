@@ -1,0 +1,40 @@
+users: [
+        {
+            name: 'Hafsa',
+            age: '26',
+            gender: 'Female',
+            phone: '1942448775',
+            email: 'admin@admin.com',
+            password: bcrypt.hashSync('123456', 8),
+            isAdmin: true,
+            isSeller: true,
+            seller: [
+                store:
+                isOwner: true
+                owner:{
+                    name:
+                    phone:
+                },
+                isManager: true
+                manager:{
+                    name:
+                    phone:
+                }
+                isStaff: true,
+                staff:{
+                    name:
+                    phone:
+                }
+            ]
+        },
+        {
+            name: 'John',
+            age: '30',
+            gender: 'Male',
+            phone: '9193847588',
+            email: 'john@123.com',
+            password: bcrypt.hashSync('123456', 8),
+            isAdmin: false,
+            isSeller: false,
+        }
+    ],
