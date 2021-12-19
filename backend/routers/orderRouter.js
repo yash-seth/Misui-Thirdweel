@@ -5,7 +5,7 @@ import { isAuth, isAdmin } from '../utils.js';
 
 const orderRouter = express.Router();
 
-//to get all orders(admin able to see all order)
+//to get all orders(admin will be able to see all orders)
 orderRouter.get(
     '/',
     isAuth,
@@ -66,6 +66,25 @@ orderRouter.delete(
         if (order) {
             const deleteOrder = await order.remove();
             res.send({ message: 'Order Deleted', order: deleteOrder });
+        } else {
+            res.status(404).send({ message: 'Order Not Found' });
+        }
+    })
+);
+
+//confirmation of delivered order
+orderRouter.put(
+    '/:id/deliver',
+    isAuth,
+    isAdmin,
+    expressAsyncHandler(async (req, res) => {
+        const order = await Order.findById(req.params.id);
+        if (order) {
+            order.isDelivered = true;
+            order.deliveredAt = Date.now();
+
+            const updatedOrder = await order.save();
+            res.send({ message: 'Order Delivered', order: updatedOrder });
         } else {
             res.status(404).send({ message: 'Order Not Found' });
         }
