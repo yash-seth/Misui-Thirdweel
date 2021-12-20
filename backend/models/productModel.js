@@ -3,7 +3,18 @@ import mongoose from 'mongoose';
 const productSchema = new mongoose.Schema(
     {
         name: { type: String, required: true, unique: true },
-        kind: { type: String, required: true },
+        kind: {
+            service: { type: Boolean, required: true },
+            product: { type: Boolean, required: true },
+        },
+        subKind: {
+            branded: { type: String, required: true },
+            unbranded: { type: String, required: true },
+            exotic: {
+                isHandmade: { type: Boolean, required: true },
+                isHomemade: { type: Boolean, required: true },
+            }
+        },
         image: { type: String, required: true },
         price: { type: String, required: true },
         category: { type: String, required: true },
