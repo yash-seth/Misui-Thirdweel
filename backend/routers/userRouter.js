@@ -29,6 +29,17 @@ userRouter.post(
                     phone: user.phone,
                     email: user.email,
                     isAdmin: user.isAdmin,
+                    isSeller: user.isSeller,
+                    seller: {
+                        storeName: user.storeName,
+                        rating: user.rating,
+                        numReviews: user.numReviews,
+                        role: {
+                            isOwner: user.isOwner,
+                            isManager: user.isManager,
+                            isStaff: user.isStaff,
+                        }
+                    },
                     token: generateToken(user),
                 });
                 return;
@@ -59,6 +70,17 @@ userRouter.post(
             phone: createdUser.phone,
             email: createdUser.email,
             isAdmin: createdUser.isAdmin,
+            isSeller: createdUser.isSeller,
+            seller: {
+                storeName: createdUser.storeName,
+                rating: createdUser.rating,
+                numReviews: createdUser.numReviews,
+                role: {
+                    isOwner: createdUser.isOwner,
+                    isManager: createdUser.isManager,
+                    isStaff: createdUser.isStaff,
+                }
+            },
             token: generateToken(createdUser),
         });
     })
@@ -98,6 +120,17 @@ userRouter.put(
                 phone: updatedUser.phone,
                 email: updatedUser.email,
                 isAdmin: updatedUser.isAdmin,
+                isSeller: updatedUser.isSeller,
+                seller: {
+                    storeName: updatedUser.storeName,
+                    rating: updatedUser.rating,
+                    numReviews: updatedUser.numReviews,
+                    role: {
+                        isOwner: updatedUser.isOwner,
+                        isManager: updatedUser.isManager,
+                        isStaff: updatedUser.isStaff,
+                    }
+                },
                 token: generateToken(updatedUser),
             });
         }

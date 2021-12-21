@@ -9,7 +9,18 @@ const data = {
             phone: '1942448775',
             email: 'admin@admin.com',
             password: bcrypt.hashSync('123456', 8),
-            isAdmin: true
+            isAdmin: true,
+            isSeller: true,
+            seller: {
+                storeName: 'abc enterprize',
+                rating: 4.5,
+                numReviews: 20,
+                role: {
+                    isOwner: true,
+                    isManager: false,
+                    isStaff: false,
+                }
+            }
         },
         {
             name: 'John',
@@ -18,7 +29,18 @@ const data = {
             phone: '9193847588',
             email: 'john@123.com',
             password: bcrypt.hashSync('123456', 8),
-            isAdmin: false
+            isAdmin: false,
+            isSeller: true,
+            seller: {
+                storeName: 'abc enterprize',
+                rating: 4.5,
+                numReviews: 20,
+                role: {
+                    isOwner: true,
+                    isManager: false,
+                    isStaff: false,
+                }
+            }
         }
     ],
     products: [
