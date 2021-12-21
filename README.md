@@ -1,2 +1,11 @@
-At first a folder is made named e-commerce-site
-e-commerce site > npm init -y
+- At first a folder is made named e-commerce-site 
+- e-commerce site > npm init -y
+- express js is installed
+- nodemon is installed to restart db after any changes occured
+- mongoose is installed
+- mongodb is connected from localhost
+- expressAsyncHandler is installed to stop data loading
+- bcryptjs is used for password encription
+- jwt is installed for authentication purposes
+- dotenv is installed to keep secure data in .env file
+
