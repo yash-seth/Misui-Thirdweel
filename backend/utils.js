@@ -84,7 +84,7 @@ export const isAdmin = (req, res, next) => {
 
 //authorization for the person who is owner or manager of a store or an admin
 export const isOwnerOrManagerOrAdmin = (req, res, next) => {
-    if (req.user && req.user.seller.role.isOwner || req.user.seller.role.isOwner || req.user.isAdmin) {
+    if (req.user && (req.user.seller.role.isOwner || req.user.seller.role.isOwner || req.user.isAdmin)) {
         next();
     } else {
         res.status(401).send({ message: 'Invalid Store Owner or Admin Token' });
