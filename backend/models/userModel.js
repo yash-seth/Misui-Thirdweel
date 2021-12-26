@@ -12,6 +12,7 @@ const userSchema = new mongoose.Schema(
         isSeller: { type: Boolean, default: false, required: true },
         seller: {
             store: {
+                id: { type: String },
                 name: { type: String, required: true, unique: true },
                 location: { type: String, required: true },
                 openingTime: { type: Number, required: true },

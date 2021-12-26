@@ -3,7 +3,6 @@ import mongoose from 'mongoose';
 const productSchema = new mongoose.Schema(
     {
         name: { type: String, required: true, unique: true },
-        seller: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
         kind: {
             service: { type: Boolean, required: true },
             product: { type: Boolean, required: true },
@@ -28,6 +27,7 @@ const productSchema = new mongoose.Schema(
         countInStock: { type: Number, required: true },
         rating: { type: Number, required: true },
         numReviews: { type: Number, required: true },
+        storeId: { type: String }
     },
     {
         timestamps: true,
