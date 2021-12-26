@@ -5,6 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "stop-win": "Taskkill /IM node.exe /F",
     "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
   },
   "keywords": [],
