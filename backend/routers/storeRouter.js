@@ -1,4 +1,6 @@
 import express from "express";
+import cloudinary from "../utils/cloudinary.js";
+import upload from "../utils/multer.js";
 import expressAsyncHandler from "express-async-handler";
 import Store from "../models/storeModel.js";
 
@@ -12,7 +14,7 @@ storeRouter.get('/', expressAsyncHandler(async (req, res) => {
 }));
 
 //to find a store details
-//localhost:5000/api/stores/61c87eb08de4326b654190f3
+//localhost:5000/api/stores/id
 storeRouter.get('/:id', expressAsyncHandler(async (req, res) => {
     const store = await Store.findById(req.params.id);
     if (store) {
@@ -24,11 +26,25 @@ storeRouter.get('/:id', expressAsyncHandler(async (req, res) => {
 
 }));
 
+
 //to create new store
 //localhost:5000/api/stores/
+
+//here tested for image uploading
+// storeRouter.post('/', upload.single("image"), expressAsyncHandler(async (req, res) => {
+//     console.log(req.file)
+//     const result = await cloudinary.v2.uploader.upload(req.file.path);
+//     console.log(result)
+//     res.json(result)
+// })
+// )
+
+
 storeRouter.post('/', expressAsyncHandler(async (req, res) => {
     const store = new Store({
         name: req.body.name,
+        category: req.body.category,
+        contactNo: req.body.contactNo,
         location: req.body.location,
         openingTime: req.body.openingTime,
         availability: req.body.availability,

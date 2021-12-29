@@ -4,8 +4,8 @@ const productSchema = new mongoose.Schema(
     {
         name: { type: String, required: true, unique: true },
         kind: {
-            service: { type: Boolean, required: true },
-            product: { type: Boolean, required: true },
+            service: { type: Boolean },
+            product: { type: Boolean },
         },
         subKind: {
             branded: { type: Boolean },

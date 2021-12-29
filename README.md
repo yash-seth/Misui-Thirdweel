@@ -8,4 +8,5 @@
 - bcryptjs is used for password encription
 - jwt is installed for authentication purposes
 - dotenv is installed to keep secure data in .env file
-
+- multer is installed for uploading image
+- cloudinary is installed to store uploaded image

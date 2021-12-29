@@ -8,13 +8,6 @@ export const generateToken = (user) => {
             email: user.email,
             isAdmin: user.isAdmin,
             isSeller: user.isSeller,
-            seller: {
-                role: {
-                    isOwner: user.isOwner,
-                    isManager: user.isManager,
-                    isStaff: user.isStaff,
-                }
-            }
         },
         process.env.JWT_SECRET || 'somethingsecret',
         {

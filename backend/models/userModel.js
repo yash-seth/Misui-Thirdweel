@@ -10,24 +10,10 @@ const userSchema = new mongoose.Schema(
         password: { type: String, required: true },
         isAdmin: { type: Boolean, default: false, required: true },
         isSeller: { type: Boolean, default: false, required: true },
-        seller: {
-            store: {
-                id: { type: String },
-                name: { type: String, required: true, unique: true },
-                location: { type: String, required: true },
-                openingTime: { type: Number, required: true },
-                availability: { type: Boolean, required: true },
-                details: { type: String, required: true },
-                rating: { type: Number, required: true },
-                numReviews: { type: Number, required: true },
-                orderType: { type: String, required: true },
-            },
-            role: {
-                isOwner: { type: Boolean, default: false, required: true },
-                isManager: { type: Boolean, default: false, required: true },
-                isStaff: { type: Boolean, default: false, required: true },
-            }
-        }
+        seller: [{
+            storeId: { type: String },
+            sellerRole: { type: Array }
+        }]
     },
     {
         timestamps: true,

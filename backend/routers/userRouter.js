@@ -3,7 +3,7 @@ import expressAsyncHandler from "express-async-handler";
 import bcrypt from 'bcryptjs';
 import data from "../data.js";
 import User from "../models/userModel.js";
-import { generateToken, isAuth, isAdmin } from "../utils.js";
+import { generateToken, isAuth, isAdmin } from "../utils/utils.js";
 
 const userRouter = express.Router();
 
@@ -30,16 +30,6 @@ userRouter.post(
                     email: user.email,
                     isAdmin: user.isAdmin,
                     isSeller: user.isSeller,
-                    seller: {
-                        storeName: user.storeName,
-                        rating: user.rating,
-                        numReviews: user.numReviews,
-                        role: {
-                            isOwner: user.isOwner,
-                            isManager: user.isManager,
-                            isStaff: user.isStaff,
-                        }
-                    },
                     token: generateToken(user),
                 });
                 return;
@@ -55,8 +45,6 @@ userRouter.post(
     expressAsyncHandler(async (req, res) => {
         const user = new User({
             name: req.body.name,
-            age: req.body.age,
-            gender: req.body.gender,
             phone: req.body.phone,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 8),
@@ -71,16 +59,12 @@ userRouter.post(
             email: createdUser.email,
             isAdmin: createdUser.isAdmin,
             isSeller: createdUser.isSeller,
-            seller: {
-                storeName: createdUser.storeName,
-                rating: createdUser.rating,
-                numReviews: createdUser.numReviews,
-                role: {
-                    isOwner: createdUser.isOwner,
-                    isManager: createdUser.isManager,
-                    isStaff: createdUser.isStaff,
+            seller: [
+                {
+                    storeId: createdUser.storeId,
+                    sellerRole: createdUser.sellerRole
                 }
-            },
+            ],
             token: generateToken(createdUser),
         });
     })

@@ -20,10 +20,11 @@ mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/e-commerce-site
 }).then(() => console.log('mongodb is connected'))
     .catch((err) => console.log(err));
 
+app.use('/api/stores', storeRouter);
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
 app.use('/api/orders', orderRouter);
-app.use('/api/stores', storeRouter);
+
 
 app.get('/', (req, res) => {
     res.send('Server is ready');

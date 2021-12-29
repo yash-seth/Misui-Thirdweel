@@ -3,6 +3,10 @@ import mongoose from 'mongoose';
 const storeSchema = new mongoose.Schema(
     {
         name: { type: String, required: true, unique: true },
+        category: { type: String },
+        contactNo: { type: Number },
+        // image: { type: String },
+        // cloudinary_id: { type: String },
         location: { type: String, required: true },
         openingTime: { type: String, required: true },
         availability: { type: Boolean, required: true },
