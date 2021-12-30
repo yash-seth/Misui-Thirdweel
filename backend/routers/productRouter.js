@@ -32,8 +32,6 @@ productRouter.get('/:id', expressAsyncHandler(async (req, res) => {
 //to create new product
 productRouter.post(
     '/',
-    isAuth,
-    isAdmin,
     expressAsyncHandler(async (req, res) => {
         const product = new Product({
             name: req.body.name,
@@ -54,8 +52,6 @@ productRouter.post(
 //to update product
 productRouter.put(
     '/:id',
-    isAuth,
-    isAdmin,
     expressAsyncHandler(async (req, res) => {
         const productId = req.params.id;
         const product = await Product.findById(productId);
@@ -86,8 +82,6 @@ productRouter.put(
 //to delete product
 productRouter.delete(
     '/:id',
-    isAuth,
-    isAdmin,
     expressAsyncHandler(async (req, res) => {
         const product = await Product.findById(req.params.id);
         if (product) {

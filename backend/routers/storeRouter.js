@@ -13,7 +13,7 @@ storeRouter.get('/', expressAsyncHandler(async (req, res) => {
     res.send(stores);
 }));
 
-//to find a store details
+//to find a store details by id
 //localhost:5000/api/stores/id
 storeRouter.get('/:id', expressAsyncHandler(async (req, res) => {
     const store = await Store.findById(req.params.id);
@@ -26,25 +26,20 @@ storeRouter.get('/:id', expressAsyncHandler(async (req, res) => {
 
 }));
 
-
 //to create new store
 //localhost:5000/api/stores/
 
 //here tested for image uploading
-// storeRouter.post('/', upload.single("image"), expressAsyncHandler(async (req, res) => {
-//     console.log(req.file)
-//     const result = await cloudinary.v2.uploader.upload(req.file.path);
-//     console.log(result)
-//     res.json(result)
-// })
-// )
-
-
-storeRouter.post('/', expressAsyncHandler(async (req, res) => {
+storeRouter.post('/', upload.single("image"), expressAsyncHandler(async (req, res) => {
+    //upload image to cloudinary
+    const result = await cloudinary.v2.uploader.upload(req.file.path);
+    //create new store
     const store = new Store({
         name: req.body.name,
         category: req.body.category,
         contactNo: req.body.contactNo,
+        image: result.secure_url,
+        cloudinary_id: result.public_id,
         location: req.body.location,
         openingTime: req.body.openingTime,
         availability: req.body.availability,
@@ -57,10 +52,11 @@ storeRouter.post('/', expressAsyncHandler(async (req, res) => {
             sellerRole: req.body.sellerRole
         }
     });
+    //save store
     const createdStore = await store.save();
     res.send({ message: 'Store Created', store: createdStore });
-})
 
-);
+})
+)
 
 export default storeRouter;

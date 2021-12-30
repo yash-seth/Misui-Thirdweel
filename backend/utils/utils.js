@@ -39,6 +39,15 @@ export const isAuth = (req, res, next) => {
     }
 };
 
+//authorization for the person who is a user and also an admin
+export const isAdmin = (req, res, next) => {
+    if (req.user && req.user.isAdmin) {
+        next();
+    } else {
+        res.status(401).send({ message: 'Invalid Admin Token' });
+    }
+};
+
 //seller authorization as an owner
 export const isOwner = (req, res, next) => {
     if (req.user && req.user.isSeller && req.user.seller.role.isOwner) {
@@ -66,14 +75,6 @@ export const isStaff = (req, res, next) => {
     }
 };
 
-//authorization for the person who is owner of a store and also an admin
-export const isAdmin = (req, res, next) => {
-    if (req.user && req.user.seller.role.isOwner && req.user.isAdmin) {
-        next();
-    } else {
-        res.status(401).send({ message: 'Invalid Admin Token' });
-    }
-};
 
 //authorization for the person who is owner or manager of a store or an admin
 export const isOwnerOrManagerOrAdmin = (req, res, next) => {
