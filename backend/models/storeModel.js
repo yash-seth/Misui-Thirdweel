@@ -4,7 +4,7 @@ const storeSchema = new mongoose.Schema(
     {
         name: { type: String, required: true, unique: true },
         category: { type: String },
-        contactNo: { type: Number },
+        contactNo: { type: Number, min: 10, unique: true },
         image: { type: String },
         cloudinary_id: { type: String },
         location: { type: String, required: true },

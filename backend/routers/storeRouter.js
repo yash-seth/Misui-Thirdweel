@@ -14,9 +14,24 @@ storeRouter.get('/', expressAsyncHandler(async (req, res) => {
 }));
 
 //to find a store details by id
-//localhost:5000/api/stores/id
-storeRouter.get('/:id', expressAsyncHandler(async (req, res) => {
+//localhost:5000/api/stores/getById/:id
+storeRouter.get('/getById/:id', expressAsyncHandler(async (req, res) => {
+    // console.log(req.params);
     const store = await Store.findById(req.params.id);
+    if (store) {
+        res.send(store);
+    }
+    else {
+        res.status(404).send({ message: 'Store not found' })
+    }
+
+}));
+
+//to get store by category
+//localhost:5000/api/stores/getByCategory/:category
+storeRouter.get('/getByCategory/:category', expressAsyncHandler(async (req, res) => {
+
+    const store = await Store.find({ category: req.params.category });
     if (store) {
         res.send(store);
     }
@@ -28,8 +43,6 @@ storeRouter.get('/:id', expressAsyncHandler(async (req, res) => {
 
 //to create new store
 //localhost:5000/api/stores/
-
-//here tested for image uploading
 storeRouter.post('/', upload.single("image"), expressAsyncHandler(async (req, res) => {
     //upload image to cloudinary
     const result = await cloudinary.v2.uploader.upload(req.file.path);
