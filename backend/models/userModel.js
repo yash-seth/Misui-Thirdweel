@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema(
     {
-        name: { type: String, required: true },
+        username: { type: String, required: true },
         age: { type: String },
         gender: { type: String },
         phone: { type: Number, required: true, unique: true, min: 10 },

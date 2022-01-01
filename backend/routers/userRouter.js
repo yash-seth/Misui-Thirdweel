@@ -9,7 +9,7 @@ const userRouter = express.Router();
 
 userRouter.get('/seed', expressAsyncHandler(async (req, res) => {
     //to remove user in emergency case
-    //await User.remove({});
+    await User.remove({});
     const createdUsers = await User.insertMany(data.users);
     res.send(createdUsers);
 }));
@@ -59,10 +59,14 @@ userRouter.post(
             email: createdUser.email,
             isAdmin: createdUser.isAdmin,
             isSeller: createdUser.isSeller,
+            sellerRole: {
+                isOwner: createdUser.isOwner,
+                isManager: createdUser.isManager,
+                isStaff: createdUser.isStaff,
+            },
             seller: [
                 {
                     storeId: createdUser.storeId,
-                    sellerRole: createdUser.sellerRole
                 }
             ],
             token: generateToken(createdUser),
@@ -105,15 +109,10 @@ userRouter.put(
                 email: updatedUser.email,
                 isAdmin: updatedUser.isAdmin,
                 isSeller: updatedUser.isSeller,
-                seller: {
-                    storeName: updatedUser.storeName,
-                    rating: updatedUser.rating,
-                    numReviews: updatedUser.numReviews,
-                    role: {
-                        isOwner: updatedUser.isOwner,
-                        isManager: updatedUser.isManager,
-                        isStaff: updatedUser.isStaff,
-                    }
+                sellerRole: {
+                    isOwner: updatedUser.isOwner,
+                    isManager: updatedUser.isManager,
+                    isStaff: updatedUser.isStaff,
                 },
                 token: generateToken(updatedUser),
             });
@@ -124,8 +123,8 @@ userRouter.put(
 //to get all users
 userRouter.get(
     '/',
-    isAuth,
-    isAdmin,
+    // isAuth,
+    // isAdmin,
     expressAsyncHandler(async (req, res) => {
         const users = await User.find({});
         res.send(users);
@@ -135,8 +134,8 @@ userRouter.get(
 //to delete user except admin
 userRouter.delete(
     '/:id',
-    isAuth,
-    isAdmin,
+    // isAuth,
+    // isAdmin,
     expressAsyncHandler(async (req, res) => {
         const user = await User.findById(req.params.id);
         if (user) {

@@ -10,3 +10,4 @@
 - dotenv is installed to keep secure data in .env file
 - multer is installed for uploading image
 - cloudinary is installed to store uploaded image
+- image upload using multer in cloudinary is successful
