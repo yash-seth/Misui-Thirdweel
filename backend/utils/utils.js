@@ -50,7 +50,7 @@ export const isAdmin = (req, res, next) => {
 
 //seller authorization as an owner
 export const isOwner = (req, res, next) => {
-    if (req.user && req.user.isSeller && req.user.seller.role.isOwner) {
+    if (req.user && req.user.isSeller && req.user.sellerRole.isOwner) {
         next();
     } else {
         res.status(401).send({ message: 'Invalid Owner Token' });
@@ -59,7 +59,7 @@ export const isOwner = (req, res, next) => {
 
 //seller authorization as a manager
 export const isManager = (req, res, next) => {
-    if (req.user && req.user.isSeller && req.user.seller.role.isManager) {
+    if (req.user && req.user.isSeller && req.user.sellerRole.isManager) {
         next();
     } else {
         res.status(401).send({ message: 'Invalid Manager Token' });
@@ -68,7 +68,7 @@ export const isManager = (req, res, next) => {
 
 //seller authorization as a staff
 export const isStaff = (req, res, next) => {
-    if (req.user && req.user.isSeller && req.user.seller.role.isStaff) {
+    if (req.user && req.user.isSeller && req.user.sellerRole.isStaff) {
         next();
     } else {
         res.status(401).send({ message: 'Invalid Staff Token' });
@@ -78,7 +78,7 @@ export const isStaff = (req, res, next) => {
 
 //authorization for the person who is owner or manager of a store or an admin
 export const isOwnerOrManagerOrAdmin = (req, res, next) => {
-    if (req.user && (req.user.seller.role.isOwner || req.user.seller.role.isOwner || req.user.isAdmin)) {
+    if (req.user && (req.user.sellerRole.isOwner || req.user.sellerRole.isManager || req.user.isAdmin)) {
         next();
     } else {
         res.status(401).send({ message: 'Invalid Store Owner or Admin Token' });

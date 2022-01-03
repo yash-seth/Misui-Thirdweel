@@ -43,6 +43,11 @@ userRouter.post(
 userRouter.post(
     '/register',
     expressAsyncHandler(async (req, res) => {
+        //validation
+        const userExists = await User.findOne({ email: req.body.email });
+        if (userExists) {
+            return res.status(422).json({ message: 'Email already exists' })
+        }
         const user = new User({
             name: req.body.name,
             phone: req.body.phone,
