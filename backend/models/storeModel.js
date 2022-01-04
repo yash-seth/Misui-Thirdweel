@@ -8,6 +8,7 @@ const storeSchema = new mongoose.Schema(
         image: { type: String },
         cloudinary_id: { type: String },
         location: { type: String, required: true },
+        address: { type: String },
         openingTime: { type: String, required: true },
         availability: { type: Boolean, required: true },
         details: { type: String, required: true },
