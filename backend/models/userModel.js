@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema(
             isStaff: { type: Boolean, default: false },
         },
         seller: [{
-            storeId: { type: String },
+            storeId: { type: mongoose.Schema.Types.ObjectId, ref: 'Store' },
         }]
     },
     {
