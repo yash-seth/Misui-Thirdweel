@@ -83,7 +83,7 @@ userRouter.post(
 userRouter.get(
     '/:id',
     expressAsyncHandler(async (req, res) => {
-        const user = await User.findById(req.params.id);
+        const user = await User.findById(req.params.id).populate('stores');
         if (user) {
             res.send(user);
         } else {

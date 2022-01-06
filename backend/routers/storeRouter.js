@@ -88,6 +88,14 @@ storeRouter.post('/', isAuth, isAdmin, upload.single("image"), expressAsyncHandl
     });
     //save store
     const createdStore = await store.save();
+    //update the user who is creating the store and push store id to user collection
+    await User.updateOne({
+        _id: req.user._id
+    }, {
+        $push: {
+            stores: createdStore._id
+        }
+    });
     res.send({ message: 'Store Created', store: createdStore });
 
 })
