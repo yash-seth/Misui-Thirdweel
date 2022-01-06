@@ -16,7 +16,8 @@ const storeSchema = new mongoose.Schema(
         numReviews: { type: Number, required: true },
         orderType: { type: String, required: true },
         sellerDetails: {
-            sellerId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'User'
         }
     },
     {

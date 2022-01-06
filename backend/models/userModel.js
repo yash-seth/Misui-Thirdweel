@@ -12,12 +12,12 @@ const userSchema = new mongoose.Schema(
         isAdmin: { type: Boolean, default: false, required: true },
         isSeller: { type: Boolean, default: false, required: true },
         sellerRole: {
-            isOwner: { type: Boolean, default: false },
-            isManager: { type: Boolean, default: false },
-            isStaff: { type: Boolean, default: false },
+            isOwner: { type: Boolean, default: false, required: true },
+            isManager: { type: Boolean, default: false, required: true },
+            isStaff: { type: Boolean, default: false, required: true },
         },
-        seller: [{
-            storeId: { type: mongoose.Schema.Types.ObjectId, ref: 'Store' },
+        stores: [{
+            type: mongoose.Schema.Types.ObjectId, ref: 'Store'
         }]
     },
     {

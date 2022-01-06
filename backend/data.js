@@ -1,6 +1,32 @@
 import bcrypt from "bcryptjs";
 
 const data = {
+    stores: [
+        {
+            name: 'pqr mega mart',
+            category: 'Grocery & Staples',
+            contactNo: '1942448775',
+            location: 'Bangalore',
+            openingTime: '10:00AM',
+            availability: true,
+            details: 'a mega place for grocery & staples',
+            rating: 4.5,
+            numReviews: 17,
+            orderType: 'online/offline'
+        },
+        {
+            name: 'xyw mega mart',
+            category: 'Appareals',
+            contactNo: '9424487755',
+            location: 'Bangalore',
+            openingTime: '09:00AM',
+            availability: true,
+            details: 'a mega place for various appareals',
+            rating: 4.0,
+            numReviews: 15,
+            orderType: 'online/offline'
+        }
+    ],
     users: [
         {
             name: 'Hafsa',
@@ -11,15 +37,8 @@ const data = {
             password: bcrypt.hashSync('123456', 8),
             isAdmin: true,
             isSeller: true,
-            seller: {
-                storeName: 'abc enterprize',
-                rating: 4.5,
-                numReviews: 20,
-                role: {
-                    isOwner: true,
-                    isManager: false,
-                    isStaff: false,
-                }
+            sellerRole: {
+                isOwner: true
             }
         },
         {
@@ -30,17 +49,7 @@ const data = {
             email: 'john@123.com',
             password: bcrypt.hashSync('123456', 8),
             isAdmin: false,
-            isSeller: true,
-            seller: {
-                storeName: 'abc enterprize',
-                rating: 4.5,
-                numReviews: 20,
-                role: {
-                    isOwner: true,
-                    isManager: false,
-                    isStaff: false,
-                }
-            }
+            isSeller: false,
         }
     ],
     products: [

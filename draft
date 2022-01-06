@@ -1,3 +1,27 @@
+stores: [
+    {
+name: 'pqr mega mart',
+category: 'Grocery & Staples',
+location: 'Bangalore',
+openingTime: '10:00AM',
+availability: true,
+details: 'a mega place for grocery & staples',
+rating: 4.5,
+numReviews: 17,
+orderType: 'online/offline'
+    },
+    {
+name: 'xyw mega mart',
+category: 'Appareals',
+location: 'Bangalore',
+openingTime: '09:00AM',
+availability: true,
+details: 'a mega place for various appareals',
+rating: 4.0,
+numReviews: 15,
+orderType: 'online/offline'
+    }
+]
 users: [
         {
             name: 'Hafsa',
@@ -8,24 +32,9 @@ users: [
             password: bcrypt.hashSync('123456', 8),
             isAdmin: true,
             isSeller: true,
-            seller: [
-                store:
-                isOwner: true
-                owner:{
-                    name:
-                    phone:
-                },
-                isManager: true
-                manager:{
-                    name:
-                    phone:
-                }
-                isStaff: true,
-                staff:{
-                    name:
-                    phone:
-                }
-            ]
+           sellerRole: {
+               isOwner: true
+           }
         },
         {
             name: 'John',

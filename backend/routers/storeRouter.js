@@ -2,14 +2,37 @@ import express from "express";
 import cloudinary from "../utils/cloudinary.js";
 import upload from "../utils/multer.js";
 import expressAsyncHandler from "express-async-handler";
+import data from '../data.js';
 import Store from "../models/storeModel.js";
+import User from "../models/userModel.js";
+import { isAdmin, isAuth, isStoreOwnerOrStoreManagerOrAdmin } from "../utils/utils.js";
 
 const storeRouter = express.Router();
+
+storeRouter.get('/seed', expressAsyncHandler(async (req, res) => {
+
+
+    const seller = await User.findOne({ isSeller: true });
+    if (seller) {
+        const products = data.stores.map((store) => ({
+            ...store,
+            sellerDetails: seller._id,
+        }));
+        //to remove store in emergency case
+        await Store.deleteMany({});
+        const createdStores = await Store.insertMany(data.stores);
+        res.send({ createdStores });
+    } else {
+        res
+            .status(500)
+            .send({ message: 'No seller found. first run /api/users/seed' });
+    }
+}));
 
 //to find all stores
 //localhost:5000/api/stores/
 storeRouter.get('/', expressAsyncHandler(async (req, res) => {
-    const stores = await Store.find({});
+    const stores = await Store.find({}).populate('sellerDetails');
     res.send(stores);
 }));
 
@@ -17,7 +40,7 @@ storeRouter.get('/', expressAsyncHandler(async (req, res) => {
 //localhost:5000/api/stores/getById/:id
 storeRouter.get('/getById/:id', expressAsyncHandler(async (req, res) => {
     // console.log(req.params);
-    const store = await Store.findById(req.params.id);
+    const store = await Store.findById(req.params.id).populate('sellerDetails');
     if (store) {
         res.send(store);
     }
@@ -31,7 +54,7 @@ storeRouter.get('/getById/:id', expressAsyncHandler(async (req, res) => {
 //localhost:5000/api/stores/getByCategory/:category
 storeRouter.get('/getByCategory/:category', expressAsyncHandler(async (req, res) => {
 
-    const store = await Store.find({ category: req.params.category });
+    const store = await Store.find({ category: req.params.category }).populate('sellerDetails').exec();
     if (store) {
         res.send(store);
     }
@@ -43,7 +66,7 @@ storeRouter.get('/getByCategory/:category', expressAsyncHandler(async (req, res)
 
 //to create new store
 //localhost:5000/api/stores/
-storeRouter.post('/', upload.single("image"), expressAsyncHandler(async (req, res) => {
+storeRouter.post('/', isAuth, isAdmin, upload.single("image"), expressAsyncHandler(async (req, res) => {
     //upload image to cloudinary
     const result = await cloudinary.v2.uploader.upload(req.file.path);
     //create new store
@@ -60,10 +83,8 @@ storeRouter.post('/', upload.single("image"), expressAsyncHandler(async (req, re
         rating: req.body.rating,
         numReviews: req.body.numReviews,
         orderType: req.body.orderType,
-        sellerDetails: {
-            sellerId: req.body.sellerId,
-            sellerRole: req.body.sellerRole
-        }
+        sellerDetails: req.user._id
+
     });
     //save store
     const createdStore = await store.save();
