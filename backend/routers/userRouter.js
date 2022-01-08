@@ -56,25 +56,26 @@ userRouter.post(
         });
         const createdUser = await user.save();
         res.send({
-            _id: createdUser._id,
-            name: createdUser.name,
-            age: createdUser.age,
-            gender: createdUser.gender,
-            phone: createdUser.phone,
-            email: createdUser.email,
-            isAdmin: createdUser.isAdmin,
-            isSeller: createdUser.isSeller,
-            sellerRole: {
-                isOwner: createdUser.isOwner,
-                isManager: createdUser.isManager,
-                isStaff: createdUser.isStaff,
-            },
-            seller: [
-                {
-                    storeId: createdUser.storeId,
-                }
-            ],
-            token: generateToken(createdUser),
+            // _id: createdUser._id,
+            // name: createdUser.name,
+            // age: createdUser.age,
+            // gender: createdUser.gender,
+            // phone: createdUser.phone,
+            // email: createdUser.email,
+            // isAdmin: createdUser.isAdmin,
+            // isSeller: createdUser.isSeller,
+            // sellerRole: {
+            //     isOwner: createdUser.isOwner,
+            //     isManager: createdUser.isManager,
+            //     isStaff: createdUser.isStaff,
+            // },
+            // seller: [
+            //     {
+            //         storeId: createdUser.storeId,
+            //     }
+            // ],
+            // token: generateToken(createdUser),
+            createdUser
         });
     })
 );
