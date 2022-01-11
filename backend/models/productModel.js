@@ -16,6 +16,7 @@ const productSchema = new mongoose.Schema(
             }
         },
         image: { type: String, required: true },
+        cloudinary_id: { type: String },
         price: { type: String, required: true },
         category: { type: String, required: true },
         subCategory: { type: String },
@@ -23,10 +24,10 @@ const productSchema = new mongoose.Schema(
         size: { type: String },
         color: { type: String },
         tags: { type: String },
-        brand: { type: String, required: true },
-        countInStock: { type: Number, required: true },
-        rating: { type: Number, required: true },
-        numReviews: { type: Number, required: true },
+        brand: { type: String },
+        countInStock: { type: Boolean, required: true },
+        // rating: { type: Number, required: true },
+        // numReviews: { type: Number },
         storeId: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Store'

@@ -3,6 +3,8 @@ import mongoose from 'mongoose';
 const userSchema = new mongoose.Schema(
     {
         name: { type: String, required: true },
+        image: { type: String },
+        cloudinary_id: { type: String },
         age: { type: String },
         gender: { type: String },
         phone: { type: Number, required: true, unique: true, min: 10 },

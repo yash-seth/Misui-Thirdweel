@@ -19,7 +19,7 @@ storeRouter.get('/seed', expressAsyncHandler(async (req, res) => {
             sellerDetails: seller._id,
         }));
         //to remove store in emergency case
-        await Store.deleteMany({});
+        //await Store.deleteMany({});
         const createdStores = await Store.insertMany(data.stores);
         res.send({ createdStores });
     } else {

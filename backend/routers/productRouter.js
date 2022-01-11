@@ -1,4 +1,6 @@
 import express from 'express';
+import cloudinary from "../utils/cloudinary.js";
+import upload from "../utils/multer.js";
 import expressAsyncHandler from 'express-async-handler';
 import data from '../data.js'
 import Product from '../models/productModel.js';
@@ -13,7 +15,7 @@ productRouter.get('/', expressAsyncHandler(async (req, res) => {
 
 productRouter.get('/seed', expressAsyncHandler(async (req, res) => {
     //to remove product in emergency case
-    //await Product.remove({});
+    //await Product.deleteMany({});
     const createdProducts = await Product.insertMany(data.products);
     res.send({ createdProducts });
 }));
@@ -32,17 +34,21 @@ productRouter.get('/:id', expressAsyncHandler(async (req, res) => {
 //to create new product
 productRouter.post(
     '/',
+    isAuth, isAdmin, upload.single("image"),
     expressAsyncHandler(async (req, res) => {
+        //upload image to cloudinary
+        const result = await cloudinary.v2.uploader.upload(req.file.path);
         const product = new Product({
             name: req.body.name,
-            image: req.body.image,
+            image: result.secure_url,
+            cloudinary_id: result.public_id,
             price: req.body.price,
             category: req.body.category,
             description: req.body.description,
             brand: req.body.brand,
             countInStock: req.body.countInStock,
-            rating: req.body.rating,
-            numReviews: req.body.numReviews,
+            // rating: req.body.rating,
+            // numReviews: req.body.numReviews,
         });
         const createdProduct = await product.save();
         res.send({ message: 'Product Created', product: createdProduct });
@@ -66,8 +72,8 @@ productRouter.put(
             product.size = req.body.size;
             product.color = req.body.color;
             product.tags = req.body.tags;
-            product.brand = req.body.brand,
-                product.countInStock = req.body.countInStock;
+            product.brand = req.body.brand;
+            product.countInStock = req.body.countInStock;
             product.rating = req.body.rating;
             product.numReviews = req.body.numReviews;
 

@@ -9,7 +9,7 @@ const userRouter = express.Router();
 
 userRouter.get('/seed', expressAsyncHandler(async (req, res) => {
     //to remove user in emergency case
-    await User.remove({});
+    //await User.deleteMany({});
     const createdUsers = await User.insertMany(data.users);
     res.send(createdUsers);
 }));
@@ -55,27 +55,7 @@ userRouter.post(
             password: bcrypt.hashSync(req.body.password, 8),
         });
         const createdUser = await user.save();
-        res.send({
-            _id: createdUser._id,
-            name: createdUser.name,
-            age: createdUser.age,
-            gender: createdUser.gender,
-            phone: createdUser.phone,
-            email: createdUser.email,
-            isAdmin: createdUser.isAdmin,
-            isSeller: createdUser.isSeller,
-            sellerRole: {
-                isOwner: createdUser.isOwner,
-                isManager: createdUser.isManager,
-                isStaff: createdUser.isStaff,
-            },
-            seller: [
-                {
-                    storeId: createdUser.storeId,
-                }
-            ],
-            token: generateToken(createdUser),
-        });
+        res.send(createdUser);
     })
 );
 
