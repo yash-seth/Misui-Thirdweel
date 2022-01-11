@@ -55,7 +55,32 @@ userRouter.post(
             password: bcrypt.hashSync(req.body.password, 8),
         });
         const createdUser = await user.save();
+<<<<<<< HEAD
         res.send(createdUser);
+=======
+        res.send({
+            // _id: createdUser._id,
+            // name: createdUser.name,
+            // age: createdUser.age,
+            // gender: createdUser.gender,
+            // phone: createdUser.phone,
+            // email: createdUser.email,
+            // isAdmin: createdUser.isAdmin,
+            // isSeller: createdUser.isSeller,
+            // sellerRole: {
+            //     isOwner: createdUser.isOwner,
+            //     isManager: createdUser.isManager,
+            //     isStaff: createdUser.isStaff,
+            // },
+            // seller: [
+            //     {
+            //         storeId: createdUser.storeId,
+            //     }
+            // ],
+            // token: generateToken(createdUser),
+            createdUser
+        });
+>>>>>>> fcc9259e577e47f824f29bcd24599c0d178a3431
     })
 );
 
