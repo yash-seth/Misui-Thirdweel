@@ -14,8 +14,7 @@ export default function App() {
 
   return (
     <>
-     <div className="w-md h-96 bg-primary-600">
-
+     <div className="w-md h-96 bg-primary-600 text-secondary-700">
      </div>
     </>
   )
