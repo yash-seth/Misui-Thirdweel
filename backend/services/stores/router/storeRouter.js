@@ -11,7 +11,7 @@ storeRouter.get('/seed', expressAsyncHandler(async (req, res) => {
     //await Store.deleteMany({});
     const createdStores = await Store.insertMany(data.stores);
     res.send({ createdStores });
-    res.status(500).send({ message: 'No seller found. first run /api/users/seed' });
+    res.status(500).send({ message: 'No store found. first run /api/users/seed' });
 
 }));
 
