@@ -1,6 +1,7 @@
 import './App.css';
 import Header from "./Components/Header/Header"
 import Banner from "./Components/Banner/Banner"
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -8,6 +9,8 @@ function App() {
     <div className="App">
       <Header />
       <Banner />
+      Temporary
+      <Footer />
     </div>
       
     </>

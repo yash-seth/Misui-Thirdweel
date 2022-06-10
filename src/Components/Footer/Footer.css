@@ -1,0 +1,44 @@
+.mainFooter{
+    text-align:center;
+    background-color: rgb(101, 145, 101);
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.container{
+    margin: 0 100px;
+}
+
+.copyright{
+    font-size:12px;
+}
+
+#connectText{
+    font-size: 40px;
+}
+
+.row{
+    font-size: large;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+  }
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .list-items{
+      font-size: small;
+  }
+
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }

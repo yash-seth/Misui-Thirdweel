@@ -5,9 +5,11 @@ function Banner() {
   return (
     <>
         <div className="mainBanner">
-            <h1>
+            <h2>
+                <b>
                 Welcome to Thirdweel
-            </h1>
+                </b>
+            </h2>
         </div>
     </>
   )
