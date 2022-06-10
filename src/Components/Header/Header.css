@@ -1,0 +1,43 @@
+.main{
+    text-align:center;;
+    font-family: 'Lato', sans-serif;
+    vertical-align: center;
+    overflow: hidden;
+    background-color: rgb(248, 245, 207);
+}
+
+
+.logo{
+    float:left;
+    padding: 10px;
+}
+
+.logo_text{
+    float:left;
+    margin-top: 5px;
+    padding: 5px;
+    font-size: larger;
+    color: green;
+}
+
+.buttons{
+    float:right;
+    margin: 10px;
+}
+
+#Home , #About, #Hiring, #Contact{
+    margin: 0px 40px;
+
+}
+
+button, input[type="submit"], input[type="reset"] {
+    font-family: 'Lato', sans-serif;
+    color: green;
+	background: none;
+    font-size: larger;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
