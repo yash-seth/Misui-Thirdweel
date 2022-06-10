@@ -2,6 +2,7 @@ import './App.css';
 import Header from "./Components/Header/Header"
 import Banner from "./Components/Banner/Banner"
 import Footer from './Components/Footer/Footer';
+import Content from './Components/Content/Content';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
     <div className="App">
       <Header />
       <Banner />
-      Temporary
+      <Content />
       <Footer />
     </div>
       

@@ -1,0 +1,14 @@
+.mainContent{
+    text-align: center;
+    background-color: rgb(250, 240, 234);
+    font-size: 40px;
+    padding: 10px;
+}
+
+.content-area{
+    margin: 0 100px;
+}
+
+.introduction-text{
+    font-size: 30px;
+}
