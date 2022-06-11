@@ -1,5 +1,6 @@
 import React from 'react'
 import './Header.css'
+import MenuIcon from '@mui/icons-material/Menu';
 
 function Header() {
   return (
@@ -15,6 +16,9 @@ function Header() {
                 <button id='Hiring'>Hiring</button>
                 <button id='Contact'>Contact Us</button>
             </div>
+            <div className='mobile-menu'>
+                  <MenuIcon />
+              </div>
         </div>
     </>
   )

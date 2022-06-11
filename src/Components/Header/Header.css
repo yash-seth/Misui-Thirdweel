@@ -41,3 +41,18 @@ button, input[type="submit"], input[type="reset"] {
 	cursor: pointer;
 	outline: inherit;
 }
+
+.mobile-menu{
+    display: none;
+    float:right;
+    padding: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .buttons{
+        display: none;
+    }
+    .mobile-menu{
+        display: block;
+    }
+}
