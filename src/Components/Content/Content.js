@@ -9,76 +9,30 @@ function Content() {
     <>
       <div className="mainContent">
         <div className="content-area">
-          <p>
-            Our mission is to{" "}
-            <b>
-              <i>digitalise</i>
-            </b>{" "}
-            physical market
-            <br /> and{" "}
-            <b>
-              <i>bridge the gap</i>
-            </b>{" "}
-            between the physical and
-            <br /> digital market
-          </p>
-          <img
-            src={require("./down_arrow.png")}
-            height="80px"
-            alt="down arrow"
-          />
-          <br />
-          <img src={require("./diagram.png")} height="400px" alt="diagram" />
-          <br />
-          <img
-            src={require("./down_arrow.png")}
-            height="50px"
-            alt="down arrow"
-          />
-          <br />
-          <div className="introduction-text">
-            <i>We present to you,</i>
-            <br />
-          </div>
-          <h2>Thirdweel.</h2>
+                <p id="opening-header">Looking to <u id="underline">shop</u><br /> something?</p>
+                <p id='opening-caption'>You can find sellers in your <br/><b>neighbourhood</b> with ThirdWeel</p>
+                <p id="opening-hashtag">#VocalForLocal</p>
+                <img id="introduction-image" src={require("./ecommerce first gif.gif")} alt="ecommerce animation" height="500px"></img>
         </div>
         <div className="content-area-middle">
-          Thirdweel leverages the strength of the local retail shop <br />
+          <div className="content-area-middle-content">
+          <h1>What is ThirdWeel?</h1>
+          ThirdWeel leverages the strength of the local retail shop <br />
           network to its best potential, benefiting both customers and <br />
           local retailers. Packed with new innovative features to connect <br />
           users and the retail shopkeepers on a deeper level to provide a<br />
           personalized e-commerce experience
+          </div>
+          <div className="content-area-middle-animation">
+            <img src={require("./Green shopping lady swoosh animation.gif")} alt="shopping cart animation" height="400px"></img>
+          </div>
         </div>
-        <div className="content-area">
-          <div className="caption">Thirdweel it.</div>
-          <div className="flowchart">
-            <CottageOutlinedIcon style={{ fontSize: 70 }} />
-            <ArrowRightAltOutlinedIcon style={{ fontSize: 70 }} />
-            <img
-              src="http://misui.in/media/logo.svg"
-              alt="company-logo"
-              height="70px"
-            />
-            <ArrowRightAltOutlinedIcon style={{ fontSize: 70 }} />
-            <HouseSidingOutlinedIcon style={{ fontSize: 70 }} /> <br />
-            <div className="flowchart-left-text">Your home.</div>
-            <div className="flowchart-right-text">
-              Your neighbourhood local stores.
-            </div>
-          </div>
-          <br />
-          <div className="shapes">
-            <img
-              src={require("./square.png")}
-              alt="square"
-              height="370px"
-            ></img>
-            <img
-              src={require("./circle.png")}
-              alt="circle"
-              height="400px"
-            ></img>
-          </div>
+        <div className="services">
+          <img src={require("./neighbourhood local store.png")} alt="services" height="200px"></img>
+          <img id="left_point" src={require("./arrows.png")} alt="services"></img>
+          <img src={require("./thirdweel services.png")} alt="services" height="300px"></img>
+          <img src={require("./arrows.png")} alt="services"></img>
+          <img src={require("./lady_shopping.png")} alt="services" height="200px"></img>
           <hr />
           <div className="testimonials">
             Let the customers speak for us.
@@ -86,7 +40,7 @@ function Content() {
               <div class="column">
                 <br />
                 <div className="list-items">
-                  "Thirdweel is one of <br/> the best online<br/> shopping
+                  "ThirdWeel is one of <br/> the best online<br/> shopping
                   sites i've ever <br/> used! The customer <br/> service is very 
                   helpful <br/> and behaviour is good. I <br/> had a wonderful <br/>
                   experience."<br/> ~ Roshan Gupta
@@ -96,7 +50,7 @@ function Content() {
                 <br />
                 <div className="list-items">
                   "I like the quality of service and the <br/> quality of goods. I love
-                  <br/> shopping on Thirdweel <br/> as quality, price and <br/> service is
+                  <br/> shopping on ThirdWeel <br/> as quality, price and <br/> service is
                   really excellent.<br/> I also get to support the <br/> local retail stores in <br/> areas."
                   <br/>~ Aniruddha Bala
                 </div>

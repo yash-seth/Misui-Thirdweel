@@ -7,7 +7,7 @@ function Banner() {
         <div className="mainBanner">
             <h2>
                 <b>
-                Welcome to Thirdweel
+                Welcome to ThirdWeel
                 </b>
             </h2>
         </div>

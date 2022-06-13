@@ -7,8 +7,8 @@ function Header() {
     <>
         <div className="mainHeader">
             <div className="company-info">
-                <div className="logo"><img src="http://misui.in/media/logo.svg" alt="company-logo" height="25px" /></div>
-                <div className="logo_text"><b>Thirdweel</b></div>
+                <div className="logo"><img src="http://misui.in/media/logo.svg" alt="company-logo" height="35px" /></div>
+                <div className="logo_text"><b>ThirdWeel</b></div>
             </div>
             <div className='buttons'>
                 <button id='Home'>Home</button>

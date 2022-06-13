@@ -1,9 +1,9 @@
 .mainHeader{
     text-align:center;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     vertical-align: center;
     overflow: hidden;
-    background-color: rgb(248, 245, 207);
+    background-color: #F7F6F2;
 }
 
 
@@ -14,25 +14,27 @@
 
 .logo_text{
     float:left;
-    margin-top: 5px;
+    margin-top: 7px;
     padding: 5px;
-    font-size: larger;
-    color: green;
+    font-size: 25px;
+    color: #4B8D5E; /* color */
 }
 
 .buttons{
     float:right;
     margin: 10px;
+    font-size: 20px;
 }
 
 #Home , #About, #Hiring, #Contact{
-    margin: 0px 40px;
+    padding-top: 7px;
+    margin: 0px 30px;
 
 }
 
 button, input[type="submit"], input[type="reset"] {
     font-family: 'Lato', sans-serif;
-    color: green;
+    color: #4B8D5E; /* color */
 	background: none;
     font-size: larger;
 	border: none;

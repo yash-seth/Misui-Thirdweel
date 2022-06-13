@@ -9,7 +9,7 @@ function Footer() {
   return (
     <div className='mainFooter'>
         <div className="container">
-            <h1><b>Thirdweel</b></h1>
+            <h1><b>ThirdWeel</b></h1>
             <p>We provide the best in the class e-commerce <br/> service, we are always there for you</p>
             <p>Let's get started.</p>
             <b id="connectText">Connect with us.</b>
