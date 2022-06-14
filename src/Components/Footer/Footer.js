@@ -4,6 +4,7 @@ import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import CallIcon from '@mui/icons-material/Call';
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
 import AddIcon from '@mui/icons-material/Add';
+import { fontSize } from '@mui/system';
 
 function Footer() {
   return (
@@ -16,27 +17,42 @@ function Footer() {
             <hr />
             <div class="row">
                 <div class="column">
-                    <b>Links</b><br/>
+                  
                     <div className='list-items'>
-                        <ArrowUpwardIcon/>Home<br/>
+                    <b style={{fontSize:'30px',}}>Links</b><br/>
+                    
+                    <div>
+                        <ArrowUpwardIcon/>Home
+                    </div>
+                    
+                    <div>
                         <ArrowUpwardIcon/>About Us<br/>
+                    </div>
+                    
+                    <div>
                         <ArrowUpwardIcon/>Hiring<br/>
+                    </div>
+                    
+                    <div>
                         <ArrowUpwardIcon/>Contact Us
                     </div>
-                </div>
-                <div class="column">
-                    <b>Contacts</b><br/>
-                    <div className='list-items'>
-                        <CallIcon />919191919191<br/>
-                        <FmdGoodOutlinedIcon /> 2nd floor, K-tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102
                     </div>
                 </div>
                 <div class="column">
-                    <b>Legals</b><br />
+                   
                     <div className='list-items'>
-                    <AddIcon />Terms of use<br />
-                    <AddIcon />Privacy Policy<br />
-                    <AddIcon />Contact Information<br />
+                    <b style={{fontSize:'30px',}}>Contacts</b><br/>
+                        <div><CallIcon />919191919191</div>
+                        <div><FmdGoodOutlinedIcon /> 2nd floor, K-tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div className='list-items'>
+                    <b style={{fontSize:'30px',}}>Legals</b><br />
+                    <div> <AddIcon />Terms of use </div>
+                    <div><AddIcon />Privacy Policy </div> 
+                    <div> <AddIcon />Contact Information </div>
                     </div>
                 </div>
             </div>

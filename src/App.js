@@ -1,8 +1,10 @@
+import React from 'react';
+import Header from './components/Header/Header'
+import Content from './components/Content/Content'
+import Footer from './components/Footer/Footer';
+import B_footer from './components/B_footer/B_footer';
 import './App.css';
-import Header from "./Components/Header/Header"
-import Banner from "./Components/Banner/Banner"
-import Footer from './Components/Footer/Footer';
-import Content from './Components/Content/Content';
+
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
     <div className="App">
       <Header />
       <Content />
+      <B_footer/>
+      <Footer/>
     </div>
       
     </>
