@@ -5,6 +5,10 @@
     padding-top:10px;
 }
 
+.mainContent img {
+    max-width: 100%;
+}
+
 #opening-header{
     font-size: 64px;
 }
@@ -18,7 +22,7 @@
 }
 
 .content-area{
-    margin: 0 100px;
+    margin: 0 50px;
     padding-bottom: 100px;
 }
 
@@ -33,11 +37,29 @@
     padding-left: 200px;
 }
 
-@media screen and (max-width: 700px) {              /*responsive code for the ecommerce gif */
+@media screen and (max-width: 1376px) {  
     #introduction-image{
-        height: 400px;
+        padding-left: 0px;
+    }
+    }
+
+@media screen and (max-width: 768px) {              /*responsive code for the ecommerce gif and font sizes*/
+    #introduction-image{
+        height: auto;
         margin: 0px;
         padding: 0px;
+        padding-left: 0px;
+    }
+    #opening-header{
+        font-size: 40px;
+    }
+    
+    #opening-caption{
+        font-size: 24px;
+    }
+    
+    #opening-hashtag{
+        font-size: 16px;
     }
 }
 
@@ -52,6 +74,10 @@
     padding:30px;
 }
 
+.content-area-middle img {
+    max-width: 100%;
+}
+
 .content-area-middle-content{
     padding-top: 30px;
 }
@@ -60,11 +86,17 @@
     padding-left: 100px;
 }
 
-@media screen and (max-width: 700px) {              /*responsive code for the shopping cart gif */
+@media screen and (max-width: 768px) {              /*responsive code for the shopping cart gif */
     .content-area-middle-animation{
-        height: 400px;
+        height: auto;
         margin: 0px;
         padding: 0px;
+    }
+    #content-area-middle-content-header{
+        font-size: 40px;
+    }
+    #content-area-middle-content-text{
+        font-size: 16px;
     }
 }
 
@@ -94,7 +126,7 @@
     font-size: 24px;
 }
 
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 768px) {
     .column {
       width: 100%;
     }
@@ -113,6 +145,20 @@
     text-align: center;
   }
 
+  .services img{
+    max-width: 100%;
+  }
+
+  #services-image-caption-one{
+      font-size: 24px;
+  }
+
+  #services-image-caption-two{
+    font-size: 24px;
+    padding-top: 30px;
+}
+
+
   #left_point{
       transform: rotate(180deg);
       padding: 0px 20px;
@@ -122,10 +168,10 @@
         padding: 0px 20px;
     }
 
-  @media screen and (max-width: 650px){     /*responsive code for the services part */
+  @media screen and (max-width: 1376px){     /*responsive code for the services part */
     #left_point{
         transform: rotate(270deg);
-        padding: 10px 0px;
+        padding: 20px 0px;
     }
     #right_point{
         transform: rotate(90deg);
@@ -133,14 +179,23 @@
     }
     .services{
         flex-direction: column;
+        margin: 0 50px;
     }
     #shopping_lady{
-        height: 200px;
+        height: auto;
     }
     #services_image{
-        height: 200px;
+        height: auto;
     }
     #store{
-        height: 250px;
+        height: auto;
     }
+    #services-image-caption-one{
+        font-size: 16px;
+    }
+  
+    #services-image-caption-two{
+      font-size: 16px;
+      padding-top: 0px;
+  }
   }

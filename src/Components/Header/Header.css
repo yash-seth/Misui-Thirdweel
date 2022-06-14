@@ -48,9 +48,10 @@ button, input[type="submit"], input[type="reset"] {
     display: none;
     float:right;
     padding: 10px;
+    color: #4B8D5E;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     .buttons{
         display: none;
     }
