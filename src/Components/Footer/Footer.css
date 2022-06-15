@@ -36,8 +36,11 @@
 
   .list-items{
       font-size: small;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
   }
-
+ 
   @media screen and (max-width: 600px) {
     .column {
       width: 100%;

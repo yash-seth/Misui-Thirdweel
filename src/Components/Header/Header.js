@@ -17,7 +17,7 @@ function Header() {
                 <button id='Contact'>Contact Us</button>
             </div>
             <div className='mobile-menu'>
-                  <MenuIcon />
+                <MenuIcon/>
               </div>
         </div>
     </>
