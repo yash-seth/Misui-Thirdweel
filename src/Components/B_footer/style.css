@@ -1,10 +1,10 @@
 .background{
     text-align:center;
-    background-color: rgb(101, 145, 101);
+    background-color:  #4B8D5E;
     color: white;
     font-size: 30px;
     padding: 10px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
 }
 .container{
     margin: 0 50px;
@@ -75,24 +75,24 @@ font-weight: 400;
 font-size: 20px;
 line-height: 20px;
 text-align:left;
-color: #FFFFFF;
+color: #FFFF;
 margin-bottom: 25px;
 }
 .background_1{
     text-align:center;
-    background-color: rgb(255, 255, 255);
+    background-color: #F7F6F2;
     font-size: 30px;
     color: #000000;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
     margin-bottom: 75px;
 
 }
 .cust_review{
-    background-color: #FFFFFF;
+    background-color: #F7F6F2;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 24pt;
     line-height: 29px;
     color: #000000;
     margin-bottom: 25px;
