@@ -1,0 +1,110 @@
+.mainHeader{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F7F6F2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.address{
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    align-items: center;
+}
+
+.logo{
+    float:left;
+    padding: 10px;
+}
+
+.logo_text{
+    float:left;
+    margin-top: 4.5px;
+    padding: 5px;
+    font-size: 25px;
+}
+
+.buttons{
+    display: flex;
+    float:right;
+    font-size: 20px;
+}
+
+#my_cart{
+    margin-top: 4.5px;
+    color: black
+}
+
+#shopping_cart{
+    margin-top: 4.5px;
+}
+
+#log_in{
+    padding:0 25px;
+    background-color: #4B8D5E;
+    border-radius: 25px;
+    color: #F7F6F2;
+}
+
+.searchBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#search{
+    size: 50%;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    float: right;
+    padding: 5px 100px;
+}
+
+.searchIcon{
+    float: right;
+    padding: 5px 10px;
+    background: #EAEAEA;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#Home , #my_cart, #Hiring, #Contact{
+    padding-top: 4.5px;
+    margin: 0px 30px;
+
+}
+
+button, input[type="submit"], input[type="reset"] {
+    font-family: 'Lato', sans-serif;
+    color: #4B8D5E; /* color */
+	background: none;
+    font-size: larger;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.mobile-menu{
+    display: none;
+    float:right;
+    padding: 10px;
+    color: #4B8D5E;    /*color*/
+}
+
+/* @media screen and (max-width: 800px) {
+    .buttons{
+        display: none;
+    }
+    .mobile-menu{
+        display: block;
+    }
+} */

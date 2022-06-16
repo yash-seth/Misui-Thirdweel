@@ -1,0 +1,25 @@
+.storiesContainer{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 100px;
+    padding: 30px 0px;
+}
+
+.stories{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.storiesContainer img{
+    border-radius: 50%;
+}
+
+#storiesHeading{
+    font-size: 24px;
+    font-weight: 600;
+}

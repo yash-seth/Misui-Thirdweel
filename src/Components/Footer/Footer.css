@@ -1,4 +1,5 @@
 .mainFooter{
+    font-family: 'Montserrat', sans-serif;
     text-align:center;
     background-color: #4B8D5E;
     color: white;
@@ -64,6 +65,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
+      font-weight: 400;
   }
 
   @media screen and (max-width: 768px) {

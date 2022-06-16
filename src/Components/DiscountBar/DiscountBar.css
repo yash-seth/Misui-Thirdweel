@@ -1,0 +1,13 @@
+.discountBarcontainer{
+    font-family: 'Montserrat', sans-serif;
+    margin:10px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap;
+}
+
+.banner{
+    padding: 10px;
+}
