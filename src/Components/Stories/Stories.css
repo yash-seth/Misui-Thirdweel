@@ -10,16 +10,34 @@
 .stories{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 }
 
 .storiesContainer img{
     border-radius: 50%;
 }
 
+#moreStories{
+    display: none;
+}
+
 #storiesHeading{
     font-size: 24px;
     font-weight: 600;
+}
+
+@media screen and (max-width: 768px){
+    #story{
+        width:15%;
+        padding: 0 10px;
+    }
+    .storiesContainer{
+        margin: 0 40px;
+    }
+    #moreStories{
+        padding: 0 15px;
+        display: block;
+    }
 }

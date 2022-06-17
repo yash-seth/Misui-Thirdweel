@@ -4,7 +4,6 @@
 }
 
 .headerMenuButtons{
-    margin: 10px;
     font-size: 20px;
     display: flex;
     flex-direction: row;
@@ -13,12 +12,56 @@
     font-weight: 600;
 }
 
+.categoryDropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.categoriesMenuContainer{
+    font-size: 16px;
+    font-weight: 400;
+    position: absolute;
+    display: none;
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.categoriesMenuContainer p:hover {background-color: #ddd;}
+
+.categoryDropdown:hover .categoriesMenuContainer     {display: block;}
+
+.groupByDropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.groupByMenuContainer{
+    font-size: 16px;
+    font-weight: 400;
+    position: absolute;
+    display: none;
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.groupByMenuContainer p:hover {background-color: #ddd;}
+
+.groupByDropdown:hover .groupByMenuContainer     {display: block;}
+
 #burgerMenu{
     display: none;
 }
 
-#burgerMenu, #Category , #Offers, #Group_By, #Wishlist{
-    margin: 0px 30px;
+#burgerMenu, #Categories , #Offers, #Group_By, #Wishlist{
+    margin: 0px 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#burgerMenu:hover, #Categories:hover , #Offers:hover, #Group_By:hover, #Wishlist:hover{
+    background-color: #F7F6F2;
 }
 
 button, input[type="submit"], input[type="reset"] {

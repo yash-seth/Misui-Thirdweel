@@ -1,5 +1,6 @@
 import React from 'react'
 import './Header.css'
+import { Routes, Route, Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -23,9 +24,11 @@ function Header() {
               </div>
             </div>
             <div className='buttons'>
-                <button id='log_in'>Log In</button>
+                <Link to="/Login" style={{ textDecoration: 'none' }}>
+                  <button id='log_in'>Log In</button>
+                </Link>
                 <div>
-                  <button id="my_cart"><img id="shopping_cart" src={require("./cart.png")} alt="my cart icon"/>My Cart</button>
+                    <Link to="/MyCart" style={{ textDecoration: 'none' }}><button id="my_cart"><img id="shopping_cart" src={require("./cart.png")} alt="my cart icon"/>My Cart</button></Link>
                 </div>
             </div>
         </div>
