@@ -31,3 +31,13 @@
 #category{
     padding: 10px 0;
 }
+
+@media screen and (max-width: 768px) {              /*responsive code for the ecommerce gif and font sizes*/
+    .categoriesContainer{
+        margin: 0 40px;
+    }
+    #category{
+        height: auto;
+        width: 30%;
+    }
+}

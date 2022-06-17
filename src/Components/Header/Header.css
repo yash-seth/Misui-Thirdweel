@@ -5,6 +5,14 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.company-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .address{
@@ -33,7 +41,10 @@
 }
 
 #my_cart{
-    margin-top: 4.5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
     color: black
 }
 
@@ -42,9 +53,9 @@
 }
 
 #log_in{
-    padding:0 25px;
+    padding:0 30px;
     background-color: #4B8D5E;
-    border-radius: 25px;
+    border-radius: 10px;
     color: #F7F6F2;
 }
 
@@ -56,23 +67,30 @@
 }
 
 #search{
-    size: 50%;
-    font-size: 17px;
+    /* size: 50%; */
+    font-size: 15px;
     border: none;
     cursor: pointer;
     border-radius: 10px;
-    float: right;
-    padding: 5px 100px;
+    padding: 7px 180px 7px 60px;
+}
+
+input::-webkit-input-placeholder {
+    opacity: 0.5;
 }
 
 .searchIcon{
-    float: right;
+    float: left;
     padding: 5px 10px;
     background: #EAEAEA;
     font-size: 17px;
     border: none;
     cursor: pointer;
     border-radius: 10px;
+}
+
+#location{
+    padding-left:20px;
 }
 
 #Home , #my_cart, #Hiring, #Contact{
@@ -100,11 +118,15 @@ button, input[type="submit"], input[type="reset"] {
     color: #4B8D5E;    /*color*/
 }
 
-/* @media screen and (max-width: 800px) {
-    .buttons{
-        display: none;
+@media screen and (max-width: 800px) {
+    .mainHeader{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
     }
-    .mobile-menu{
-        display: block;
+    #search{
+        width: 40%;
     }
-} */
+}

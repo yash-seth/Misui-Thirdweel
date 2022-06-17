@@ -31,3 +31,20 @@
 #store{
     padding: 10px 0;
 }
+
+@media screen and (max-width: 768px) {
+    .storesContainer{
+        margin: 0 40px;
+    }
+    #store{
+        height: auto;
+        width: 60%;
+    }
+    .stores{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}

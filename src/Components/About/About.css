@@ -31,3 +31,14 @@
 #aboutBanner{
     padding: 10px;
 }
+
+@media screen and (max-width: 768px) {              /*responsive code for the ecommerce gif and font sizes*/
+    .aboutContainer{
+        margin: 0 30px;
+    }
+    #aboutBanner{
+        width: 100%;
+        height: auto;
+    }
+
+}

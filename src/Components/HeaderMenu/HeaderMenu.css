@@ -13,6 +13,10 @@
     font-weight: 600;
 }
 
+#burgerMenu{
+    display: none;
+}
+
 #burgerMenu, #Category , #Offers, #Group_By, #Wishlist{
     margin: 0px 30px;
 }
@@ -27,4 +31,16 @@ button, input[type="submit"], input[type="reset"] {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+}
+
+@media screen and (max-width: 768px){
+    .headerMenuContainer{
+        margin: 0 40px;
+    }
+    .headerMenuButton{
+        display: none;
+    }
+    #burgerMenu{
+        display: block;
+    }
 }
