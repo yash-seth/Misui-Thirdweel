@@ -1,5 +1,6 @@
 import React from 'react'
 import './TopOffers.css'
+import {TopOfferData} from "../../Data"
 
 function TopOffers() {
   return (
@@ -9,10 +10,9 @@ function TopOffers() {
             <img id="arrow" src={require("./arrow.png")} alt="arrow" />
         </div>
         <div className='offers'>
-            <img id="discount" src={require("./discount1.png")} alt="discount" />
-            <img id="discount" src={require("./discount2.png")} alt="discount" />
-            <img id="discount" src={require("./discount1.png")} alt="discount" />
-            <img id="discount" src={require("./discount2.png")} alt="discount" />
+            {TopOfferData.map((TopOffer)=>{
+              return <img id="discount" key={TopOffer.id} src={require("./"+TopOffer.src)} alt={TopOffer.alt}/>
+              })}
         </div>
     </div>
   )

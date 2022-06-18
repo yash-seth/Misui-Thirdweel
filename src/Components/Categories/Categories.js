@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Categories.css"
+import {CategoryData} from "../../Data"
 
 function Categories() {
   return (
@@ -9,18 +10,9 @@ function Categories() {
                 <img id="arrow" src={require("./arrow.png")} alt="arrow" />
             </div>
         <div className='categories'>
-                <img id="category" src={require("./category1.png")} alt="category" />
-                <img id="category" src={require("./category2.png")} alt="category" />
-                <img id="category" src={require("./category3.png")} alt="category" />
-                <img id="category" src={require("./category1.png")} alt="category" />
-                <img id="category" src={require("./category2.png")} alt="category" />
-                <img id="category" src={require("./category3.png")} alt="category" />
-                <img id="category" src={require("./category1.png")} alt="category" />
-                <img id="category" src={require("./category2.png")} alt="category" />
-                <img id="category" src={require("./category3.png")} alt="category" />
-                <img id="category" src={require("./category1.png")} alt="category" />
-                <img id="category" src={require("./category2.png")} alt="category" />
-                <img id="category" src={require("./category3.png")} alt="category" />
+        {CategoryData.map((Category)=>{
+              return <img id="category" key={Category.id} src={require("./"+Category.src)} alt={Category.alt}/>
+              })}
         </div>
     </div>
   )

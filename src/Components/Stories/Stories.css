@@ -12,7 +12,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .storiesContainer img{
@@ -39,5 +39,11 @@
     #moreStories{
         padding: 0 15px;
         display: block;
+    }
+    .stories{
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
     }
 }

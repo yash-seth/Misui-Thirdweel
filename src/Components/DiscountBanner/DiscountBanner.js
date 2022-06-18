@@ -1,10 +1,13 @@
 import React from 'react'
 import "./DiscountBanner.css"
+import {DiscountBannerData} from "../../Data"
 
 function DiscountBanner() {
   return (
     <div className='discountBannerContainer'>
-        <img id="discountBanner" src={require("./discountBanner.png")} alt="discountBanner"/>
+        {DiscountBannerData.map((discountBanner)=>{
+              return <img id="discountBanner" key={discountBanner.id} src={require("./"+discountBanner.src)} alt={discountBanner.alt}/>
+              })}
     </div>
   )
 }

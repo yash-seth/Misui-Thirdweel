@@ -1,5 +1,6 @@
 import React from 'react'
 import "./About.css"
+import {AboutData} from "../../Data"
 
 function About() {
   return (
@@ -8,8 +9,9 @@ function About() {
                 <section id="about-heading">Order today get today</section>
             </div>
             <div className='aboutBanners'>
-                <img id="aboutBanner" src={require("./pickup.png")} alt="about banner" />
-                <img id="aboutBanner" src={require("./delivery.png")} alt="about banner" />
+            {AboutData.map((aboutBanner)=>{
+              return <img id="aboutBanner" key={aboutBanner.id} src={require("./"+aboutBanner.src)} alt={aboutBanner.alt}/>
+              })}
             </div>
         </div>
   )

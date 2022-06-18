@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Stores.css"
+import {StoreData} from "../../Data"
 
 function Stores() {
     return (
@@ -9,10 +10,9 @@ function Stores() {
                 <img id="arrow" src={require("./arrow.png")} alt="arrow" />
             </div>
             <div className='stores'>
-                <img id="store" src={require("./store1.png")} alt="store" />
-                <img id="store" src={require("./store2.png")} alt="store" />
-                <img id="store" src={require("./store1.png")} alt="store" />
-                <img id="store" src={require("./store2.png")} alt="store" />
+                {StoreData.map((Story)=>{
+                    return <img id="store" key={Story.id} src={require("./"+Story.src)} alt={Story.alt} />
+                })}
             </div>
         </div>
       )

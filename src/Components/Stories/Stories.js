@@ -1,22 +1,18 @@
 import React from 'react'
 import "./Stories.css"
+import {StoryData} from "../../Data"
 
 function Stories() {
+  console.log(StoryData.length)
   return (
     <>
     <div className='storiesContainer'>
         <p id="storiesHeading">Stories</p>
         <div className='stories'>
-            <img id="story" src={require("./stories.jpg")} alt="stories circle" />
-            <img id="story" src={require("./stories.jpg")} alt="stories circle" />
-            <img id="story" src={require("./stories.jpg")} alt="stories circle" />
-            <img id="story" src={require("./stories.jpg")} alt="stories circle" />
-            <div id="moreStories">+ 5 more</div>
-            <img id="story" src={require("./stories.jpg")} alt="stories circle" />
-            <img id="story" src={require("./stories.jpg")} alt="stories circle" />
-            <img id="story" src={require("./stories.jpg")} alt="stories circle" />
-            <img id="story" src={require("./stories.jpg")} alt="stories circle" />
-            <img id="story" src={require("./stories.jpg")} alt="stories circle" />
+            {StoryData.map((Story)=>{
+              return <img id="story" key={Story.id} src={require("./"+Story.src)} alt={Story.alt}/>
+              })}
+             <div id="moreStories">+ 5 more</div>
         </div>
     </div>
     </>
