@@ -3,7 +3,6 @@ import "./Stories.css"
 import {StoryData} from "../../Data"
 
 function Stories() {
-  console.log(StoryData.length)
   return (
     <>
     <div className='storiesContainer'>

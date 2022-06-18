@@ -11,7 +11,7 @@
 .company-info{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
@@ -36,6 +36,9 @@
 
 .buttons{
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     float:right;
     font-size: 20px;
 }
@@ -75,12 +78,20 @@
     padding: 7px 180px 7px 60px;
 }
 
+.search{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
 input::-webkit-input-placeholder {
     opacity: 0.5;
 }
 
 .searchIcon{
-    float: left;
+    float: right;
     padding: 5px 10px;
     background: #EAEAEA;
     font-size: 17px;
@@ -127,6 +138,18 @@ button, input[type="submit"], input[type="reset"] {
         flex-wrap: wrap;
     }
     #search{
-        width: 40%;
+        width: 20%;
+    }
+    .company-info{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo_text{
+        padding: 0 0;
+    }
+    .buttons{
+        padding: 10px 0;
     }
 }

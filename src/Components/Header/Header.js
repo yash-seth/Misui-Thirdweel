@@ -1,6 +1,6 @@
 import React from 'react'
 import './Header.css'
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -18,10 +18,10 @@ function Header() {
             <div className='searchBar'>
               <div className='search'>
                 <input id="search" type="text" placeholder="Search.."></input>
+                <div className='searchIcon'>
+                  <img id="searchIcon" src={require("./search.png")} alt="search icon"/>
               </div>
-              <div className='searchIcon'>
-                <img id="searchIcon" src={require("./search.png")} alt="search icon"/>
-              </div>
+              </div>     
             </div>
             <div className='buttons'>
                 <Link to="/Login" style={{ textDecoration: 'none' }}>
