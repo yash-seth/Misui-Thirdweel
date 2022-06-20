@@ -15,6 +15,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Login from './Components/Login/Login';
 import Offers from './Components/Offers/Offers';
 import Wishlist from './Components/Wishlist/Wishlist';
+import StoreSearch from './Components/StoreSearch/StoreSearch';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Offers" element={<Offers />} />
         <Route path="/Wishlist" element={<Wishlist />} />
+        <Route path="/Search" element={<StoreSearch />} />
       </Routes>
     </>
   );

@@ -7,8 +7,10 @@ function Header() {
     <>
         <div className="mainHeader">
             <div className="company-info">
+              <Link to="/" style={{ textDecoration: 'none' }}>
                 <div className="logo"><img src="http://misui.in/media/logo.svg" alt="company-logo" height="28px" /></div>
                 <div className="logo_text"><b>ThirdWeel</b></div>
+              </Link>
                 <div className="address">
                   <img id="location" src={require("./navigation.png")} alt="location icon"/>
                   Home, 2nd Floor, K...
@@ -19,7 +21,9 @@ function Header() {
               <div className='search'>
                 <input id="search" type="text" placeholder="Search.."></input>
                 <div className='searchIcon'>
+                <Link to="/Search" style={{ textDecoration: 'none' }}>
                   <img id="searchIcon" src={require("./search.png")} alt="search icon"/>
+                  </Link>
               </div>
               </div>     
             </div>

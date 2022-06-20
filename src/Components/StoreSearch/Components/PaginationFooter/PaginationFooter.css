@@ -1,0 +1,19 @@
+.PaginationFooterContainer{
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.number{
+    font-size: 25px;
+    margin: 10px;
+    padding:5px 12px;
+    border-radius: 50%;
+}
+
+.number:hover{
+    background-color: #E9E9E9;
+}
