@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from './components/Header/Header'
-import Content from './components/Content/Content'
-import Footer from './components/Footer/Footer';
-import B_footer from './components/B_footer/B_footer';
+import Header from './Components/Header/Header'
+import Content from './Components/Content/Content'
+import Footer from './Components/Footer/Footer';
+import B_footer from './Components/B_footer/B_footer';
 import './App.css';
 
 
@@ -14,7 +14,7 @@ function App() {
       <Content />
       <B_footer/>
       <Footer/>
-    </div>
+    </div>    
       
     </>
   );

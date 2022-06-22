@@ -1,0 +1,131 @@
+.featuresContainer{
+    background-color: #4B8D5E;
+    color: white;
+    font-family: 'Montserrat';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#features_header{
+    font-size: 26px;
+}
+
+.features{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin:0 20px;
+    padding-bottom: 50px;
+}
+
+.feature{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+.featureSubHeading{
+    text-align: center;
+    padding-top: 15px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.featureDetail{
+    text-align: center;
+    margin: 0 60px;
+}
+
+.reviewContainer{
+    text-align:center;
+    background-color: #F7F6F2;
+    font-size: 30px;
+    color: #000000;
+    font-family: 'Montserrat';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.reviews{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+    margin-bottom: 50px;
+}
+
+.column_cust_review{
+    margin: 0 20px;
+    font-weight: 400;
+    font-size: 16pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#review_header{
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.reviewContent{
+    text-align: start;
+    margin: 0 30px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    #review_header{
+        margin: 0 20px;
+    }
+    .column_cust_review{
+        margin: 20px 20px;
+        font-weight: 400;
+        font-size: 16pt;
+    }
+    .reviews{
+        flex-direction: column;
+    }
+    #review_header, #features_header{
+        font-size: 18px;
+    }
+    .reviewContent{
+        margin: 0;
+    }
+    .features{
+        margin: 0px;
+    }
+    .featureDetail{
+        margin: 0 40px;
+    }
+    .featureSubHeading{
+        padding-top: 15px;
+        font-size: 24px;
+    }
+    .featureImg{
+        height: 250px;
+    }
+    .featureDetail{
+        font-size: 14px;
+    }
+    .reviewContent{
+        font-size: 18px;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .features{
+        flex-wrap: wrap;
+    }
+  }
