@@ -30,9 +30,38 @@
 
 @media screen and (max-width: 768px){
     .StoreSearchHeaderContainer{
-        margin: 0 40px;
+        margin: 0 20px;
+        padding: 10px 0;
     }
     #hr{
         margin: 0 40px;
     }
+    #itemInfo{
+        font-size: 18px;
+    }
+    #storeInfo{
+        font-size: 18px;
+    }
+    #StoreSearchSort{
+        font-size: 18px;
+    }
 }
+
+#StoreSearchSort{
+    position: relative;
+    display: inline-block;
+}
+
+.sortByMenuContainer{
+    font-size: 16px;
+    font-weight: 400;
+    position: absolute;
+    display: none;
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.sortByMenuContainer p:hover {background-color: #ddd;}
+
+#StoreSearchSort:hover .sortByMenuContainer     {display: block;}

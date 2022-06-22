@@ -36,10 +36,10 @@ function App() {
         <Footer/>
         </>
         }/>
-        <Route path="/Login" element={<Login />} />
-        <Route path="/Offers" element={<Offers />} />
-        <Route path="/Wishlist" element={<Wishlist />} />
-        <Route path="/Search" element={<StoreSearch />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/offers" element={<Offers />} />
+        <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/search" element={<StoreSearch />} />
       </Routes>
     </>
   );

@@ -17,3 +17,19 @@
 .number:hover{
     background-color: #E9E9E9;
 }
+
+@media screen and (max-width:768px){
+    .PaginationFooterContainer{
+        margin: 10px 0;
+    }
+    .number{
+        font-size: 18px;
+        margin: 0;
+    }
+    #left_arrow{
+        height: 20px;
+    }
+    #right_arrow{
+        height: 20px;
+    }
+}

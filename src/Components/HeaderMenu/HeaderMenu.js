@@ -16,7 +16,7 @@ function HeaderMenu() {
                         <p>Electronics</p>
                     </div>
                   </div>
-                  <Link to="/Offers" style={{ textDecoration: 'none' }}>
+                  <Link to="/offers" style={{ textDecoration: 'none' }}>
                     <button id='Offers'>Offers</button>
                   </Link>
                   <div className='groupByDropdown'>
@@ -26,7 +26,7 @@ function HeaderMenu() {
                         <p>Relevance</p>
                     </div>
                   </div>
-                  <Link to="/Wishlist" style={{ textDecoration: 'none' }}>
+                  <Link to="/wishlist" style={{ textDecoration: 'none' }}>
                     <button id='Wishlist'>Wishlist</button>
                   </Link>
                 </div>

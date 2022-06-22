@@ -28,9 +28,6 @@
 }
 
 .logo_text{
-    float:left;
-    margin-top: 4.5px;
-    padding: 5px;
     font-size: 25px;
     text-decoration: none;
 }
@@ -143,7 +140,7 @@ button, input[type="submit"], input[type="reset"] {
     }
     .company-info{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }

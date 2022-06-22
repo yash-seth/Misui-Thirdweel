@@ -6,7 +6,6 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    /* flex: 1 0 31%; */
 }
 
 .StoreInfo{
@@ -80,20 +79,23 @@
 .productBannerText{
     background-color: #E9E9E9;
     padding: 0 18px;
-    width: 72%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content:center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #product_frame{
     position: absolute;
+    padding: 10px;
 }
 
 #product{
     position: relative;
     height: 110px;
+    padding: 10px 0px;
 }
 
 .purchase-details{
@@ -105,10 +107,17 @@
 
 #add_frame{
     position: absolute;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #add_button{
     position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
 }
 
 .add_to_cart{
@@ -131,6 +140,57 @@
     font-size: 12px;
 }
 
-@media screen and (max-width: 768px){
+#add-button-text{
+    font-size: 12px;
+}
 
+@media screen and (max-width: 768px){
+    .StoreResultsContainer{
+        margin: 0;
+    }
+
+    .StoreInfo{
+        padding: 10px 10px;
+    }
+
+    #product_frame{
+        height: 120px;
+    }
+
+    #product{
+        padding: 0px;
+        height: 60px;
+    }
+    
+    .productBannerText{
+        padding: 0px;
+        width: 100%
+    }
+
+    .StoreInformation{
+        font-size: 16px;
+    }
+    .StoreProducts{
+        padding: 0;
+    }
+    
+    #product-header{
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    .add_to_cart{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    #add_button{
+        padding-left: 5px;
+        padding-top: 10px;
+    }
+
+    #store_address{
+        font-size: 14px;
+    }
 }

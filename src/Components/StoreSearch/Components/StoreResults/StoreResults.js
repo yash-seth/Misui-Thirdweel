@@ -35,28 +35,31 @@ function StoreResults() {
                                     return (
                                         <>
                                         <div className='productBanner'>
-                                            <img id="product_frame" src={require("./product_frame.png")} alt="product_frame"/>
+                                            <img id="product_frame" src={require("./product_frame.png")} alt="product_frame" height="auto"/>
                                             <img id="product" key={product.id} src={require("./" + product.src)} alt={product.alt}/>
                                             <div className='productBannerText'>
                                                 <div>
                                                     <div id="product-header">{product.name}<br/></div>
                                                     <div id="product-weight">{product.weight}</div>
-                                                    <div id="product-price">{product.price}</div>
-                                                    <button style={{textDecoration:"none"}}>
                                                     <div className='add_to_cart'>
+                                                        <div id="product-price">{product.price}</div>
+                                                        <button style={{textDecoration:"none"}}>
                                                         <div id="add_button">
-                                                            <img id="add" src={require("./add.png")} alt="add" />ADD
-                                                        </div>
-                                                        <img id="add_frame" src={require("./add_frame.png")} alt="add_frame"/>   
+                                                            <img id="add_frame" src={require("./add_frame.png")} alt="add_frame"/>
+                                                            <img id="add" src={require("./add.png")} alt="add" /><div id="add-button-text">ADD</div>
+                                                        </div>   
+                                                        </button>
                                                     </div>
-                                                    </button>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
                                         </>
                                     )
                                 })}
+                                <button style={{textDecoration:"none"}}>
                                     <img id="right_arrow" src={require("./right_arrow.png")} alt="right arrow" />
+                                </button>
                             </div>
                         </div>
                     </>

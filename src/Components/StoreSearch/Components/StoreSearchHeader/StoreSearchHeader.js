@@ -13,7 +13,11 @@ function StoreSearchHeader() {
             </div>
             <div id="StoreSearchSort">
                 Sort By: Relevance
-                <img id="dropdown" src={require("./dropdown.png")} alt="dropdown icon" height="20px"/>
+                <button style={{textDecoration: "none"}}><img id="dropdown" src={require("./dropdown.png")} alt="dropdown icon" height="20px"/></button>
+                <div className='sortByMenuContainer'>
+                        <p>Relevance</p>
+                        <p>Rating</p>
+                    </div>
             </div>
         </div>
         <hr id="hr"/>
