@@ -1,6 +1,6 @@
-import './B_footer.css'
+import './AboutContent.css'
 
-function B_footer(){
+function AboutContent(){
     return(<>
             <div className='featuresContainer'>
                 <div id="features_header"><h1><b>ThirdWeel</b></h1></div>
@@ -52,4 +52,4 @@ function B_footer(){
             </>  )
 }
 
-export default B_footer;
+export default AboutContent;
