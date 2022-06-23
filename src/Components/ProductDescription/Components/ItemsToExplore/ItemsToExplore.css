@@ -1,0 +1,23 @@
+.ItemsToExploreContainer{
+    margin: 0 100px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ItemsToExploreHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#ItemsToExploreHeading{
+    font-size: 24px;
+    font-weight: 600;
+}

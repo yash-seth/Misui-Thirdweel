@@ -1,6 +1,7 @@
 import React from 'react'
 import "./StoreResults.css"
 import {StoreSearchData} from "../../../../Data"
+import { Link } from "react-router-dom";
 
 function StoreResults() {
   return (
@@ -36,7 +37,7 @@ function StoreResults() {
                                         <>
                                         <div className='productBanner'>
                                             <img id="product_frame" src={require("./product_frame.png")} alt="product_frame" height="auto"/>
-                                            <img id="product" key={product.id} src={require("./" + product.src)} alt={product.alt}/>
+                                            <Link to="/productDescription" style={{ textDecoration: 'none' }}> <img id="product" key={product.id} src={require("./" + product.src)} alt={product.alt}/></Link>
                                             <div className='productBannerText'>
                                                 <div>
                                                     <div id="product-header">{product.name}<br/></div>

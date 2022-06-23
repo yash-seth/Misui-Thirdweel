@@ -292,6 +292,92 @@ const StoreSearchData = [
   },
 ];
 
+const itemsToExplore = [
+  {
+    id: 0,
+    src: "product2.png",
+    alt: "product",
+    name: "Veggie Fingers",
+    weight: "250 gm",
+    price: "$120",
+  },
+  {
+    id: 1,
+    src: "product4.png",
+    alt: "product",
+    name: "Pringles",
+    weight: "100 gm",
+    price: "$80",
+  },
+  {
+    id: 2,
+    src: "product2.png",
+    alt: "product",
+    name: "Veggie Fingers",
+    weight: "250 gm",
+    price: "$120",
+  },
+  {
+    id: 3,
+    src: "product4.png",
+    alt: "product",
+    name: "Pringles",
+    weight: "100 gm",
+    price: "$80",
+  },
+  {
+    id: 4,
+    src: "product2.png",
+    alt: "product",
+    name: "Veggie Fingers",
+    weight: "250 gm",
+    price: "$120",
+  },
+  {
+    id: 5,
+    src: "product4.png",
+    alt: "product",
+    name: "Pringles",
+    weight: "100 gm",
+    price: "$80",
+  },
+  {
+    id: 6,
+    src: "product2.png",
+    alt: "product",
+    name: "Veggie Fingers",
+    weight: "250 gm",
+    price: "$120",
+  },
+]
+
+const BoughtTogetherData =[
+  {
+    id: 0,
+    src: "product2.png",
+    alt: "product",
+    name: "Veggie Fingers",
+    weight: "250 gm",
+    price: "$120",
+  },
+  {
+    id: 1,
+    src: "product4.png",
+    alt: "product",
+    name: "Pringles",
+    weight: "100 gm",
+    price: "$80",
+  },
+  {
+    id: 2,
+    src: "product2.png",
+    alt: "product",
+    name: "Veggie Fingers",
+    weight: "250 gm",
+    price: "$120",
+  },
+]
+
 export {
   TrendingData,
   StoryData,
@@ -302,4 +388,6 @@ export {
   DiscountBannerData,
   AboutData,
   StoreSearchData,
+  itemsToExplore,
+  BoughtTogetherData,
 };

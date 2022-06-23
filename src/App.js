@@ -11,11 +11,12 @@ import Stores from './Components/Stores/Stores';
 import Stories from './Components/Stories/Stories';
 import TopOffers from './Components/TopOffers/TopOffers';
 import Trending from './Components/Trending/Trending';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import Login from './Components/Login/Login';
 import Offers from './Components/Offers/Offers';
 import Wishlist from './Components/Wishlist/Wishlist';
 import StoreSearch from './Components/StoreSearch/StoreSearch';
+import ProductDescription from './Components/ProductDescription/ProductDescription';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route path="/offers" element={<Offers />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/search" element={<StoreSearch />} />
+        <Route path="/productDescription" element={<ProductDescription/>} />
       </Routes>
     </>
   );
