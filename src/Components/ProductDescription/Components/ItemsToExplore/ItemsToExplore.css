@@ -1,6 +1,7 @@
 .ItemsToExploreContainer{
     margin: 0 100px;
     font-family: 'Montserrat', sans-serif;
+    padding-bottom: 50px;
 }
 
 .items{
@@ -8,6 +9,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
 }
 
 .ItemsToExploreHeader{
@@ -20,4 +23,10 @@
 #ItemsToExploreHeading{
     font-size: 24px;
     font-weight: 600;
+}
+
+@media screen and (max-width:768px){
+    .ItemsToExploreContainer{
+        margin: 0 20px;
+    }
 }

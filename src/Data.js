@@ -378,6 +378,75 @@ const BoughtTogetherData =[
   },
 ]
 
+const localStoresData =[
+  {
+    id: 0,
+    src: "store2.png",
+    alt: "Store Info",
+    address_line_one: "2nd Floor, K-Tech NASSCOM, 67, Phase 3,",
+    address_line_two: "1st Sector, HSR Layout, Bengaluru,",
+    address_line_three: "Karnataka 560102",
+    contact: "75063326420",
+    rating: "ratings.png",
+    distance: "4.2km",
+    name: "Rahul Stores",
+  },
+  {
+    id: 1,
+    src: "store2.png",
+    alt: "Store Info",
+    address_line_one: "2nd Floor, K-Tech NASSCOM, 67, Phase 3,",
+    address_line_two: "1st Sector, HSR Layout, Bengaluru,",
+    address_line_three: "Karnataka 560102",
+    contact: "75063326420",
+    rating: "ratings.png",
+    distance: "4.2km",
+    name: "Rahul Stores",
+  },
+  {
+    id: 2,
+    src: "store2.png",
+    alt: "Store Info",
+    address_line_one: "2nd Floor, K-Tech NASSCOM, 67, Phase 3,",
+    address_line_two: "1st Sector, HSR Layout, Bengaluru,",
+    address_line_three: "Karnataka 560102",
+    contact: "75063326420",
+    rating: "ratings.png",
+    distance: "4.2km",
+    name: "Rahul Stores",
+  },
+  {
+    id: 3,
+    src: "store2.png",
+    alt: "Store Info",
+    address_line_one: "2nd Floor, K-Tech NASSCOM, 67, Phase 3,",
+    address_line_two: "1st Sector, HSR Layout, Bengaluru,",
+    address_line_three: "Karnataka 560102",
+    contact: "75063326420",
+    rating: "ratings.png",
+    distance: "4.2km",
+    name: "Rahul Stores",
+  },
+  {
+    id: 4,
+    src: "store2.png",
+    alt: "Store Info",
+    address_line_one: "2nd Floor, K-Tech NASSCOM, 67, Phase 3,",
+    address_line_two: "1st Sector, HSR Layout, Bengaluru,",
+    address_line_three: "Karnataka 560102",
+    contact: "75063326420",
+    rating: "ratings.png",
+    distance: "4.2km",
+    name: "Rahul Stores",
+  },
+]
+
+const imageGalleryData = [
+    {id:0,src:"image 47.png", alt:"product image"},
+    {id:1,src:"image 48.png", alt:"product image"},
+    {id:2,src:"image 50.png", alt:"product image"}
+  ]
+
 export {
   TrendingData,
   StoryData,
@@ -390,4 +459,6 @@ export {
   StoreSearchData,
   itemsToExplore,
   BoughtTogetherData,
+  localStoresData,
+  imageGalleryData,
 };

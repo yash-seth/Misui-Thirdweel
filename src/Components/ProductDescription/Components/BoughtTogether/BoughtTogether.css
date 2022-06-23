@@ -1,6 +1,7 @@
 .BoughtTogetherContainer{
     margin: 0 100px;
     font-family: 'Montserrat', sans-serif;
+    padding-bottom: 50px;
 }
 
 .BoughtTogetherItems{
@@ -8,6 +9,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .BoughtTogetherHeader{
@@ -36,4 +38,15 @@
     padding: 8px 10px;
     border-radius: 6px;
     background-color: #F6BA74;
+}
+
+@media screen and (max-width:768px){
+    .BoughtTogetherContainer{
+        margin: 0 20px;
+    }
+    .BoughtTogehterCheckoutDetails{
+        padding-top: 10px;
+        margin: auto;
+        align-items: center;
+    }
 }

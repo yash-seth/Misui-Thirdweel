@@ -39,6 +39,7 @@ function ItemsToExplore() {
           )
       })}
     </div>
+    <hr/>
     </div>
   )
 }
