@@ -7,7 +7,7 @@ function Header() {
     <>
         <div className="mainHeader">
             <div className="company-info">
-                <div className="logo"><img src="http://misui.in/media/logo.svg" alt="company-logo" height="28px" /></div>
+                <div className="logo"><img src="./thirdweel mini logo.png" alt="company-logo" height="28px" /></div>
                 <Link to="/" style={{ textDecoration: 'none' }}><div className="logo_text"><b>ThirdWeel</b></div></Link>
                 <div className="address">
                   <img id="location" src={require("./navigation.png")} alt="location icon"/>
