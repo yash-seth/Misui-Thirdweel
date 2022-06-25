@@ -64,7 +64,7 @@ const AboutData = [
 const StoreSearchData = [
   {
     id: 0,
-    src: "store2.png",
+    src: "store.png",
     alt: "Store Info",
     address_line_one: "2nd Floor, K-Tech NASSCOM, 67, Phase 3,",
     address_line_two: "1st Sector, HSR Layout, Bengaluru,",
@@ -102,7 +102,7 @@ const StoreSearchData = [
   },
   {
     id: 1,
-    src: "store2.png",
+    src: "store.png",
     alt: "Store Info",
     address_line_one: "2nd Floor, K-Tech NASSCOM, 67, Phase 3,",
     address_line_two: "1st Sector, HSR Layout, Bengaluru,",
@@ -140,7 +140,7 @@ const StoreSearchData = [
   },
   {
     id: 2,
-    src: "store2.png",
+    src: "store.png",
     alt: "Store Info",
     address_line_one: "2nd Floor, K-Tech NASSCOM, 67, Phase 3,",
     address_line_two: "1st Sector, HSR Layout, Bengaluru,",
@@ -178,7 +178,7 @@ const StoreSearchData = [
   },
   {
     id: 3,
-    src: "store2.png",
+    src: "store.png",
     alt: "Store Info",
     address_line_one: "2nd Floor, K-Tech NASSCOM, 67, Phase 3,",
     address_line_two: "1st Sector, HSR Layout, Bengaluru,",
@@ -216,7 +216,7 @@ const StoreSearchData = [
   },
   {
     id: 4,
-    src: "store2.png",
+    src: "store.png",
     alt: "Store Info",
     address_line_one: "2nd Floor, K-Tech NASSCOM, 67, Phase 3,",
     address_line_two: "1st Sector, HSR Layout, Bengaluru,",
@@ -254,7 +254,7 @@ const StoreSearchData = [
   },
   {
     id: 5,
-    src: "store2.png",
+    src: "store.png",
     alt: "Store Info",
     address_line_one: "2nd Floor, K-Tech NASSCOM, 67, Phase 3,",
     address_line_two: "1st Sector, HSR Layout, Bengaluru,",
@@ -447,6 +447,28 @@ const imageGalleryData = [
     {id:2,src:"image 50.png", alt:"product image"}
   ]
 
+const categoryDropdownData =[
+  {id:0,name:"Fruits and Vegetables"},
+  {id:1,name:"Foodgrains, Oil and Masala"},
+  {id:2,name:"Bakery, Cakes and Dairy"},
+  {id:3,name:"Beverages"},
+  {id:4,name:"Snacks and Branded Foods"},
+  {id:5,name:"Beauty and Hygiene"},
+  {id:6,name:"Cleaning and Household"},
+  {id:7,name:"Baby Care"},
+  {id:8,name:"View All"},
+]
+
+const groupByDropdownData = [
+  {id:0,name:"Price"},
+  {id:1,name:"Relevance"},
+]
+
+const sortByData = [
+  {id:0,name:"Relevance"},
+  {id:1,name:"Rating"},
+]
+
 export {
   TrendingData,
   StoryData,
@@ -461,4 +483,7 @@ export {
   BoughtTogetherData,
   localStoresData,
   imageGalleryData,
+  categoryDropdownData,
+  groupByDropdownData,
+  sortByData,
 };

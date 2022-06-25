@@ -17,24 +17,28 @@ import Offers from './Components/Offers/Offers';
 import Wishlist from './Components/Wishlist/Wishlist';
 import StoreSearch from './Components/StoreSearch/StoreSearch';
 import ProductDescription from './Components/ProductDescription/ProductDescription';
+import {useState} from "react"
 
 function App() {
+const [menuState, setMenuState] = useState(false)
   return (
     <>
       <Routes>
         <Route path="/MyCart" element={<MyCart />} />
         <Route path="/" element={<>
         <Header />
-        <HeaderMenu/>
-        <Stories/>
-        <DiscountBar/>
-        <TopOffers/>
-        <Stores/>
-        <Categories/>
-        <DiscountBanner/>
-        <Trending/>
-        <About/>
-        <Footer/>
+        <HeaderMenu menuState = {menuState} setMenuState={setMenuState}/>
+        <div className="dim">
+          <Stories/>
+          <DiscountBar/>
+          <TopOffers/>
+          <Stores/>
+          <Categories/>
+          <DiscountBanner/>
+          <Trending/>
+          <About/>
+          <Footer/>
+          </div>
         </>
         }/>
         <Route path="/login" element={<Login />} />

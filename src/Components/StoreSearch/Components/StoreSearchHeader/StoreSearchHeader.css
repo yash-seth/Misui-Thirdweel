@@ -65,3 +65,19 @@
 .sortByMenuContainer p:hover {background-color: #ddd;}
 
 #StoreSearchSort:hover .sortByMenuContainer     {display: block;}
+
+.categorySubMenu{
+    display: none;
+    padding: 0px 25px;
+    background-color: white;
+    border:1px solid rgba(0, 0, 0,0.2);
+}
+
+#sortByName{
+    padding: 12px 30px;
+    white-space: nowrap;
+}
+
+#sortByName:hover{
+    color: #4B8D5E;
+}

@@ -1,6 +1,7 @@
 import React from 'react'
 import "./HeaderMenu.css"
 import { Routes, Route, Link } from "react-router-dom";
+import {categoryDropdownData, groupByDropdownData} from "../../Data"
 
 function HeaderMenu() {
   return (
@@ -12,8 +13,30 @@ function HeaderMenu() {
                   <div className='categoryDropdown'>
                     <button id='Categories'>Categories</button>
                     <div className='categoriesMenuContainer'>
-                        <p>Sports</p>
-                        <p>Electronics</p>
+                      <div className='categoryMenu'>
+                        {categoryDropdownData.map((category)=>{
+                          return (<>
+                                    <button id="categoryButton" style={{textDecoration:"none"}}><div id="categoryName">{category.name}</div></button><br/>
+                                  </>
+                          )
+                        })}
+                        </div>
+                        <div className='categorySubMenu'>
+                        {categoryDropdownData.map((category)=>{
+                          return (<>
+                                    <button id="categoryButton" style={{textDecoration:"none"}}><div id="categoryName">{category.name}</div></button><br/>
+                                  </>
+                          )
+                        })}
+                        </div>
+                        <div className='categorySubMenu'>
+                        {categoryDropdownData.map((category)=>{
+                          return (<>
+                                    <button id="categoryButton" style={{textDecoration:"none"}}><div id="categoryName">{category.name}</div></button><br/>
+                                  </>
+                          )
+                        })}
+                      </div>
                     </div>
                   </div>
                   <Link to="/offers" style={{ textDecoration: 'none' }}>
@@ -22,8 +45,12 @@ function HeaderMenu() {
                   <div className='groupByDropdown'>
                     <button id='Group_By'>Group By</button>
                     <div className='groupByMenuContainer'>
-                        <p>Price</p>
-                        <p>Relevance</p>
+                        {groupByDropdownData.map((groupBy)=>{
+                          return (<>
+                                    <button id="groupByButton" style={{textDecoration:"none"}}><div id="groupByName">{groupBy.name}</div></button><br/>
+                                  </>
+                          )
+                        })}
                     </div>
                   </div>
                   <Link to="/wishlist" style={{ textDecoration: 'none' }}>

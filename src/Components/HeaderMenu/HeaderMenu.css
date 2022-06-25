@@ -1,6 +1,7 @@
 .headerMenuContainer{
     font-family: 'Montserrat', sans-serif;
     margin: 0 100px;
+    z-index: 10;
 }
 
 .headerMenuButtons{
@@ -23,13 +24,38 @@
     position: absolute;
     display: none;
     background-color: #f1f1f1;
-    padding: 10px;
-    margin: 0 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
 }
 
-.categoriesMenuContainer p:hover {background-color: #ddd;}
+.categoryMenu{
+    display: none;
+    padding: 0px 25px;
+}
 
-.categoryDropdown:hover .categoriesMenuContainer     {display: block;}
+.categorySubMenu{
+    display: none;
+    padding: 0px 25px;
+    background-color: white;
+    border:1px solid rgba(0, 0, 0,0.2);
+}
+
+#categoryName:hover, #groupByName:hover{
+    color: #4B8D5E;
+}
+
+#categoryName, #groupByName{
+    padding: 12px 30px;
+    white-space: nowrap;
+}
+
+.categoryDropdown:hover .categoryMenu   {display: block;}
+.categoryDropdown:hover .categorySubMenu  {display: block;}
+
+/* #categoryName{
+    border: 1px solid rgba(0,0,0,0.2);
+} */
 
 .groupByDropdown{
     position: relative;
@@ -42,8 +68,6 @@
     position: absolute;
     display: none;
     background-color: #f1f1f1;
-    padding: 10px;
-    margin: 0 10px;
 }
 
 .groupByMenuContainer p:hover {background-color: #ddd;}

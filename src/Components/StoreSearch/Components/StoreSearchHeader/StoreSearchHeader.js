@@ -1,5 +1,6 @@
 import React from 'react'
 import "./StoreSearchHeader.css"
+import {sortByData} from "../../../../Data"
 
 function StoreSearchHeader() {
   return (
@@ -15,8 +16,12 @@ function StoreSearchHeader() {
                 Sort By: Relevance
                 <button style={{textDecoration: "none"}}><img id="dropdown" src={require("./dropdown.png")} alt="dropdown icon" height="20px"/></button>
                 <div className='sortByMenuContainer'>
-                        <p>Relevance</p>
-                        <p>Rating</p>
+                {sortByData.map((sortBy)=>{
+                          return (<>
+                                    <button id="sortByButton" style={{textDecoration:"none"}}><div id="sortByName">{sortBy.name}</div></button><br/>
+                                  </>
+                          )
+                        })}
                     </div>
             </div>
         </div>
