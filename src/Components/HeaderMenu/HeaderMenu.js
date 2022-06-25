@@ -1,6 +1,6 @@
 import React from 'react'
 import "./HeaderMenu.css"
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {categoryDropdownData, groupByDropdownData} from "../../Data"
 
 function HeaderMenu() {

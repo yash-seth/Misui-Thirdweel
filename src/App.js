@@ -17,10 +17,8 @@ import Offers from './Components/Offers/Offers';
 import Wishlist from './Components/Wishlist/Wishlist';
 import StoreSearch from './Components/StoreSearch/StoreSearch';
 import ProductDescription from './Components/ProductDescription/ProductDescription';
-import {useState} from "react"
 
 function App() {
-const [menuState, setMenuState] = useState(false)
   return (
     <>
       <Routes>
@@ -28,17 +26,15 @@ const [menuState, setMenuState] = useState(false)
         <Route path="/" element={<>
         <Header />
         <HeaderMenu menuState = {menuState} setMenuState={setMenuState}/>
-        <div className="dim">
-          <Stories/>
-          <DiscountBar/>
-          <TopOffers/>
-          <Stores/>
-          <Categories/>
-          <DiscountBanner/>
-          <Trending/>
-          <About/>
-          <Footer/>
-          </div>
+        <Stories/>
+        <DiscountBar/>
+        <TopOffers/>
+        <Stores/>
+        <Categories/>
+        <DiscountBanner/>
+        <Trending/>
+        <About/>
+        <Footer/>
         </>
         }/>
         <Route path="/login" element={<Login />} />
