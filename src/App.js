@@ -25,7 +25,7 @@ function App() {
         <Route path="/MyCart" element={<MyCart />} />
         <Route path="/" element={<>
         <Header />
-        <HeaderMenu menuState = {menuState} setMenuState={setMenuState}/>
+        <HeaderMenu />
         <Stories/>
         <DiscountBar/>
         <TopOffers/>
