@@ -41,6 +41,17 @@
     font-size: 20px;
 }
 
+.headerInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerInfo button{
+    padding:0 10px;
+}
+
 #my_cart{
     display: flex;
     flex-direction: row;
@@ -127,6 +138,23 @@ button, input[type="submit"], input[type="reset"] {
     color: #4B8D5E;    /*color*/
 }
 
+#profileIcon, #cartMobile{
+    display: none;
+}
+
+#burgerMenuMobile{
+    display: none;
+}
+
+.navButtons{
+    display: none;
+}
+
+.navigationButtons button{
+    font-size: 12px;
+    font-weight: 600;
+}
+
 @media screen and (max-width: 800px) {
     .mainHeader{
         display: flex;
@@ -140,14 +168,58 @@ button, input[type="submit"], input[type="reset"] {
     }
     .company-info{
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
+        width: 100%;
     }
     .logo_text{
         padding: 0 0;
     }
     .buttons{
         padding: 10px 0;
+    }
+    .logo_text{
+        display: none;
+    }
+    #profileIcon, #cartMobile{
+        display: block;
+    }
+    .buttons{
+        display: none;
+    }
+    #location{
+        padding: 0;
+    }
+    #burgerMenuMobile{
+        display: block;
+        margin: 0px 10px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #F7F6F2;
+    }
+    .searchIcon{
+        padding: 2.5px 5px;
+        background: #EAEAEA;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    #search{
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 7px 150px 7px 60px;
+    }
+    .navButtons{
+        display: block;
+    }
+    .navigationButtons{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
     }
 }

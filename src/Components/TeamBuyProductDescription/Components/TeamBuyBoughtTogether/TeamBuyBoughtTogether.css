@@ -1,0 +1,52 @@
+.BoughtTogetherContainer{
+    margin: 0 100px;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 50px;
+}
+
+.BoughtTogetherItems{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.BoughtTogetherHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#BoughtTogetherHeading{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.BoughtTogehterCheckoutDetails{
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#add_to_cart_bought_together{
+    font-weight: 600;
+    margin: 8px 0px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    background-color: #F6BA74;
+}
+
+@media screen and (max-width:768px){
+    .BoughtTogetherContainer{
+        margin: 0 20px;
+    }
+    .BoughtTogehterCheckoutDetails{
+        padding-top: 10px;
+        margin: auto;
+        align-items: center;
+    }
+}

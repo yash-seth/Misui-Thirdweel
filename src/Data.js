@@ -469,6 +469,13 @@ const sortByData = [
   {id:1,name:"Rating"},
 ]
 
+const TeamBuyData = [
+  { id: 0, src: "store1.png", alt: "store" },
+  { id: 1, src: "store2.png", alt: "store" },
+  { id: 2, src: "store1.png", alt: "store" },
+  { id: 3, src: "store2.png", alt: "store" },
+];
+
 export {
   TrendingData,
   StoryData,
@@ -486,4 +493,5 @@ export {
   categoryDropdownData,
   groupByDropdownData,
   sortByData,
+  TeamBuyData,
 };

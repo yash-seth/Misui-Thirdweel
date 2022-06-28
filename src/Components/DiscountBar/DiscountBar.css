@@ -14,10 +14,13 @@
 
 @media screen and (max-width: 768px) {              /*responsive code for the ecommerce gif and font sizes*/
     .discountBarcontainer{
-        margin:0 40px;
+        margin:0;
     }
     .banner{
         height: auto;
-        width: 100%;
+        width: 90%;
+    }
+    .banner{
+        padding: 10px 0;
     }
 }

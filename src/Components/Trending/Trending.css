@@ -7,7 +7,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 #trending-heading{
@@ -18,13 +18,18 @@
 
 @media screen and (max-width: 768px) {              /*responsive code for the ecommerce gif and font sizes*/
     .trendingContainer{
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: flex-start;
         align-items: center;
-        margin: 0 40px;
+        margin: 0 ;
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
     }
     #trendingItem{
-        padding: 10px 10px;
+        height: 130px;
+        padding: 0 10px;
     }
 }
 

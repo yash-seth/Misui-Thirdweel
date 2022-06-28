@@ -42,17 +42,7 @@ function HeaderMenu() {
                   <Link to="/offers" style={{ textDecoration: 'none' }}>
                     <button id='Offers'>Offers</button>
                   </Link>
-                  <div className='groupByDropdown'>
-                    <button id='Group_By'>Group By</button>
-                    <div className='groupByMenuContainer'>
-                        {groupByDropdownData.map((groupBy)=>{
-                          return (<>
-                                    <button id="groupByButton" style={{textDecoration:"none"}}><div id="groupByName">{groupBy.name}</div></button><br/>
-                                  </>
-                          )
-                        })}
-                    </div>
-                  </div>
+                    <button id='Group_By'>Group Buy</button>
                   <Link to="/wishlist" style={{ textDecoration: 'none' }}>
                     <button id='Wishlist'>Wishlist</button>
                   </Link>

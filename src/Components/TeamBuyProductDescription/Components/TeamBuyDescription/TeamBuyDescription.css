@@ -1,0 +1,302 @@
+.DescriptionContainer{
+    margin: 0 80px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* flex-wrap: wrap; */
+}
+
+.ProductDescription{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.imageGallery{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageGalleryImageFrame{
+    height: 100px;
+    width: 80px;
+    margin: 20px;
+    border: 1px solid rgba(0, 0, 0,0.4);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#imageGalleryImage{
+    width:90%
+}
+
+.product{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#product_big_image{
+    margin: 50px 50px 0px;
+}
+.productDescriptionDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.productDescriptionDetailsHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productDescriptionDetailsHeading{
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.productDescriptionDetailsSubHeading{
+    font-size: 12px;
+}
+
+#wishlist{
+    margin-left: 30px;
+}
+
+.productDescriptionDetailsHeaderDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.localStoresRecommendationsHeader{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.productDescriptionDetailsDesc{
+    width: 80%;
+}
+
+#check_availability{
+    margin-top: 50px;
+}
+
+.last_checked{
+    text-align: center;
+    font-size: 12px;
+}
+
+#productHeader, #localStoresRecommendationsHeading{
+    font-weight: 600;
+    font-size: 24px;
+}
+
+#categories{
+    font-size: 12px;
+}
+
+.localStores{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid rgba(0, 0, 0,0.4);
+    padding: 5px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    white-space: nowrap;
+    height: 400px;
+}
+
+.localStore{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.localStoreDetails{
+    padding: 10px 20px 10px;
+    font-size: 12px;
+}
+
+#localStoreImage{
+    padding: 10px;
+}
+
+#localStoreHeader{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#localStoreDistance{
+    font-size: 12px;
+}
+
+#localStoreAddress{
+    font-size: 10px;
+}
+
+.localStoreFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.TeamBuyProductDescControls{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.teamBuy{
+    padding: 12px 15px;
+    background-color: #F6BA74;
+    margin: 20px 20px 20px 0px;
+    border-radius: 8px;
+}
+
+.joinTeam{
+    background-color: #F6BA74;
+    border-radius: 8px;
+    padding: 6px 9px;
+}
+
+#strikethrough{
+    text-decoration: line-through;
+    font-size: 12px;
+}
+
+.teamBuyContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid rgba(0, 0, 0,0.4);
+    width: 100%;
+}
+
+.teamBuyTime{
+    font-size: 12px;
+}
+
+.teamBuyBox{
+    
+}
+
+.teamDetail{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.teamBuyInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.teamBuyControls{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.teamStatus{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.teamMemberIcons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#teamMemberIcon{
+    margin: 0 2px;
+}
+
+#teamBuyContainerHeader{
+    padding-left: 10px;
+}
+
+#teamImage{
+    padding: 10px;
+}
+
+#teamBuyDetailhr{
+    width: 100%;
+}
+@media screen and (max-width:1000px){
+    .localStores{
+        height: 300px;
+    }
+    .DescriptionContainer{
+        margin: 0 20px;
+    }
+    .DescriptionContainer{
+        flex-wrap: wrap;
+    }
+    .imageGalleryImageFrame{
+        height: 60px;
+        width: 40px;
+        margin: 20px 10px;
+        border: 1px solid rgba(0, 0, 0,0.4);
+    }
+    #product_big_image{
+        margin: 10px;
+        height: 250px;
+    }
+    .productDescriptionDetailsDesc{
+        word-wrap: break-word;
+    }
+    .product{
+        flex-wrap: wrap;
+    }
+    .localStores{
+        white-space: wrap;
+        padding: 0px;
+    }
+    .productDescriptionDetails{
+        align-items: center;
+    }
+    .product{
+        justify-content: space-around;
+        align-items: center;
+    }
+    .localStoresRecommendations{
+        margin: auto;
+        padding-bottom: 50px;
+    }
+    .localStoreDetails{
+        padding: 5px 5px;
+        font-size: 12px;
+    }
+}

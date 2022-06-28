@@ -34,7 +34,7 @@
 
 @media screen and (max-width: 768px) {              /*responsive code for the ecommerce gif and font sizes*/
     .aboutContainer{
-        margin: 0 30px;
+        margin: 0 20px;
     }
     #aboutBanner{
         width: 100%;

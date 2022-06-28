@@ -9,7 +9,9 @@ function StoreSearch() {
   return (
     <>
         <Header />
-        <HeaderMenu />
+        <div className='mobileView'>
+          <HeaderMenu />
+        </div>
         <StoreSearchHeader />
         <StoreResults />
         <PaginationFooter />

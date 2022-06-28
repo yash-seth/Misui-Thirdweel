@@ -9,7 +9,7 @@
 
 @media screen and (max-width: 768px) {
     .discountBannerContainer{
-        margin: 0 30px;
+        margin: 0;
     }
     #discountBanner{
         width: 100%;

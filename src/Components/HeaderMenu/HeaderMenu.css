@@ -74,10 +74,6 @@
 
 .groupByDropdown:hover .groupByMenuContainer     {display: block;}
 
-#burgerMenu{
-    display: none;
-}
-
 #burgerMenu, #Categories , #Offers, #Group_By, #Wishlist{
     margin: 0px 10px;
     padding: 10px;

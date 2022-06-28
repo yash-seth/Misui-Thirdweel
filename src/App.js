@@ -17,6 +17,8 @@ import Offers from './Components/Offers/Offers';
 import Wishlist from './Components/Wishlist/Wishlist';
 import StoreSearch from './Components/StoreSearch/StoreSearch';
 import ProductDescription from './Components/ProductDescription/ProductDescription';
+import TeamBuy from './Components/TeamBuy/TeamBuy';
+import TeamBuyProductDescription from './Components/TeamBuyProductDescription/TeamBuyProductDescription';
 
 function App() {
   return (
@@ -25,11 +27,14 @@ function App() {
         <Route path="/MyCart" element={<MyCart />} />
         <Route path="/" element={<>
         <Header />
-        <HeaderMenu />
+        <div className='mobileView'>
+          <HeaderMenu />
+        </div>
         <Stories/>
         <DiscountBar/>
         <TopOffers/>
         <Stores/>
+        <TeamBuy/>
         <Categories/>
         <DiscountBanner/>
         <Trending/>
@@ -42,6 +47,7 @@ function App() {
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/search" element={<StoreSearch />} />
         <Route path="/productDescription" element={<ProductDescription/>} />
+        <Route path="/TeamBuyproductDescription" element={<TeamBuyProductDescription/>} />
       </Routes>
     </>
   );
