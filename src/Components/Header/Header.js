@@ -40,7 +40,7 @@ function Header() {
                     <button id='Offers'>Offers</button>
                   </Link>
                   <Link to="/TeamBuyproductDescription" style={{ textDecoration: 'none' }}>
-                    <button id='Group_By'>Group Buy</button>
+                    <button id='Group_Buy'>Group Buy</button>
                   </Link>
                   <Link to="/wishlist" style={{ textDecoration: 'none' }}>
                     <button id='Wishlist'>Wishlist</button>
@@ -55,6 +55,18 @@ function Header() {
                     <Link to="/MyCart" style={{ textDecoration: 'none' }}><button id="my_cart"><img id="shopping_cart" src={require("./cart.png")} alt="my cart icon"/>My Cart</button></Link>
                 </div>
             </div>
+        </div>
+        <div className="sidebar">
+          <div className='profileSectionSidebar'>
+            <header>Hello Profile</header>
+          </div>
+          <div className='sidebarMenu'>
+            <ul>
+              <li><a href="#">Categories</a></li>
+              <li><a href="#">Offers</a></li>
+              <li><a href="#">Group Buy</a></li>
+            </ul>
+          </div>
         </div>
     </>
   )

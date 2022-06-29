@@ -476,6 +476,11 @@ const TeamBuyData = [
   { id: 3, src: "store2.png", alt: "store" },
 ];
 
+const TeamBuyProductData = [
+  { id: 0, teamLeaderSrc: "Ellipse 82.png", teamLeaderName: "Zoya", numOfMembers: [1,1,1,0], time: "23:18:03" },
+  { id: 1, teamLeaderSrc: "Ellipse 83.png", teamLeaderName: "Rahul", numOfMembers: [1,1,0,0], time: "23:18:03" },
+]
+
 export {
   TrendingData,
   StoryData,
@@ -494,4 +499,5 @@ export {
   groupByDropdownData,
   sortByData,
   TeamBuyData,
+  TeamBuyProductData,
 };

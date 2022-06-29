@@ -162,6 +162,13 @@
     align-items: center;
 }
 
+.teamBuy{
+    padding: 12px 15px;
+    background-color: #F6BA74;
+    margin: 20px 0px 0px 0px;
+    border-radius: 8px;
+}
+
 .TeamBuyProductDescControls{
     display: flex;
     flex-direction: column;
@@ -169,91 +176,59 @@
     align-items: center;
 }
 
-.teamBuy{
-    padding: 12px 15px;
-    background-color: #F6BA74;
-    margin: 20px 20px 20px 0px;
-    border-radius: 8px;
-}
-
-.joinTeam{
-    background-color: #F6BA74;
-    border-radius: 8px;
-    padding: 6px 9px;
-}
-
 #strikethrough{
     text-decoration: line-through;
     font-size: 12px;
 }
 
-.teamBuyContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    border: 1px solid rgba(0, 0, 0,0.4);
-    width: 100%;
+.TeamBuyContainer{
+    border:1px solid rgba(0, 0, 0,0.4);
+    margin-left: 0;
 }
 
-.teamBuyTime{
+.TeamBuyContainerContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.TeamBuyControls{
+    margin-right: 0;
+}
+
+.TeamBuyDetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.TeamBuyDetailsInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.teamJoin{
+    background-color: #F6BA74;
+    padding: 6px 9px;
+    border-radius: 8px;
+}
+
+.TeamBuyControls{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#TeamBuyTime{
     font-size: 12px;
 }
 
-.teamBuyBox{
-    
-}
-
-.teamDetail{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.teamBuyInfo{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.teamBuyControls{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.teamStatus{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.teamMemberIcons{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-#teamMemberIcon{
-    margin: 0 2px;
-}
-
-#teamBuyContainerHeader{
-    padding-left: 10px;
-}
-
-#teamImage{
-    padding: 10px;
-}
-
-#teamBuyDetailhr{
-    width: 100%;
-}
 @media screen and (max-width:1000px){
     .localStores{
         height: 300px;
