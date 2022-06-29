@@ -14,6 +14,7 @@
 }
 
 .categoryDropdown{
+    z-index: 99;
     position: relative;
     display: inline-block;
 }
@@ -106,4 +107,134 @@ button, input[type="submit"], input[type="reset"] {
     #burgerMenu{
         display: block;
     }
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 420px;
+    height: 100%;
+    z-index: 100;
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    line-height: 25px;
+    font-weight: 500;
+    transition: 0.4s;
+}
+
+#closeButtonSidebar{
+    position: fixed;
+    top: 0;
+    left: 420px;
+    z-index: 100;
+    display: none;
+    transition: 0.4s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sidebar a{
+    text-decoration: none;
+}
+
+.sidebar ul{
+    list-style: none;
+}
+
+.sidebar ul a{
+    display: block;
+}
+
+.profileSectionSidebar{
+    background-color: #4B8D5E;
+    padding:20px 50px;
+    color: white;
+}
+
+.sidebarMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+
+.sidebarMenuOption{
+    margin: 2px 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sidebarMenuOption:hover{
+    color:#4B8D5E
+}
+
+.border{
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    border-top: 1px solid black;
+}
+
+.sidebarCategoriesMenu{
+    position: fixed;
+    top: 25%;
+    margin: 2px 25px;
+    display: none;
+    transition: 0.4s;
+}
+
+.mainMenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#categoryMenuHeader{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#mainMenuArrow{
+    transform: rotate(180deg);
+}
+
+.categoriesMenuSidebar{
+    margin:10px;
+}
+
+#sidebarCategoryName{
+    margin:5px 10px;
+}
+
+#sidebarCategoryName:hover{
+    color:#4B8D5E
+}
+
+.overlaySidebar{
+    position: fixed;
+    right:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(103, 103, 103,0.8);
+    z-index: 99;
+    display: none;
+    transition: 0.4s;
+}
+
+.overlayCategoryDropdown{
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    height: 85%;
+    background-color: rgba(103, 103, 103,0.8);
+    z-index: 98;
+    display: none;
+    transition: 0.4s;
 }

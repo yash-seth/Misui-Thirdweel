@@ -223,37 +223,3 @@ button, input[type="submit"], input[type="reset"] {
         align-items: center;
     }
 }
-
-.sidebar{
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 300px;
-    height: 100%;
-    z-index: 100;
-    font-family: 'Montserrat', sans-serif;
-    background-color: white;
-    line-height: 30px;
-    font-weight: 500;
-}
-
-.sidebar a{
-    text-decoration: none;
-}
-
-.sidebar ul{
-    list-style: none;
-}
-
-.sidebar ul a{
-    display: block;
-}
-
-.profileSectionSidebar{
-    background-color: #4B8D5E;
-    padding:50px;
-}
-
-.sidebar.active{
-    left: 0;
-}

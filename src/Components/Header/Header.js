@@ -24,11 +24,11 @@ function Header() {
               <button style={{ textDecoration: 'none' }}><img id="burgerMenuMobile" src={require("./burgerMenu.png")} alt="burger menu icon" height="25px"/></button>
               <div className='search'>
                 <input id="search" type="text" placeholder="Search.."></input>
-                <div className='searchIcon'>
                 <Link to="/search" style={{ textDecoration: 'none' }}>
+                <div className='searchIcon'>
                   <img id="searchIcon" src={require("./search.png")} alt="search icon"/>
-                  </Link>
               </div>
+              </Link>
               </div>     
             </div>
             <div className="navButtons">
@@ -39,7 +39,7 @@ function Header() {
                 <Link to="/offers" style={{ textDecoration: 'none' }}>
                     <button id='Offers'>Offers</button>
                   </Link>
-                  <Link to="/TeamBuyproductDescription" style={{ textDecoration: 'none' }}>
+                  <Link to="/teamBuyProductDescription" style={{ textDecoration: 'none' }}>
                     <button id='Group_Buy'>Group Buy</button>
                   </Link>
                   <Link to="/wishlist" style={{ textDecoration: 'none' }}>
@@ -55,18 +55,6 @@ function Header() {
                     <Link to="/MyCart" style={{ textDecoration: 'none' }}><button id="my_cart"><img id="shopping_cart" src={require("./cart.png")} alt="my cart icon"/>My Cart</button></Link>
                 </div>
             </div>
-        </div>
-        <div className="sidebar">
-          <div className='profileSectionSidebar'>
-            <header>Hello Profile</header>
-          </div>
-          <div className='sidebarMenu'>
-            <ul>
-              <li><a href="#">Categories</a></li>
-              <li><a href="#">Offers</a></li>
-              <li><a href="#">Group Buy</a></li>
-            </ul>
-          </div>
         </div>
     </>
   )

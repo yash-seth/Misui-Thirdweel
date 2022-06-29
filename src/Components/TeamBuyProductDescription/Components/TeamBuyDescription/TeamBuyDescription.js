@@ -91,7 +91,7 @@ function Description() {
                               id="TeamBuyProfileImage"
                               key={Team.id}
                               src={require("./" + Team.teamLeaderSrc)}
-                              alt="team leader photo"
+                              alt="team leader icon"
                             />
                             {Team.teamLeaderName}
                           </div>

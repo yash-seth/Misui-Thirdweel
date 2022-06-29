@@ -459,11 +459,6 @@ const categoryDropdownData =[
   {id:8,name:"View All"},
 ]
 
-const groupByDropdownData = [
-  {id:0,name:"Price"},
-  {id:1,name:"Relevance"},
-]
-
 const sortByData = [
   {id:0,name:"Relevance"},
   {id:1,name:"Rating"},
@@ -496,7 +491,6 @@ export {
   localStoresData,
   imageGalleryData,
   categoryDropdownData,
-  groupByDropdownData,
   sortByData,
   TeamBuyData,
   TeamBuyProductData,
