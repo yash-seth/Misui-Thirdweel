@@ -4,7 +4,7 @@ import {TeamBuyData} from "../../Data"
 
 function TeamBuy() {
     return (
-        <div className='TeamBuyContainer'>
+        <div className='TeamBuyHomepageContainer'>
             <div className='TeamBuyHeading'>
                 <section id="TeamBuy-heading">Team Buy</section>
                 <img id="arrow" src={require("./arrow.png")} alt="arrow" />

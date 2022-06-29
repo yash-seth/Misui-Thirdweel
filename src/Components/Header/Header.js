@@ -24,11 +24,11 @@ function Header() {
               <button style={{ textDecoration: 'none' }}><img id="burgerMenuMobile" src={require("./burgerMenu.png")} alt="burger menu icon" height="25px"/></button>
               <div className='search'>
                 <input id="search" type="text" placeholder="Search.."></input>
-                <div className='searchIcon'>
                 <Link to="/search" style={{ textDecoration: 'none' }}>
+                <div className='searchIcon'>
                   <img id="searchIcon" src={require("./search.png")} alt="search icon"/>
-                  </Link>
               </div>
+              </Link>
               </div>     
             </div>
             <div className="navButtons">
@@ -39,8 +39,8 @@ function Header() {
                 <Link to="/offers" style={{ textDecoration: 'none' }}>
                     <button id='Offers'>Offers</button>
                   </Link>
-                  <Link to="/TeamBuyproductDescription" style={{ textDecoration: 'none' }}>
-                    <button id='Group_By'>Group Buy</button>
+                  <Link to="/teamBuyProductDescription" style={{ textDecoration: 'none' }}>
+                    <button id='Group_Buy'>Group Buy</button>
                   </Link>
                   <Link to="/wishlist" style={{ textDecoration: 'none' }}>
                     <button id='Wishlist'>Wishlist</button>

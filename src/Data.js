@@ -459,11 +459,6 @@ const categoryDropdownData =[
   {id:8,name:"View All"},
 ]
 
-const groupByDropdownData = [
-  {id:0,name:"Price"},
-  {id:1,name:"Relevance"},
-]
-
 const sortByData = [
   {id:0,name:"Relevance"},
   {id:1,name:"Rating"},
@@ -475,6 +470,11 @@ const TeamBuyData = [
   { id: 2, src: "store1.png", alt: "store" },
   { id: 3, src: "store2.png", alt: "store" },
 ];
+
+const TeamBuyProductData = [
+  { id: 0, teamLeaderSrc: "Ellipse 82.png", teamLeaderName: "Zoya", numOfMembers: [1,1,1,0], time: "23:18:03" },
+  { id: 1, teamLeaderSrc: "Ellipse 83.png", teamLeaderName: "Rahul", numOfMembers: [1,1,0,0], time: "23:18:03" },
+]
 
 export {
   TrendingData,
@@ -491,7 +491,7 @@ export {
   localStoresData,
   imageGalleryData,
   categoryDropdownData,
-  groupByDropdownData,
   sortByData,
   TeamBuyData,
+  TeamBuyProductData,
 };

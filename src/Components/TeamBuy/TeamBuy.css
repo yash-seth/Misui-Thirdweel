@@ -1,4 +1,4 @@
-.TeamBuyContainer{
+.TeamBuyHomepageContainer{
     font-family: 'Montserrat', sans-serif;
     margin: 0 100px;
     padding: 30px 0;
@@ -33,7 +33,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .TeamBuyContainer{
+    .TeamBuyHomepageContainer{
         margin: 0 20px;
     }
     #TeamBuyBanner{
