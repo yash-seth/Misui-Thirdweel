@@ -476,6 +476,12 @@ const TeamBuyProductData = [
   { id: 1, teamLeaderSrc: "Ellipse 83.png", teamLeaderName: "Rahul", numOfMembers: [1,1,0,0], time: "23:18:03" },
 ]
 
+
+const addressData = [
+  {id:0, label:"Home", name:"Shivam Rathore", address: "2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
+  {id:1, label:"Home", name:"Shivam Rathore", address: "2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
+  {id:2, label:"Home", name:"Shivam Rathore", address: "2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
+]
 export {
   TrendingData,
   StoryData,
@@ -494,4 +500,5 @@ export {
   sortByData,
   TeamBuyData,
   TeamBuyProductData,
+  addressData
 };

@@ -14,7 +14,7 @@
 }
 
 .categoryDropdown{
-    z-index: 99;
+    z-index: 96;
     position: relative;
     display: inline-block;
 }
@@ -234,7 +234,7 @@ button, input[type="submit"], input[type="reset"] {
     width: 100%;
     height: 85%;
     background-color: rgba(103, 103, 103,0.8);
-    z-index: 98;
+    z-index: 95;
     display: none;
     transition: 0.4s;
 }
