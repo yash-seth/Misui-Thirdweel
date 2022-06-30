@@ -1,10 +1,6 @@
 import React from "react";
 import "./TeamBuyDescription.css";
-import {
-  localStoresData,
-  imageGalleryData,
-  TeamBuyProductData,
-} from "../../../../Data";
+import { localStoresData, imageGalleryData, TeamBuyProductData, } from "../../../../Data";
 
 function Description() {
   return (
@@ -39,6 +35,22 @@ function Description() {
                 src={require("./product_big_photo.png")}
                 alt="product big"
               />
+              <div className="imageGalleryMobile">
+              {imageGalleryData.map((image) => {
+                return (
+                  <>
+                    <div className="imageGalleryImageFrame">
+                      <img
+                        id="imageGalleryImage"
+                        key={image.id}
+                        src={require("./" + image.src)}
+                        alt={image.alt}
+                      />
+                    </div>
+                  </>
+                );
+              })}
+            </div>
               <div>
                 <button style={{ textDecoration: "none" }}>
                   <img
@@ -80,10 +92,52 @@ function Description() {
                 </button>
               </div>
               <div className="TeamBuyContainer">
-                <div>Team Buy</div>
+                <div id="TeamBuyContainerHeader">Join teams</div>
                 <div className="TeamBuyContainerContent">
                   {TeamBuyProductData.map((Team) => {
-                    return (
+                    return Team.id!==Object.keys(Team).length-1 ?(
+                      <>
+                        <div className="TeamBuyDetails">
+                          <div className="TeamBuyDetailsInfo">
+                            <img
+                              id="TeamBuyProfileImage"
+                              key={Team.id}
+                              src={require("./" + Team.teamLeaderSrc)}
+                              alt="team leader icon"
+                            />
+                            {Team.teamLeaderName}
+                          </div>
+                          <div className="TeamBuyControls">
+                            <button className="teamJoin">Join</button>
+                            <div className="TeamBuyJoinDetails">
+                              <div className="TeamBuyJoinIcons">
+                                {Team.numOfMembers.map((teamMember) => {
+                                  return teamMember === 1 ? (
+                                    <img
+                                      id="TeamIconActive"
+                                      key={Team.id}
+                                      src={require("./Vector-2.png")}
+                                      alt="team icon active"
+                                    />
+                                  ) : (
+                                    <img
+                                      id="TeamIconInactive"
+                                      key={Team.id}
+                                      src={require("./Vector-3.png")}
+                                      alt="team icon inactive"
+                                      height="16.5px"
+                                    />
+                                  );
+                                })}
+                              </div>
+                              <div id="TeamBuyTime">Time {Team.time}</div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr id="hr"/>
+                      </>
+                    ):
+                    (
                       <>
                         <div className="TeamBuyDetails">
                           <div className="TeamBuyDetailsInfo">
@@ -122,7 +176,6 @@ function Description() {
                             </div>
                           </div>
                         </div>
-                        <hr />
                       </>
                     );
                   })}

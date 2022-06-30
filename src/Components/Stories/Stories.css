@@ -10,9 +10,8 @@
 .stories{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    /* overflow: hidden; */
 }
 
 .storiesContainer img{
@@ -28,10 +27,16 @@
     font-weight: 600;
 }
 
+#story{
+    width:8%;
+    padding: 0 20px;
+}
+
 @media screen and (max-width: 768px){
     #story{
-        width:25%;
+        width:20%;
         padding: 0 10px;
+        height: 70px;
     }
     .storiesContainer{
         margin: 0 20px;

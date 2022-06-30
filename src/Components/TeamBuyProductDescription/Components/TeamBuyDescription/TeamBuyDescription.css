@@ -183,14 +183,16 @@
 
 .TeamBuyContainer{
     border:1px solid rgba(0, 0, 0,0.4);
+    margin: 10px;
     margin-left: 0;
+    width: 90%;
 }
 
 .TeamBuyContainerContent{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
 }
 
@@ -203,6 +205,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+}
+
+#TeamBuyContainerHeader{
+    padding: 10px;
 }
 
 .TeamBuyDetailsInfo{
@@ -210,6 +217,10 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+}
+
+#TeamBuyProfileImage{
+    padding: 5px;
 }
 
 .teamJoin{
@@ -227,6 +238,23 @@
 
 #TeamBuyTime{
     font-size: 12px;
+}
+
+#hr{
+    margin-left: 0;
+    width: 100%;
+}
+
+.TeamBuyJoinDetails{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageGalleryMobile{
+    display: none;
 }
 
 @media screen and (max-width:1000px){
@@ -273,5 +301,19 @@
     .localStoreDetails{
         padding: 5px 5px;
         font-size: 12px;
+    }
+    .TeamBuyContainer{
+        width: 70%;
+    }
+
+    .imageGallery{
+        display: none;
+    }
+
+    .imageGalleryMobile{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 }

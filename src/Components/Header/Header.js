@@ -2,23 +2,24 @@ import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { addressData } from "../../Data";
-import {useState} from "react"
+import { useState } from "react";
+import { categoryDropdownData } from "../../Data";
 
 function Header() {
-  const [addressModalState, setAddressModalState] = useState(false)
+  const [addressModalState, setAddressModalState] = useState(false);
 
-  const toggleAddressModal = (e) =>{
-    if(!addressModalState){
-      setAddressModalState(true)
-      document.getElementsByClassName("addressModal")[0].style.display = "block";
+  const toggleAddressModal = (e) => {
+    if (!addressModalState) {
+      setAddressModalState(true);
+      document.getElementsByClassName("addressModal")[0].style.display =
+        "block";
       document.getElementById("overlayAddressModal").style.display = "block";
-    }
-    else{
-      setAddressModalState(false)
+    } else {
+      setAddressModalState(false);
       document.getElementsByClassName("addressModal")[0].style.display = "none";
       document.getElementById("overlayAddressModal").style.display = "none";
     }
-  }
+  };
   return (
     <>
       <div className="mainHeader">
@@ -36,7 +37,10 @@ function Header() {
                 <b>ThirdWeel</b>
               </div>
             </Link>
-            <button style={{ textDecoration: "none" }} onClick={toggleAddressModal}>
+            <button
+              style={{ textDecoration: "none" }}
+              onClick={toggleAddressModal}
+            >
               <img
                 id="location"
                 src={require("./navigation.png")}
@@ -97,6 +101,23 @@ function Header() {
           <div className="navigationButtons">
             <div className="categoryDropdownMobile">
               <button id="CategoriesMobile">Categories</button>
+              <div className="categoriesMenuContainerMobile">
+                <div className="categoryMenuMobile">
+                  {categoryDropdownData.map((category) => {
+                    return (
+                      <>
+                        <button
+                          id="categoryButtonMobile"
+                          style={{ textDecoration: "none" }}
+                        >
+                          <div id="categoryNameMobile">{category.name}</div>
+                        </button>
+                        <br />
+                      </>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
             <Link to="/offers" style={{ textDecoration: "none" }}>
               <button id="Offers">Offers</button>
@@ -175,6 +196,50 @@ function Header() {
         </div>
       </div>
       <div id="overlayAddressModal"></div>
+      <div className="addressModalMobile">
+        <img
+          id="addressModalCloseButtonMobile"
+          src={require("./Cross button.png")}
+          alt="close icon"
+        />
+        <div className="addressModalHeaderMobile">
+          <div className="addressModalHeaderTextMobile">
+            Choose your location
+          </div>
+        </div>
+        <div className="addressModalMainMobile">
+          <div className="addressModalMainTextMobile">
+            Select a delivery location to see your nearby local stores, product
+            availability and delivery options
+          </div>
+          <div className="addressesMobile">
+            {addressData.map((addr) => {
+              return (
+                <>
+                  <div className="addressContainerMobile">
+                    <div className="addressLabelMobile">{addr.label}</div>
+                    <div className="addressMainMobile">
+                      <b>{addr.name}</b> {addr.address}
+                    </div>
+                  </div>
+                  <br />
+                </>
+              );
+            })}
+          </div>
+          <button>
+            <div className="addressContainerFooterMobile">
+              Add an address or pickup point
+            </div>
+          </button>
+          <br />
+          <div className="separatorMobile">or enter a pincode</div>
+          <div className="addressPincodeControlsMobile">
+            <input id="pincodeInputMobile" type="text" />
+            <button id="applyPincodeMobile">Apply</button>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

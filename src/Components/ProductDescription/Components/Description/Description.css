@@ -162,6 +162,10 @@
     align-items: center;
 }
 
+.imageGalleryMobile{
+    display: none;
+}
+
 @media screen and (max-width:1000px){
     .localStores{
         height: 300px;
@@ -187,16 +191,14 @@
     }
     .product{
         flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
     }
     .localStores{
         white-space: wrap;
         padding: 0px;
     }
     .productDescriptionDetails{
-        align-items: center;
-    }
-    .product{
-        justify-content: space-around;
         align-items: center;
     }
     .localStoresRecommendations{
@@ -206,5 +208,15 @@
     .localStoreDetails{
         padding: 5px 5px;
         font-size: 12px;
+    }
+    .imageGallery{
+        display: none;
+    }
+
+    .imageGalleryMobile{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 }

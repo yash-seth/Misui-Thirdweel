@@ -228,7 +228,7 @@ button, input[type="submit"], input[type="reset"] {
 .addressModal{
     position: fixed;
     left:38%;
-    top:15%;
+    top:10%;
     width: 25%;
     font-family: 'Montserrat', sans-serif;
     z-index: 98;
@@ -339,6 +339,170 @@ button, input[type="submit"], input[type="reset"] {
   }
 
   #pincodeInput{
+    margin: 10px;
+    padding: 6px 8px;
+    border-radius: 10%;
+    border: 1px solid rgba(0,0,0,0.2);
+  }
+
+  #overlayAddressModal{
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(103, 103, 103,0.8);
+    z-index: 97;
+    display: none;
+    transition: 0.4s;
+  }
+
+  .categoriesMenuContainerMobile{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    left: 0;
+    position: absolute;
+    display: none;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.categoryMenuMobile{
+    display: none;
+    padding: 0px 25px;
+}
+
+#categoryNameMobile:hover{
+    color: #4B8D5E;
+}
+
+#categoryNameMobile{
+    font-size: 16px;
+    font-weight: 400;
+    padding: 20px 30px;
+    white-space: nowrap;
+}
+
+.categoryDropdownMobile:hover .categoryMenuMobile   {display: block;}
+
+#hr{
+    width: 100%;
+}
+
+.addressModalMobile{
+    position: fixed;
+    left:0%;
+    bottom:-1%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 98;
+    display:none;
+    transition: 0.4s;
+}
+
+.addressModalHeaderMobile{
+    background-color: #F7F6F2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.addressModalHeaderTextMobile{
+    padding: 12px 20px;
+    font-weight: 600;
+}
+
+#addressModalCloseButtonMobile{
+    padding:12px 20px;
+}
+
+.addressModalMainMobile{
+    background-color: white;
+}
+
+.addressModalMainTextMobile{
+    margin:0 10px;
+    font-size:12px;
+    padding:10px;
+}
+
+.addressesMobile{
+    margin:0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.addressContainerMobile{
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.addressLabelMobile{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.addressContainerMobile:hover{
+    background-color: #cbffda;
+}
+
+.addressContainerFooterMobile{
+    padding: 5px 15px 10px;
+    font-size: 14px;
+    color: #4B8D5E;
+    font-weight: 600;
+    margin:0px 40px;
+}
+
+.addressContainerFooterMobile:hover{
+    color: #74b887;
+}
+
+.separatorMobile {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    padding: 0 0 10px;
+  }
+  
+  .separatorMobile::before,
+  .separatorMobile::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+  }
+  
+  .separatorMobile:not(:empty)::before {
+    margin-right: .25em;
+  }
+  
+  .separatorMobile:not(:empty)::after {
+    margin-left: .25em;
+  }
+
+  .addressPincodeControlsMobile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #applyPincodeMobile{
+    padding: 6px 8px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 30%;
+    color: black;
+  }
+
+  #pincodeInputMobile{
     margin: 10px;
     padding: 6px 8px;
     border-radius: 10%;
