@@ -482,6 +482,13 @@ const addressData = [
   {id:1, label:"Home", name:"Shivam Rathore", address: "2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
   {id:2, label:"Home", name:"Shivam Rathore", address: "2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
 ]
+
+const storeWiseCartData = [
+  {id:0, name:"Laxman Stores",distance:"4.2 km",addr:"2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102", total:"$1154",savings:"$145",products:[{id:0,name:"Lays Potato Chips - Masala Magic", amount: "115gm/130gm (Weight May Vary)", status: "In Stock", cost: "$55", quantity: "2", imgSrc:"prod1.png"},{id:1,name:"Fortune Sunlite Refined Sunflower Oil", amount: "5L", status: "In Stock", cost: "$680", quantity: "1", imgSrc:"prod2.png"}]},
+  {id:1, name:"Laxman Stores",distance:"4.2 km",addr:"2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102", total:"$1154",savings:"$145",products:[{id:0,name:"Lays Potato Chips - Masala Magic", amount: "115gm/130gm (Weight May Vary)", status: "In Stock", cost: "$55", quantity: "2", imgSrc:"prod1.png"},{id:1,name:"Fortune Sunlite Refined Sunflower Oil", amount: "5L", status: "In Stock", cost: "$680", quantity: "1", imgSrc:"prod2.png"}]},
+  {id:2, name:"Laxman Stores",distance:"4.2 km",addr:"2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102", total:"$1154",savings:"$145",products:[{id:0,name:"Lays Potato Chips - Masala Magic", amount: "115gm/130gm (Weight May Vary)", status: "In Stock", cost: "$55", quantity: "2", imgSrc:"prod1.png"},{id:1,name:"Fortune Sunlite Refined Sunflower Oil", amount: "5L", status: "In Stock", cost: "$680", quantity: "1", imgSrc:"prod2.png"}]},
+]
+
 export {
   TrendingData,
   StoryData,
@@ -500,5 +507,6 @@ export {
   sortByData,
   TeamBuyData,
   TeamBuyProductData,
-  addressData
+  addressData,
+  storeWiseCartData,
 };

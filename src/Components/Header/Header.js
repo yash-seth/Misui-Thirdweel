@@ -2,21 +2,45 @@ import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { addressData } from "../../Data";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { categoryDropdownData } from "../../Data";
 
 function Header() {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 768;
+
   const [addressModalState, setAddressModalState] = useState(false);
 
   const toggleAddressModal = (e) => {
-    if (!addressModalState) {
+    if (!addressModalState && !isMobile) {
       setAddressModalState(true);
       document.getElementsByClassName("addressModal")[0].style.display =
         "block";
       document.getElementById("overlayAddressModal").style.display = "block";
-    } else {
+    } else if (addressModalState && !isMobile) {
       setAddressModalState(false);
       document.getElementsByClassName("addressModal")[0].style.display = "none";
+      document.getElementById("overlayAddressModal").style.display = "none";
+    } else if (!addressModalState && isMobile) {
+      setAddressModalState(true);
+      document.getElementsByClassName("addressModalMobile")[0].style.display =
+        "block";
+      document.getElementById("overlayAddressModal").style.display = "block";
+    } else {
+      setAddressModalState(false);
+      document.getElementsByClassName("addressModalMobile")[0].style.display =
+        "none";
       document.getElementById("overlayAddressModal").style.display = "none";
     }
   };
@@ -197,11 +221,15 @@ function Header() {
       </div>
       <div id="overlayAddressModal"></div>
       <div className="addressModalMobile">
-        <img
-          id="addressModalCloseButtonMobile"
-          src={require("./Cross button.png")}
-          alt="close icon"
-        />
+        <div id="closeButtonAddressModalMobile">
+          <button onClick={toggleAddressModal}>
+            <img
+              id="addressModalCloseButtonMobile"
+              src={require("./Cross button.png")}
+              alt="close icon"
+            />
+          </button>
+        </div>
         <div className="addressModalHeaderMobile">
           <div className="addressModalHeaderTextMobile">
             Choose your location

@@ -379,7 +379,7 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 #categoryNameMobile{
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
     padding: 20px 30px;
     white-space: nowrap;
@@ -416,7 +416,17 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 #addressModalCloseButtonMobile{
-    padding:12px 20px;
+    padding:12px 15px;
+    background-color: white;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#closeButtonAddressModalMobile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .addressModalMainMobile{
@@ -425,7 +435,7 @@ button, input[type="submit"], input[type="reset"] {
 
 .addressModalMainTextMobile{
     margin:0 10px;
-    font-size:12px;
+    font-size:8px;
     padding:10px;
 }
 
@@ -438,14 +448,14 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 .addressContainerMobile{
-    font-size: 14px;
+    font-size: 8px;
     padding: 10px;
     border-radius: 12px;
     border: 1px solid rgba(0,0,0,0.2);
 }
 
 .addressLabelMobile{
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 600;
 }
 
@@ -455,7 +465,7 @@ button, input[type="submit"], input[type="reset"] {
 
 .addressContainerFooterMobile{
     padding: 5px 15px 10px;
-    font-size: 14px;
+    font-size: 10px;
     color: #4B8D5E;
     font-weight: 600;
     margin:0px 40px;

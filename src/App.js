@@ -19,12 +19,13 @@ import StoreSearch from './Components/StoreSearch/StoreSearch';
 import ProductDescription from './Components/ProductDescription/ProductDescription';
 import TeamBuy from './Components/TeamBuy/TeamBuy';
 import TeamBuyProductDescription from './Components/TeamBuyProductDescription/TeamBuyProductDescription';
+import StoreWiseCart from './Components/StoreWiseCart/StoreWiseCart';
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/MyCart" element={<MyCart />} />
+        <Route path="/MyCart" element={<StoreWiseCart />} />
         <Route path="/" element={<>
         <Header />
         <div className='mobileView'>
