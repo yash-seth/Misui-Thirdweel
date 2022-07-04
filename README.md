@@ -1,4 +1,4 @@
-# Thirdweel Fronted
+# Thirdweel Frontend
 ## Contents
 - Landing Page
 - Website Store
