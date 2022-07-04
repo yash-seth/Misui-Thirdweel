@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./StoreWiseBreakdown.css";
 import { storeWiseCartData } from "../../../../Data";
 import {Link} from 'react-router-dom'
 
 function StoreWiseBreakdown() {
+
   return (
     <div className="StoreWiseBreakdownContainer">
       <div className="StorewiseBreakdown">
@@ -16,7 +17,7 @@ function StoreWiseBreakdown() {
           />
         </div>
         <div className="StoreWiseBreakdownHeaderSubText">
-          Showing results for 3 stores
+          Showing results for {storeWiseCartData.length} stores
         </div>
         <div className="storeWiseBreakdown">
           <div className="storeBreakdown">
@@ -48,16 +49,17 @@ function StoreWiseBreakdown() {
                     {storeData.products.map((product) => {
                       return (
                         <>
-                         <Link to="/productDescription" style={{ textDecoration: 'none', color: "inherit"}}>
                           <div className="StoreWiseProduct" key={product.key}>
+                          <Link to="/productDescription" style={{ textDecoration: 'none', color: "inherit"}}>
                             <img
                               id="storeWiseProdImg"
                               src={require("./" + product.imgSrc)}
                               alt="product image"
                             />
+                            </Link>
                             <div className="StoreWiseProductInfo">
                               <div className="storeWiseProdNameHeader">
-                                <div id="storeWiseProdName">{product.name}</div>
+                              <Link to="/productDescription" style={{ textDecoration: 'none', color: "inherit"}}><div id="storeWiseProdName">{product.name}</div></Link>
                                 <div>
                                   <button>
                                     <img
@@ -77,12 +79,13 @@ function StoreWiseBreakdown() {
                                   Cost: {product.cost}
                                 </div>
                                 <div id="storeWiseProdQuantity">
-                                  Quantity: {product.quantity}
+                                  <div id="storeWiseProdQuantityControls"><button><img id="storeWiseProdQuantityRemoveBtn" src={require("./minusQuantity.png")} alt="minus quantity button" /></button>
+                                  <div>{product.quantity}</div>
+                                  <button><img id="storeWiseProdQuantityAddBtn" src={require("./addQuantity.png")} alt="add quantity button" height="15px"/></button></div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                          </Link>
                           <hr />
                         </>
                       );

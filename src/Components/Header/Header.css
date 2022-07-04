@@ -60,10 +60,6 @@
     color: black
 }
 
-#shopping_cart{
-    margin-top: 4.5px;
-}
-
 #log_in{
     padding:0 30px;
     background-color: #4B8D5E;
@@ -114,7 +110,6 @@ input::-webkit-input-placeholder {
 }
 
 #Home , #my_cart, #Hiring, #Contact{
-    padding-top: 4.5px;
     margin: 0px 30px;
 
 }

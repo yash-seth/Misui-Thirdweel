@@ -131,7 +131,30 @@
 }
 
 #storeWiseProdQuantity{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     font-size: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 40%;
+}
+
+#storeWiseProdQuantityAddBtn{
+    margin-top: 2px;
+}
+
+#storeWiseProdQuantityRemoveBtn{
+    margin:0 2px;
+    height: 12px;
+}
+
+#storeWiseProdQuantityControls{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .storeWiseProdNameHeader{
@@ -202,4 +225,79 @@
     padding: 20px;
     background-color: #f6ba74;
     width: 100%;
+}
+
+@media screen and (max-width: 768px){
+    #StoreWiseBreakdownHeaderText{
+        font-size: 26px;
+    }
+    .storeBreakdownHeader{
+        padding-top: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    .storeBreakdownDetailsHeading{
+        font-size: 16px;
+        font-weight: 600;
+        margin-right:12px;
+    }
+    .storeBreakdownAddr{
+        width: 90%;
+        word-wrap: break-word;
+        font-size: 12px;
+    }
+    .StoreWiseBreakdownContainer{
+        margin: 20px;
+    }
+    .proceedToCheckoutContanier{
+        position: static;
+        width: 100%;
+    }
+    .proceedToCheckoutContanierHeader{
+        padding: 20px 0;
+        margin:0 15px;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .storeWiseBreakdown{
+        width: 100%;
+        word-wrap: break-word;
+        overflow-x: visible;
+    }
+    #storeWiseProdImg{
+        padding-right:0px;
+        height: 80px;
+    }
+    #storeWiseProdName{
+        font-size: 14px;
+    }
+    .StoreWiseProducts{
+        margin: 4px 2px;
+        white-space: pre-wrap;
+        height: 280px;
+    }
+    .StoreWiseProductInfo{
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 100%;
+    }
+    #crossButton{
+        padding: 0 5px;
+    }
+    .proceedToCheckoutContanierHeader{
+        padding: 10px 0;
+        margin:0 8px;
+        font-size: 18px;
+    }
+    .price, .discount, .coupons, .deliveryCharges{
+        font-size: 14px;
+    }
+    #totalChargesHeader, #totalChargesAmount{
+        font-size: 14px;
+    }
+    .walletInfo{
+        font-size: 12px;
+    }
 }

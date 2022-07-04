@@ -130,7 +130,7 @@ function HeaderMenu() {
           </div>
         </div>
       </div>
-      <hr />
+      <hr id="headerMenuBottomHR"/>
       <div className="sidebar">
         <div className="profileSectionSidebar">
           <img src={require("./Profile avatar icon.png")} alt="Profile avatar icon.png" />

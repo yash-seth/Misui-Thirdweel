@@ -97,6 +97,10 @@ button, input[type="submit"], input[type="reset"] {
 	outline: inherit;
 }
 
+#headerMenuBottomHR{
+    margin: 0;
+}
+
 @media screen and (max-width: 768px){
     .headerMenuContainer{
         margin: 0 40px;
