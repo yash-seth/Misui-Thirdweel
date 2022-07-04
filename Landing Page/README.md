@@ -1,4 +1,4 @@
-# Thirdweel Landing Page Frontend
+# Landing Page Frontend
 ## External Libraries Used
 - React Router
 
