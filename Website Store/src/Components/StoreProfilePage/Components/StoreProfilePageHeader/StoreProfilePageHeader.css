@@ -1,0 +1,38 @@
+.StoreProfilePageHeaderMain{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 200px;
+}
+
+.StoreProfilePageHeaderMainTopContainer{
+    min-width: 900px;
+    background-color: #DEEBE1;
+    min-height: 300px;
+}
+
+.StoreProfileDetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.StoreProfileDetailsMainExtra{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.StoreProfileDetailsPostsCount{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.StoreProfileDetailsFollowersCount{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}

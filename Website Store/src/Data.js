@@ -489,6 +489,10 @@ const storeWiseCartData = [
   {id:2, name:"Laxman Stores",distance:"4.2 km",addr:"2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102", total:"$1154",savings:"$145",products:[{id:0,name:"Lays Potato Chips - Masala Magic", amount: "115gm/130gm (Weight May Vary)", status: "In Stock", cost: "$55", quantity: "2", imgSrc:"prod1.png"},{id:1,name:"Fortune Sunlite Refined Sunflower Oil", amount: "5L", status: "In Stock", cost: "$680", quantity: "1", imgSrc:"prod2.png"}]},
 ]
 
+const storeProfileData = [
+  {id:0, name:"Laxmi Stores", distance: "4.2km", rating: "rating.png", postsCount: 23, followersCount: 356, contactDetails: "75063326420",about:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta adipisci, rem tempore perferendis vero inventore blanditiis dolore modi odit minus distinctio quos dolor consequuntur repudiandae eaque porro amet eligendi esse.", location: "Phase 3, Bengaluru"},
+]
+
 export {
   TrendingData,
   StoryData,
@@ -509,4 +513,5 @@ export {
   TeamBuyProductData,
   addressData,
   storeWiseCartData,
+  storeProfileData,
 };

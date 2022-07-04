@@ -20,6 +20,7 @@ import ProductDescription from './Components/ProductDescription/ProductDescripti
 import TeamBuy from './Components/TeamBuy/TeamBuy';
 import TeamBuyProductDescription from './Components/TeamBuyProductDescription/TeamBuyProductDescription';
 import StoreWiseCart from './Components/StoreWiseCart/StoreWiseCart';
+import StoreProfilePage from "./Components/StoreProfilePage/StoreProfilePage"
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
         <Route path="/search" element={<StoreSearch />} />
         <Route path="/productDescription" element={<ProductDescription/>} />
         <Route path="/teamBuyProductDescription" element={<TeamBuyProductDescription/>} />
+        <Route path="/storeProfile" element={<StoreProfilePage/>} />
       </Routes>
     </>
   );
