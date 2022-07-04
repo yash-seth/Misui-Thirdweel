@@ -1,0 +1,18 @@
+.discountBannerContainer{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 100px;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .discountBannerContainer{
+        margin: 0;
+    }
+    #discountBanner{
+        width: 100%;
+        height: auto;
+    }
+}

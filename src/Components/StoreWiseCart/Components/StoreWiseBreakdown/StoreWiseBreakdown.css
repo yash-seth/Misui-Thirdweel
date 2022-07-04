@@ -1,0 +1,205 @@
+.StoreWiseBreakdownContainer{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 100px;
+}
+
+.storeWiseBreakdown{
+    width: 70%;
+}
+
+.StoreWiseBreakdownHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 0 5px;
+}
+
+.storeBreakdown{
+    padding: 20px 10px;
+}
+
+.storeBreakdownDetailsHeading{
+    font-size: 20px;
+    font-weight: 600;
+    margin-right:12px;
+}
+
+.storeBreakdownAddr{
+    width: 60%;
+    word-wrap: break-word;
+    font-size: 12px;
+}
+
+#StoreWiseBreakdownHeaderText{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.StoreWiseBreakdownHeaderSubText{
+    font-size: 14px;
+}
+
+.storeBreakdownHeader{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.storeBreakdownDetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.storeBreakdownMoney{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.StoreWiseProducts{
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    height: 300px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.StoreWiseProduct{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#storeWiseProdImg{
+    padding: 10px;
+}
+
+.StoreWiseProductInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-left: 50px;
+    width: 100%;
+}
+
+#crossButton{
+    padding: 0 10px;
+}
+
+#storeWiseProdName{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#storeWiseProdAmt{
+    font-size: 14px;
+}
+
+#storeWiseProdStatus{
+    padding: 2px 0;
+    color: #4b8d5e;
+    font-size: 10px;
+}
+
+#storeBreakdownChargesText{
+    font-size: 16px;
+}
+
+#storeBreakdownSavingsText{
+    color: #4b8d5e;
+    font-size: 14px;
+}
+
+.storeWiseProdQuantityPrice{
+    padding: 10px 0;
+}
+
+#storeWiseProdPrice{
+    font-size: 14px;
+}
+
+#storeWiseProdQuantity{
+    font-size: 14px;
+}
+
+.storeWiseProdNameHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.proceedToCheckoutContanier{
+    position: absolute;
+    right:5%;
+    top:25%;
+    width: 20%;
+    background-color: white;
+}
+
+.proceedToCheckoutContanierHeader{
+    padding: 20px 0;
+    margin:0 15px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.proceedToCheckoutBody{
+    padding: 5px 0;
+}
+
+.price, .discount, .coupons, .deliveryCharges, .totalCharges, .totalChargesText{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 15px;
+    font-weight: 500;
+}
+
+#totalChargesHeader, #totalChargesAmount{
+    font-size: 18px;
+}
+
+.totalChargesText{
+    font-size: 12px;
+    color: #4b8d5e;
+}
+
+#dottedSeparator{
+    border-top: 1px dotted rgba(0, 0, 0, 0.2)
+}
+
+.walletInfo{
+    background-color: #ffe5cc;
+    padding: 15px;
+    font-size: 14px;
+}
+
+.coupons, .discount{
+    color: #4b8d5e;
+}
+
+.filler{
+    padding: 10px 0;
+    background-color: #f4f2f2;
+}
+
+#proceedButton{
+    padding: 20px;
+    background-color: #f6ba74;
+    width: 100%;
+}

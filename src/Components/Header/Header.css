@@ -1,0 +1,531 @@
+.mainHeader{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F7F6F2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.company-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.address{
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    align-items: center;
+}
+
+.logo{
+    float:left;
+    padding: 10px;
+}
+
+.logo_text{
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    float:right;
+    font-size: 20px;
+}
+
+.headerInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerInfo button{
+    padding:0 10px;
+}
+
+#my_cart{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: black
+}
+
+#shopping_cart{
+    margin-top: 4.5px;
+}
+
+#log_in{
+    padding:0 30px;
+    background-color: #4B8D5E;
+    border-radius: 10px;
+    color: #F7F6F2;
+}
+
+.searchBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#search{
+    /* size: 50%; */
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 7px 180px 7px 60px;
+}
+
+.search{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+input::-webkit-input-placeholder {
+    opacity: 0.5;
+}
+
+.searchIcon{
+    float: right;
+    padding: 5px 10px;
+    background: #EAEAEA;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#location{
+    padding-left:20px;
+}
+
+#Home , #my_cart, #Hiring, #Contact{
+    padding-top: 4.5px;
+    margin: 0px 30px;
+
+}
+
+button, input[type="submit"], input[type="reset"] {
+    font-family: 'Lato', sans-serif;
+    color: #4B8D5E; /* color */
+	background: none;
+    font-size: larger;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.mobile-menu{
+    display: none;
+    float:right;
+    padding: 10px;
+    color: #4B8D5E;    /*color*/
+}
+
+#profileIcon, #cartMobile{
+    display: none;
+}
+
+#burgerMenuMobile{
+    display: none;
+}
+
+.navButtons{
+    display: none;
+}
+
+.navigationButtons button{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 800px) {
+    .mainHeader{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    #search{
+        width: 20%;
+    }
+    .company-info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .logo_text{
+        padding: 0 0;
+    }
+    .buttons{
+        padding: 10px 0;
+    }
+    .logo_text{
+        display: none;
+    }
+    #profileIcon, #cartMobile{
+        display: block;
+    }
+    .buttons{
+        display: none;
+    }
+    #location{
+        padding: 0;
+    }
+    #burgerMenuMobile{
+        display: block;
+        margin: 0px 10px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #F7F6F2;
+    }
+    .searchIcon{
+        padding: 2.5px 5px;
+        background: #EAEAEA;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    #search{
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 7px 150px 7px 60px;
+    }
+    .navButtons{
+        display: block;
+    }
+    .navigationButtons{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+
+.addressModal{
+    position: fixed;
+    left:38%;
+    top:10%;
+    width: 25%;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 98;
+    display: none;
+    transition: 0.4s;
+}
+
+
+.addressModalHeader{
+    background-color: #F7F6F2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#addressModalHeaderText{
+    padding: 12px 20px;
+    font-weight: 600;
+}
+
+#addressModalCloseButton{
+    padding:12px 20px;
+}
+
+.addressModalMain{
+    background-color: white;
+}
+
+.addressModalMainText{
+    margin:0 10px;
+    font-size:12px;
+    padding:10px;
+}
+
+.addresses{
+    margin:0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.addressContainer{
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.addressLabel{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.addressContainer:hover{
+    background-color: #cbffda;
+}
+
+.addressContainerFooter{
+    padding: 5px 15px 10px;
+    font-size: 14px;
+    color: #4B8D5E;
+    font-weight: 600;
+    margin:0px 40px;
+}
+
+.addressContainerFooter:hover{
+    color: #74b887;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    padding: 0 0 10px;
+  }
+  
+  .separator::before,
+  .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+  }
+  
+  .separator:not(:empty)::before {
+    margin-right: .25em;
+  }
+  
+  .separator:not(:empty)::after {
+    margin-left: .25em;
+  }
+
+  .addressPincodeControls{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 10px;
+  }
+
+  #applyPincode{
+    padding: 6px 8px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 30%;
+    color: black;
+  }
+
+  #pincodeInput{
+    margin: 10px;
+    padding: 6px 8px;
+    border-radius: 10%;
+    border: 1px solid rgba(0,0,0,0.2);
+  }
+
+  #overlayAddressModal{
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(103, 103, 103,0.8);
+    z-index: 97;
+    display: none;
+    transition: 0.4s;
+  }
+
+  .categoriesMenuContainerMobile{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    left: 0;
+    position: absolute;
+    display: none;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.categoryMenuMobile{
+    display: none;
+    padding: 0px 25px;
+}
+
+#categoryNameMobile:hover{
+    color: #4B8D5E;
+}
+
+#categoryNameMobile{
+    font-size: 12px;
+    font-weight: 400;
+    padding: 20px 30px;
+    white-space: nowrap;
+}
+
+.categoryDropdownMobile:hover .categoryMenuMobile   {display: block;}
+
+#hr{
+    width: 100%;
+}
+
+.addressModalMobile{
+    position: fixed;
+    left:0%;
+    bottom:-1%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 98;
+    display:none;
+    transition: 0.4s;
+}
+
+.addressModalHeaderMobile{
+    background-color: #F7F6F2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.addressModalHeaderTextMobile{
+    padding: 12px 20px;
+    font-weight: 600;
+}
+
+#addressModalCloseButtonMobile{
+    padding:12px 15px;
+    background-color: white;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#closeButtonAddressModalMobile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.addressModalMainMobile{
+    background-color: white;
+}
+
+.addressModalMainTextMobile{
+    margin:0 10px;
+    font-size:8px;
+    padding:10px;
+}
+
+.addressesMobile{
+    margin:0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.addressContainerMobile{
+    font-size: 8px;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.addressLabelMobile{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.addressContainerMobile:hover{
+    background-color: #cbffda;
+}
+
+.addressContainerFooterMobile{
+    padding: 5px 15px 10px;
+    font-size: 10px;
+    color: #4B8D5E;
+    font-weight: 600;
+    margin:0px 40px;
+}
+
+.addressContainerFooterMobile:hover{
+    color: #74b887;
+}
+
+.separatorMobile {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    padding: 0 0 10px;
+  }
+  
+  .separatorMobile::before,
+  .separatorMobile::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+  }
+  
+  .separatorMobile:not(:empty)::before {
+    margin-right: .25em;
+  }
+  
+  .separatorMobile:not(:empty)::after {
+    margin-left: .25em;
+  }
+
+  .addressPincodeControlsMobile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #applyPincodeMobile{
+    padding: 6px 8px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 30%;
+    color: black;
+  }
+
+  #pincodeInputMobile{
+    margin: 10px;
+    padding: 6px 8px;
+    border-radius: 10%;
+    border: 1px solid rgba(0,0,0,0.2);
+  }
+
+  #overlayAddressModal{
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(103, 103, 103,0.8);
+    z-index: 97;
+    display: none;
+    transition: 0.4s;
+  }

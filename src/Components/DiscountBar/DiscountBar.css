@@ -1,0 +1,26 @@
+.discountBarcontainer{
+    font-family: 'Montserrat', sans-serif;
+    margin:10px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap;
+}
+
+.banner{
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {              /*responsive code for the ecommerce gif and font sizes*/
+    .discountBarcontainer{
+        margin:0;
+    }
+    .banner{
+        height: auto;
+        width: 90%;
+    }
+    .banner{
+        padding: 10px 0;
+    }
+}

@@ -1,0 +1,39 @@
+.PaginationFooterContainer{
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.number{
+    font-size: 25px;
+    margin: 10px;
+    padding:5px 12px;
+    border-radius: 50%;
+}
+
+.number:hover{
+    background-color: #E9E9E9;
+}
+
+#left_arrow{
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width:768px){
+    .PaginationFooterContainer{
+        margin: 10px 0;
+    }
+    .number{
+        font-size: 18px;
+        margin: 0;
+    }
+    #left_arrow{
+        height: 20px;
+    }
+    #right_arrow{
+        height: 20px;
+    }
+}

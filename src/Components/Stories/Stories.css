@@ -1,0 +1,55 @@
+.storiesContainer{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 100px;
+    padding: 10px 0px;
+}
+
+.stories{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.storiesContainer img{
+    border-radius: 50%;
+}
+
+#moreStories{
+    display: none;
+}
+
+#storiesHeading{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#story{
+    width:8%;
+    padding: 0 20px;
+}
+
+@media screen and (max-width: 768px){
+    #story{
+        width:20%;
+        padding: 0 10px;
+        height: 70px;
+    }
+    .storiesContainer{
+        margin: 0 20px;
+        padding: 10px 0;
+    }
+    #moreStories{
+        padding: 0 15px;
+        display: block;
+    }
+    .stories{
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+}

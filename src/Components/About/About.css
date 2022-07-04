@@ -1,0 +1,44 @@
+.aboutContainer{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 100px;
+    padding: 30px 0;
+}
+
+.aboutHeading{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#arrow{
+    color: black;
+}
+
+#about-heading{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.aboutBanners{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#aboutBanner{
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {              /*responsive code for the ecommerce gif and font sizes*/
+    .aboutContainer{
+        margin: 0 20px;
+    }
+    #aboutBanner{
+        width: 100%;
+        height: auto;
+    }
+
+}

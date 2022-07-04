@@ -1,0 +1,83 @@
+.StoreSearchHeaderContainer{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+#storeInfo{
+    padding-left: 20px;
+    font-weight: 600;
+}
+
+#StoreSearchSort{
+    margin-left:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 20px;
+    font-weight: 600;
+}
+
+#hr{
+    margin: 0 100px;
+}
+
+@media screen and (max-width: 768px){
+    .StoreSearchHeaderContainer{
+        margin: 0 20px;
+        padding: 10px 0;
+    }
+    #hr{
+        margin: 0 40px;
+    }
+    #itemInfo{
+        font-size: 18px;
+    }
+    #storeInfo{
+        font-size: 18px;
+    }
+    #StoreSearchSort{
+        font-size: 18px;
+    }
+}
+
+#StoreSearchSort{
+    position: relative;
+    display: inline-block;
+}
+
+.sortByMenuContainer{
+    font-size: 16px;
+    font-weight: 400;
+    position: absolute;
+    display: none;
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.sortByMenuContainer p:hover {background-color: #ddd;}
+
+#StoreSearchSort:hover .sortByMenuContainer     {display: block;}
+
+.categorySubMenu{
+    display: none;
+    padding: 0px 25px;
+    background-color: white;
+    border:1px solid rgba(0, 0, 0,0.2);
+}
+
+#sortByName{
+    padding: 12px 30px;
+    white-space: nowrap;
+}
+
+#sortByName:hover{
+    color: #4B8D5E;
+}

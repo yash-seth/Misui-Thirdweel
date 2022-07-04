@@ -1,0 +1,55 @@
+.TeamBuyHomepageContainer{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 100px;
+    padding: 30px 0;
+}
+
+.TeamBuyHeading{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#arrow{
+    color: black;
+}
+
+#TeamBuy-heading{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.TeamBuyBanners{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#TeamBuyBanner{
+    padding: 10px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .TeamBuyHomepageContainer{
+        margin: 0 20px;
+    }
+    #TeamBuyBanner{
+        height: auto;
+        width: 70%;
+        padding: 10px 10px
+    }
+    .TeamBuyBanners{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+}

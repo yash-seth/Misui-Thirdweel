@@ -1,0 +1,196 @@
+.StoreResultsContainer{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.StoreInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 60px 80px;
+}
+
+.StoreDetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.StoreInformation{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.StoreProducts{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 25px;
+}
+
+#store_name{
+    padding: 10px;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+#store_distance{
+    font-size: 16px;
+}
+
+#store_address{
+    padding:10px
+}
+
+#contactContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#phone_icon{
+    padding-right: 5px;
+}
+
+.productBanner{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.productBannerText{
+    background-color: #E9E9E9;
+    padding: 0 18px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#product_frame{
+    position: absolute;
+    padding: 10px;
+}
+
+#product{
+    position: relative;
+    height: 110px;
+    padding: 10px 0px;
+}
+
+.purchase-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#add_frame{
+    position: absolute;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#add_button{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.add_to_cart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#product-header{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#product-weight{
+    font-size: 12px;
+}
+
+#product-price{
+    font-size: 12px;
+}
+
+#add-button-text{
+    font-size: 12px;
+}
+
+@media screen and (max-width: 768px){
+    .StoreResultsContainer{
+        margin: 0;
+    }
+
+    .StoreInfo{
+        padding: 10px 10px;
+    }
+
+    #product_frame{
+        height: 120px;
+    }
+
+    #product{
+        padding: 0px;
+        height: 60px;
+    }
+    
+    .productBannerText{
+        padding: 0px;
+        width: 100%
+    }
+
+    .StoreInformation{
+        font-size: 16px;
+    }
+    .StoreProducts{
+        padding: 0;
+    }
+    
+    #product-header{
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    .add_to_cart{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    #add_button{
+        padding-left: 5px;
+        padding-top: 10px;
+    }
+
+    #store_address{
+        font-size: 14px;
+    }
+}

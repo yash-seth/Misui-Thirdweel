@@ -1,0 +1,44 @@
+.categoriesContainer{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 100px;
+    padding: 30px 0;
+}
+
+.categoriesHeading{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#arrow{
+    color: black;
+}
+
+#categories-heading{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.categories{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#category{
+    padding: 10px 0;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {              /*responsive code for the ecommerce gif and font sizes*/
+    .categoriesContainer{
+        margin: 0 20px;
+    }
+    #category{
+        height: auto;
+        width: 30%;
+    }
+}
