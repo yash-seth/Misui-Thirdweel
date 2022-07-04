@@ -50,13 +50,15 @@ function Header() {
         <div className="company-info">
           <div className="address">
             <div className="logo">
+            <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
               <img
                 src="./thirdweel mini logo.png"
                 alt="company-logo"
                 height="28px"
               />
+              </Link>
             </div>
-            <Link to="/" style={{ textDecoration: "none" }}>
+            <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
               <div className="logo_text">
                 <b>ThirdWeel</b>
               </div>

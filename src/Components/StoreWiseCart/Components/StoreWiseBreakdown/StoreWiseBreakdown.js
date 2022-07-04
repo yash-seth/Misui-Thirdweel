@@ -1,6 +1,7 @@
 import React from "react";
 import "./StoreWiseBreakdown.css";
 import { storeWiseCartData } from "../../../../Data";
+import {Link} from 'react-router-dom'
 
 function StoreWiseBreakdown() {
   return (
@@ -47,6 +48,7 @@ function StoreWiseBreakdown() {
                     {storeData.products.map((product) => {
                       return (
                         <>
+                         <Link to="/productDescription" style={{ textDecoration: 'none', color: "inherit"}}>
                           <div className="StoreWiseProduct" key={product.key}>
                             <img
                               id="storeWiseProdImg"
@@ -80,6 +82,7 @@ function StoreWiseBreakdown() {
                               </div>
                             </div>
                           </div>
+                          </Link>
                           <hr />
                         </>
                       );
