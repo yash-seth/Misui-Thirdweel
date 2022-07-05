@@ -1,0 +1,31 @@
+.ProfilePageMain{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #f2f2f2;;
+}
+
+.ProfilePageMainDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 920px){
+    .ProfilePageMain{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .ProfilePageMainDetails{
+        justify-content: center;
+        align-items: center;
+    }
+    .ProfilePageTopProducts{
+        width: 100%;
+    }
+}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./StoreWiseBreakdown.css";
 import { storeWiseCartData } from "../../../../Data";
 import {Link} from 'react-router-dom'
@@ -54,7 +54,7 @@ function StoreWiseBreakdown() {
                             <img
                               id="storeWiseProdImg"
                               src={require("./" + product.imgSrc)}
-                              alt="product image"
+                              alt="product"
                             />
                             </Link>
                             <div className="StoreWiseProductInfo">

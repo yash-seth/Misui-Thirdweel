@@ -50,7 +50,7 @@ function StoreProfilePageHeader() {
             return (<img id="storeProfileImage" key={image.key} src={require("./" + image.src)} alt={image.alt}/>)
             })}
         </div>
-        <img id="storeProfilePhoto" src={require("./Ellipse 72.png")} alt="store profile photo" />
+        <img id="storeProfilePhoto" src={require("./Ellipse 72.png")} alt="store profile" />
     </div>
   )
 }

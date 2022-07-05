@@ -6,7 +6,6 @@ import DiscountBar from './Components/DiscountBar/DiscountBar';
 import Footer from './Components/Footer/Footer'
 import Header from './Components/Header/Header';
 import HeaderMenu from './Components/HeaderMenu/HeaderMenu';
-import MyCart from './Components/MyCart/MyCart';
 import Stores from './Components/Stores/Stores';
 import Stories from './Components/Stories/Stories';
 import TopOffers from './Components/TopOffers/TopOffers';
@@ -21,6 +20,7 @@ import TeamBuy from './Components/TeamBuy/TeamBuy';
 import TeamBuyProductDescription from './Components/TeamBuyProductDescription/TeamBuyProductDescription';
 import StoreWiseCart from './Components/StoreWiseCart/StoreWiseCart';
 import StoreProfilePage from "./Components/StoreProfilePage/StoreProfilePage"
+import ProfilePage from "./Components/ProfilePage/ProfilePage"
 
 function App() {
   return (
@@ -51,6 +51,7 @@ function App() {
         <Route path="/productDescription" element={<ProductDescription/>} />
         <Route path="/teamBuyProductDescription" element={<TeamBuyProductDescription/>} />
         <Route path="/storeProfile" element={<StoreProfilePage/>} />
+        <Route path="/profile" element={<ProfilePage/>} />
       </Routes>
     </>
   );

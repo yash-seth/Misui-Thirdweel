@@ -553,6 +553,70 @@ const storeProfileTopProducts = [
   },
 ]
 
+const ProfileData = [
+  {id:0, name:"Suraj Nair", postsCount: 23, followersCount: 356, about:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta adipisci, rem tempore perferendis vero inventore blanditiis dolore modi odit minus distinctio quos dolor consequuntur repudiandae eaque porro amet eligendi esse.", location: "Phase 3, Bengaluru"},
+]
+
+const ProfileImages = [
+  {id:0, src:"post 1.png", alt:"store profile image"},
+  {id:1, src:"post 2.png", alt:"store profile image"},
+  {id:2, src:"post 1.png", alt:"store profile image"},
+  {id:3, src:"post 2.png", alt:"store profile image"},
+  {id:4, src:"post 1.png", alt:"store profile image"},
+  {id:5, src:"post 2.png", alt:"store profile image"},
+]
+
+const ProfileTopProducts = [
+  {
+    id: 0,
+    src: "veggies.png",
+    alt: "product",
+    name: "Masala Lays",
+    weight: "50 gm",
+    price: "$20",
+  },
+  {
+    id: 1,
+    src: "veggies.png",
+    alt: "product",
+    name: "Masala Lays",
+    weight: "50 gm",
+    price: "$20",
+  },
+  {
+    id: 2,
+    src: "veggies.png",
+    alt: "product",
+    name: "Masala Lays",
+    weight: "50 gm",
+    price: "$20",
+  },
+  {
+    id: 3,
+    src: "veggies.png",
+    alt: "product",
+    name: "Masala Lays",
+    weight: "50 gm",
+    price: "$20",
+  },
+  {
+    id: 4,
+    src: "veggies.png",
+    alt: "product",
+    name: "Masala Lays",
+    weight: "50 gm",
+    price: "$20",
+  },
+  {
+    id: 5,
+    src: "veggies.png",
+    alt: "product",
+    name: "Masala Lays",
+    weight: "50 gm",
+    price: "$20",
+  },
+]
+
 export {
   TrendingData,
   StoryData,
@@ -576,4 +640,7 @@ export {
   storeProfileData,
   storeProfileImages,
   storeProfileTopProducts,
+  ProfileData,
+  ProfileImages,
+  ProfileTopProducts,
 };

@@ -82,12 +82,14 @@ function Header() {
           </div>
           <div className="headerInfo">
             <button style={{ textDecoration: "none" }}>
+            <Link to="/profile" style={{ textDecoration: 'none' }}>
               <img
                 id="profileIcon"
                 src={require("./profileIcon.png")}
                 alt="profile icon"
                 height="25px"
               />
+              </Link>
             </button>
             <Link to="/MyCart" style={{ textDecoration: "none" }}>
               <button style={{ textDecoration: "none" }}>

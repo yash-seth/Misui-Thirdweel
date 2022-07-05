@@ -132,10 +132,12 @@ function HeaderMenu() {
       </div>
       <hr id="headerMenuBottomHR"/>
       <div className="sidebar">
+      <Link to="/profile" style={{ textDecoration: 'none' }} onClick={toggleSidebar}>
         <div className="profileSectionSidebar">
           <img src={require("./Profile avatar icon.png")} alt="Profile avatar icon.png" />
           <header>Hello, Profile</header>
         </div>
+        </Link>
         <div className="sidebarMenu">
           <div className="sidebarMenuOption">
             <button id="sidebarMenuOption" onClick={toggleCategoryMenu}>Categories</button>
@@ -190,7 +192,7 @@ function HeaderMenu() {
           </div>
           <hr className="border"/>
           <div className="sidebarMenuOption">
-            <button id="sidebarMenuOption">Your account</button>
+            <Link to="/profile" style={{ textDecoration: 'none' }}><button id="sidebarMenuOption">Your account</button></Link>
           </div>
           <div className="sidebarMenuOption">
             <button id="sidebarMenuOption">Sign out</button>
