@@ -1,0 +1,42 @@
+.StoreProfilePageTopProductsContainer{
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 100px;
+}
+
+.StoreProfilePageTopProductsContainerImages{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        padding: 10px;
+        max-height: 1000px;
+        position: relative;
+}
+
+.StoreProfilePageTopProductsContainerHeader{
+    font-size: 22px;
+    margin: 10px;
+    padding: 10px;
+}
+
+@media screen and (max-width: 920px){
+    .StoreProfilePageTopProductsContainer{
+        margin: 20px;
+    }
+    .StoreProfilePageTopProductsContainerImages{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+}
+}

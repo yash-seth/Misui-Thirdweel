@@ -12,10 +12,10 @@ function StoreResults() {
                     return (<>
                         <div className='store'>
                             <div className='StoreDetails'>
-                                <img id="store" key={Store.id} src={require("./"+Store.src)} alt={Store.alt} height="200px"/>
+                                <Link to="/storeProfile" style={{ textDecoration: "none", color: "inherit" }}><img id="store" key={Store.id} src={require("./"+Store.src)} alt={Store.alt} height="200px"/></Link>
                                 <div className='StoreInformation'>
                                     <div id="store_name">
-                                        {Store.name}
+                                        <Link to="/storeProfile" style={{ textDecoration: "none", color: "inherit" }}>{Store.name}</Link>
                                         <div id="store_distance">{Store.distance}</div>
                                         </div>  
                                     <div id="store_address">

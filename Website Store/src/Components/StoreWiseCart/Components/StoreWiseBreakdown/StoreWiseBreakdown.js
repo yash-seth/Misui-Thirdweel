@@ -28,7 +28,7 @@ function StoreWiseBreakdown() {
                     <div className="storeBreakdownDetailsHeader">
                       <div className="storeBreakdownDetails">
                         <div className="storeBreakdownDetailsHeading">
-                          {storeData.name}
+                        <Link to="/storeProfile" style={{ textDecoration: "none", color: "inherit" }}>{storeData.name}</Link>
                         </div>
                         <div className="storeBreakdownDetailsDistance">
                           {storeData.distance}

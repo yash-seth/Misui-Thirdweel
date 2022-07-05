@@ -362,6 +362,7 @@ button, input[type="submit"], input[type="reset"] {
     display: flex;
     flex-direction: row;
     width: 100%;
+    z-index: 81;            /*originally was not set */
 }
 
 .categoryMenuMobile{

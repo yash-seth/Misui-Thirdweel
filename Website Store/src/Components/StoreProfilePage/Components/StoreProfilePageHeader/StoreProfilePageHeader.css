@@ -1,22 +1,45 @@
 .StoreProfilePageHeaderMain{
     font-family: 'Montserrat', sans-serif;
     margin: 0 200px;
+    width: 80%;
 }
 
 .StoreProfilePageHeaderMainTopContainer{
-    min-width: 900px;
     background-color: #DEEBE1;
-    min-height: 300px;
+    min-height: 250px;
 }
 
 .StoreProfileDetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 45px 0;
+}
+
+.storeProfileDistance{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 }
 
+#storeLocation{
+    padding: 5px;
+    background-color: #e9e9e9;
+    border-radius: 8%;
+}
+
 .StoreProfileDetailsMainExtra{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.storeProfileNumbers{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -31,8 +54,178 @@
 }
 
 .StoreProfileDetailsFollowersCount{
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+}
+
+#storeProfileName{
+    font-size: 32px;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+#storeProfileRating{
+    margin: 0 4px;
+}
+
+.StoreProfileDetailsPostsCountHeader, .StoreProfileDetailsFollowersCountHeader{
+    font-size: 20px;
+}
+
+.StoreProfileDetailsPostsCountNumber, .StoreProfileDetailsFollowersCountNumber{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.storeProfileControlButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#follow{
+    background-color: #4B8D5E;
+    border-radius: 10%;
+    padding: 10px 15px;
+    color: white;
+}
+
+#visitStorePage{
+    margin-left: 20px;
+    background-color: #e9e9e9;
+    border-radius: 10%;
+    padding: 10px 15px;
+    color: black;
+    font-weight: 600;
+}
+
+.StoreProfileExtraDetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;   
+    padding: 10px 25px 20px;
+}
+
+.StoreProfileExtraDetailsControlsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.storeProfileAbout{
+    width: 70%;
+}
+
+.storeProfileContacts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.storeProfileAboutHeading{
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.storeProfileAbout{
+    font-size: 14px;
+}
+
+#chatWithSeller{
+    background-color: #e9e9e9;
+}
+
+.storeProfileImages{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: white;   
+    margin: 30px 0;
+}
+
+#storeProfileImage{
+    padding: 40px;
+}
+
+#storeProfilePhoto{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    z-index: 80;
+}
+
+@media screen and (max-width: 920px){
+    .StoreProfilePageHeaderMain{
+        margin: 0 0;
+    }
+    #storeProfileImage{
+        padding: 10px;
+        height: 200px;
+    }
+    .storeProfileImages{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .StoreProfileDetails{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 45px 0;
+    }
+    .StoreProfileDetailsMainExtra{
+        justify-content: center;
+        align-items: center;
+    }
+    .StoreProfileDetailsPostsCount{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .StoreProfileDetailsFollowersCount{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .storeProfileNumbers{
+        margin-top: 20px;
+    }
+    .storeProfileControlButtons{
+        margin-top: 20px;
+    }
+    #storeProfilePhoto{
+        position: absolute;
+        left: 0; 
+        right: 0; 
+        top: 25%; 
+        margin: auto;
+        z-index: 10;
+    }
+    .StoreProfileExtraDetails{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .storeProfileDistance{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .StoreProfileExtraDetailsControls{
+        margin-top: 10px;
+    }
+    .storeProfileAbout{
+        width: 100%;
+    }
 }

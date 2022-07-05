@@ -1,6 +1,7 @@
 import React from "react";
 import "./Description.css";
 import { localStoresData, imageGalleryData } from "../../../../Data";
+import { Link } from "react-router-dom";
 
 function Description() {
   return (
@@ -101,16 +102,16 @@ function Description() {
               return (
                 <>
                   <div className="localStore">
-                    <img
+                    <Link to="/storeProfile" style={{ textDecoration: "none", color: "inherit" }}><img
                       id="localStoreImage"
                       key={localStore.id}
                       src={require("./" + localStore.src)}
                       alt={localStore.alt}
                       height="100px"
-                    />
+                    /></Link>
                     <div className="localStoreDetails">
                       <section id="localStoreHeader">
-                        {localStore.name}
+                        <Link to="/storeProfile" style={{ textDecoration: "none", color: "inherit" }}>{localStore.name}</Link>
                         <img src={require("./instock.png")} alt="instock" />
                         <br />
                         <section id="localStoreDistance">
