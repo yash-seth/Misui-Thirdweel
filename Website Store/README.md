@@ -20,3 +20,5 @@
 - [x] Product Description Page
 - [x] Team Buy page
 - [x] Storewise Cart
+- [x] Store Profile
+- [x] User Profile
