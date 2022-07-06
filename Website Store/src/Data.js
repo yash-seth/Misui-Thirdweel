@@ -617,6 +617,88 @@ const ProfileTopProducts = [
   },
 ]
 
+const StoreItemsPageInfo = [
+  {id:0, src:"store.png", name: "Laxmi Stores", dist: "4.2km", location: "Phase 3, Bengaluru", contact: "75063326420", rating: "rating.png", about:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta adipisci, rem tempore perferendis vero inventore blanditiis dolore modi odit minus distinctio quos dolor consequuntur repudiandae eaque porro amet eligendi esse."}
+]
+
+const StoreItemsProducts = [
+  {id: 0,
+    src: "veggies.png",
+    alt: "product",
+    name: "Masala Lays",
+    weight: "50 gm",
+    price: "$20",
+    quantity: 1
+  },
+  {id: 1,
+    src: "veggies.png",
+    alt: "product",
+    name: "Masala Lays",
+    weight: "50 gm",
+    price: "$20",
+    quantity: 1
+  },
+  {id: 2,
+    src: "veggies.png",
+    alt: "product",
+    name: "Masala Lays",
+    weight: "50 gm",
+    price: "$20",
+    quantity: 1
+  },
+  {id: 3,
+    src: "veggies.png",
+    alt: "product",
+    name: "Masala Lays",
+    weight: "50 gm",
+    price: "$20",
+    quantity: 1
+  },
+  {id: 4,
+    src: "veggies.png",
+    alt: "product",
+    name: "Masala Lays",
+    weight: "50 gm",
+    price: "$20",
+    quantity: 1
+  },
+  {id: 5,
+    src: "veggies.png",
+    alt: "product",
+    name: "Masala Lays",
+    weight: "50 gm",
+    price: "$20",
+    quantity: 1
+  },
+]
+
+const StoreItemsCart = [
+  {id: 0,
+    src: "veggies.png",
+    alt: "product",
+    name: "Masala Lays",
+    weight: "50 gm",
+    price: "$20",
+    quantity: 1
+  },
+  {id: 1,
+    src: "veggies.png",
+    alt: "product",
+    name: "Masala Lays",
+    weight: "50 gm",
+    price: "$20",
+    quantity: 1
+  },
+  {id: 2,
+    src: "veggies.png",
+    alt: "product",
+    name: "Masala Lays",
+    weight: "50 gm",
+    price: "$20",
+    quantity: 1
+  },
+]
+
 export {
   TrendingData,
   StoryData,
@@ -643,4 +725,7 @@ export {
   ProfileData,
   ProfileImages,
   ProfileTopProducts,
+  StoreItemsPageInfo,
+  StoreItemsProducts,
+  StoreItemsCart,
 };

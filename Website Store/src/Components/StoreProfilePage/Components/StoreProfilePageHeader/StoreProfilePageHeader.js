@@ -1,6 +1,7 @@
 import React from 'react'
 import "./StoreProfilePageHeader.css"
 import {storeProfileData, storeProfileImages} from "../../../../Data"
+import {Link} from "react-router-dom"
 
 function StoreProfilePageHeader() {
   return (
@@ -26,7 +27,7 @@ function StoreProfilePageHeader() {
             </div>
             <div className='storeProfileControlButtons'>
                 <button id="follow">Follow</button>
-                <button id="visitStorePage">Visit Store</button>
+                <Link to="/storeItems" style={{textDecoration:"none"}}><button id="visitStorePage">Visit Store</button></Link>
             </div>
         </div>
         <div className="StoreProfileExtraDetails">

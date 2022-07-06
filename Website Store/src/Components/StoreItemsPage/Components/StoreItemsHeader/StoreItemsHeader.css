@@ -1,0 +1,120 @@
+.StoreItemsHeaderContainer{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #114c5c;
+    padding: 50px 200px;
+}
+
+.StoreItemsHeaderContainerImage{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.StoreItemsHeaderContainerImageNav{
+    color: white;
+    margin: 0 0 5px;
+    font-size: 14px;
+}
+
+.StoreItemsHeaderContainerInfoHeader{
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.StoreItemsHeaderContainerInfoDistance{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.StoreItemsHeaderContainerInfo{
+    margin-left: 50px;
+    color: white
+}
+
+.StoreItemsHeaderContainerInfoContact, .StoreItemsHeaderContainerInfoLocation{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#StoreItemsHeaderContainerInfoLocationBtn{
+    background-color: white;
+    padding: 3px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.StoreItemsHeaderContainerInfoContact{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.chatWithSellerContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.StoreItemsHeaderContainerExtraInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#chatWithSeller{
+    background-color: white;
+    padding: 3px;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+
+.StoreItemsHeaderContainerAbout{
+    width: 70%;
+    font-size: 14px;
+}
+
+.StoreItemsHeaderContainerAboutHeading{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+#readMore{
+    color: white;
+}
+
+@media screen and (max-width: 920px){
+    .StoreItemsHeaderContainer{
+        padding:0px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .StoreItemsHeaderContainerInfo{
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .StoreItemsHeaderContainerAboutHeader{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    #StoreItemsHeaderContainerInfoHr{
+        display: none;
+    }
+}
