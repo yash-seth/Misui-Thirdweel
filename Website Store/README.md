@@ -23,3 +23,4 @@
 - [x] Store Profile
 - [x] User Profile
 - [x] Store Items Page
+- [x] Cart Checkout Page
