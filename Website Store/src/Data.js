@@ -479,8 +479,8 @@ const TeamBuyProductData = [
 
 const addressData = [
   {id:0, label:"Home", name:"Shivam Rathore", address: "2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
-  {id:1, label:"Home", name:"Shivam Rathore", address: "2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
-  {id:2, label:"Home", name:"Shivam Rathore", address: "2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
+  {id:1, label:"Work", name:"Shivam Rathore", address: "2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
+  {id:2, label:"Home 2", name:"Shivam Rathore", address: "2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
 ]
 
 const storeWiseCartData = [
@@ -699,6 +699,25 @@ const StoreItemsCart = [
   },
 ]
 
+const cartCheckoutPickupData = [
+  {id: 0,
+    name:"Shree Laxmi Stores, Sant Tukaram Marg, Thane (East)",
+    addr: "Shop No 3, Vilas Apartments - Vilas CHSL, Sant Tukaram Road, Kopri, Daulat Nagar, Thane (East), Thane, Maharashtra",
+    timeSlots: [
+      {id:0, slot: "Tomorrow 10:00AM - 12:00PM"},
+      {id:1, slot: "Tomorrow 03:00PM - 05:00PM"}
+    ] 
+  },
+  {id: 1,
+    name:"Shree Laxmi Stores, Sant Tukaram Marg, Thane (East)",
+    addr: "Shop No 3, Vilas Apartments - Vilas CHSL, Sant Tukaram Road, Kopri, Daulat Nagar, Thane (East), Thane, Maharashtra",
+    timeSlots: [
+      {id:0, slot: "Tomorrow 10:00AM - 12:00PM"},
+      {id:1, slot: "Tomorrow 03:00PM - 05:00PM"}
+    ] 
+  },
+]
+
 export {
   TrendingData,
   StoryData,
@@ -728,4 +747,5 @@ export {
   StoreItemsPageInfo,
   StoreItemsProducts,
   StoreItemsCart,
+  cartCheckoutPickupData,
 };

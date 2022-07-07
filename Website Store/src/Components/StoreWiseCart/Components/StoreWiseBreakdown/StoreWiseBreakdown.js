@@ -126,7 +126,7 @@ function StoreWiseBreakdown() {
         <div className="totalChargesText">You will save $442 on this order</div>
         <div className="walletInfo">Save extra $62 using thirdweel wallet</div>
         <div className="filler"></div>
-        <button id="proceedButton">Proceed</button>
+        <Link to="/cartHomeDelivery" style={{textDecoration:"none"}}><button id="proceedButton">Proceed</button></Link>
       </div>
     </div>
   );

@@ -5,10 +5,10 @@ import StoreItemsHeader from './Components/StoreItemsHeader/StoreItemsHeader'
 import StoreItemsSearch from './Components/StoreItemsSearch/StoreItemsSearch'
 import StoreItemsMain from './Components/StoreItemsMain/StoreItemsMain'
 
-function StoreItemsPage() {
+function StoreItemsPage({setAddress}) {
   return (
     <>
-        <Header/>
+        <Header setAddress={setAddress}/>
         <StoreItemsHeader/>
         <StoreItemsSearch/>
         <StoreItemsMain/>

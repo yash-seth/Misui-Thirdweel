@@ -1,6 +1,5 @@
 import React from 'react'
 import "./StoreItemsSearch.css"
-import {StoreItemsPageInfo} from "../../../../Data"
 
 function StoreItemsSearch() {
   return (

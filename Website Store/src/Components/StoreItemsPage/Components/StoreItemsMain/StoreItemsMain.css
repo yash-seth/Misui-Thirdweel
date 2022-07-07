@@ -112,7 +112,7 @@
 }
 
 .StoreItemsMainContainerOffers{
-    padding: 20px 40px;
+    padding: 20px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-right:1px solid transparent;
 }
@@ -137,7 +137,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 20px 30px;
+    padding: 20px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-right:1px solid transparent;
     width: 100%;
@@ -152,11 +152,12 @@
 }
 
 .StoreItemsMainContainerCartContents{
-    width: 100%;
+    width: 80%;
     overflow-x: hidden;
     overflow-y: scroll;
     white-space: nowrap;
     height: 120px;
+    padding: 0 20px;
 }
 
 #StoreItemsMainContainerCartItemDetailsName{
@@ -234,6 +235,7 @@
         align-items: center;
         border: 1px solid rgba(0, 0, 0, 0.2);
         border-right:1px solid transparent;
-        width: 90%;
+        width: 100%;
+        padding: 0;
     }
 }

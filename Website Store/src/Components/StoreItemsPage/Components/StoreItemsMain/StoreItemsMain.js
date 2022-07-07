@@ -2,6 +2,7 @@ import React from 'react'
 import "./StoreItemsMain.css"
 import {categoryDropdownData, StoreItemsProducts, StoreItemsCart} from "../../../../Data"
 import {useState} from 'react'
+import {Link} from "react-router-dom"
 
 function StoreItemsMain() {
     const [currentCategory, setCurrentCategory] = useState(categoryDropdownData[0].name)
@@ -78,7 +79,7 @@ function StoreItemsMain() {
                 </div>
             </div>
             <div className='StoreItemsMainContainerCheckoutBtn'>
-                <button id="StoreItemsMainContainerCheckoutBtn">Checkout</button>
+                <Link to="/cartHomeDelivery" style={{textDecoration: "none"}} ><button id="StoreItemsMainContainerCheckoutBtn">Checkout</button></Link>
             </div>
         </div>
     </div>

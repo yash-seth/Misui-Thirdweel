@@ -5,10 +5,10 @@ import PaginationFooter from './Components/PaginationFooter/PaginationFooter'
 import StoreWiseBreakdown from './Components/StoreWiseBreakdown/StoreWiseBreakdown'
 import "./StoreWiseCart.css"
 
-function StoreWiseCart() {
+function StoreWiseCart({setAddress}) {
   return (
     <>
-        <Header/>
+        <Header setAddress={setAddress}/>
         <div className='mobileView'>
           <HeaderMenu />
         </div>

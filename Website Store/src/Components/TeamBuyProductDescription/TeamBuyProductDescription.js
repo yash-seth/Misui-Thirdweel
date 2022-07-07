@@ -5,10 +5,10 @@ import TeamBuyDescription from './Components/TeamBuyDescription/TeamBuyDescripti
 import TeamBuyItemsToExplore from './Components/TeamBuyItemsToExplore/TeamBuyItemsToExplore'
 import "./TeamBuyProductDescription.css"
 
-function ProductDescription() {
+function ProductDescription({setAddress}) {
   return (
     <>
-        <Header/>
+        <Header setAddress={setAddress}/>
         <TeamBuyDescription/>
         <TeamBuyBoughtTogether/>
         <TeamBuyItemsToExplore/>
