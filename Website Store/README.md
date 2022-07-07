@@ -22,3 +22,4 @@
 - [x] Storewise Cart
 - [x] Store Profile
 - [x] User Profile
+- [x] Store Items Page
