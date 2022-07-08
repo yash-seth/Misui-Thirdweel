@@ -5,12 +5,13 @@ import { addressData } from "../../Data";
 import { useState, useEffect } from "react";
 import { categoryDropdownData } from "../../Data";
 
-function Header({setAddress}) {
+function Header({address, setAddress}) {
   const [width, setWidth] = useState(window.innerWidth);
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
   }
+  
   useEffect(() => {
     setAddress({label:addressData[0].label,addr:addressData[0].address});
     window.addEventListener("resize", handleWindowSizeChange);
@@ -73,7 +74,7 @@ function Header({setAddress}) {
                 src={require("./navigation.png")}
                 alt="location icon"
               />
-              Home, 2nd Floor, K...
+              {address.label}, {address.addr.substring(0,12)}...
               <img
                 id="dropdown"
                 src={require("./dropdown.png")}
@@ -200,7 +201,7 @@ function Header({setAddress}) {
             {addressData.map((addr) => {
               return (
                 <>
-                  <div className="addressContainer" onClick={()=>setAddress({label:addr.label,addr:addr.address})}>
+                  <div className="addressContainer" onClick={()=>{setAddress({label:addr.label,addr:addr.address});toggleAddressModal()}}>
                     <div className="addressLabel">{addr.label}</div>
                     <div className="addressMain">
                       <b>{addr.name}</b> {addr.address}

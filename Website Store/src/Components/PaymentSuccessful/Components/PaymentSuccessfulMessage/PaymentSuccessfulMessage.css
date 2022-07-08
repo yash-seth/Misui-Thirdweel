@@ -138,6 +138,15 @@
     margin-left: 20px;
 }
 
+#teamBuyPageBtn{
+    padding: 15px 40px;
+    border: 1px solid rgba(0,0,0,0.6);
+    border-radius: 8px;
+    font-weight: 600;
+    background-color: #f6ba74;
+    color: rgb(122, 122, 122);
+}
+
 @media screen and (max-width: 920px){
     .PaymentSuccessfulMessageContainer{
         font-family: 'Montserrat', sans-serif;
@@ -159,6 +168,9 @@
         padding: 6px 20px;
     }
     #viewOrder{
+        padding: 6px 20px;
+    }
+    #teamBuyPageBtn{
         padding: 6px 20px;
     }
 }

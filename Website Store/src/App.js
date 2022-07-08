@@ -28,10 +28,11 @@ import PaymentSuccessful from './Components/PaymentSuccessful/PaymentSuccessful'
 
 function App() {
     const [address, setAddress] = useState({label:"",addr:""})
+    const [paymentView, setPaymentView] = useState("normal")
   return (
     <>
       <Routes>
-        <Route path="/MyCart" element={<StoreWiseCart setAddress={setAddress}/>} />
+        <Route path="/MyCart" element={<StoreWiseCart address={address} setAddress={setAddress}/>} />
         <Route path="/" element={<>
         <Header address={address} setAddress={setAddress}/>
         <div className='mobileView'>
@@ -52,14 +53,14 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/offers" element={<Offers />} />
         <Route path="/wishlist" element={<Wishlist />} />
-        <Route path="/search" element={<StoreSearch setAddress={setAddress}/>} />
-        <Route path="/productDescription" element={<ProductDescription setAddress={setAddress}/>} />
-        <Route path="/teamBuyProductDescription" element={<TeamBuyProductDescription setAddress={setAddress}/>} />
-        <Route path="/storeProfile" element={<StoreProfilePage setAddress={setAddress}/>} />
-        <Route path="/profile" element={<ProfilePage setAddress={setAddress}/>} />
-        <Route path="/storeItems" element={<StoreItemsPage setAddress={setAddress}/>} />
-        <Route path="/cartHomeDelivery" element={<CartCheckout address={address} setAddress={setAddress}/>} />
-        <Route path="/PaymentSuccessful" element={<PaymentSuccessful setAddress={setAddress}/>} />
+        <Route path="/search" element={<StoreSearch address={address} setAddress={setAddress}/>} />
+        <Route path="/productDescription" element={<ProductDescription address={address} setAddress={setAddress}/>} />
+        <Route path="/teamBuyProductDescription" element={<TeamBuyProductDescription address={address} setAddress={setAddress}/>} />
+        <Route path="/storeProfile" element={<StoreProfilePage address={address} setAddress={setAddress}/>} />
+        <Route path="/profile" element={<ProfilePage address={address} setAddress={setAddress}/>} />
+        <Route path="/storeItems" element={<StoreItemsPage address={address} setAddress={setAddress}/>} />
+        <Route path="/CartCheckout" element={<CartCheckout address={address} setAddress={setAddress}/>} />
+        <Route path="/PaymentSuccessful" element={<PaymentSuccessful address={address} setAddress={setAddress} paymentView={paymentView}/>} />
       </Routes>
     </>
   );

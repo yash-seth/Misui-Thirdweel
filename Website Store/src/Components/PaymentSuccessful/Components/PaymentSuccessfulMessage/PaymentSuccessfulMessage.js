@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { cartCheckoutPickupData } from "../../../../Data";
 import {Link} from "react-router-dom"
 
-function PaymentSuccessfulMessage() {
+function PaymentSuccessfulMessage({paymentView}) {
   const [timestampPlaced, setTimestampPlaced] = useState("");
   useEffect(() => {
     var today = new Date();
@@ -17,7 +17,7 @@ function PaymentSuccessfulMessage() {
     <>
       <div className="PaymentSuccessfulMessageContainer">
         <div className="PaymentSuccessfulMessageContainerHeader">
-          <img src={require("./successTick.png")} alt="success tick" />
+          {paymentView==="normal" ? (<img src={require("./successTick.png")} alt="success tick" />):(<img src={require("./orangeTick.png")} alt="success tick" />)}
           <div className="PaymentSuccessfulMessageContainerHeaderText">
             <div id="PaymentSuccessfulMessageContainerHeading">
               Payment Successful
@@ -87,7 +87,10 @@ function PaymentSuccessfulMessage() {
           </div>
         </div>
         <div className="PaymentSuccessfulMessageFooterButtons">
-            <Link to="/" style={{textDecoration: "none"}}><button id="continueShopping">Continue Shopping</button></Link>
+            {paymentView==="normal" ? 
+            (<Link to="/" style={{textDecoration: "none"}}><button id="continueShopping">Continue Shopping</button></Link>)
+            :
+            (<Link to="/teamBuyProductDescription" style={{textDecoration: "none"}}><button id="teamBuyPageBtn">Continue to Team Buy Page</button></Link>)}
             <Link to="/MyCart" style={{textDecoration: "none"}}><button id="viewOrder">View Order</button></Link>
         </div>
       </div>

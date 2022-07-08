@@ -5,10 +5,10 @@ import PaginationFooter from './Components/PaginationFooter/PaginationFooter'
 import StoreResults from './Components/StoreResults/StoreResults'
 import StoreSearchHeader from './Components/StoreSearchHeader/StoreSearchHeader'
 
-function StoreSearch({setAddress}) {
+function StoreSearch({address, setAddress}) {
   return (
     <>
-        <Header setAddress={setAddress}/>
+        <Header address={address} setAddress={setAddress}/>
         <div className='mobileView'>
           <HeaderMenu />
         </div>

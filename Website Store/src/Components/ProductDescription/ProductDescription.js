@@ -5,10 +5,10 @@ import Description from './Components/Description/Description'
 import ItemsToExplore from './Components/ItemsToExplore/ItemsToExplore'
 import "./ProductDescription.css"
 
-function ProductDescription({setAddress}) {
+function ProductDescription({address, setAddress}) {
   return (
     <>
-        <Header setAddress={setAddress}/>
+        <Header address={address} setAddress={setAddress}/>
         <Description/>
         <BoughtTogether/>
         <ItemsToExplore/>

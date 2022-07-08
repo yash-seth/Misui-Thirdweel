@@ -79,7 +79,7 @@ function StoreItemsMain() {
                 </div>
             </div>
             <div className='StoreItemsMainContainerCheckoutBtn'>
-                <Link to="/cartHomeDelivery" style={{textDecoration: "none"}} ><button id="StoreItemsMainContainerCheckoutBtn">Checkout</button></Link>
+                <Link to="/CartCheckout" style={{textDecoration: "none"}} ><button id="StoreItemsMainContainerCheckoutBtn">Checkout</button></Link>
             </div>
         </div>
     </div>

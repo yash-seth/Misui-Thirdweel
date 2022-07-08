@@ -2,7 +2,7 @@ import React from "react";
 import "./HeaderMenu.css";
 import { Link } from "react-router-dom";
 import { categoryDropdownData } from "../../Data";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function HeaderMenu() {
   const [sidebarState, setSidebarState] = useState("close");
@@ -52,6 +52,10 @@ function HeaderMenu() {
   }
 
 
+  useEffect(() => {
+    setSidebarState("close");
+  }, [])
+  
   return (
     <>
       <div className="headerMenuContainer">
@@ -132,7 +136,7 @@ function HeaderMenu() {
       </div>
       <hr id="headerMenuBottomHR"/>
       <div className="sidebar">
-      <Link to="/profile" style={{ textDecoration: 'none' }} onClick={toggleSidebar}>
+      <Link to="/profile" style={{ textDecoration: 'none' }}>
         <div className="profileSectionSidebar">
           <img src={require("./Profile avatar icon.png")} alt="Profile avatar icon.png" />
           <header>Hello, Profile</header>

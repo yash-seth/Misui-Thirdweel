@@ -6,7 +6,7 @@ import CartCheckoutMain from "./Components/CartCheckoutMain/CartCheckoutMain";
 function CartCheckout({address, setAddress}) {
   return (
     <>
-      <Header setAddress={setAddress}/>
+      <Header address={address} setAddress={setAddress}/>
         <div className='CartHomeDeliveryApp'>
             <CartCheckoutMain address={address}/>
         </div>
