@@ -566,6 +566,15 @@ const ProfileImages = [
   {id:5, src:"post 2.png", alt:"store profile image"},
 ]
 
+const rewardsImages = [
+  {id:0, src:"reward.png", alt:"store profile image"},
+  {id:1, src:"reward.png", alt:"store profile image"},
+  {id:2, src:"reward.png", alt:"store profile image"},
+  {id:3, src:"reward.png", alt:"store profile image"},
+  {id:4, src:"reward.png", alt:"store profile image"},
+  {id:5, src:"reward.png", alt:"store profile image"},
+]
+
 const ProfileTopProducts = [
   {
     id: 0,
@@ -760,4 +769,5 @@ export {
   StoreItemsCart,
   cartCheckoutPickupData,
   paymentSuccessfulScatchCardData,
+  rewardsImages,
 };

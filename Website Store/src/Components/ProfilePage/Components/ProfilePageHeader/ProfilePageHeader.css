@@ -146,18 +146,45 @@
     border-radius: 10%;
 }
 
-.ProfileImages{
+.ImageGrid{
+    background-color: white;   
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.ImageGridControlsBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#rewardsImagesBtn{
+    margin-left:30px;
+}
+
+#rewardsImagesBtn:focus, #postsImageBtn:focus{
+    border-bottom: 3px solid black;
+}
+
+.ImageGridImages{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     background-color: white;   
-    margin: 30px 0;
+    margin: 0px 0 10px;
 }
 
-#ProfileImage{
-    padding: 40px;
+#ProfileImage, #rewardImage{
+    padding: 20px 40px 40px;
 }
 
 #ProfilePhoto{
@@ -171,14 +198,23 @@
     .ProfilePageHeaderMain{
         margin: 0 0;
     }
-    #ProfileImage{
+    #ProfileImage,#rewardImage{
         padding: 10px;
         height: 200px;
     }
-    .ProfileImages{
+    .ImageGridImages{
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+    }
+    .ImageGridControlsBar{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0px;
+        margin-top: 20px;
+        font-size: 18px;
     }
     .ProfileDetails{
         flex-direction: column;
@@ -230,5 +266,13 @@
     }
     .ProfileAbout{
         width: 100%;
+    }
+    .ImageGrid{
+        background-color: white;   
+        margin: 30px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
     }
 }

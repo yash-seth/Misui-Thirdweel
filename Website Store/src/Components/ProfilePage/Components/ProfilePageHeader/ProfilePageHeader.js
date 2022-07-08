@@ -1,8 +1,13 @@
 import React from 'react'
 import "./ProfilePageHeader.css"
-import {ProfileData, ProfileImages} from "../../../../Data"
+import {ProfileData, ProfileImages, rewardsImages} from "../../../../Data"
+import {useState, useEffect} from "react"
 
 function ProfilePageHeader() {
+    const [imageGridView, setImageGridView] = useState("posts")
+    useEffect(() => {
+        setImageGridView("posts");
+    }, [])
   return (
     <div className="ProfilePageHeaderMain">
         <div className="ProfilePageHeaderMainTopContainer"><span></span></div>
@@ -37,10 +42,22 @@ function ProfilePageHeader() {
                 </div>
             </div>
         </div>
-        <div className='ProfileImages'>
-            {ProfileImages.map((image)=>{
-            return (<img id="ProfileImage" key={image.key} src={require("./" + image.src)} alt={image.alt}/>)
-            })}
+        <div className="ImageGrid">
+            <div className='ImageGridControlsBar'>
+                <button id="postsImageBtn" onClick={()=> setImageGridView("posts")}>Posts</button>
+                <button id="rewardsImagesBtn" onClick={()=> setImageGridView("rewards")}>Rewards</button>
+            </div>
+            <div className='ImageGridImages'>
+                {imageGridView==="posts" ? ProfileImages.map((image)=>{
+                return (<img id="ProfileImage" key={image.key} src={require("./" + image.src)} alt={image.alt}/>)
+                })
+                :
+                (rewardsImages.map((image)=>{
+                    return (<img id="rewardImage" key={image.key} src={require("./" + image.src)} alt={image.alt} height="220px"/>)
+                    }))
+                }
+                
+            </div>
         </div>
         <img id="ProfilePhoto" src={require("./Ellipse 72.png")} alt=" profile" />
     </div>
