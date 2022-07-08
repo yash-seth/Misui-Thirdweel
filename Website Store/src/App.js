@@ -23,7 +23,7 @@ import StoreWiseCart from './Components/StoreWiseCart/StoreWiseCart';
 import StoreProfilePage from "./Components/StoreProfilePage/StoreProfilePage"
 import ProfilePage from "./Components/ProfilePage/ProfilePage"
 import StoreItemsPage from "./Components/StoreItemsPage/StoreItemsPage"
-import CartHomeDelivery from './Components/CartHomeDelivery/CartHomeDelivery';
+import CartCheckout from './Components/CartCheckout/CartCheckout';
 import PaymentSuccessful from './Components/PaymentSuccessful/PaymentSuccessful';
 
 function App() {
@@ -58,7 +58,7 @@ function App() {
         <Route path="/storeProfile" element={<StoreProfilePage setAddress={setAddress}/>} />
         <Route path="/profile" element={<ProfilePage setAddress={setAddress}/>} />
         <Route path="/storeItems" element={<StoreItemsPage setAddress={setAddress}/>} />
-        <Route path="/cartHomeDelivery" element={<CartHomeDelivery address={address} setAddress={setAddress}/>} />
+        <Route path="/cartHomeDelivery" element={<CartCheckout address={address} setAddress={setAddress}/>} />
         <Route path="/PaymentSuccessful" element={<PaymentSuccessful setAddress={setAddress}/>} />
       </Routes>
     </>

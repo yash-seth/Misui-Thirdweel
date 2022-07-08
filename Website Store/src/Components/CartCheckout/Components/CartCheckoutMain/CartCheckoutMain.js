@@ -1,10 +1,10 @@
 import React from "react";
-import "./CartHomeDeliveryMain.css";
+import "./CartCheckoutMain.css";
 import { useState } from "react";
 import { cartCheckoutPickupData } from "../../../../Data";
 import { Link } from "react-router-dom";
 
-function CartHomeDeliveryMain({ address }) {
+function CartCheckoutMain({ address }) {
   const [deliveryMethod, setDeliveryMethod] = useState("Home Delivery");
   return (
     <>
@@ -237,4 +237,4 @@ function CartHomeDeliveryMain({ address }) {
   );
 }
 
-export default CartHomeDeliveryMain;
+export default CartCheckoutMain;
