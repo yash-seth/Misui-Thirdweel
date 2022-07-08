@@ -716,7 +716,18 @@ const cartCheckoutPickupData = [
       {id:1, slot: "Tomorrow 03:00PM - 05:00PM"}
     ] 
   },
+  {id: 2,
+    name:"Shree Laxmi Stores, Sant Tukaram Marg, Thane (East)",
+    addr: "Shop No 3, Vilas Apartments - Vilas CHSL, Sant Tukaram Road, Kopri, Daulat Nagar, Thane (East), Thane, Maharashtra",
+    timeSlots: [
+      {id:0, slot: "Tomorrow 10:00AM - 12:00PM"},
+      {id:1, slot: "Tomorrow 03:00PM - 05:00PM"}
+    ] 
+  },
 ]
+
+const paymentSuccessfulScatchCardData = 
+  {id: 0, name: "Laxmi Store", scatchCards:[{id:0,unlocked:1,src:"B1G1ScratchCard.png", alt:"buy 1 get 1 scatch card"},{id:1,unlocked:0,src:"B1G1ScratchCard.png", alt:"buy 1 get 1 scatch card"},{id:2,unlocked:0,src:"B1G1ScratchCard.png", alt:"buy 1 get 1 scatch card"},{id:3,unlocked:0,src:"B1G1ScratchCard.png", alt:"buy 1 get 1 scatch card"}]}
 
 export {
   TrendingData,
@@ -748,4 +759,5 @@ export {
   StoreItemsProducts,
   StoreItemsCart,
   cartCheckoutPickupData,
+  paymentSuccessfulScatchCardData,
 };

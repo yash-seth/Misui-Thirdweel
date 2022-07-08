@@ -1,7 +1,8 @@
 import React from "react";
 import "./CartHomeDeliveryMain.css";
 import { useState } from "react";
-import {cartCheckoutPickupData} from "../../../../Data"
+import { cartCheckoutPickupData } from "../../../../Data";
+import { Link } from "react-router-dom";
 
 function CartHomeDeliveryMain({ address }) {
   const [deliveryMethod, setDeliveryMethod] = useState("Home Delivery");
@@ -76,31 +77,53 @@ function CartHomeDeliveryMain({ address }) {
               </div>
             ) : (
               <div className="CartPickUpPointMainContainer">
-                <div className="CartPickUpPointMainContainerHeader">Pick Up Addresses - ({cartCheckoutPickupData.length} Stores)</div>
-                <hr id="CartHomeDeliveryMainHR"/>
-                {cartCheckoutPickupData.map((addr)=>{
-                    return (<>
-                    <div className="pickupUpPointAddr">
-                        <div id="pickupUpPointAddrHeading">Pick- up point {addr.id+1} address</div>
-                        <div className="pickupUpPointAddrNameContainer">
-                            <img src={require("./shop icon.png")} alt="shop icon" />
+                <div className="CartPickUpPointMainContainerHeader">
+                  Pick Up Addresses - ({cartCheckoutPickupData.length} Stores)
+                </div>
+                <hr id="CartHomeDeliveryMainHR" />
+                <div className="pickupUpPointAddrList">
+                  {cartCheckoutPickupData.map((addr) => {
+                    return (
+                      <>
+                        <div className="pickupUpPointAddr">
+                          <div id="pickupUpPointAddrHeading">
+                            Pick- up point {addr.id + 1} address
+                          </div>
+                          <div className="pickupUpPointAddrNameContainer">
+                            <img
+                              src={require("./shop icon.png")}
+                              alt="shop icon"
+                            />
                             <div id="pickupUpPointAddrName">{addr.name}</div>
+                          </div>
+                          <div id="pickupUpPointAddr">{addr.addr}</div>
+                          <div id="pickupUpPointAddrTimeSlotHeading">
+                            Choose Time Slot
+                          </div>
+                          <select id="pickupUpPointAddrTimeSlotDropdown">
+                            {addr.timeSlots.map((timeslot) => {
+                              return (
+                                <>
+                                  <option key={timeslot.id}>
+                                    {timeslot.slot}
+                                  </option>
+                                </>
+                              );
+                            })}
+                          </select>
+                          <div id="pickupUpPointAddrFooterText">
+                            Delivery Charges <span id="freeText">Free</span>
+                          </div>
                         </div>
-                        <div id="pickupUpPointAddr">{addr.addr}</div>
-                        <div id="pickupUpPointAddrTimeSlotHeading">Choose Time Slot</div>
-                        <select id="pickupUpPointAddrTimeSlotDropdown">
-                        {addr.timeSlots.map((timeslot)=>{
-                            return (<>
-                            <option key={timeslot.id}>{timeslot.slot}</option>
-                            </>)
-                        })}
-                        </select>
-                        <div id="pickupUpPointAddrFooterText">Delivery Charges <span id="freeText">Free</span></div>
-                    </div>
-                    {addr.key===cartCheckoutPickupData.length-1? (<span></span>) :(<hr id="CartHomeDeliveryMainHR"/>)}
-                    </>
-                    )
-                })}
+                        {addr.key === cartCheckoutPickupData.length - 1 ? (
+                          <span></span>
+                        ) : (
+                          <hr id="CartHomeDeliveryMainHR" />
+                        )}
+                      </>
+                    );
+                  })}
+                </div>
               </div>
             )}
           </div>
@@ -168,7 +191,9 @@ function CartHomeDeliveryMain({ address }) {
                   </div>
                 </div>
               </div>
-              <button id="pay">Pay</button>
+              <Link to="/paymentSuccessful" style={{ textDecoration: "none" }}>
+                <button id="pay">Pay</button>
+              </Link>
             </div>
           </div>
         </div>

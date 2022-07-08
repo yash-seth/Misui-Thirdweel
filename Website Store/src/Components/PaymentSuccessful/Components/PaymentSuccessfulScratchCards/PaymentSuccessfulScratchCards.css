@@ -1,0 +1,62 @@
+.PaymentSuccessfulScratchCardsContainer{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 80px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.PaymentSuccessfulScratchCards{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.PaymentSuccessfulScratchCardsContainerHeader{
+    font-size: 24px;
+    color: rgb(150, 150, 150);
+}
+
+#emptyScratchCard{
+    padding: 32px 55px;
+    background-color: rgb(226, 226, 226);
+    margin:0 10px;
+    border-radius: 8px;
+}
+
+.scratchCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#emptyScratchCardInfo{
+    font-size: 12px;
+}
+
+.scratchCardsText{
+    margin: 10px 0;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 920px){
+    .PaymentSuccessfulScratchCardsContainer{
+        padding: 20px;
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+    .PaymentSuccessfulScratchCards{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 20px 0;
+    }
+    .PaymentSuccessfulScratchCardsContainerHeader{
+        text-align: center;
+    }
+}

@@ -24,6 +24,7 @@ import StoreProfilePage from "./Components/StoreProfilePage/StoreProfilePage"
 import ProfilePage from "./Components/ProfilePage/ProfilePage"
 import StoreItemsPage from "./Components/StoreItemsPage/StoreItemsPage"
 import CartHomeDelivery from './Components/CartHomeDelivery/CartHomeDelivery';
+import PaymentSuccessful from './Components/PaymentSuccessful/PaymentSuccessful';
 
 function App() {
     const [address, setAddress] = useState({label:"",addr:""})
@@ -58,6 +59,7 @@ function App() {
         <Route path="/profile" element={<ProfilePage setAddress={setAddress}/>} />
         <Route path="/storeItems" element={<StoreItemsPage setAddress={setAddress}/>} />
         <Route path="/cartHomeDelivery" element={<CartHomeDelivery address={address} setAddress={setAddress}/>} />
+        <Route path="/PaymentSuccessful" element={<PaymentSuccessful setAddress={setAddress}/>} />
       </Routes>
     </>
   );
