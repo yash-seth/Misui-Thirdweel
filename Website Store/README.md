@@ -24,3 +24,4 @@
 - [x] User Profile
 - [x] Store Items Page
 - [x] Cart Checkout Page
+- [x] Payment Success Page
