@@ -1,0 +1,101 @@
+.FAQMainContainer{
+    font-family: 'Montserrat', sans-serif;
+    padding: 30px 100px 0;
+}
+
+#FAQMainContainerHeaderText{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.FAQMainContainerTopics{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.FAQMainContainerTopicList{
+    background-color: white;
+    width: 30%;
+    margin-right: 20px;
+    padding: 10px 0px 10px 30px;
+    height: 320px;
+    margin-bottom: 20px;
+}
+
+#FAQMainContainerTopicListHeader{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#FAQTopic{
+    padding:5px 0px;
+}
+
+#FAQTopic:hover{
+    color:#4B8D5E;
+}
+
+#FAQMainContainerFAQListHeader{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.FAQMainContainerFAQList{
+    margin-right: 20px;
+    padding: 10px 0px 10px 30px;
+    height: 320px;
+    margin-bottom: 20px;
+    background-color: white;
+    width: 70%;
+}
+
+.FAQMainContainerFAQListFAQ{
+    height: 300px;
+    overflow-y: scroll;
+}
+
+#FAQQuestion{
+    font-weight: 600;
+    color: #4B8D5E;
+}
+
+#FAQAnswer{
+    color: rgba(0,0,0,0.6);
+    font-size: 12px;
+}
+
+.FAQQuestionContainer{
+    padding: 10px 0;
+}
+
+@media screen and (max-width: 920px){
+    .FAQMainContainer{
+        padding: 10px 20px 0;
+    }
+    #FAQMainContainerHeaderText{
+        text-align: center;
+        font-size: 20px;
+
+    }
+    .FAQMainContainerTopicList{
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+        padding: 10px 0;
+        height: 200px;
+    }
+    .FAQMainContainerFAQList{
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+        padding: 10px 0;
+    }
+    .FAQMainContainerTopics{
+        flex-wrap: wrap;
+    }
+    .FAQQuestionContainer{
+        margin: 0 10px;
+    }
+}

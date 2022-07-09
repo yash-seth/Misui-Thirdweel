@@ -1,0 +1,87 @@
+.FAQFooterNavContainer{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+.FAQFooterNavContainerHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#FAQFooterNavContainerHeaderText{
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0 0 0 12px;
+}
+
+#FAQFooterNavContainerHeaderSubText{
+    margin: 0 0 0 12px;
+}
+
+.FAQFooterNavButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    margin: 30px 0;
+}
+
+#chatWithUsBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(225, 225, 225);
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.4);
+}
+
+#callUsBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(225, 225, 225);
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.4);
+}
+
+@media screen and (max-width: 920px){
+    .FAQFooterNavContainer{
+        font-family: 'Montserrat', sans-serif;
+        margin: 0 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .FAQFooterNavContainerHeader{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 10px 0px;
+    }
+
+    .FAQFooterNavButtons{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+    }
+}

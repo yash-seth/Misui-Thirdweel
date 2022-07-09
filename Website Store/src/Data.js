@@ -738,6 +738,34 @@ const cartCheckoutPickupData = [
 const paymentSuccessfulScatchCardData = 
   {id: 0, name: "Laxmi Store", scatchCards:[{id:0,unlocked:1,src:"B1G1ScratchCard.png", alt:"buy 1 get 1 scatch card"},{id:1,unlocked:0,src:"B1G1ScratchCard.png", alt:"buy 1 get 1 scatch card"},{id:2,unlocked:0,src:"B1G1ScratchCard.png", alt:"buy 1 get 1 scatch card"},{id:3,unlocked:0,src:"B1G1ScratchCard.png", alt:"buy 1 get 1 scatch card"}]}
 
+
+const FAQTopicList = [
+  {id:0, name:"Order"},
+  {id:0, name:"Cancellations and returns"},
+  {id:0, name:"Payments"},
+  {id:0, name:"Shopping"},
+  {id:0, name:"Wallet"},
+  {id:0, name:"Seller"},
+]
+
+const FAQQuestionsList = [
+  {id:0, question:"Lorem ipsum dolor sit amet, consectetur?", answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur vero optio labore veniam pariatur. Id nesciunt, vel tempora, libero ab quod aperiam doloribus ea asperiores, laborum quos a rem consequatur!'},
+  {id:1, question:"Lorem ipsum dolor sit amet, consectetur?", answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur vero optio labore veniam pariatur. Id nesciunt, vel tempora, libero ab quod aperiam doloribus ea asperiores, laborum quos a rem consequatur!'},
+  {id:2, question:"Lorem ipsum dolor sit amet, consectetur?", answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur vero optio labore veniam pariatur. Id nesciunt, vel tempora, libero ab quod aperiam doloribus ea asperiores, laborum quos a rem consequatur!'},
+  {id:3, question:"Lorem ipsum dolor sit amet, consectetur?", answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur vero optio labore veniam pariatur. Id nesciunt, vel tempora, libero ab quod aperiam doloribus ea asperiores, laborum quos a rem consequatur!'},
+  {id:4, question:"Lorem ipsum dolor sit amet, consectetur?", answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur vero optio labore veniam pariatur. Id nesciunt, vel tempora, libero ab quod aperiam doloribus ea asperiores, laborum quos a rem consequatur!'},
+  {id:5, question:"Lorem ipsum dolor sit amet, consectetur?", answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur vero optio labore veniam pariatur. Id nesciunt, vel tempora, libero ab quod aperiam doloribus ea asperiores, laborum quos a rem consequatur!'},
+  {id:6, question:"Lorem ipsum dolor sit amet, consectetur?", answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur vero optio labore veniam pariatur. Id nesciunt, vel tempora, libero ab quod aperiam doloribus ea asperiores, laborum quos a rem consequatur!'},
+]
+
+const CustomerServiceIssueQuestion = [
+  {id:0, question:"I want to track my order", answer: 'Check order status and call the delivery agent'},
+  {id:1, question:"I want to track my order", answer: 'Check order status and call the delivery agent'},
+  {id:2, question:"I want to track my order", answer: 'Check order status and call the delivery agent'},
+  {id:3, question:"I want to track my order", answer: 'Check order status and call the delivery agent'},
+]
+
+
 export {
   TrendingData,
   StoryData,
@@ -770,4 +798,7 @@ export {
   cartCheckoutPickupData,
   paymentSuccessfulScatchCardData,
   rewardsImages,
+  FAQTopicList,
+  FAQQuestionsList,
+  CustomerServiceIssueQuestion,
 };

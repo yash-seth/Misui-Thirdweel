@@ -1,0 +1,161 @@
+.CustomerServiceMainContainer{
+    font-family: 'Montserrat', sans-serif;
+    padding: 30px 100px 0;
+}
+
+#CustomerServiceMainContainerHeaderText{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.CustomerServiceMainContainerTopics{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.CustomerServiceMainContainerTopicList{
+    background-color: white;
+    width: 30%;
+    margin-right: 20px;
+    padding: 10px 0px 10px 30px;
+    height: 345px;
+    margin-bottom: 20px;
+}
+
+#CustomerServiceMainContainerTopicListHeader{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#issueTopic{
+    padding:5px 0px;
+}
+
+#issueTopic:hover{
+    color:#4B8D5E;
+}
+
+#CustomerServiceIssuesHeader{
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    padding: 10px 0px 0px 30px;
+}
+
+.CustomerServiceMainContainerHelpCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.HelpCenterContainer{
+    background-color: white;
+    margin-right: 20px;
+    padding: 10px 0px 10px 30px;
+    margin-bottom: 20px;
+    width: 90%;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#CustomerServiceIssuesHeaderText{
+    padding: 10px 0px 10px 30px;
+}
+
+.CustomerServiceMainContainerIssues{
+    background-color: white;
+    margin-right: 20px;
+    padding: 10px 0px 10px 30px;
+    margin-bottom: 20px;
+    width: 90%;
+}
+
+.CustomerServiceMainContainerIssue{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.issueDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.CustomerServiceIssue{
+    height: 300px;
+    overflow-y: scroll;
+}
+
+#issueQuestion{
+    font-weight: 600;
+    color: #4B8D5E;
+}
+
+#issueAnswer{
+    color: rgba(0,0,0,0.6);
+    font-size: 12px;
+}
+
+@media screen and (max-width: 920px){
+    .CustomerServiceMainContainer{
+        padding: 10px 20px 0;
+    }
+    #CustomerServiceMainContainerHeaderText{
+        text-align: center;
+        font-size: 20px;
+
+    }
+    .CustomerServiceMainContainerTopicList{
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+        padding: 10px 0;
+        height: 200px;
+    }
+    .CustomerServiceMainContainerHelpCenter{
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+        padding: 10px 0;
+    }
+    .CustomerServiceMainContainerTopics{
+        flex-wrap: wrap;
+    }
+    .HelpCenterContainer{
+        margin: 10px 0;
+        padding: 10px 0;
+        width: 100%;
+    }
+    #CustomerServiceIssuesHeaderText{
+        padding: 10px 0px 10px 0px;
+    }
+    .CustomerServiceMainContainerIssues{
+        margin: 10px 0;
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+    .CustomerServiceMainContainerIssue{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 0;
+    }
+    .issueDetails{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    #issueAnswer{
+        width: 60%;
+    }
+}

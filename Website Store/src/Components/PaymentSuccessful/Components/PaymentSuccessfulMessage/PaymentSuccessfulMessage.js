@@ -11,7 +11,7 @@ function PaymentSuccessfulMessage({paymentView}) {
     var currentTime =
       today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     setTimestampPlaced(currentTime);
-  });
+  },[]);
 
   return (
     <>

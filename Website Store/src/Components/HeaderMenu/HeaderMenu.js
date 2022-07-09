@@ -183,13 +183,13 @@ function HeaderMenu() {
           </div>
           <hr className="border"/>
           <div className="sidebarMenuOption">
-            <button id="sidebarMenuOption">Customer Service</button>
+            <Link to="/CustomerService" style={{ textDecoration: 'none' }}><button id="sidebarMenuOption">Customer Service</button></Link>
           </div>
           <div className="sidebarMenuOption">
             <button id="sidebarMenuOption">Become a seller</button>
           </div>
           <div className="sidebarMenuOption">
-            <button id="sidebarMenuOption">FAQs</button>
+            <Link to="/FAQs" style={{ textDecoration: 'none' }}><button id="sidebarMenuOption">FAQs</button></Link>
           </div>
           <div className="sidebarMenuOption">
             <button id="sidebarMenuOption">About Us</button>
