@@ -1,0 +1,1 @@
+export const websiteStoreUrl = "http://ec2-44-206-245-136.compute-1.amazonaws.com:8012"
