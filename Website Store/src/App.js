@@ -46,7 +46,7 @@ function App() {
         <Stores/>
         <TeamBuy/>
         <Categories/>
-        <DiscountBanner/>
+        {/* <DiscountBanner/> */}
         <Trending/>
         <About/>
         <Footer/>
