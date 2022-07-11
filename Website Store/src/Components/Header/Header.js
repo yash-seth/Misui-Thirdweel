@@ -213,9 +213,11 @@ function Header({address, setAddress}) {
             })}
           </div>
           <button>
-            <div className="addressContainerFooter">
-              Add an address or pickup point
-            </div>
+            <Link to="/addAddress" style={{textDecoration: "none"}}>
+              <div className="addressContainerFooter">
+                Add an address or pickup point
+              </div>
+            </Link>
           </button>
           <br />
           <div className="separator">or enter a pincode</div>
@@ -250,7 +252,7 @@ function Header({address, setAddress}) {
             {addressData.map((addr) => {
               return (
                 <>
-                  <div className="addressContainerMobile">
+                  <div className="addressContainerMobile" onClick={()=>{setAddress({label:addr.label,addr:addr.address});toggleAddressModal()}}>
                     <div className="addressLabelMobile">{addr.label}</div>
                     <div className="addressMainMobile">
                       <b>{addr.name}</b> {addr.address}
@@ -261,11 +263,13 @@ function Header({address, setAddress}) {
               );
             })}
           </div>
-          <button>
-            <div className="addressContainerFooterMobile">
-              Add an address or pickup point
-            </div>
-          </button>
+          <Link to="/addAddress" style={{textDecoration: "none"}}>
+            <button>
+              <div className="addressContainerFooterMobile">
+                Add an address or pickup point
+              </div>
+            </button>
+          </Link>
           <br />
           <div className="separatorMobile">or enter a pincode</div>
           <div className="addressPincodeControlsMobile">

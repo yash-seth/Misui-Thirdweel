@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import "./DiscountBanner.css"
-import { DiscountBannerData } from "../../Data"
+// import { DiscountBannerData } from "../../Data"
 import axios from 'axios';
 import { websiteStoreUrl } from '../../api/urls';
 

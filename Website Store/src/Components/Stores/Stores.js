@@ -30,7 +30,7 @@ function Stores() {
             <Link to="/storeProfile" style={{ textDecoration: "none", color: "inherit" }}>
                 <div className='stores'>
                     {stores.map((store) => {
-                        return <img id="store" key={store.uuid} src={store.src} alt={store.alt} />
+                        return <img id="store" key={store.uuid} src={store.src} alt={store.alt} height="200px"/>
                     })}
                 </div>
             </Link>

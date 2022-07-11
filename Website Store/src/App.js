@@ -2,7 +2,7 @@ import './App.css';
 import { useState, } from 'react'
 import About from './Components/About/About';
 import Categories from './Components/Categories/Categories';
-import DiscountBanner from './Components/DiscountBanner/DiscountBanner';
+// import DiscountBanner from './Components/DiscountBanner/DiscountBanner';
 import DiscountBar from './Components/DiscountBar/DiscountBar';
 import Footer from './Components/Footer/Footer'
 import Header from './Components/Header/Header';
@@ -27,6 +27,7 @@ import CartCheckout from './Components/CartCheckout/CartCheckout';
 import PaymentSuccessful from './Components/PaymentSuccessful/PaymentSuccessful';
 import FAQ from './Components/FAQ/FAQ';
 import CustomerService from './Components/CustomerService/CustomerService';
+import AddAddress from './Components/AddAddress/AddAddress';
 
 function App() {
     const [address, setAddress] = useState({label:"",addr:""})
@@ -65,6 +66,7 @@ function App() {
         <Route path="/PaymentSuccessful" element={<PaymentSuccessful address={address} setAddress={setAddress} paymentView={paymentView}/>} />
         <Route path="/FAQs" element={<FAQ address={address} setAddress={setAddress}/>} />
         <Route path="/CustomerService" element={<CustomerService address={address} setAddress={setAddress}/>} />
+        <Route path="/addAddress" element={<AddAddress address={address} setAddress={setAddress}/>} />
       </Routes>
     </>
   );
