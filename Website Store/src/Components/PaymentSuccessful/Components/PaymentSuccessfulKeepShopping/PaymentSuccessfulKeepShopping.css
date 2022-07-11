@@ -27,17 +27,6 @@
     position: relative;
 }
 
-
-
-
-.StoreProducts{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 25px;
-}
-
 .productBanner{
     padding: 10px;
     display: flex;

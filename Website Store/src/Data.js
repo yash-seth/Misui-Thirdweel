@@ -779,6 +779,19 @@ const profileAddresses = [
   {id:3, name:"Ravi Kumar", addr:"2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102", contact: "75063326420"},
 ]
 
+const ChatRouletteData = [
+  {id:0, src:"reward.png", name:"ABC Store", addr:"2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
+  {id:1, src:"reward.png", name:"ABC Store", addr:"2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
+  {id:2, src:"reward.png", name:"ABC Store", addr:"2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
+  {id:3, src:"reward.png", name:"ABC Store", addr:"2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
+  {id:4, src:"reward.png", name:"ABC Store", addr:"2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
+  {id:5, src:"reward.png", name:"ABC Store", addr:"2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
+  {id:6, src:"reward.png", name:"ABC Store", addr:"2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
+  {id:7, src:"reward.png", name:"ABC Store", addr:"2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
+  {id:8, src:"reward.png", name:"ABC Store", addr:"2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
+  {id:9, src:"reward.png", name:"ABC Store", addr:"2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
+]
+
 
 export {
   TrendingData,
@@ -817,4 +830,5 @@ export {
   CustomerServiceIssueQuestion,
   AddAddressTopicList,
   profileAddresses,
+  ChatRouletteData,
 };

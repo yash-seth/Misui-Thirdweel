@@ -1,0 +1,136 @@
+.ChatRouletteMainContainer{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 100px;
+    background-color: #f2f2f2;
+}
+
+.ChatRouletteMainContainerHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.ChatRouletteMainContainerHeaderText{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+#ChatRouletteMainContainerHeaderText{
+    font-size: 32px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#ChatRouletteMainContainerHeaderSubText{
+    font-size: 14px;
+}
+
+#headerRightArrow{
+    margin-left: 10px;
+}
+
+.ChatRouletteMainContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.chatRouletteFilters{
+    width: 15%;
+    background-color: white;
+    padding: 20px;
+}
+
+#chatRouletteFiltersHeader{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#chatRouletteFiltersOrderStatus, #chatRouletteFiltersOrderTime{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#chatRouletteHR{
+    width: 100%;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.chatRouletteFilters input{
+    padding: 2px 0;
+}
+
+.chatRouletteCoupons{
+    width: 85%;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#rouletteImage{
+    padding: 0px 20px 0px;
+}
+
+.roulette{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rouletteDetails{
+    margin: 0 30px 20px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+#rouletteName{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#rouletteAddr{
+    font-size: 10px;
+}
+
+@media screen and (max-width: 920px) {
+    .ChatRouletteMainContainer{
+        padding: 0 20px;
+    }    
+    .ChatRouletteMainContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .chatRouletteFilters{
+        width: 80%;
+    }   
+    
+    .roulette{
+        padding-top: 20px;
+        width: 100%;
+    }
+    .chatRouletteCoupons{
+        width: 85%;
+        margin-left: 0px;
+    }
+}

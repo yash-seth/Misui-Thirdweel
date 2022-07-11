@@ -28,6 +28,7 @@ import PaymentSuccessful from './Components/PaymentSuccessful/PaymentSuccessful'
 import FAQ from './Components/FAQ/FAQ';
 import CustomerService from './Components/CustomerService/CustomerService';
 import AddAddress from './Components/AddAddress/AddAddress';
+import ChatRoulette from './Components/ChatRoulette/ChatRoulette';
 
 function App() {
     const [address, setAddress] = useState({label:"",addr:""})
@@ -67,6 +68,7 @@ function App() {
         <Route path="/FAQs" element={<FAQ address={address} setAddress={setAddress}/>} />
         <Route path="/CustomerService" element={<CustomerService address={address} setAddress={setAddress}/>} />
         <Route path="/addAddress" element={<AddAddress address={address} setAddress={setAddress}/>} />
+        <Route path="/chatRoulette" element={<ChatRoulette address={address} setAddress={setAddress}/>} />
       </Routes>
     </>
   );
