@@ -26,3 +26,5 @@
 - [x] Cart Checkout Page
 - [x] Payment Success Page
 - [x] Team Buy Payment Success Page
+- [x] FAQ Page
+- [x] Customer Support Page
