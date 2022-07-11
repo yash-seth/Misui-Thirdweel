@@ -28,3 +28,5 @@
 - [x] Team Buy Payment Success Page
 - [x] FAQ Page
 - [x] Customer Support Page
+- [x] Chat Roulette Page
+- [x] 'Add Address' Page
