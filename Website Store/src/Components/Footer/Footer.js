@@ -22,7 +22,7 @@ function Footer() {
                 <div className="footerColumn">
                 <p className="list-header"><b>Contact</b></p>
                     <div className='list-items'>
-                        <div className='list-item'><img className="link-icon" src={require("./call.png")} alt="call icon" />919191919191</div><br/>
+                        <div className='list-item'><img className="link-icon" src={require("./call.png")} alt="call icon" />7019504495</div><br/>
                         <div className='list-item'><img className="link-icon" src={require("./location.png")} alt="location icon" />2nd floor, K-tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102</div>
                     </div>
                 </div>

@@ -1,0 +1,220 @@
+.AddAddressMainContainer{
+    font-family: 'Montserrat', sans-serif;
+    padding: 30px 100px 0;
+    padding-bottom: 20px;
+}
+
+#AddAddressMainContainerHeaderText{
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+#AddAddressMainContainerHeaderSubText{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.AddAddressMainContainerTopics{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.AddAddressMainContainerTopicList{
+    background-color: white;
+    width: 30%;
+    margin-right: 20px;
+    padding: 10px 0px 10px 30px;
+    height: 420px;
+    margin-bottom: 20px;
+}
+
+#topic{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#profileTopic{
+    padding:20px 0px;
+}
+
+#profileTopic:hover{
+    color:#4B8D5E;
+}
+
+
+.AddAddressMainContainerAdd{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.AddAddressContainer{
+    background-color: white;
+    margin-right: 20px;
+    padding: 10px 0px 10px 30px;
+    margin-bottom: 20px;
+    width: 90%;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#AddAddressContainerHeaderText{
+    padding: 10px 0px 10px 30px;
+}
+
+.AddAddressMainContainerAddresses{
+    background-color: white;
+    margin-right: 20px;
+    padding: 10px 0px 10px 30px;
+    margin-bottom: 20px;
+    width: 90%;
+}
+
+.AddAddressMainContainerAddressList{
+    height: 260px;
+    overflow-y: scroll;
+}
+
+.AddAddressMainContainerAddress{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+
+.issueDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.CustomerServiceIssue{
+    height: 300px;
+    overflow-y: scroll;
+}
+
+#issueQuestion{
+    font-weight: 600;
+    color: #4B8D5E;
+}
+
+#issueAnswer{
+    color: rgba(0,0,0,0.6);
+    font-size: 12px;
+}
+
+.addrHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+
+#addressDesc{
+    color: rgba(0,0,0,0.6);
+    font-size: 14px;
+}
+
+#defaultAddr{
+    background-color: rgb(204, 204, 204);
+    display: inline;
+    padding: 2px;
+    font-size: 14px;
+    margin: 2px;
+}
+
+#signOut{
+    margin-left: 15px;
+}
+
+#signOut:hover{
+    color: #4B8D5E;
+}
+
+@media screen and (max-width: 920px){
+    .AddAddressMainContainer{
+        padding: 10px 20px 0;
+    }
+    #AddAddressMainContainerHeaderText{
+        text-align: center;
+        font-size: 20px;
+
+    }
+    #AddAddressMainContainerHeaderSubText{
+        text-align: center;
+        font-size: 14px;
+
+    }
+    .AddAddressMainContainerTopicList{
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+        padding: 10px 0;
+        height: 270px;
+    }
+    .AddAddressMainContainerAdd{
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+        padding: 10px 0;
+    }
+    .AddAddressMainContainerTopics{
+        flex-wrap: wrap;
+    }
+    .AddAddressContainer{
+        margin: 10px 0;
+        padding: 10px 0;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    #AddAddressContainerHeaderText{
+        padding: 10px 0px 10px 0px;
+    }
+    .AddAddressMainContainerAddresses{
+        margin: 10px 0;
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+    .AddAddressMainContainerAddress{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 0;
+    }
+    .issueDetails{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    #issueAnswer{
+        width: 60%;
+    }
+    .addrHeader{
+        margin:0 10px;
+        width: 100%
+    }
+    #defaultAddr{
+        float: left;
+        margin-left: 10px;
+    }
+    #topic{
+        justify-content: center;
+    }
+}

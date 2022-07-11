@@ -765,6 +765,20 @@ const CustomerServiceIssueQuestion = [
   {id:3, question:"I want to track my order", answer: 'Check order status and call the delivery agent'},
 ]
 
+const AddAddressTopicList = [
+  {id:0, name:"My Orders"},
+  {id:1, name:"My Profile"},
+  {id:2, name:"Payments"},
+  {id:3, name:"My Chats"},
+]
+
+const profileAddresses = [
+  {id:0, name:"Ishaan Kumar", addr:"2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102", contact: "75063326420"},
+  {id:1, name:"Ravi Kumar", addr:"2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102", contact: "75063326420"},
+  {id:2, name:"Ravi Kumar", addr:"2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102", contact: "75063326420"},
+  {id:3, name:"Ravi Kumar", addr:"2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102", contact: "75063326420"},
+]
+
 
 export {
   TrendingData,
@@ -801,4 +815,6 @@ export {
   FAQTopicList,
   FAQQuestionsList,
   CustomerServiceIssueQuestion,
+  AddAddressTopicList,
+  profileAddresses,
 };
