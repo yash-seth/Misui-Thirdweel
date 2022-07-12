@@ -30,3 +30,4 @@
 - [x] Customer Support Page
 - [x] Chat Roulette Page
 - [x] 'Add Address' Page
+- [x] Product Availability Page
