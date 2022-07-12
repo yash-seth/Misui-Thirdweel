@@ -1,0 +1,26 @@
+.ProductAvailabilitySearchContainer{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+#ProductAvailabilitySearch{
+    margin-top: 10px;
+    padding: 10px 250px 10px 30px;
+    background: url("./search.png") no-repeat left ;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 12px;
+    background-color: white;
+}
+
+@media screen and (max-width: 768px){
+    #ProductAvailabilitySearch{
+        padding: 10px 120px 10px 20px;
+    }
+}
+
+@media screen and (max-width: 350px){
+    #ProductAvailabilitySearch{
+        padding: 10px 80px 10px 10px;
+    }
+}

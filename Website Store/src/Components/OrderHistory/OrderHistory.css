@@ -1,0 +1,256 @@
+.OrderHistoryMainContainer{
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 100px;
+    background-color: #f2f2f2;
+}
+
+.OrderHistoryMainContainerHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.OrderHistoryMainContainerHeaderText{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+#OrderHistoryMainContainerHeaderText{
+    font-size: 32px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#OrderHistoryMainContainerHeaderSubText{
+    font-size: 14px;
+}
+
+#headerRightArrow{
+    margin-left: 10px;
+}
+
+.OrderHistoryMainContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.OrderHistoryFilters{
+    width: 15%;
+    background-color: white;
+    padding: 20px;
+}
+
+#OrderHistoryFiltersHeader{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#OrderHistoryFiltersOrderStatus, #OrderHistoryFiltersOrderTime{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#OrderHistoryHR{
+    width: 100%;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.OrderHistoryFilters input{
+    padding: 2px 0;
+}
+
+.OrderHistoryMainContainerSubHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+#OrderHistoryMainContainerSubHeaderText{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#OrderHistoryMainContainerSubHeaderTextSubtext{
+    font-size: 14px;
+}
+
+.OrderHistoryItems{
+    width: 85%;
+    margin-left: 20px;
+}
+
+.OrderHistoryItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.orderStatus{
+    padding: 10px;
+}
+
+#orderStatusHeader{
+    font-size: 20px;
+    font-weight: 600;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.orderID{
+    padding: 10px;
+    font-weight: 600;
+}
+
+#orderIDHeader{
+    font-size: 16px;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+#orderID{
+    font-weight: 500;
+}
+
+.orderPlacedDetails{
+    padding: 10px;
+    font-weight: 600;
+}
+
+#orderPlacedDetailsHeader{
+    font-size: 16px;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+#orderPlacedDetails{
+    font-weight: 500;
+}
+
+.orderAmount{
+    padding: 10px;
+    font-weight: 600;
+}
+
+#orderAmountHeader{
+    font-size: 16px;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+#orderAmount{
+    font-weight: 500;
+}
+
+#viewItemsBtn{
+    padding: 8px;
+    background-color: #FFE5CC;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+#OrderDetailsDropdownMenu{
+    padding: 10px;
+}
+
+.OrderHistoryItemOnDropdown{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #fff2e6;
+}
+
+.orderAddress{
+    width: 30%;
+}
+
+.orderType, .orderAddress, .orderMode, .orderAmountExtra{
+    padding: 50px;
+}
+
+#orderTypeHeader, #orderAddressHeader, #orderModeHeader, #orderAmountExtraHeader{
+    font-weight: 600;
+}
+
+#orderType, #orderName, #orderAddress, #orderMode, #orderAmountExtraAmount, #orderAmountExtraSavings{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#orderAmountExtraSavingsAmt{
+    color: #4B8D5E;
+}
+@media screen and (max-width: 920px) {
+    .OrderHistoryMainContainer{
+        padding: 0 20px;
+    }    
+    .OrderHistoryMainContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .OrderHistoryFilters{
+        width: 80%;
+    }   
+    .OrderHistoryItems{
+        margin-left: 0px;
+    }
+    .OrderHistoryItemsContainer{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .OrderHistoryItem{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+    .OrderHistoryItemDetails{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 20px;
+    }
+    
+    .OrderHistoryItemDetailsInfo{
+        padding: 10px 0px;
+        border-right: none;
+        width: 60%;
+    }
+    
+    .OrderHistoryTimeSearched{
+        border-right: none;
+        padding: 10px 0px;
+        width: 60%;
+    }
+    .OrderHistoryStoresFound{
+        padding: 10px 0px;
+        width: 60%;
+    }
+    #selectProdAvailabilityItem, #deleteProdAvailabilityItem{
+        display: none;
+    }
+    #OrderHistoryItemImage{
+        margin-top: 20px;
+    }
+}

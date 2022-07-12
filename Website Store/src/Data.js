@@ -802,6 +802,14 @@ const productAvailabilityData = [
   {id: 6, name: "Masala Lays Chips - Masala Magic", lastSearchedDate: "17 March, 2022", lastSearchedTime: "7:00 PM", numOfStoresFound: 45, src:"prod.png"},
 ]
 
+const OrderHistoryData = [
+  {id: 0, status: "Complete", ID: 24245768, timestampPlaced: "17 Mar, Thu 4:00 PM - 7:00 PM", amount: "$1450", type: "Home Delivery", name: "Rohan Kumar", address: "2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102", paymentMode: "UPI", savings: "$245"},
+  {id: 1, status: "Complete", ID: 24245768, timestampPlaced: "17 Mar, Thu 4:00 PM - 7:00 PM", amount: "$1450", type: "Home Delivery", name: "Rohan Kumar", address: "2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102", paymentMode: "UPI", savings: "$245"},
+  {id: 2, status: "Complete", ID: 24245768, timestampPlaced: "17 Mar, Thu 4:00 PM - 7:00 PM", amount: "$1450", type: "Home Delivery", name: "Rohan Kumar", address: "2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102", paymentMode: "UPI", savings: "$245"},
+  {id: 3, status: "Complete", ID: 24245768, timestampPlaced: "17 Mar, Thu 4:00 PM - 7:00 PM", amount: "$1450", type: "Home Delivery", name: "Rohan Kumar", address: "2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102", paymentMode: "UPI", savings: "$245"},
+  {id: 4, status: "Complete", ID: 24245768, timestampPlaced: "17 Mar, Thu 4:00 PM - 7:00 PM", amount: "$1450", type: "Home Delivery", name: "Rohan Kumar", address: "2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102", paymentMode: "UPI", savings: "$245"},
+]
+
 export {
   TrendingData,
   StoryData,
@@ -841,4 +849,5 @@ export {
   profileAddresses,
   ChatRouletteData,
   productAvailabilityData,
+  OrderHistoryData,
 };

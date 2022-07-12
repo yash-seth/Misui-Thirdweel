@@ -178,7 +178,9 @@ function HeaderMenu() {
             <button id="sidebarMenuOption">Group Buy History</button>
           </div>
           <div className="sidebarMenuOption">
-            <button id="sidebarMenuOption">Order History</button>
+            <Link to="/orderHistory" style={{ textDecoration: "none" }}>
+              <button id="sidebarMenuOption">Order History</button>
+            </Link>
           </div>
           <div className="sidebarMenuOption">
             <button id="sidebarMenuOption">Wallet</button>
