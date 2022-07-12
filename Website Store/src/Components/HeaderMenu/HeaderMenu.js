@@ -169,8 +169,10 @@ function HeaderMenu() {
           </div>
           <hr className="border"/>
           <div className="sidebarMenuOption">
-            <button id="sidebarMenuOption">Availability check history</button>
-            <img src={require("./rightArrow.png")} alt="right arrow" height="25px"/>
+            <Link to="/productAvailability" style={{ textDecoration: "none" }}>
+              <button id="sidebarMenuOption">Availability check history</button>
+            </Link>
+              <img src={require("./rightArrow.png")} alt="right arrow" height="25px"/>
           </div>
           <div className="sidebarMenuOption">
             <button id="sidebarMenuOption">Group Buy History</button>

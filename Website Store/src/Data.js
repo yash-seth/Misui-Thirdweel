@@ -792,6 +792,15 @@ const ChatRouletteData = [
   {id:9, src:"reward.png", name:"ABC Store", addr:"2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
 ]
 
+const productAvailabilityData = [
+  {id: 0, name: "Masala Lays Chips - Masala Magic", lastSearchedDate: "17 March, 2022", lastSearchedTime: "7:00 PM", numOfStoresFound: 45, src:"prod.png"},
+  {id: 1, name: "Masala Lays Chips - Masala Magic", lastSearchedDate: "17 March, 2022", lastSearchedTime: "7:00 PM", numOfStoresFound: 45, src:"prod.png"},
+  {id: 2, name: "Masala Lays Chips - Masala Magic", lastSearchedDate: "17 March, 2022", lastSearchedTime: "7:00 PM", numOfStoresFound: 45, src:"prod.png"},
+  {id: 3, name: "Masala Lays Chips - Masala Magic", lastSearchedDate: "17 March, 2022", lastSearchedTime: "7:00 PM", numOfStoresFound: 45, src:"prod.png"},
+  {id: 4, name: "Masala Lays Chips - Masala Magic", lastSearchedDate: "17 March, 2022", lastSearchedTime: "7:00 PM", numOfStoresFound: 45, src:"prod.png"},
+  {id: 5, name: "Masala Lays Chips - Masala Magic", lastSearchedDate: "17 March, 2022", lastSearchedTime: "7:00 PM", numOfStoresFound: 45, src:"prod.png"},
+  {id: 6, name: "Masala Lays Chips - Masala Magic", lastSearchedDate: "17 March, 2022", lastSearchedTime: "7:00 PM", numOfStoresFound: 45, src:"prod.png"},
+]
 
 export {
   TrendingData,
@@ -831,4 +840,5 @@ export {
   AddAddressTopicList,
   profileAddresses,
   ChatRouletteData,
+  productAvailabilityData,
 };

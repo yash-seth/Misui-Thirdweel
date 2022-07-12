@@ -1,0 +1,226 @@
+.ProductAvailabilityMainContainer{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 100px;
+    background-color: #f2f2f2;
+}
+
+.ProductAvailabilityMainContainerHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.ProductAvailabilityMainContainerHeaderText{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+#ProductAvailabilityMainContainerHeaderText{
+    font-size: 32px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#ProductAvailabilityMainContainerHeaderSubText{
+    font-size: 14px;
+}
+
+#headerRightArrow{
+    margin-left: 10px;
+}
+
+.ProductAvailabilityMainContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.ProductAvailabilityFilters{
+    width: 15%;
+    background-color: white;
+    padding: 20px;
+}
+
+#ProductAvailabilityFiltersHeader{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#ProductAvailabilityFiltersOrderStatus, #ProductAvailabilityFiltersOrderTime{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#ProductAvailabilityHR{
+    width: 100%;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.ProductAvailabilityFilters input{
+    padding: 2px 0;
+}
+
+.ProductAvailabilityMainContainerSubHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+#ProductAvailabilityMainContainerSubHeaderText{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#ProductAvailabilityMainContainerSubHeaderTextSubtext{
+    font-size: 14px;
+}
+
+.ProductAvailabilityItemsContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.ProductAvailabilityItems{
+    width: 85%;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.ProductAvailabilityItem{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.ProductAvailabilityItemDetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.ProductAvailabilityItemDetailsInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 40px;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.ProductAvailabilityTimeSearched{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px 40px;
+}
+
+.ProductAvailabilityStoresFound{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 60px;
+}
+
+#prodAvailabilityViewStoresBtn{
+    padding: 8px;
+    background-color: #FFE5CC;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.selectProdAvailabilityItem{
+    padding: 10px;
+}
+
+#deleteProdAvailabilityItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@media screen and (max-width: 920px) {
+    .ProductAvailabilityMainContainer{
+        padding: 0 20px;
+    }    
+    .ProductAvailabilityMainContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .ProductAvailabilityFilters{
+        width: 80%;
+    }   
+    .ProductAvailabilityItems{
+        margin-left: 0px;
+    }
+    .ProductAvailabilityItemsContainer{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .ProductAvailabilityItem{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+    .ProductAvailabilityItemDetails{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 20px;
+    }
+    
+    .ProductAvailabilityItemDetailsInfo{
+        padding: 10px 0px;
+        border-right: none;
+        width: 60%;
+    }
+    
+    .ProductAvailabilityTimeSearched{
+        border-right: none;
+        padding: 10px 0px;
+        width: 60%;
+    }
+    .ProductAvailabilityStoresFound{
+        padding: 10px 0px;
+        width: 60%;
+    }
+    #selectProdAvailabilityItem, #deleteProdAvailabilityItem{
+        display: none;
+    }
+    #ProductAvailabilityItemImage{
+        margin-top: 20px;
+    }
+}
