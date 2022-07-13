@@ -175,7 +175,9 @@ function HeaderMenu() {
               <img src={require("./rightArrow.png")} alt="right arrow" height="25px"/>
           </div>
           <div className="sidebarMenuOption">
+          <Link to="/teamBuyHistory" style={{ textDecoration: "none" }}>
             <button id="sidebarMenuOption">Group Buy History</button>
+          </Link>
           </div>
           <div className="sidebarMenuOption">
             <Link to="/orderHistory" style={{ textDecoration: "none" }}>

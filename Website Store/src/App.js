@@ -31,6 +31,7 @@ import AddAddress from './Components/AddAddress/AddAddress';
 import ChatRoulette from './Components/ChatRoulette/ChatRoulette';
 import ProductAvailability from './Components/ProductAvailability/ProductAvailability';
 import OrderHistory from './Components/OrderHistory/OrderHistory';
+import TeamBuyHistory from './Components/TeamBuyHistory/TeamBuyHistory';
 
 function App() {
     const [address, setAddress] = useState({label:"",addr:""})
@@ -73,6 +74,7 @@ function App() {
         <Route path="/chatRoulette" element={<ChatRoulette address={address} setAddress={setAddress}/>} />
         <Route path="/productAvailability" element={<ProductAvailability address={address} setAddress={setAddress}/>} />
         <Route path="/orderHistory" element={<OrderHistory address={address} setAddress={setAddress}/>} />
+        <Route path="/teamBuyHistory" element={<TeamBuyHistory address={address} setAddress={setAddress}/>} />
       </Routes>
     </>
   );
