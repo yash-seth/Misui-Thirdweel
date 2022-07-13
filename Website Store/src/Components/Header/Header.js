@@ -5,15 +5,15 @@ import { addressData } from "../../Data";
 import { useState, useEffect } from "react";
 import { categoryDropdownData } from "../../Data";
 
-function Header({address, setAddress}) {
+function Header({ address, setAddress }) {
   const [width, setWidth] = useState(window.innerWidth);
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
   }
-  
+
   useEffect(() => {
-    setAddress({label:addressData[0].label,addr:addressData[0].address});
+    setAddress({ label: addressData[0].label, addr: addressData[0].address });
     window.addEventListener("resize", handleWindowSizeChange);
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
@@ -52,12 +52,12 @@ function Header({address, setAddress}) {
         <div className="company-info">
           <div className="address">
             <div className="logo">
-            <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
-              <img
-                src="./thirdweel mini logo.png"
-                alt="company-logo"
-                height="28px"
-              />
+              <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+                <img
+                  src="./thirdweel mini logo.png"
+                  alt="company-logo"
+                  height="28px"
+                />
               </Link>
             </div>
             <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
@@ -74,7 +74,7 @@ function Header({address, setAddress}) {
                 src={require("./navigation.png")}
                 alt="location icon"
               />
-              {address.label}, {address.addr.substring(0,12)}...
+              {address.label}, {address.addr.substring(0, 12)}...
               <img
                 id="dropdown"
                 src={require("./dropdown.png")}
@@ -84,13 +84,13 @@ function Header({address, setAddress}) {
           </div>
           <div className="headerInfo">
             <button style={{ textDecoration: "none" }}>
-            <Link to="/profile" style={{ textDecoration: 'none' }}>
-              <img
-                id="profileIcon"
-                src={require("./profileIcon.png")}
-                alt="profile icon"
-                height="25px"
-              />
+              <Link to="/profile" style={{ textDecoration: "none" }}>
+                <img
+                  id="profileIcon"
+                  src={require("./profileIcon.png")}
+                  alt="profile icon"
+                  height="25px"
+                />
               </Link>
             </button>
             <Link to="/MyCart" style={{ textDecoration: "none" }}>
@@ -201,7 +201,13 @@ function Header({address, setAddress}) {
             {addressData.map((addr) => {
               return (
                 <>
-                  <div className="addressContainer" onClick={()=>{setAddress({label:addr.label,addr:addr.address});toggleAddressModal()}}>
+                  <div
+                    className="addressContainer"
+                    onClick={() => {
+                      setAddress({ label: addr.label, addr: addr.address });
+                      toggleAddressModal();
+                    }}
+                  >
                     <div className="addressLabel">{addr.label}</div>
                     <div className="addressMain">
                       <b>{addr.name}</b> {addr.address}
@@ -213,7 +219,7 @@ function Header({address, setAddress}) {
             })}
           </div>
           <button>
-            <Link to="/addAddress" style={{textDecoration: "none"}}>
+            <Link to="/addAddress" style={{ textDecoration: "none" }}>
               <div className="addressContainerFooter">
                 Add an address or pickup point
               </div>
@@ -252,7 +258,13 @@ function Header({address, setAddress}) {
             {addressData.map((addr) => {
               return (
                 <>
-                  <div className="addressContainerMobile" onClick={()=>{setAddress({label:addr.label,addr:addr.address});toggleAddressModal()}}>
+                  <div
+                    className="addressContainerMobile"
+                    onClick={() => {
+                      setAddress({ label: addr.label, addr: addr.address });
+                      toggleAddressModal();
+                    }}
+                  >
                     <div className="addressLabelMobile">{addr.label}</div>
                     <div className="addressMainMobile">
                       <b>{addr.name}</b> {addr.address}
@@ -263,7 +275,7 @@ function Header({address, setAddress}) {
               );
             })}
           </div>
-          <Link to="/addAddress" style={{textDecoration: "none"}}>
+          <Link to="/addAddress" style={{ textDecoration: "none" }}>
             <button>
               <div className="addressContainerFooterMobile">
                 Add an address or pickup point
