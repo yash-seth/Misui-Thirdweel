@@ -33,3 +33,4 @@
 - [x] Product Availability Page
 - [x] Order History Page
 - [x] Team buy Order History Page
+- [x] Login Page
