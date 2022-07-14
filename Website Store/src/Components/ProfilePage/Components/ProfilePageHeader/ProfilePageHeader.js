@@ -9,9 +9,9 @@ function ProfilePageHeader() {
     const toggleCurrentPostView = (id) => {
         setPostView(postView === id ? undefined : id);
     };
-    // useEffect(() => {
-    //     setImageGridView("posts");
-    // }, [])
+    useEffect(() => {
+        setImageGridView("posts");
+    }, [])
   return (
     <div className="ProfilePageHeaderMain">
         <div className="ProfilePageHeaderMainTopContainer"><span></span></div>
