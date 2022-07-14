@@ -7,7 +7,7 @@ import { OrderHistoryData } from "../../Data";
 // import { Link } from "react-router-dom";
 
 function OrderHistory({ address, setAddress }) {
-  const [orderItemDropdown, setOrderItemDropdown] = useState("close");
+  const [orderItemDropdown, setOrderItemDropdown] = useState();
   const toggleOrderItemDropdown = (id) => {
     setOrderItemDropdown(orderItemDropdown === id ? undefined : id);
   };

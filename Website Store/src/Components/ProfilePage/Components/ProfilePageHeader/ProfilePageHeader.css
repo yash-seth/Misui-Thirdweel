@@ -276,3 +276,231 @@
         align-items: center;
     }
 }
+
+/* for the image/reward popup view */
+
+.imagePopup{
+    position: fixed;
+    left: 20%;
+    top:15%;
+    z-index: 94;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 60%;
+}
+
+.imagePopupContent{
+    margin: 20px;
+}
+
+.imagePopupContentHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.imagePopupContentCaption{
+    font-size: 12px;
+}
+
+#profilePopupName{
+    margin-left: 10px;
+}
+
+#profileImagePopupCrossButton{
+    position: fixed;
+    z-index: 94;
+    right: 10%;
+    top: 5%;
+}
+
+.imagePopupContentFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#profileImagePopupLikesContainer, #profileImagePopupLikesContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+}
+
+.profileImagePopupAddComment{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#profileImagePopupAddComment{
+    border: none;
+    margin: none;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    padding: 10px;
+}
+
+#profileImagePopupShareComment{
+    color: blue
+}
+
+#popupHR{
+    width: 100%;
+}
+
+
+.profileImagePopupComments{
+    height: 110px;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+.profileImagePopupComment{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profileImagePopupCommentUserinfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 30%;
+}
+
+#profileImagePopupCommentDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 5px;
+}
+
+#profileImagePopupCommentTime{
+    font-size: 10px;
+}
+
+#profileImagePopupCommentContent{
+    font-size: 10px;
+}
+
+#popupPostOverlay{
+    position: fixed;
+    right:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(103, 103, 103,0.8);
+    z-index: 93;
+    display: block;
+    transition: 0.4s;
+}
+
+.rewardImagePopup{
+    position: fixed;
+    left: 27%;
+    top:20%;
+    z-index: 94;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+}
+
+.rewardImagePopupContentMain{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.rewardImagePopupHeaderBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#leftArrowPopup{
+    padding: 10px;
+}
+
+#rewardImagePopupHeaderBarText{
+    font-size: 18px;
+}
+
+#rewardImagePopupContentMainName{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#rewardImagePopupContentMainAddr{
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+#rewardImagePopupContentMainExpiryDateContainerMessage{
+    font-weight: 600;
+}
+.rewardImagePopupContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#rewardImagePopupContentMainExpiry{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+#rewardImagePopupContentMainExpiryDateContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.rewardImagePopupContentMainBody{
+    font-size: 10px;
+    margin: 0 20px;
+    font-weight: 600;
+}
+
+#giftReward{
+    padding: 10px 30px;
+    background-color: #e0e0e0;
+    border-radius: 18px;
+    color: black;
+    margin-top: 20px;
+    border: 1px solid;
+}
+
+#giftOffer{
+    padding: 10px 50px;
+    background-color: #27c353;
+    border-radius: 18px;
+    color: white;
+    margin-top: 20px;
+}
