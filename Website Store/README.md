@@ -21,7 +21,7 @@
 - [x] Team Buy page
 - [x] Storewise Cart
 - [x] Store Profile
-- [x] User Profile
+- [x] User Profile - Post/Reward Views & popups for posts/rewards
 - [x] Store Items Page
 - [x] Cart Checkout Page
 - [x] Payment Success Page
