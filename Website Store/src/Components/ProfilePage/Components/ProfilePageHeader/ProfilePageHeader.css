@@ -105,11 +105,31 @@
 
 .ProfileExtraDetails{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     background-color: white;   
     padding: 10px 25px 20px;
+}
+
+.ProfileExtraDetailsStories{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+#profileStory{
+    margin: 0 20px;
+}
+
+.profileStoryContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .ProfileExtraDetailsControlsContainer{
@@ -121,6 +141,7 @@
 
 .ProfileAbout{
     width: 70%;
+    margin-bottom: 10px;
 }
 
 .ProfileContacts{
@@ -503,4 +524,144 @@
     border-radius: 18px;
     color: white;
     margin-top: 20px;
+}
+
+/*for new post popup */
+
+.newPostContainer{
+    position: fixed;
+    left: 30%;
+    top:15%;
+    z-index: 94;
+    background-color: white;
+    display: block;
+    width: 40%;
+}
+
+#popupNewPostOverlay{
+    position: fixed;
+    right:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(103, 103, 103,0.8);
+    z-index: 93;
+    display: block;
+    transition: 0.4s;
+}
+
+.newPostContainerMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 400px;
+}
+
+#newPostContainerHeader{
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+#selectFromComputer{
+    padding: 10px 40px;
+    border-radius: 18px;
+    background-color: #27c353;
+    color: white;
+    margin-top: 20px;
+}
+
+.createPostContainer{
+    position: fixed;
+    left: 27%;
+    top:15%;
+    z-index: 94;
+    background-color: white;
+    display: none;
+    width: 50%;
+}
+
+#popupcreatePostOverlay{
+    position: fixed;
+    right:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(103, 103, 103,0.8);
+    z-index: 93;
+    display: block;
+    transition: 0.4s;
+}
+
+.createPostContainerMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.createPostContainerHeader{
+    font-weight: 600;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#selectFromComputer{
+    padding: 10px 40px;
+    border-radius: 18px;
+    background-color: #27c353;
+    color: white;
+    margin-top: 20px;
+}
+
+#PopupCrossButton{
+    position: fixed;
+    z-index: 94;
+    right: 10%;
+    top: 5%;
+    display: block;
+}
+
+#createPostLeftArrow{
+    margin: 0 10px;
+}
+
+#postBtnCreatePost{
+    color: rgb(62, 62, 255);
+    margin: 0 10px;
+}
+
+.createPostContainerMainContent{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.createPostContainerMainContentDetails{
+    margin-left: 15px;
+}
+
+.createPostContainerMainContentUserDetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#createPostCaption{
+    border: none;
+    margin: none;
+    outline: none;
+    resize: none;
+    height: 200px;
+    margin-top: 10px;
+    width: auto;
 }

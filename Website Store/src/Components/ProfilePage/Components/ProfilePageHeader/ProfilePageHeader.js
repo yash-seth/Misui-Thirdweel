@@ -1,17 +1,48 @@
 import React from 'react'
 import "./ProfilePageHeader.css"
-import {ProfileData, ProfileImages, rewardsImages} from "../../../../Data"
+import {ProfileData, ProfileImages, rewardsImages, profileStoryData} from "../../../../Data"
 import {useState, useEffect} from "react"
 
 function ProfilePageHeader() {
     const [imageGridView, setImageGridView] = useState("posts")
     const [postView, setPostView] = useState();
+    const [newPostPopup, setNewPostPopup] = useState(false);
+    const [createPostPopup, setCreatePostPopup] = useState(false);
+    const [popup, setPopup] = useState(false);
     const toggleCurrentPostView = (id) => {
         setPostView(postView === id ? undefined : id);
     };
     useEffect(() => {
         setImageGridView("posts");
     }, [])
+    console.log(popup)
+    const toggleNewPostView =()=>{
+        console.log("I was here")
+        if(newPostPopup){
+            setPopup(true);
+            setNewPostPopup(false);
+        }else{
+            setPopup(false);
+            setNewPostPopup(true);
+        }
+    }
+
+    const toggleCreatePostView = () =>{
+        if(createPostPopup){
+            document.getElementsByClassName("createPostContainer")[0].style.display = "none";
+            setNewPostPopup(false);
+            setCreatePostPopup(true);
+        }else{
+            document.getElementsByClassName("createPostContainer")[0].style.display = "block";
+            setNewPostPopup(false);
+            setCreatePostPopup(false);
+        }
+    }
+
+    const navigateCreatePost = () =>{
+        document.getElementsByClassName("createPostContainer")[0].style.display = "none";
+    }
+
   return (
     <div className="ProfilePageHeaderMain">
         <div className="ProfilePageHeaderMainTopContainer"><span></span></div>
@@ -45,6 +76,26 @@ function ProfilePageHeader() {
                     <div className='ProfileAbout'>{ProfileData[0].about.substring(0,150)} <button><b>{"Read More..."}</b></button></div>
                 </div>
             </div>
+            <div className='ProfileExtraDetailsStories'>
+                {profileStoryData.map((story)=>{
+                    return(
+                        <>{story.id===0?
+                        (<div className='profileStoryContainer'>
+                            <button><img key={story.id} id="profileStory" src={require("./" + story.src)} alt={story.alt} height="80px"/></button>
+                            <div id="profileStoryCaption">{story.caption}</div>
+                        </div>)
+                        :
+                        (
+                            <div className='profileStoryContainer'>
+                                <img key={story.id} id="profileStory" src={require("./" + story.src)} alt={story.alt} height="80px"/>
+                                <div id="profileStoryCaption">{story.caption}</div>
+                            </div>
+                        )
+                    }
+                    </>
+                    )
+                })}
+            </div>
         </div>
         <div className="ImageGrid">
             <div className='ImageGridControlsBar'>
@@ -54,7 +105,7 @@ function ProfilePageHeader() {
             <div className='ImageGridImages'>
                 {imageGridView==="posts" ? ProfileImages.map((image)=>{
                 return (<>
-                            <img id="ProfileImage" key={image.key} src={require("./" + image.src)} alt={image.alt} onClick={() => toggleCurrentPostView(image.id)}/>
+                            {image.id===0? (<img id="ProfileImage" key={image.key} src={require("./" + image.src)} alt={image.alt} onClick={()=>{toggleNewPostView();setPopup(true);}} height="200px"/>):(<img id="ProfileImage" key={image.key} src={require("./" + image.src)} alt={image.alt} onClick={() => toggleCurrentPostView(image.id)} height="200px"/>)}
                             {postView===image.id?
                             (<>
                             <div className='imagePopup'>
@@ -116,7 +167,7 @@ function ProfilePageHeader() {
                     <img id="rewardImage" key={image.key} src={require("./" + image.src)} alt={image.alt} height="220px" onClick={() => toggleCurrentPostView(image.id)}/>
                     {postView===image.id?
                         (<>
-                        <div className='rewardImagePopup'>
+                        <div className='rewardImagePopup' key={image.id}>
                             <div className='rewardImagePopupHeaderBar'>
                                 <img id="leftArrowPopup" src={require("./leftArrow.png")} alt="left arrow" height="15px"/>
                                 <div id="rewardImagePopupHeaderBarText">Offer</div>
@@ -154,6 +205,35 @@ function ProfilePageHeader() {
             </div>
         </div>
         <img id="ProfilePhoto" src={require("./Ellipse 72.png")} alt=" profile" />
+        {popup && <div className='newPostContainer'>
+            <div className='newPostContainerMain'>
+                <div id='newPostContainerHeader'>Create Post</div>
+                <img src={require("./newPostGraphic.png")} alt="new post graphic" height="200px"/>
+                <div id="newPostContainerContent">Drag photos or videos for your post here</div>
+                <button id="selectFromComputer" onClick={()=>toggleCreatePostView()}>Select from computer</button>
+            </div>
+        </div>}
+        {popup && <div className='createPostContainer'>
+            <div className='createPostContainerMain'>
+                <div className='createPostContainerHeader'>
+                    <button onClick={()=>navigateCreatePost()}><img id="createPostLeftArrow" src={require("./leftArrow.png")} alt="left arrow" height="15px"/></button>
+                    <div id="createPostContainerHeaderText">Create Post</div>
+                    <button id="postBtnCreatePost" onClick={()=>setPopup(false)}>Post</button>
+                </div>
+                <div className='createPostContainerMainContent'>
+                    <img id="createPostSelectedPost" src={require('./post 1.png')} alt="post" height="500px"/>
+                    <div className='createPostContainerMainContentDetails'>
+                        <div className='createPostContainerMainContentUserDetails'>
+                            <img src={require("./Ellipse 72.png")} alt="profileImagePopup" height="40px"/>
+                            <div id="profilePopupName">{ProfileData[0].name}</div>
+                        </div>
+                        <textarea id="createPostCaption" placeholder='Write a caption'></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>}
+        {popup && <div id='popupNewPostOverlay'></div>}
+        {popup && <img id="PopupCrossButton" src={require("./crossExit.png")} alt="cross button" onClick={()=>setPopup(false)}/> }
     </div>
   )
 }
