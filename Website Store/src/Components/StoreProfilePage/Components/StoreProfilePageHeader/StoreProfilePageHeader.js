@@ -1,6 +1,6 @@
 import React from 'react'
 import "./StoreProfilePageHeader.css"
-import {storeProfileData, storeProfileImages} from "../../../../Data"
+import {storeProfileData, storeProfileImages, storeStoryData} from "../../../../Data"
 import {Link} from "react-router-dom"
 
 function StoreProfilePageHeader() {
@@ -46,9 +46,29 @@ function StoreProfilePageHeader() {
                 <div className='storeProfileContacts'><img src={require("./phone.png")} alt="phone icon"/><div>{storeProfileData[0].contactDetails}</div></div>
             </div>
         </div>
+        <div className='ProfileExtraDetailsStories'>
+                {storeStoryData.map((story)=>{
+                    return(
+                        <>{story.id===0?
+                        (<div className='profileStoryContainer'>
+                            <button><img key={story.id} id="profileStory" src={require("./" + story.src)} alt={story.alt} height="80px"/></button>
+                            <div id="profileStoryCaption">{story.caption}</div>
+                        </div>)
+                        :
+                        (
+                            <div className='profileStoryContainer'>
+                                <img key={story.id} id="profileStory" src={require("./" + story.src)} alt={story.alt} height="80px"/>
+                                <div id="profileStoryCaption">{story.caption}</div>
+                            </div>
+                        )
+                    }
+                    </>
+                    )
+                })}
+            </div>
         <div className='storeProfileImages'>
             {storeProfileImages.map((image)=>{
-            return (<img id="storeProfileImage" key={image.key} src={require("./" + image.src)} alt={image.alt}/>)
+            return (<img id="storeProfileImage" key={image.key} src={require("./" + image.src)} alt={image.alt} height="200px"/>)
             })}
         </div>
         <img id="storeProfilePhoto" src={require("./Ellipse 72.png")} alt="store profile" />

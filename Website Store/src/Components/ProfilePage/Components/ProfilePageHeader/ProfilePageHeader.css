@@ -665,3 +665,60 @@
     margin-top: 10px;
     width: auto;
 }
+
+.createHighlightContainer{
+    position: fixed;
+    left: 27%;
+    top:15%;
+    z-index: 95;
+    background-color: white;
+    display: block;
+    width: 45%;
+    height: 450px;
+    overflow-y: scroll;
+}
+
+.createHighLightHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#createHighLightHeaderText{
+    text-align: center;
+    font-weight: 600;
+}
+
+.hightlightGrid{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-left: 12px;
+}
+
+#highlightImg{
+    padding: 5px;
+}
+
+#hightlightFrame{
+    position: relative;
+}
+
+#hightlightDate{
+    position: absolute;
+    top: 5%;
+    background-color: rgb(255, 255, 255, 0.8);
+    border-radius: 18px;
+    padding: 2px;
+    left: 5%;
+}
+
+#selectHightlightOption{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}

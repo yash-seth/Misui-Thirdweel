@@ -1,6 +1,6 @@
 import React from 'react'
 import "./ProfilePageHeader.css"
-import {ProfileData, ProfileImages, rewardsImages, profileStoryData} from "../../../../Data"
+import {ProfileData, ProfileImages, rewardsImages, profileStoryData, highlightStoryData} from "../../../../Data"
 import {useState, useEffect} from "react"
 
 function ProfilePageHeader() {
@@ -9,6 +9,8 @@ function ProfilePageHeader() {
     const [newPostPopup, setNewPostPopup] = useState(false);
     const [createPostPopup, setCreatePostPopup] = useState(false);
     const [popup, setPopup] = useState(false);
+    const [newHighlightPopup, setnewHighlightPopup] = useState(false);
+
     const toggleCurrentPostView = (id) => {
         setPostView(postView === id ? undefined : id);
     };
@@ -17,10 +19,10 @@ function ProfilePageHeader() {
     }, [])
     console.log(popup)
     const toggleNewPostView =()=>{
-        console.log("I was here")
         if(newPostPopup){
             setPopup(true);
             setNewPostPopup(false);
+            setnewHighlightPopup(false)
         }else{
             setPopup(false);
             setNewPostPopup(true);
@@ -81,7 +83,7 @@ function ProfilePageHeader() {
                     return(
                         <>{story.id===0?
                         (<div className='profileStoryContainer'>
-                            <button><img key={story.id} id="profileStory" src={require("./" + story.src)} alt={story.alt} height="80px"/></button>
+                            <button><img key={story.id} id="profileStory" src={require("./" + story.src)} alt={story.alt} height="80px" onClick={()=>{setnewHighlightPopup(true);setPopup(true);}} /></button>
                             <div id="profileStoryCaption">{story.caption}</div>
                         </div>)
                         :
@@ -234,6 +236,24 @@ function ProfilePageHeader() {
         </div>}
         {popup && <div id='popupNewPostOverlay'></div>}
         {popup && <img id="PopupCrossButton" src={require("./crossExit.png")} alt="cross button" onClick={()=>setPopup(false)}/> }
+        {popup && newHighlightPopup && <div className='createHighlightContainer'>
+            <div className='createHighLightHeader'>
+                <button onClick={()=>setPopup(false)}><img id="createPostLeftArrow" src={require("./leftArrow.png")} alt="left arrow" height="15px"/></button>
+                <div id="createHighLightHeaderText">Choose Highlight</div>
+            </div>
+            <div className='hightlightGrid'>
+                {highlightStoryData.map((highlight)=>{
+                        return (<>
+                                <div id="hightlightFrame">
+                                    <div id="hightlightDate">{highlight.date}</div>
+                                    <button><img id="highlightImg" key={highlight.id} src={require("./" + highlight.src)} alt={highlight.alt} height="200px" width="150px"/></button>
+                                    <img id="selectHightlightOption" src={require("./selectHighlight.png")} alt="select highlight option" />
+                                </div>
+                            </>
+                        ) 
+                    })}
+            </div>
+        </div>}
     </div>
   )
 }

@@ -842,6 +842,22 @@ const storeStoryData = [
   { id: 8, src: "stories.jpg", alt: "stories circle" , caption: "shop"},
 ];
 
+const highlightStoryData = [
+  {id:0, src:"highlight.png", alt:"highlight story", date: "23 Jun"},
+  {id:1, src:"highlight.png", alt:"highlight story", date: "23 Jun"},
+  {id:2, src:"highlight.png", alt:"highlight story", date: "23 Jun"},
+  {id:3, src:"highlight.png", alt:"highlight story", date: "23 Jun"},
+  {id:4, src:"highlight.png", alt:"highlight story", date: "23 Jun"},
+  {id:5, src:"highlight.png", alt:"highlight story", date: "23 Jun"},
+  {id:6, src:"highlight.png", alt:"highlight story", date: "23 Jun"},
+  {id:7, src:"highlight.png", alt:"highlight story", date: "23 Jun"},
+  {id:8, src:"highlight.png", alt:"highlight story", date: "23 Jun"},
+]
+
+const teamBuyTeamAndItemData =  {id:0, src:"prod1.png", name: "Lays Potato Chips - Masala Magic", price: "$75", teamBuy: "$256", deliveryCharges: "$60", total: "$45", discPrice: "$55", amount: "115gm/130gm (Weight May Vary)", purchasedFrom:"Laxman Stores", addr: "2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102", dist: "4.2km", orderID: "22222222", orderPlacedTS: "17 Mar, 2022 4:00 PM - 7:00 PM"}
+
+const teamBuyTeamDetails = [{id: 0, name: "Zoya", pfp:"Ellipse 82.png"}, {id: 1, name: "Jim", timeJoined:"2 hr ago", pfp:"Ellipse 83.png"}, {id: 2, name: "Jim", timeJoined:"2 hr ago", pfp:"Ellipse 83.png"}, {id: 3, name: "Jim", timeJoined:"2 hr ago", pfp:"Ellipse 83.png"}]
+
 export {
   TrendingData,
   StoryData,
@@ -885,4 +901,7 @@ export {
   TeamBuyHistoryData,
   profileStoryData,
   storeStoryData,
+  highlightStoryData,
+  teamBuyTeamAndItemData,
+  teamBuyTeamDetails,
 };
