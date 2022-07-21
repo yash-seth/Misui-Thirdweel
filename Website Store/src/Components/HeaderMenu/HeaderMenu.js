@@ -202,7 +202,7 @@ function HeaderMenu({setProfileView}) {
           </div>
           <hr className="border"/>
           <div className="sidebarMenuOption">
-            <Link to="/profile" style={{ textDecoration: 'none' }}><button id="sidebarMenuOption">Your account</button></Link>
+            <Link to="/profile" style={{ textDecoration: 'none' }} onClick={()=>setProfileView(true)}><button id="sidebarMenuOption">Your account</button></Link>
           </div>
           <div className="sidebarMenuOption">
             <button id="sidebarMenuOption">Sign out</button>
