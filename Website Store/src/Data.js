@@ -856,7 +856,7 @@ const highlightStoryData = [
 
 const teamBuyTeamAndItemData =  {id:0, src:"prod1.png", name: "Lays Potato Chips - Masala Magic", price: "$75", teamBuy: "$256", deliveryCharges: "$60", total: "$45", discPrice: "$55", amount: "115gm/130gm (Weight May Vary)", purchasedFrom:"Laxman Stores", addr: "2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102", dist: "4.2km", orderID: "22222222", orderPlacedTS: "17 Mar, 2022 4:00 PM - 7:00 PM"}
 
-const teamBuyTeamDetails = [{id: 0, name: "Zoya", pfp:"Ellipse 82.png"}, {id: 1, name: "Jim", timeJoined:"2 hr ago", pfp:"Ellipse 83.png"}, {id: 2, name: "Jim", timeJoined:"2 hr ago", pfp:"Ellipse 83.png"}, {id: 3, name: "Jim", timeJoined:"2 hr ago", pfp:"Ellipse 83.png"}]
+const teamBuyTeamDetails = [{id: 0, name: "Zoya", pfp:"Ellipse 82.png"}, {id: 1, name: "Jim", timeJoined:"2 hr ago", pfp:"Ellipse 83.png", state: true}, {id: 2, name: "Jim", timeJoined:"2 hr ago", pfp:"Ellipse 83.png", state: true}, {id: 3, name: "Jim", timeJoined:"2 hr ago", pfp:"Ellipse 83.png", state: false}]
 
 export {
   TrendingData,

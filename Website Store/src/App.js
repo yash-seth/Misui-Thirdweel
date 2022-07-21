@@ -37,6 +37,7 @@ import GroupBuyTeamAndItem from './Components/GroupBuyTeamAndItem/GroupBuyTeamAn
 function App() {
     const [address, setAddress] = useState({label:"",addr:""})
     const [paymentView, setPaymentView] = useState("normal")
+    const [profileView, setProfileView] = useState(true)
   return (
     <>
       <Routes>
@@ -44,7 +45,7 @@ function App() {
         <Route path="/" element={<>
         <Header address={address} setAddress={setAddress}/>
         <div className='mobileView'>
-          <HeaderMenu />
+          <HeaderMenu setProfileView={setProfileView}/>
         </div>
         <Stories/>
         <DiscountBar/>
@@ -65,7 +66,7 @@ function App() {
         <Route path="/productDescription" element={<ProductDescription address={address} setAddress={setAddress}/>} />
         <Route path="/teamBuyProductDescription" element={<TeamBuyProductDescription address={address} setAddress={setAddress}/>} />
         <Route path="/storeProfile" element={<StoreProfilePage address={address} setAddress={setAddress}/>} />
-        <Route path="/profile" element={<ProfilePage address={address} setAddress={setAddress}/>} />
+        <Route path="/profile" element={<ProfilePage address={address} setAddress={setAddress} profileView={profileView}/>} />
         <Route path="/storeItems" element={<StoreItemsPage address={address} setAddress={setAddress}/>} />
         <Route path="/CartCheckout" element={<CartCheckout address={address} setAddress={setAddress}/>} />
         <Route path="/PaymentSuccessful" element={<PaymentSuccessful address={address} setAddress={setAddress} paymentView={paymentView}/>} />
@@ -76,7 +77,7 @@ function App() {
         <Route path="/productAvailability" element={<ProductAvailability address={address} setAddress={setAddress}/>} />
         <Route path="/orderHistory" element={<OrderHistory address={address} setAddress={setAddress}/>} />
         <Route path="/teamBuyHistory" element={<TeamBuyHistory address={address} setAddress={setAddress}/>} />
-        <Route path="/teamBuyTeamAndItem" element={<GroupBuyTeamAndItem address={address} setAddress={setAddress}/>} />
+        <Route path="/teamBuyTeamAndItem" element={<GroupBuyTeamAndItem address={address} setAddress={setAddress} setProfileView={setProfileView}/>} />
       </Routes>
     </>
   );

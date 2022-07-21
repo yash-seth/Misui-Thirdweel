@@ -3,7 +3,7 @@ import "./ProfilePageHeader.css"
 import {ProfileData, ProfileImages, rewardsImages, profileStoryData, highlightStoryData} from "../../../../Data"
 import {useState, useEffect} from "react"
 
-function ProfilePageHeader() {
+function ProfilePageHeader({ profileView }) {
     const [imageGridView, setImageGridView] = useState("posts")
     const [postView, setPostView] = useState();
     const [newPostPopup, setNewPostPopup] = useState(false);
@@ -78,7 +78,7 @@ function ProfilePageHeader() {
                     <div className='ProfileAbout'>{ProfileData[0].about.substring(0,150)} <button><b>{"Read More..."}</b></button></div>
                 </div>
             </div>
-            <div className='ProfileExtraDetailsStories'>
+            {profileView && <div className='ProfileExtraDetailsStories'>
                 {profileStoryData.map((story)=>{
                     return(
                         <>{story.id===0?
@@ -97,17 +97,17 @@ function ProfilePageHeader() {
                     </>
                     )
                 })}
-            </div>
+            </div>}
         </div>
         <div className="ImageGrid">
-            <div className='ImageGridControlsBar'>
+            {profileView &&<div className='ImageGridControlsBar'>
                 <button id="postsImageBtn" onClick={()=> setImageGridView("posts")}>Posts</button>
                 <button id="rewardsImagesBtn" onClick={()=> setImageGridView("rewards")}>Rewards</button>
-            </div>
+            </div>}
             <div className='ImageGridImages'>
                 {imageGridView==="posts" ? ProfileImages.map((image)=>{
                 return (<>
-                            {image.id===0? (<img id="ProfileImage" key={image.key} src={require("./" + image.src)} alt={image.alt} onClick={()=>{toggleNewPostView();setPopup(true);}} height="200px"/>):(<img id="ProfileImage" key={image.key} src={require("./" + image.src)} alt={image.alt} onClick={() => toggleCurrentPostView(image.id)} height="200px"/>)}
+                            { profileView && image.id===0? (<img id="ProfileImage" key={image.key} src={require("./" + image.src)} alt={image.alt} onClick={()=>{toggleNewPostView();setPopup(true);}} height="200px"/>):(<img id="ProfileImage" key={image.key} src={require("./" + image.src)} alt={image.alt} onClick={() => toggleCurrentPostView(image.id)} height="200px"/>)}
                             {postView===image.id?
                             (<>
                             <div className='imagePopup'>

@@ -3,13 +3,14 @@ import Header from "../Header/Header";
 import HeaderMenu from "../HeaderMenu/HeaderMenu";
 import "./GroupBuyTeamAndItem.css";
 import { teamBuyTeamAndItemData, teamBuyTeamDetails} from "../../Data";
+import {Link} from "react-router-dom"
 
-function GroupBuyTeamAndItem({ address, setAddress }) {
+function GroupBuyTeamAndItem({ address, setAddress, setProfileView }) {
   return (
     <>
       <Header address={address} setAddress={setAddress} />
       <div className="mobileView">
-        <HeaderMenu />
+        <HeaderMenu setProfileView={setProfileView}/>
       </div>
       <div className="GroupBuyTeamAndItemContainer">
         <div className="GroupBuyTeamAndItemContainerHeader">
@@ -58,7 +59,7 @@ function GroupBuyTeamAndItem({ address, setAddress }) {
                                     <div id="teamMemberName">{teamMember.name}</div>
                                     <div id="teamMemberTime">Joined team  {teamMember.timeJoined}</div>
                                 </div>
-                                <button id="viewProfileTeamBuy">View Profile</button>
+                                <Link to="/profile" style={{textDecoration: "none"}}><button id="viewProfileTeamBuy" onClick={setProfileView(false)}>View Profile</button></Link>
                                 <button id="followProfileTeamBuy">Follow</button>
                             </div>
                         )

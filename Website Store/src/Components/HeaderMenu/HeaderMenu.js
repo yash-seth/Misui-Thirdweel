@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { categoryDropdownData } from "../../Data";
 import { useState, useEffect } from "react";
 
-function HeaderMenu() {
+function HeaderMenu({setProfileView}) {
   const [sidebarState, setSidebarState] = useState("close");
   const [categoryMenuState, setCategoryMenuState] = useState("close");
   const [categoryHover, setCategoryHover] = useState(false)
@@ -136,7 +136,7 @@ function HeaderMenu() {
       </div>
       <hr id="headerMenuBottomHR"/>
       <div className="sidebar">
-      <Link to="/profile" style={{ textDecoration: 'none' }}>
+      <Link to="/profile" style={{ textDecoration: 'none' }} onClick={()=>setProfileView(true)}>
         <div className="profileSectionSidebar">
           <img src={require("./Profile avatar icon.png")} alt="Profile avatar icon.png" />
           <header>Hello, Profile</header>

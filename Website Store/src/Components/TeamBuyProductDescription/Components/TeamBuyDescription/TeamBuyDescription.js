@@ -121,7 +121,7 @@ function Description() {
                             {Team.teamLeaderName}
                           </div>
                           <div className="TeamBuyControls">
-                            <button className="teamJoin">Team up</button>
+                            <Link to="/teamBuyTeamAndItem" style={{textDecoration: "none"}}><button className="teamJoin">Team up</button></Link>
                             <div className="TeamBuyJoinDetails">
                               <div className="TeamBuyJoinIcons">
                                 {Team.numOfMembers.map((teamMember) => {
