@@ -123,7 +123,7 @@ function HeaderMenu({setProfileView}) {
               <button id="Offers">Offers</button>
             </Link>
             <Link
-              to="/teamBuyProductDescription"
+              to="/teamBuyItemSearch"
               style={{ textDecoration: "none" }}
             >
               <button id="Group_By">Group Buy</button>
@@ -155,7 +155,7 @@ function HeaderMenu({setProfileView}) {
           </div>
           <div className="sidebarMenuOption">
             <Link
-              to="/teamBuyProductDescription"
+              to="/teamBuyItemSearch"
               style={{ textDecoration: "none" }}><button id="sidebarMenuOption">Group Buy</button></Link>
           </div>
           <div className="sidebarMenuOption">

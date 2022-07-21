@@ -33,6 +33,7 @@ import ProductAvailability from './Components/ProductAvailability/ProductAvailab
 import OrderHistory from './Components/OrderHistory/OrderHistory';
 import TeamBuyHistory from './Components/TeamBuyHistory/TeamBuyHistory';
 import GroupBuyTeamAndItem from './Components/GroupBuyTeamAndItem/GroupBuyTeamAndItem';
+import TeamBuyItemSearch from './Components/TeamBuyItemSearch/TeamBuyItemSearch';
 
 function App() {
     const [address, setAddress] = useState({label:"",addr:""})
@@ -78,6 +79,7 @@ function App() {
         <Route path="/orderHistory" element={<OrderHistory address={address} setAddress={setAddress}/>} />
         <Route path="/teamBuyHistory" element={<TeamBuyHistory address={address} setAddress={setAddress}/>} />
         <Route path="/teamBuyTeamAndItem" element={<GroupBuyTeamAndItem address={address} setAddress={setAddress} setProfileView={setProfileView}/>} />
+        <Route path="/teamBuyItemSearch" element={<TeamBuyItemSearch address={address} setAddress={setAddress} setProfileView={setProfileView}/>} />
       </Routes>
     </>
   );

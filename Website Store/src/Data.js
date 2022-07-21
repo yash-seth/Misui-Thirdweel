@@ -465,10 +465,10 @@ const sortByData = [
 ]
 
 const TeamBuyData = [
-  { id: 0, src: "store1.png", alt: "store" },
-  { id: 1, src: "store2.png", alt: "store" },
-  { id: 2, src: "store1.png", alt: "store" },
-  { id: 3, src: "store2.png", alt: "store" },
+  { id: 0, src: "banner.png", alt: "store" },
+  { id: 1, src: "banner.png", alt: "store" },
+  { id: 2, src: "banner.png", alt: "store" },
+  { id: 3, src: "banner.png", alt: "store" },
 ];
 
 const TeamBuyProductData = [
@@ -858,6 +858,99 @@ const teamBuyTeamAndItemData =  {id:0, src:"prod1.png", name: "Lays Potato Chips
 
 const teamBuyTeamDetails = [{id: 0, name: "Zoya", pfp:"Ellipse 82.png"}, {id: 1, name: "Jim", timeJoined:"2 hr ago", pfp:"Ellipse 83.png", state: true}, {id: 2, name: "Jim", timeJoined:"2 hr ago", pfp:"Ellipse 83.png", state: true}, {id: 3, name: "Jim", timeJoined:"2 hr ago", pfp:"Ellipse 83.png", state: false}]
 
+const teamBuyItems = [
+  {
+    id: 0,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },
+  {
+    id: 1,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },{
+    id: 2,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },{
+    id: 3,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },{
+    id: 4,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },{
+    id: 5,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },{
+    id: 6,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },{
+    id: 7,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },
+  {
+    id: 8,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },
+  {
+    id: 9,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },
+  {
+    id: 10,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },
+  {
+    id: 11,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },
+]
+
 export {
   TrendingData,
   StoryData,
@@ -904,4 +997,5 @@ export {
   highlightStoryData,
   teamBuyTeamAndItemData,
   teamBuyTeamDetails,
+  teamBuyItems,
 };
