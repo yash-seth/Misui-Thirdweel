@@ -7,6 +7,7 @@ import { categoryDropdownData } from "../../Data";
 
 function Header({ address, setAddress }) {
   const [width, setWidth] = useState(window.innerWidth);
+  const [bannerState, setBannerState] = useState(false);
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
@@ -46,6 +47,20 @@ function Header({ address, setAddress }) {
       document.getElementById("overlayAddressModal").style.display = "none";
     }
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setBannerState(true);
+      document.getElementById("notifBanner1").style.right = "1%";
+    }, 3000);
+    setTimeout(() => {
+        document.getElementById("notifBanner2").style.right = "1%";
+      }, 6000);
+    setTimeout(() => {
+      document.getElementById("notifBanner3").style.left = "35%";
+    }, 9000);
+  }, [])
+  
   return (
     <>
       <div className="mainHeader">
@@ -290,6 +305,12 @@ function Header({ address, setAddress }) {
           </div>
         </div>
       </div>
+      <img id="notifBanner1" src={require("./notif1.png")} alt="notification banner" height="150px" onClick={()=>document.getElementById("notifBanner1").style.right = "-100%"}/>
+      <img id="notifBanner2" src={require("./notif2.png")} alt="notification banner" height="150px" onClick={()=>document.getElementById("notifBanner2").style.right = "-100%"}/>
+      <img id="notifBanner3" src={require("./notif3.png")} alt="notification banner" height="50px" onClick={()=>document.getElementById("notifBanner3").style.left = "-100%"}/>
+      <img id="notifBanner1Mobile" src={require("./notif1.png")} alt="notification banner" height="120px" onClick={()=>document.getElementById("notifBanner1Mobile").style.bottom = "-100%"}/>
+      <img id="notifBanner2Mobile" src={require("./notif2.png")} alt="notification banner" height="120px" onClick={()=>document.getElementById("notifBanner2Mobile").style.bottom = "-100%"}/>
+      <img id="notifBanner3Mobile" src={require("./notif3.png")} alt="notification banner" height="30px" onClick={()=>document.getElementById("notifBanner3Mobile").style.bottom = "-100%"}/>
     </>
   );
 }

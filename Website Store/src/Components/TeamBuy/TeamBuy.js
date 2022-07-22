@@ -12,7 +12,7 @@ function TeamBuy() {
             </div>
             <div className='TeamBuyBanners'>
                 {TeamBuyData.map((TeamBuyProduct)=>{
-                    return <Link to="/teamBuyItemSearch"><img id="TeamBuyBanner" key={TeamBuyProduct.id} src={require("./"+TeamBuyProduct.src)} alt={TeamBuyProduct.alt} /></Link>
+                    return <Link to="/teamBuyItemSearch"><img id="TeamBuyBanner" key={TeamBuyProduct.id} src={require("./"+TeamBuyProduct.src)} alt={TeamBuyProduct.alt} height="200px"/></Link>
                 })}
             </div>
         </div>

@@ -525,3 +525,58 @@ button, input[type="submit"], input[type="reset"] {
     display: none;
     transition: 0.4s;
   }
+
+  #notifBanner1, #notifBanner2{
+    position: fixed;
+    /* right: 5%;
+    top: 35%; */
+    right: -100%;
+    top: 35%;
+    transition: 0.5s;
+  }
+
+  #notifBanner3{
+    position: fixed;
+    /* left: 35%;
+    top: 35%; */
+    left: -100%;
+    top: 35%;
+    transition: 0.5s;
+  }
+
+  #notifBanner1Mobile, #notifBanner2Mobile{
+    position: fixed;
+    bottom: -100%;
+    transition: 0.5s;
+    width: 80%;
+    left: 10%;
+    display: none;
+  }
+
+  #notifBanner3Mobile{
+    position: fixed;
+    bottom: -100%;
+    left: 10%;
+    transition: 0.5s;
+    width: 80%;
+    display: none;
+  }
+
+  @media screen and (max-width: 920px){
+    #notifBanner1Mobile, #notifBanner2Mobile{
+        bottom: 2%;
+        display: block;
+      }
+    
+      #notifBanner3Mobile{
+        bottom: 2%;
+        display: block;
+      }
+      #notifBanner1, #notifBanner2{
+        display: none;
+      }
+    
+      #notifBanner3{
+        display: none;
+      }
+  }
