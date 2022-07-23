@@ -26,7 +26,7 @@ const TrendingData = [
 ];
 
 const DiscountBarData = [
-  { id: 0, src: "appBanner.png", alt: "app banner" },
+  { id: 0, src: "learnMoreTeamBuy.png", alt: "app banner" },
   { id: 1, src: "discountBanner.png", alt: "app banner" },
 ];
 
