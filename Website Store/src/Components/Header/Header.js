@@ -168,7 +168,7 @@ function Header({ address, setAddress }) {
               <button id="Offers">Offers</button>
             </Link>
             <Link
-              to="/teamBuyProductDescription"
+              to="/teamBuyItemSearch"
               style={{ textDecoration: "none" }}
             >
               <button id="Group_Buy">Group Buy</button>

@@ -44,9 +44,9 @@
     .TeamBuyBanners{
         display: flex;
         flex-direction: row;
+        flex-wrap: nowrap;
         justify-content: flex-start;
         align-items: center;
-        flex-wrap: nowrap;
         white-space: nowrap;
         overflow-x: scroll;
         overflow-y: hidden;
