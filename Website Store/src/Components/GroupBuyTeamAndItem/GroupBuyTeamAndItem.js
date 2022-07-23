@@ -72,7 +72,7 @@ function GroupBuyTeamAndItem({ address, setAddress, setProfileView }) {
             <div className="groupBuyItemStoreDetails">
                 <div className="groupBuyItemStoreDetailsPurchasedFrom">
                     <div id="purchasedFrom">Purchased from</div>
-                    <div className="purchasedFromDetails">
+                    <div className="purchasedFromDetailsAddr">
                         <div id="purchasedFromDetailsName">{teamBuyTeamAndItemData.purchasedFrom}</div>
                         <div id="purchasedFromDetailsDist">{teamBuyTeamAndItemData.dist}</div>
                     </div>

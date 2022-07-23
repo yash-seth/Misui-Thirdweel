@@ -219,3 +219,51 @@
     font-size: 12px;
     margin-top: 20px;
 }
+
+@media screen and (max-width: 920px){
+    .GroupBuyTeamAndItemContainer{
+        padding: 20px 20px;
+    }
+    .GroupBuyTeamAndItemContainerMain{
+        flex-wrap: wrap;
+    }
+    .GroupBuyTeamAndItemBreakdown{
+        background-color: white;
+        width: 100%;
+        margin-right: 0px;
+    }
+    .GroupBuyTeamAndItemPriceBreakdown{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .groupBuyItemStoreDetails{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0px;
+        text-align: center;
+    }
+    .groupBuyStatus{
+        text-align: center;
+    }
+    .groupItemTimeStamp, .groupItemorderID, .purchasedFromDetailsAddr, .purchasedFromDetailsAddr{
+        margin-top: 10px;
+    }
+    .teamBuyTeamDetails{
+        padding: 0 10px;
+    }
+    #viewProfileTeamBuy{
+        padding: 5px 10px;
+        border-radius: 8px;
+        color: white;
+        margin-left: 10px;
+        font-size: 10px;
+    }
+    #followProfileTeamBuy{
+        padding: 5px 10px;
+        border-radius: 8px;
+        margin-left: 10px;
+        font-size: 10px;
+    }
+}
