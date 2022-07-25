@@ -533,7 +533,7 @@ button, input[type="submit"], input[type="reset"] {
     right: -100%;
     top: 35%;
     transition: 0.5s;
-    z-index: 100;
+    z-index: 98;
   }
 
   #notifBanner3{
@@ -543,7 +543,7 @@ button, input[type="submit"], input[type="reset"] {
     left: -100%;
     top: 35%;
     transition: 0.5s;
-    z-index: 100;
+    z-index: 98;
   }
 
   #notifBanner1Mobile, #notifBanner2Mobile{
@@ -553,7 +553,7 @@ button, input[type="submit"], input[type="reset"] {
     width: 80%;
     left: 10%;
     display: none;
-    z-index: 100;
+    z-index: 98;
   }
 
   #notifBanner3Mobile{
@@ -563,7 +563,7 @@ button, input[type="submit"], input[type="reset"] {
     transition: 0.5s;
     width: 80%;
     display: none;
-    z-index: 100;
+    z-index: 98;
   }
 
   @media screen and (max-width: 920px){
