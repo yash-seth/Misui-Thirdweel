@@ -10,7 +10,7 @@ function Stories() {
   const [storyPopup, setStoryPopup] = useState();
   const toggleCurrentStorytView = (id) => {
     setStoryPopup(storyPopup === id ? undefined : id);
-    if(storyPopup!=undefined) document.getElementsByClassName("storyPopupOverlay")[0].style.display = "block";
+    if(storyPopup!==undefined) document.getElementsByClassName("storyPopupOverlay")[0].style.display = "block";
     else document.getElementsByClassName("storyPopupOverlay")[0].style.display = "none";
 };
   useEffect(() => {
@@ -34,7 +34,7 @@ function Stories() {
             <img id="story" key={Story.id} src={require("./"+Story.src)} alt={Story.alt} height="100px" onClick={() => toggleCurrentStorytView(Story.id)}/>
             {storyPopup===Story.id? 
             (<><div className='storyPopup'>
-              <div className='storyPopupHeader'>
+              {Story.type==="content" && <div className='storyPopupHeader'>
                 <div className='storyPopupHeaderDetails'>
                   <div id="storyPopupHeaderStorePFP"><img key={Story.id} src={require("./"+Story.src)} alt={Story.alt} height="60px" /></div>
                   <div className='storyPopupHeaderProfileDetails'>
@@ -46,14 +46,49 @@ function Stories() {
                   <img id="storyPopupDropdown" src={require("./dropdown.png")} alt="dropdown"></img>
                   <button onClick={() => toggleCurrentStorytView()}><img id="storyPopupCross" src={require("./crossButton.png")} alt="cross button"/></button>
                 </div>
-              </div>
+              </div>}
+              {Story.type==="promo" && <div className='storyPopupPromoHeader'>
+                <div className='storyPopupHeaderDetails'>
+                  <div id="storyPopupHeaderStorePFP"><img key={Story.id} src={require("./"+Story.src)} alt={Story.alt} height="60px" /></div>
+                  <div className='storyPopupHeaderProfileDetails'>
+                    <div id='storyPopupHeaderStoreName'>{Story.name}</div>
+                    <div id='storyPopupHeaderTimestamp'>{Story.timeAgo}</div>
+                  </div>
+                </div>
+                <div className='storyPopupHeaderControls'>
+                  <img id="storyPopupDropdown" src={require("./dropdown.png")} alt="dropdown"></img>
+                  <button onClick={() => toggleCurrentStorytView()}><img id="storyPopupCross" src={require("./crossButton.png")} alt="cross button"/></button>
+                </div>
+              </div>}
               {Story.id!==0 && <div className='navigationLeftStory'>
                 <button onClick={() => toggleCurrentStorytView(Story.id-1)}>
                   <img src={require("./arrowRound.png")} alt="nav" id="arrowRoundLeft"/>
                   <img src={require('./left.png')} alt="nav" id="leftArrowStory"/>
                 </button>
               </div>}
-              <img id="storyImagePopup" src={require("./" + Story.storyImg)} alt="story content" height="560px" width="350px"/>
+              {Story.type==="content" && <img id="storyImagePopup" src={require("./" + Story.storyImg)} alt="story content" height="560px" width="350px"/>}
+              {Story.type==="promo" && <div className='promoStoryPopup'>
+                <div className='promoStoryPopupHeader'>
+                  <img src={require("./lightning.png")} id="lightningDeal" alt="lighting deal"/>
+                  <div className='promoStoryPopupHeaderText'>Ultra Lighting Deal</div>
+                  </div>
+                  <div id='promoStoryPopupHeaderSubText'>Buy in 5 minutes or this deal will vanish</div>
+                  <img src={require("./" + Story.prodImg)} alt="product" id="promoProdImg" height="200px" width="200px"/>
+                  <div id="promoProductName">{Story.prodName}</div>
+                  <div id="promoProductAmount">{Story.amount}</div>
+                  <div className='promoProductPriceDetails'>
+                    <div id="strikethrough">{Story.price}</div>
+                    <div id="promoProductDiscount">{Story.discount}</div>
+                  </div>
+                  <div id="promoProductNumberOfWatching">{Story.peopleWatching} People are watching this deal</div>
+                  <button id="promoPopupBuyNowButton">Buy Now</button>
+                  <div id="promoProductFooterText">Order will be delivered in 30 min</div>
+                  <div className='promoPopupStoreInfo'>
+                    <b>Sold By:</b>
+                    <div id="promoPopupStoreInfoName">{Story.name}</div>
+                    <div id="promoPopupStoreInfoAddr">{Story.addr}</div>
+                  </div>
+                </div>}
               {Story.id!==StoryData.length-1 && <div className='navigationRightStory'>
                 <button onClick={() => toggleCurrentStorytView(Story.id+1)}>
                   <img src={require("./arrowRound.png")} alt="nav" id="arrowRoundRight"/>

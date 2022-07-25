@@ -6,15 +6,15 @@ const StoreData = [
 ];
 
 const StoryData = [
-  { id: 0, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores 1" },
-  { id: 1, src: "post 1.png", alt: "stories circle", storyImg: "post 1.png", timeAgo: "12hrs ago", name: "Laxmi Stores 2" },
-  { id: 2, src: "stories.jpg", alt: "stories circle", storyImg: "post 2.png", timeAgo: "12hrs ago", name: "Laxmi Stores 3" },
-  { id: 3, src: "post 2.png", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores 4" },
-  { id: 4, src: "stories.jpg", alt: "stories circle", storyImg: "post 1.png", timeAgo: "12hrs ago", name: "Laxmi Stores 5" },
-  { id: 5, src: "post 1.png", alt: "stories circle", storyImg: "post 2.png", timeAgo: "12hrs ago", name: "Laxmi Stores 6" },
-  { id: 6, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores 7" },
-  { id: 7, src: "post 2.png", alt: "stories circle", storyImg: "post 2.png", timeAgo: "12hrs ago", name: "Laxmi Stores 8" },
-  { id: 8, src: "post 1.png", alt: "stories circle", storyImg: "post 1.png", timeAgo: "12hrs ago", name: "Laxmi Stores 9" },
+  { id: 0, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores 1", type:"content" },
+  { id: 1, src: "post 1.png", alt: "stories circle", prodImg:"prod.png",price: "$75", discount: "$45", prodName: "Lays Potato Chips - Masala Magic", amount: "115gm/130gm (Weight May Vary)", peopleWatching: 102, addr:"2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102",  timeAgo: "12hrs ago", name: "Laxmi Stores 2" , type:"promo"},
+  { id: 2, src: "stories.jpg", alt: "stories circle", storyImg: "post 2.png", timeAgo: "12hrs ago", name: "Laxmi Stores 3" , type:"content"},
+  { id: 3, src: "post 2.png", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores 4" , type:"content"},
+  { id: 4, src: "stories.jpg", alt: "stories circle", prodImg:"prod.png",price: "$75", discount: "$45", prodName: "Lays Potato Chips - Masala Magic", amount: "115gm/130gm (Weight May Vary)", peopleWatching: 102, addr:"2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102",  timeAgo: "12hrs ago", name: "Laxmi Stores 5" , type:"promo"},
+  { id: 5, src: "post 1.png", alt: "stories circle", storyImg: "post 2.png", timeAgo: "12hrs ago", name: "Laxmi Stores 6" , type:"content"},
+  { id: 6, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores 7" , type:"content"},
+  { id: 7, src: "post 2.png", alt: "stories circle", prodImg:"prod.png",price: "$75", discount: "$45", prodName: "Lays Potato Chips - Masala Magic", amount: "115gm/130gm (Weight May Vary)", peopleWatching: 102, addr:"2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102",  timeAgo: "12hrs ago", name: "Laxmi Stores 8" , type:"promo"},
+  { id: 8, src: "post 1.png", alt: "stories circle", storyImg: "post 1.png", timeAgo: "12hrs ago", name: "Laxmi Stores 9" , type:"content"},
 ];
 
 const TrendingData = [
