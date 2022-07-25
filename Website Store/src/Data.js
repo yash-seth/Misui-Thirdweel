@@ -6,15 +6,15 @@ const StoreData = [
 ];
 
 const StoryData = [
-  { id: 0, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores" },
-  { id: 1, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores" },
-  { id: 2, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores" },
-  { id: 3, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores" },
-  { id: 4, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores" },
-  { id: 5, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores" },
-  { id: 6, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores" },
-  { id: 7, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores" },
-  { id: 8, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores" },
+  { id: 0, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores 1" },
+  { id: 1, src: "post 1.png", alt: "stories circle", storyImg: "post 1.png", timeAgo: "12hrs ago", name: "Laxmi Stores 2" },
+  { id: 2, src: "stories.jpg", alt: "stories circle", storyImg: "post 2.png", timeAgo: "12hrs ago", name: "Laxmi Stores 3" },
+  { id: 3, src: "post 2.png", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores 4" },
+  { id: 4, src: "stories.jpg", alt: "stories circle", storyImg: "post 1.png", timeAgo: "12hrs ago", name: "Laxmi Stores 5" },
+  { id: 5, src: "post 1.png", alt: "stories circle", storyImg: "post 2.png", timeAgo: "12hrs ago", name: "Laxmi Stores 6" },
+  { id: 6, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores 7" },
+  { id: 7, src: "post 2.png", alt: "stories circle", storyImg: "post 2.png", timeAgo: "12hrs ago", name: "Laxmi Stores 8" },
+  { id: 8, src: "post 1.png", alt: "stories circle", storyImg: "post 1.png", timeAgo: "12hrs ago", name: "Laxmi Stores 9" },
 ];
 
 const TrendingData = [

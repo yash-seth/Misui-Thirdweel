@@ -44,10 +44,22 @@ function Stories() {
                 </div>
                 <div className='storyPopupHeaderControls'>
                   <img id="storyPopupDropdown" src={require("./dropdown.png")} alt="dropdown"></img>
-                  <img id="storyPopupCross" src={require("./crossButton.png")} alt="cross button" onClick={() => toggleCurrentStorytView()}></img>
+                  <button onClick={() => toggleCurrentStorytView()}><img id="storyPopupCross" src={require("./crossButton.png")} alt="cross button"/></button>
                 </div>
               </div>
-              <img id="storyImagePopup" src={require("./" + Story.storyImg)} alt="story content" height="560px"/>
+              {Story.id!==0 && <div className='navigationLeftStory'>
+                <button onClick={() => toggleCurrentStorytView(Story.id-1)}>
+                  <img src={require("./arrowRound.png")} alt="nav" id="arrowRoundLeft"/>
+                  <img src={require('./left.png')} alt="nav" id="leftArrowStory"/>
+                </button>
+              </div>}
+              <img id="storyImagePopup" src={require("./" + Story.storyImg)} alt="story content" height="560px" width="350px"/>
+              {Story.id!==StoryData.length-1 && <div className='navigationRightStory'>
+                <button onClick={() => toggleCurrentStorytView(Story.id+1)}>
+                  <img src={require("./arrowRound.png")} alt="nav" id="arrowRoundRight"/>
+                  <img src={require('./right.png')} alt="nav" id="rightArrowStory"/>
+                </button>
+              </div>}
             </div>
             <div className='storyPopupOverlay'></div>
             </>)
