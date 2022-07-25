@@ -6,15 +6,15 @@ const StoreData = [
 ];
 
 const StoryData = [
-  { id: 0, src: "stories.jpg", alt: "stories circle" },
-  { id: 1, src: "stories.jpg", alt: "stories circle" },
-  { id: 2, src: "stories.jpg", alt: "stories circle" },
-  { id: 3, src: "stories.jpg", alt: "stories circle" },
-  { id: 4, src: "stories.jpg", alt: "stories circle" },
-  { id: 5, src: "stories.jpg", alt: "stories circle" },
-  { id: 6, src: "stories.jpg", alt: "stories circle" },
-  { id: 7, src: "stories.jpg", alt: "stories circle" },
-  { id: 8, src: "stories.jpg", alt: "stories circle" },
+  { id: 0, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores" },
+  { id: 1, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores" },
+  { id: 2, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores" },
+  { id: 3, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores" },
+  { id: 4, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores" },
+  { id: 5, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores" },
+  { id: 6, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores" },
+  { id: 7, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores" },
+  { id: 8, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores" },
 ];
 
 const TrendingData = [
