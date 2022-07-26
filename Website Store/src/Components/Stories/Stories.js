@@ -4,6 +4,7 @@ import {StoryData} from "../../Data"
 import { useState, useEffect } from 'react'
 import { websiteStoreUrl } from '../../api/urls'
 import axios from 'axios';
+import {Link} from "react-router-dom"
 
 function Stories() {
   const [stories, setStories] = useState([{}])
@@ -38,7 +39,7 @@ function Stories() {
                 <div className='storyPopupHeaderDetails'>
                   <div id="storyPopupHeaderStorePFP"><img key={Story.id} src={require("./"+Story.src)} alt={Story.alt} height="60px" /></div>
                   <div className='storyPopupHeaderProfileDetails'>
-                    <div id='storyPopupHeaderStoreName'>{Story.name}</div>
+                    <Link to="/storeProfile" style={{textDecoration:"none", color:"inherit"}}><div id='storyPopupHeaderStoreName'>{Story.name}</div></Link>
                     <div id='storyPopupHeaderTimestamp'>{Story.timeAgo}</div>
                   </div>
                 </div>
@@ -51,7 +52,7 @@ function Stories() {
                 <div className='storyPopupHeaderDetails'>
                   <div id="storyPopupHeaderStorePFP"><img key={Story.id} src={require("./"+Story.src)} alt={Story.alt} height="60px" /></div>
                   <div className='storyPopupHeaderProfileDetails'>
-                    <div id='storyPopupHeaderStoreName'>{Story.name}</div>
+                  <Link to="/storeProfile" style={{textDecoration:"none", color:"inherit"}}><div id='storyPopupHeaderStoreName'>{Story.name}</div></Link>
                     <div id='storyPopupHeaderTimestamp'>{Story.timeAgo}</div>
                   </div>
                 </div>
@@ -81,7 +82,7 @@ function Stories() {
                     <div id="promoProductDiscount">{Story.discount}</div>
                   </div>
                   <div id="promoProductNumberOfWatching">{Story.peopleWatching} People are watching this deal</div>
-                  <button id="promoPopupBuyNowButton">Buy Now</button>
+                  <button id="promoPopupBuyNowButton"><Link to="/productDescription" style={{textDecoration:"none", color:"inherit"}}>Buy Now</Link></button>
                   <div id="promoProductFooterText">Order will be delivered in 30 min</div>
                   <div className='promoPopupStoreInfo'>
                     <b>Sold By:</b>
