@@ -220,13 +220,14 @@
         margin: 0 0;
     }
     #ProfileImage,#rewardImage{
-        padding: 10px;
-        height: 200px;
+        padding: 5px;
+        height: 75px;
     }
     .ImageGridImages{
-        flex-direction: column;
-        justify-content: flex-start;
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
+        padding: 10px 0px;
     }
     .ImageGridControlsBar{
         display: flex;
@@ -721,4 +722,45 @@
     position: absolute;
     bottom: 5%;
     right: 5%;
+}
+
+@media screen and (max-width: 920px){
+    .imagePopup{
+        left: 0%;
+        top:0%;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    .imagePopupContent{
+        height: 50%;
+        overflow-y: scroll;
+    }
+    #imagePopupImg{
+        height: 50%;
+        width: 100%;
+    }
+    .rewardImagePopup{
+        position: fixed;
+        left: 0%;
+        top:0%;
+        z-index: 94;
+        width: 100%;
+        height: 100%;
+    }
+    .rewardImagePopupContent{
+        left: 0%;
+        top:0%;
+        flex-direction: column;
+        width: 100%;
+        height: 90%;
+    }
+    #rewardImagePopupImg{
+        height: 50%;
+        width: 100%;
+    }
+    .rewardImagePopupContentMain{
+        height: 50%;
+        /* overflow-y: scroll; */
+    }
 }
