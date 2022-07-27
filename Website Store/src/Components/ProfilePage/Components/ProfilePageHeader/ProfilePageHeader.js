@@ -471,8 +471,6 @@ function ProfilePageHeader({ profileView }) {
                         key={highlight.id}
                         src={require("./" + highlight.src)}
                         alt={highlight.alt}
-                        height="200px"
-                        width="150px"
                       />
                     </button>
                     <img
