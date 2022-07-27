@@ -383,6 +383,15 @@ function ProfilePageHeader({ profileView }) {
             >
               Select from computer
             </button>
+            <div className="mobileCreatePostContainer">
+              <div>OR</div>
+              <button onClick={() => toggleCreatePostView()}>
+                <div className="openCamera">
+                  <img src={require('./cameraBackground.png')} alt="camera icon background" id="openCameraBackground"/>
+                  <img src={require("./camera.png")} alt="open camera" id="openCamera"/>
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       )}
