@@ -449,7 +449,7 @@ function ProfilePageHeader({ profileView }) {
       {popup && newHighlightPopup && (
         <div className="createHighlightContainer">
           <div className="createHighLightHeader">
-            <button onClick={() => setPopup(false)}>
+            <button onClick={() => {setPopup(false);setnewHighlightPopup(false);}}>
               <img
                 id="createPostLeftArrow"
                 src={require("./leftArrow.png")}
