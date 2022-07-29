@@ -11,11 +11,14 @@ function TeamBuy() {
                 <img id="arrow" src={require("./arrow.png")} alt="arrow" />
             </div>
             <div className='TeamBuyBanners'>
-                <Link to="/teamBuyItemSearch" style={{textDecoration: "none"}}>
                 {TeamBuyData.map((TeamBuyProduct)=>{
-                    return <img id="TeamBuyBanner" key={TeamBuyProduct.id} src={require("./"+TeamBuyProduct.src)} alt={TeamBuyProduct.alt} height="200px"/>
+                    return( <>
+                    <Link to="/teamBuyItemSearch" style={{textDecoration: "none"}}>
+                    <img id="TeamBuyBanner" key={TeamBuyProduct.id} src={require("./"+TeamBuyProduct.src)} alt={TeamBuyProduct.alt} height="200px"/>
+                    </Link>
+                    </>
+                    )
                 })}
-                </Link>
             </div>
         </div>
       )

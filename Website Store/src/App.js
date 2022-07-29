@@ -66,7 +66,7 @@ function App() {
         <Route path="/search" element={<StoreSearch address={address} setAddress={setAddress}/>} />
         <Route path="/productDescription" element={<ProductDescription address={address} setAddress={setAddress}/>} />
         <Route path="/teamBuyProductDescription" element={<TeamBuyProductDescription address={address} setAddress={setAddress}/>} />
-        <Route path="/storeProfile" element={<StoreProfilePage address={address} setAddress={setAddress}/>} />
+        <Route path="/storeProfile" element={<StoreProfilePage address={address} setAddress={setAddress} profileView={profileView}/>} />
         <Route path="/profile" element={<ProfilePage address={address} setAddress={setAddress} profileView={profileView}/>} />
         <Route path="/storeItems" element={<StoreItemsPage address={address} setAddress={setAddress}/>} />
         <Route path="/CartCheckout" element={<CartCheckout address={address} setAddress={setAddress}/>} />
