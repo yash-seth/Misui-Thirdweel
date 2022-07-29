@@ -21,7 +21,7 @@
 - [x] Team Buy page
 - [x] Team Buy Team and Item page
 - [x] Storewise Cart
-- [x] Store Profile
+- [x] Store Profile - Post Views & popups for posts/rewards, create post popup, story bar, create highlight
 - [x] User Profile - Post/Reward Views & popups for posts/rewards, create post popup, story bar, create highlight
 - [x] Store Items Page
 - [x] Cart Checkout Page
