@@ -584,3 +584,124 @@ button, input[type="submit"], input[type="reset"] {
         display: none;
       }
   }
+
+  .sidebarMobile{
+    position: fixed;
+    top: 0;
+    left: -150%;
+    width: 70%;
+    height: 100%;
+    z-index: 100;
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    line-height: 25px;
+    font-weight: 500;
+    transition: 0.4s;
+}
+
+#closeButtonsidebarMobile{
+    position: fixed;
+    top: 0;
+    left: 70%;
+    z-index: 100;
+    display: none;
+    transition: 0.4s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sidebarMobile a{
+    text-decoration: none;
+}
+
+.sidebarMobile ul{
+    list-style: none;
+}
+
+.sidebarMobile ul a{
+    display: block;
+}
+
+.profileSectionsidebarMobile{
+    background-color: #4B8D5E;
+    padding:10px 50px;
+    color: white;
+}
+
+.sidebarMobileMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 10px 20px;
+}
+
+
+.sidebarMobileMenuOption{
+    margin: 2px 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+#sidebarMobileMenuOption:hover{
+    color:#4B8D5E;
+}
+
+.border{
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    border-top: 1px solid black;
+}
+
+.sidebarMobileCategoriesMenu{
+    position: fixed;
+    top: 25%;
+    margin: 2px 25px;
+    display: none;
+    transition: 0.4s;
+}
+
+.mainMenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#categoryMenuHeader{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#mainMenuArrow{
+    transform: rotate(180deg);
+}
+
+.categoriesMenusidebarMobile{
+    margin:10px;
+}
+
+#sidebarMobileCategoryName{
+    margin:5px 5px;
+    font-size: 14px;
+}
+
+#sidebarMobileCategoryName:hover{
+    color:#4B8D5E
+}
+
+.overlaysidebarMobile{
+    position: fixed;
+    right:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(103, 103, 103,0.8);
+    z-index: 99;
+    display: none;
+    transition: 0.4s;
+}
