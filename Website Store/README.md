@@ -23,7 +23,7 @@
 - [x] Storewise Cart
 - [x] Store Profile - Post Views & popups for posts/rewards, create post popup, story bar, create highlight
 - [x] User Profile - Post/Reward Views & popups for posts/rewards, create post popup, story bar, create highlight
-- [x] Store Items Page
+- [x] Store Items Page - Item quantity customization modal
 - [x] Cart Checkout Page
 - [x] Payment Success Page
 - [x] Team Buy Payment Success Page
