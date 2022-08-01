@@ -642,7 +642,7 @@ const StoreItemsProducts = [
   {id: 1,
     src: "veggies.png",
     alt: "product",
-    name: "Masala Lays",
+    name: "Masala Lays 1",
     weight: "50 gm",
     price: "$20",
     quantity: 1
@@ -650,7 +650,7 @@ const StoreItemsProducts = [
   {id: 2,
     src: "veggies.png",
     alt: "product",
-    name: "Masala Lays",
+    name: "Masala Lays 2",
     weight: "50 gm",
     price: "$20",
     quantity: 1
@@ -658,7 +658,7 @@ const StoreItemsProducts = [
   {id: 3,
     src: "veggies.png",
     alt: "product",
-    name: "Masala Lays",
+    name: "Masala Lays 3",
     weight: "50 gm",
     price: "$20",
     quantity: 1
@@ -666,7 +666,7 @@ const StoreItemsProducts = [
   {id: 4,
     src: "veggies.png",
     alt: "product",
-    name: "Masala Lays",
+    name: "Masala Lays 4",
     weight: "50 gm",
     price: "$20",
     quantity: 1
