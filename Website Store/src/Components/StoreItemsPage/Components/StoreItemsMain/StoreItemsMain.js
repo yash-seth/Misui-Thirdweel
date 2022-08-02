@@ -61,29 +61,19 @@ function StoreItemsMain() {
                                     <div className='quantityCustomizationModalMainHeader'>Choose Quantity</div>
                                     <div className='quantityCustomizationModalMainQuantities'>
                                         <div id="quantityCustomizationModalMainQuantitiesList">
-                                            <div id="quantityCustomizationModalMainQuantitiesListItem">
-                                                <input type="radio" id="50gm" name="itemWeight"/>
-                                                <label for="50gm">50gm - $25</label>
-                                            </div>
-                                            <div id="quantityCustomizationModalMainQuantitiesListItem">
-                                                <input type="radio" id="50gm" name="itemWeight"/>
-                                                <label for="50gm">100gm - $50</label>
-                                            </div>
-                                            <div id="quantityCustomizationModalMainQuantitiesListItem">
-                                                <input type="radio" id="50gm" name="itemWeight"/>
-                                                <label for="50gm">150gm - $100</label>
-                                            </div>
-                                            <div id="quantityCustomizationModalMainQuantitiesListItem">
-                                                <input type="radio" id="50gm" name="itemWeight"/>
-                                                <label for="50gm">200gm - $150</label>
-                                            </div>
+                                            {product.availableQuantities.map((pair)=>{
+                                                return <div id="quantityCustomizationModalMainQuantitiesListItem" key={pair.id}>
+                                                    <input type="radio" id={pair.weight} name="itemWeight"/>
+                                                    <label for="50gm">{pair.weight} - {pair.cost}</label>
+                                                </div>
+                                            })}
                                         </div>
                                         <img id="quantitiesModalGraphic" src={require("./quantitiesModalGraphic.png")} alt="modal graphic" height="100px"/>
                                     </div>
                                     <hr />
                                     <div className='quantityCustomizationModalMainFooter'>
                                         <div className='quantityCustomizationModalMainItemTotal'>Item Total: $20</div>
-                                        <button id="addItemQuantityCustomizationModal">Add item</button>
+                                        <button id="addItemQuantityCustomizationModal" onClick={()=>toggleQuantityCustomizationModal()}>Add item</button>
                                     </div>
                                 </div>
                             </div>

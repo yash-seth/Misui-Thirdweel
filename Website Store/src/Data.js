@@ -637,7 +637,8 @@ const StoreItemsProducts = [
     name: "Masala Lays",
     weight: "50 gm",
     price: "$20",
-    quantity: 1
+    quantity: 1,
+    availableQuantities: [{id: 0, weight: "50gm", cost: "$25"},{id: 0, weight: "100gm", cost: "$50"},{id: 2, weight: "150gm", cost: "$100"},{id: 3, weight: "200gm", cost: "$150"}]
   },
   {id: 1,
     src: "veggies.png",
@@ -645,7 +646,8 @@ const StoreItemsProducts = [
     name: "Masala Lays 1",
     weight: "50 gm",
     price: "$20",
-    quantity: 1
+    quantity: 1,
+    availableQuantities: [{id: 0, weight: "750gm", cost: "$250"},{id: 0, weight: "100gm", cost: "$50"},{id: 2, weight: "150gm", cost: "$100"},{id: 3, weight: "200gm", cost: "$150"}]
   },
   {id: 2,
     src: "veggies.png",
@@ -653,7 +655,8 @@ const StoreItemsProducts = [
     name: "Masala Lays 2",
     weight: "50 gm",
     price: "$20",
-    quantity: 1
+    quantity: 1,
+    availableQuantities: [{id: 0, weight: "1500gm", cost: "$250"},{id: 0, weight: "100gm", cost: "$50"},{id: 2, weight: "150gm", cost: "$100"},{id: 3, weight: "200gm", cost: "$150"}]
   },
   {id: 3,
     src: "veggies.png",
@@ -661,7 +664,8 @@ const StoreItemsProducts = [
     name: "Masala Lays 3",
     weight: "50 gm",
     price: "$20",
-    quantity: 1
+    quantity: 1,
+    availableQuantities: [{id: 0, weight: "50gm", cost: "$25"},{id: 0, weight: "100gm", cost: "$50"},{id: 2, weight: "150gm", cost: "$100"},{id: 3, weight: "200gm", cost: "$150"}]
   },
   {id: 4,
     src: "veggies.png",
@@ -669,7 +673,8 @@ const StoreItemsProducts = [
     name: "Masala Lays 4",
     weight: "50 gm",
     price: "$20",
-    quantity: 1
+    quantity: 1,
+    availableQuantities: [{id: 0, weight: "50gm", cost: "$25"},{id: 0, weight: "100gm", cost: "$50"},{id: 2, weight: "150gm", cost: "$100"},{id: 3, weight: "200gm", cost: "$150"}]
   },
   {id: 5,
     src: "veggies.png",
@@ -677,7 +682,8 @@ const StoreItemsProducts = [
     name: "Masala Lays",
     weight: "50 gm",
     price: "$20",
-    quantity: 1
+    quantity: 1,
+    availableQuantities: [{id: 0, weight: "50gm", cost: "$25"},{id: 0, weight: "100gm", cost: "$50"},{id: 2, weight: "150gm", cost: "$100"},{id: 3, weight: "200gm", cost: "$150"}]
   },
 ]
 
