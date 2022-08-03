@@ -2,24 +2,33 @@ import React, { useEffect, useState } from 'react'
 import "./Stores.css"
 import { StoreData } from "../../Data"
 import { Link } from "react-router-dom";
-import { websiteStoreUrl } from '../../api/urls';
+import { storeServiceUrl, websiteStoreUrl } from '../../api/urls';
 import axios from 'axios'
 
 function Stores() {
 
-    const [stores, setStores] = useState([])
-
+    const [stores, setStores] = useState(null)
+    const location = {
+        "long": "74.006",
+        "lat": "40.7128"
+    }
     useEffect(() => {
-        axios
-          .get(`${websiteStoreUrl}/nearbyStores`)
-          .then((response) => {
-            console.log(response)
-            setStores(response.data)
-          })
-          .catch(err => {
-            console.log(err)
-          })
-      }, [])
+        const options = {
+            method: "POST",
+            url: `${storeServiceUrl}/get-nearby-stores`,
+            data: {
+                location
+            }
+        }
+        axios(options)
+            .then((response) => {
+                console.log(response)
+                setStores(response.data)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }, [])
 
     return (
         <div className='storesContainer'>
@@ -29,8 +38,8 @@ function Stores() {
             </div>
             <Link to="/storeProfile" style={{ textDecoration: "none", color: "inherit" }}>
                 <div className='stores'>
-                    {stores.map((store) => {
-                        return <img id="store" key={store.uuid} src={store.src} alt={store.alt} height="200px"/>
+                    {stores && stores.map((store) => {
+                        return <img id="store" key={store.uuid} src={store.src} alt={store.alt} height="200px" />
                     })}
                 </div>
             </Link>
