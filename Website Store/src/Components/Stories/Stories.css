@@ -119,6 +119,16 @@
     transition: 0.4s;
 }
 
+#chatIcon{
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    height: 25px;
+    background-color: #3E6A4B;
+    padding: 15px;
+    border-radius: 20px;
+}
+
 @media screen and (max-width: 920px){
     .storyPopup{
         position: fixed;

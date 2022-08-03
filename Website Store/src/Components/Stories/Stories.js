@@ -107,6 +107,7 @@ function Stories() {
           <div id="moreStories">+ 5 more</div>
         </div>
       </div>
+      <button id="chatIconBtn" style={{textDecoration:"none"}}><img src={require("./chatIcon.png")} alt="chat icon" id="chatIcon"/></button>
     </>
     // <>
     //   <div className='storiesContainer'>
