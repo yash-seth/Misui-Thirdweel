@@ -5,16 +5,16 @@ import HeaderMenu from "../HeaderMenu/HeaderMenu"
 import StoreProfilePageHeader from './Components/StoreProfilePageHeader/StoreProfilePageHeader'
 import StoreProfilePageTopProducts from './Components/StoreProfilePageTopProducts/StoreProfilePageTopProducts'
 
-function StoreProfilePage({address, setAddress}) {
+function StoreProfilePage({address, setAddress, setProfileView, profileView}) {
   return (
     <>
         <Header address={address} setAddress={setAddress}/>
         <div className='mobileView'>
-          <HeaderMenu />
+          <HeaderMenu setProfileView={setProfileView}/>
         </div>
         <div className="StoreProfilePageMain">
             <div className="StoreProfilePageMainDetails">
-                <StoreProfilePageHeader/>
+                <StoreProfilePageHeader profileView={profileView}/>
             </div>
             <div className='StoreProfilePageTopProducts'>
               <StoreProfilePageTopProducts/>

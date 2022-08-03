@@ -2,18 +2,47 @@ import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { addressData } from "../../Data";
-import { useState, useEffect } from "react";
 import { categoryDropdownData } from "../../Data";
+import { useState, useEffect } from "react";
 
-function Header({address, setAddress}) {
+function Header({ address, setAddress, setProfileView }) {
   const [width, setWidth] = useState(window.innerWidth);
+  const [bannerState, setBannerState] = useState(false);
+  const [sidebarMobileState, setsidebarMobileState] = useState("close");
+  const [categoryMenuState, setCategoryMenuState] = useState("close");
+
+  const togglesidebarMobile = (e) => {
+    if (sidebarMobileState === "close") {
+      setsidebarMobileState("open");
+      document.getElementsByClassName("overlaysidebarMobile")[0].style.display = "block";
+      document.getElementsByClassName("sidebarMobile")[0].style.left = "0";
+      document.getElementById("closeButtonsidebarMobile").style.display = "block";
+    } else {
+      setsidebarMobileState("close");
+      document.getElementsByClassName("overlaysidebarMobile")[0].style.display = "none";
+      document.getElementsByClassName("sidebarMobile")[0].style.left = "-100%";
+      document.getElementById("closeButtonsidebarMobile").style.display = "none";
+    }
+  };
+
+  const toggleCategoryMenu = (e) => {
+    if (categoryMenuState === "close") {
+      setCategoryMenuState("open");
+      document.getElementsByClassName("sidebarMobileMenu")[0].style.display = "none";
+      document.getElementsByClassName("sidebarMobileCategoriesMenu")[0].style.display = "block";
+    } else {
+      setCategoryMenuState("close");
+      document.getElementsByClassName("sidebarMobileMenu")[0].style.display = "block";
+      document.getElementsByClassName("sidebarMobileCategoriesMenu")[0].style.display = "none";
+    }
+  };
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
   }
-  
+
   useEffect(() => {
-    setAddress({label:addressData[0].label,addr:addressData[0].address});
+    setAddress({ label: addressData[0].label, addr: addressData[0].address });
     window.addEventListener("resize", handleWindowSizeChange);
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
@@ -46,18 +75,35 @@ function Header({address, setAddress}) {
       document.getElementById("overlayAddressModal").style.display = "none";
     }
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setBannerState(true);
+      document.getElementById("notifBanner1").style.right = "1%";
+    }, 3000);
+    setTimeout(() => {
+        document.getElementById("notifBanner2").style.right = "1%";
+      }, 6000);
+    setTimeout(() => {
+      document.getElementById("notifBanner3").style.left = "35%";
+    }, 9000);
+  }, [])
+  useEffect(() => {
+    setsidebarMobileState("close");
+  }, [])
+  
   return (
     <>
       <div className="mainHeader">
         <div className="company-info">
           <div className="address">
             <div className="logo">
-            <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
-              <img
-                src="./thirdweel mini logo.png"
-                alt="company-logo"
-                height="28px"
-              />
+              <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+                <img
+                  src="./thirdweel mini logo.png"
+                  alt="company-logo"
+                  height="28px"
+                />
               </Link>
             </div>
             <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
@@ -74,7 +120,7 @@ function Header({address, setAddress}) {
                 src={require("./navigation.png")}
                 alt="location icon"
               />
-              {address.label}, {address.addr.substring(0,12)}...
+              {address.label}, {address.addr.substring(0, 12)}...
               <img
                 id="dropdown"
                 src={require("./dropdown.png")}
@@ -84,13 +130,13 @@ function Header({address, setAddress}) {
           </div>
           <div className="headerInfo">
             <button style={{ textDecoration: "none" }}>
-            <Link to="/profile" style={{ textDecoration: 'none' }}>
-              <img
-                id="profileIcon"
-                src={require("./profileIcon.png")}
-                alt="profile icon"
-                height="25px"
-              />
+              <Link to="/profile" style={{ textDecoration: "none" }}>
+                <img
+                  id="profileIcon"
+                  src={require("./profileIcon.png")}
+                  alt="profile icon"
+                  height="25px"
+                />
               </Link>
             </button>
             <Link to="/MyCart" style={{ textDecoration: "none" }}>
@@ -106,7 +152,7 @@ function Header({address, setAddress}) {
           </div>
         </div>
         <div className="searchBar">
-          <button style={{ textDecoration: "none" }}>
+          <button style={{ textDecoration: "none" }} onClick={togglesidebarMobile}>
             <img
               id="burgerMenuMobile"
               src={require("./burgerMenu.png")}
@@ -153,7 +199,7 @@ function Header({address, setAddress}) {
               <button id="Offers">Offers</button>
             </Link>
             <Link
-              to="/teamBuyProductDescription"
+              to="/teamBuyItemSearch"
               style={{ textDecoration: "none" }}
             >
               <button id="Group_Buy">Group Buy</button>
@@ -201,7 +247,13 @@ function Header({address, setAddress}) {
             {addressData.map((addr) => {
               return (
                 <>
-                  <div className="addressContainer" onClick={()=>{setAddress({label:addr.label,addr:addr.address});toggleAddressModal()}}>
+                  <div
+                    className="addressContainer"
+                    onClick={() => {
+                      setAddress({ label: addr.label, addr: addr.address });
+                      toggleAddressModal();
+                    }}
+                  >
                     <div className="addressLabel">{addr.label}</div>
                     <div className="addressMain">
                       <b>{addr.name}</b> {addr.address}
@@ -213,7 +265,7 @@ function Header({address, setAddress}) {
             })}
           </div>
           <button>
-            <Link to="/addAddress" style={{textDecoration: "none"}}>
+            <Link to="/addAddress" style={{ textDecoration: "none" }}>
               <div className="addressContainerFooter">
                 Add an address or pickup point
               </div>
@@ -252,7 +304,13 @@ function Header({address, setAddress}) {
             {addressData.map((addr) => {
               return (
                 <>
-                  <div className="addressContainerMobile" onClick={()=>{setAddress({label:addr.label,addr:addr.address});toggleAddressModal()}}>
+                  <div
+                    className="addressContainerMobile"
+                    onClick={() => {
+                      setAddress({ label: addr.label, addr: addr.address });
+                      toggleAddressModal();
+                    }}
+                  >
                     <div className="addressLabelMobile">{addr.label}</div>
                     <div className="addressMainMobile">
                       <b>{addr.name}</b> {addr.address}
@@ -263,7 +321,7 @@ function Header({address, setAddress}) {
               );
             })}
           </div>
-          <Link to="/addAddress" style={{textDecoration: "none"}}>
+          <Link to="/addAddress" style={{ textDecoration: "none" }}>
             <button>
               <div className="addressContainerFooterMobile">
                 Add an address or pickup point
@@ -278,6 +336,111 @@ function Header({address, setAddress}) {
           </div>
         </div>
       </div>
+      <img id="notifBanner1" src={require("./notif1.png")} alt="notification banner" height="150px" onClick={()=>document.getElementById("notifBanner1").style.right = "-100%"}/>
+      <img id="notifBanner2" src={require("./notif2.png")} alt="notification banner" height="150px" onClick={()=>document.getElementById("notifBanner2").style.right = "-100%"}/>
+      <img id="notifBanner3" src={require("./notif3.png")} alt="notification banner" height="50px" onClick={()=>document.getElementById("notifBanner3").style.left = "-100%"}/>
+      <img id="notifBanner1Mobile" src={require("./notif1.png")} alt="notification banner" height="120px" onClick={()=>document.getElementById("notifBanner1Mobile").style.bottom = "-100%"}/>
+      <img id="notifBanner2Mobile" src={require("./notif2.png")} alt="notification banner" height="120px" onClick={()=>document.getElementById("notifBanner2Mobile").style.bottom = "-100%"}/>
+      <img id="notifBanner3Mobile" src={require("./notif3.png")} alt="notification banner" height="30px" onClick={()=>document.getElementById("notifBanner3Mobile").style.bottom = "-100%"}/>
+      <div className="sidebarMobile">
+      <Link to="/profile" style={{ textDecoration: 'none' }} onClick={()=>setProfileView(true)}>
+        <div className="profileSectionsidebarMobile">
+          <img src={require("./Profile avatar icon.png")} alt="Profile avatar icon.png" />
+          <header>Hello, Profile</header>
+        </div>
+        </Link>
+        <div className="sidebarMobileMenu">
+          <div className="sidebarMobileMenuOption">
+            <button id="sidebarMobileMenuOption" onClick={toggleCategoryMenu}>Categories</button>
+            <img src={require("./rightArrow.png")} alt="right arrow" height="25px"/>
+          </div>
+          <div className="sidebarMobileMenuOption">
+            <Link
+              to="/offers"
+              style={{ textDecoration: "none" }}><button id="sidebarMobileMenuOption">Offers</button></Link>
+            <img src={require("./rightArrow.png")} alt="right arrow" height="25px"/>
+          </div>
+          <div className="sidebarMobileMenuOption">
+            <Link
+              to="/teamBuyItemSearch"
+              style={{ textDecoration: "none" }}><button id="sidebarMobileMenuOption">Group Buy</button></Link>
+          </div>
+          <div className="sidebarMobileMenuOption">
+          <Link
+              to="/wishlist"
+              style={{ textDecoration: "none" }}
+            ><button id="sidebarMobileMenuOption">Wishlist</button></Link>
+          </div>
+          <div className="sidebarMobileMenuOption">
+            <button id="sidebarMobileMenuOption">Best Sellers</button>
+          </div>
+          <hr className="border"/>
+          <div className="sidebarMobileMenuOption">
+            <Link to="/productAvailability" style={{ textDecoration: "none" }}>
+              <button id="sidebarMobileMenuOption">Availability check history</button>
+            </Link>
+              <img src={require("./rightArrow.png")} alt="right arrow" height="25px"/>
+          </div>
+          <div className="sidebarMobileMenuOption">
+          <Link to="/teamBuyHistory" style={{ textDecoration: "none" }}>
+            <button id="sidebarMobileMenuOption">Group Buy History</button>
+          </Link>
+          </div>
+          <div className="sidebarMobileMenuOption">
+            <Link to="/orderHistory" style={{ textDecoration: "none" }}>
+              <button id="sidebarMobileMenuOption">Order History</button>
+            </Link>
+          </div>
+          <div className="sidebarMobileMenuOption">
+            <button id="sidebarMobileMenuOption">Wallet</button>
+          </div>
+          <hr className="border"/>
+          <div className="sidebarMobileMenuOption">
+            <Link to="/CustomerService" style={{ textDecoration: 'none' }}><button id="sidebarMobileMenuOption">Customer Service</button></Link>
+          </div>
+          <div className="sidebarMobileMenuOption">
+            <button id="sidebarMobileMenuOption">Become a seller</button>
+          </div>
+          <div className="sidebarMobileMenuOption">
+            <Link to="/FAQs" style={{ textDecoration: 'none' }}><button id="sidebarMobileMenuOption">FAQs</button></Link>
+          </div>
+          <div className="sidebarMobileMenuOption">
+            <button id="sidebarMobileMenuOption">About Us</button>
+          </div>
+          <hr className="border"/>
+          <div className="sidebarMobileMenuOption">
+            <Link to="/profile" style={{ textDecoration: 'none' }} onClick={()=>setProfileView(true)}><button id="sidebarMobileMenuOption">Your account</button></Link>
+          </div>
+          <div className="sidebarMobileMenuOption">
+            <button id="sidebarMobileMenuOption">Sign out</button>
+          </div>
+        </div>
+        <div className="sidebarMobileCategoriesMenu">
+            <button onClick={toggleCategoryMenu}>
+              <div className="mainMenu">
+                <img id="mainMenuArrow" src={require("./rightArrow.png")} alt="close button" height="40px"/>
+                <div id="categoryMenuHeader">Main Menu</div>
+              </div>
+            </button>
+            <div className="categoriesMenusidebarMobile">
+              {categoryDropdownData.map((category) => {
+                    return (
+                      <>
+                        <button
+                          id="categoryButton"
+                          style={{ textDecoration: "none" }}
+                        >
+                          <div id="sidebarMobileCategoryName">{category.name}</div>
+                        </button>
+                        <br />
+                      </>
+                    );
+                  })}
+            </div>
+        </div>
+        <button id="closeButtonsidebarMobile" onClick={togglesidebarMobile} style={{textDecoration:"none"}} ><img src={require("./Close button.png")} alt="close button" height="40px"/></button>
+      </div>
+      <div className="overlaysidebarMobile"></div>
     </>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import "./TeamBuy.css"
 import {TeamBuyData} from "../../Data"
+import {Link} from "react-router-dom"
 
 function TeamBuy() {
     return (
@@ -11,7 +12,12 @@ function TeamBuy() {
             </div>
             <div className='TeamBuyBanners'>
                 {TeamBuyData.map((TeamBuyProduct)=>{
-                    return <img id="TeamBuyBanner" key={TeamBuyProduct.id} src={require("./"+TeamBuyProduct.src)} alt={TeamBuyProduct.alt} />
+                    return( <>
+                    <Link to="/teamBuyItemSearch" style={{textDecoration: "none"}}>
+                    <img id="TeamBuyBanner" key={TeamBuyProduct.id} src={require("./"+TeamBuyProduct.src)} alt={TeamBuyProduct.alt} height="200px"/>
+                    </Link>
+                    </>
+                    )
                 })}
             </div>
         </div>

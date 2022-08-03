@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { categoryDropdownData } from "../../Data";
 import { useState, useEffect } from "react";
 
-function HeaderMenu() {
+function HeaderMenu({setProfileView}) {
   const [sidebarState, setSidebarState] = useState("close");
   const [categoryMenuState, setCategoryMenuState] = useState("close");
   const [categoryHover, setCategoryHover] = useState(false)
@@ -123,7 +123,7 @@ function HeaderMenu() {
               <button id="Offers">Offers</button>
             </Link>
             <Link
-              to="/teamBuyProductDescription"
+              to="/teamBuyItemSearch"
               style={{ textDecoration: "none" }}
             >
               <button id="Group_By">Group Buy</button>
@@ -136,7 +136,7 @@ function HeaderMenu() {
       </div>
       <hr id="headerMenuBottomHR"/>
       <div className="sidebar">
-      <Link to="/profile" style={{ textDecoration: 'none' }}>
+      <Link to="/profile" style={{ textDecoration: 'none' }} onClick={()=>setProfileView(true)}>
         <div className="profileSectionSidebar">
           <img src={require("./Profile avatar icon.png")} alt="Profile avatar icon.png" />
           <header>Hello, Profile</header>
@@ -155,7 +155,7 @@ function HeaderMenu() {
           </div>
           <div className="sidebarMenuOption">
             <Link
-              to="/teamBuyProductDescription"
+              to="/teamBuyItemSearch"
               style={{ textDecoration: "none" }}><button id="sidebarMenuOption">Group Buy</button></Link>
           </div>
           <div className="sidebarMenuOption">
@@ -175,7 +175,9 @@ function HeaderMenu() {
               <img src={require("./rightArrow.png")} alt="right arrow" height="25px"/>
           </div>
           <div className="sidebarMenuOption">
+          <Link to="/teamBuyHistory" style={{ textDecoration: "none" }}>
             <button id="sidebarMenuOption">Group Buy History</button>
+          </Link>
           </div>
           <div className="sidebarMenuOption">
             <Link to="/orderHistory" style={{ textDecoration: "none" }}>
@@ -200,7 +202,7 @@ function HeaderMenu() {
           </div>
           <hr className="border"/>
           <div className="sidebarMenuOption">
-            <Link to="/profile" style={{ textDecoration: 'none' }}><button id="sidebarMenuOption">Your account</button></Link>
+            <Link to="/profile" style={{ textDecoration: 'none' }} onClick={()=>setProfileView(true)}><button id="sidebarMenuOption">Your account</button></Link>
           </div>
           <div className="sidebarMenuOption">
             <button id="sidebarMenuOption">Sign out</button>

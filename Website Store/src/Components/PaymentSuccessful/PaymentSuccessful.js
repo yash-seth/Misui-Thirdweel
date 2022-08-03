@@ -6,12 +6,12 @@ import PaymentSuccessfulMessage from './Components/PaymentSuccessfulMessage/Paym
 import PaymentSuccessfulScratchCards from './Components/PaymentSuccessfulScratchCards/PaymentSuccessfulScratchCards'
 import "./PaymentSuccessful.css"
 
-function PaymentSuccessful({address, setAddress, paymentView}) {
+function PaymentSuccessful({address, setAddress, paymentView, setProfileView}) {
   return (
     <>
         <Header address={address} setAddress={setAddress}/>
         <div className='mobileView'>
-          <HeaderMenu />
+          <HeaderMenu setProfileView={setProfileView}/>
         </div>
         <div className='PaymentSuccessfulBody'>
             <PaymentSuccessfulMessage paymentView={paymentView}/>

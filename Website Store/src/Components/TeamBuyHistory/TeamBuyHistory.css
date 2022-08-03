@@ -1,0 +1,272 @@
+.TeamBuyHistoryMainContainer{
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 100px;
+    background-color: #f2f2f2;
+}
+
+.TeamBuyHistoryMainContainerHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.TeamBuyHistoryMainContainerHeaderText{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+#TeamBuyHistoryMainContainerHeaderText{
+    font-size: 32px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#TeamBuyHistoryMainContainerHeaderSubText{
+    font-size: 14px;
+}
+
+#headerRightArrow{
+    margin-left: 10px;
+}
+
+.TeamBuyHistoryMainContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.TeamBuyHistoryFilters{
+    width: 15%;
+    background-color: white;
+    padding: 20px;
+}
+
+#TeamBuyHistoryFiltersHeader{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#TeamBuyHistoryFiltersOrderStatus, #TeamBuyHistoryFiltersOrderTime{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#TeamBuyHistoryHR{
+    width: 100%;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.TeamBuyHistoryFilters input{
+    padding: 2px 0;
+}
+
+.TeamBuyHistoryMainContainerSubHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+#TeamBuyHistoryMainContainerSubHeaderText{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#TeamBuyHistoryMainContainerSubHeaderTextSubtext{
+    font-size: 14px;
+}
+
+.TeamBuyHistoryItems{
+    width: 85%;
+    margin-left: 20px;
+}
+
+.TeamBuyHistoryItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.orderStatus{
+    padding: 10px;
+}
+
+#orderStatusHeader{
+    font-size: 20px;
+    font-weight: 600;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.orderID{
+    padding: 10px;
+    font-weight: 600;
+}
+
+#orderIDHeader{
+    font-size: 16px;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+#orderID{
+    font-weight: 500;
+}
+
+.orderPlacedDetails{
+    padding: 10px;
+    font-weight: 600;
+}
+
+#orderPlacedDetailsHeader{
+    font-size: 16px;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+#orderPlacedDetails{
+    font-weight: 500;
+}
+
+.orderAmount{
+    padding: 10px;
+    font-weight: 600;
+}
+
+#orderAmountHeader{
+    font-size: 16px;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+#orderAmount{
+    font-weight: 500;
+}
+
+#viewItemsBtn{
+    padding: 8px;
+    background-color: #FFE5CC;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+#OrderDetailsDropdownMenu{
+    padding: 10px;
+}
+
+.TeamBuyHistoryItemOnDropdown{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #fff2e6;
+}
+
+.orderAddress{
+    width: 30%;
+}
+
+.orderType, .orderAddress, .orderMode, .orderAmountExtra{
+    padding: 50px;
+}
+
+#orderTypeHeader, #orderAddressHeader, #orderModeHeader, #orderAmountExtraHeader{
+    font-weight: 600;
+}
+
+#orderType, #orderName, #orderAddress, #orderMode, #orderAmountExtraAmount, #orderAmountExtraSavings{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#orderAmountExtraSavingsAmt{
+    color: #4B8D5E;
+}
+@media screen and (max-width: 920px) {
+    .TeamBuyHistoryMainContainer{
+        padding: 0 20px;
+    }    
+    .TeamBuyHistoryMainContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .TeamBuyHistoryFilters{
+        width: 80%;
+    }   
+    .TeamBuyHistoryItems{
+        margin-left: 0px;
+    }
+    .TeamBuyHistoryItemsContainer{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .TeamBuyHistoryItem{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+    .TeamBuyHistoryItemDetails{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 20px;
+    }
+    
+    .TeamBuyHistoryItemDetailsInfo{
+        padding: 10px 0px;
+        border-right: none;
+        width: 60%;
+    }
+    
+    .TeamBuyHistoryTimeSearched{
+        border-right: none;
+        padding: 10px 0px;
+        width: 60%;
+    }
+    .TeamBuyHistoryStoresFound{
+        padding: 10px 0px;
+        width: 60%;
+    }
+    #selectProdAvailabilityItem, #deleteProdAvailabilityItem{
+        display: none;
+    }
+    #TeamBuyHistoryItemImage{
+        margin-top: 20px;
+    }
+    .TeamBuyHistoryItemOnDropdown{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+    .orderAddress{
+        width: 100%;
+    }
+    .orderType, .orderAddress, .orderMode, .orderAmountExtra{
+        padding: 10px;
+    }
+    #orderAmountHeader, #orderStatusHeader, #orderIDHeader, #orderPlacedDetailsHeader,#orderAmountHeader{
+        border-right: none;
+    }
+}

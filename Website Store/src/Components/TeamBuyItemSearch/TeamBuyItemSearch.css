@@ -1,0 +1,67 @@
+.teamBuyItemSearchContainer{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.groupBuySearchProductFrame{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.groupBuyProductGrid{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.groupBuySearchProductPriceConatainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 60%;
+}
+
+#groupBuySearchProductName{
+    font-weight: 600;
+    font-size: 18px;
+    width: 70%;
+}
+
+#groupBuySearchProductWeight{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+#groupBuyItemSearchViewStoresBtn{
+    background-color: #daffe3;
+    color: #4d9960;
+    border-radius: 8px;
+    padding: 2px 20px;
+}
+
+#groupBuySearchProductPrice{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 920px){
+    /* .groupBuySearchProductFrame{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }    */
+    .groupBuyProductGrid{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}

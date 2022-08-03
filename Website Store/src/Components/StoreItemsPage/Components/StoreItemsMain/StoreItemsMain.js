@@ -6,8 +6,15 @@ import {Link} from "react-router-dom"
 
 function StoreItemsMain() {
     const [currentCategory, setCurrentCategory] = useState(categoryDropdownData[0].name)
+    const [quantityCustomizationModal, setQuantityCustomizationModal] = useState();
 
+    const toggleQuantityCustomizationModal = (id) => {
+        setQuantityCustomizationModal(quantityCustomizationModal === id ? undefined : id);
+        if(quantityCustomizationModal!==undefined) document.getElementsByClassName("quantityCustomizationModalOverlay")[0].style.display = "block";
+        else document.getElementsByClassName("quantityCustomizationModalOverlay")[0].style.display = "none";
+    };
   return (
+    <>
     <div className="StoreItemsMainContainer">
         <div className='StoreItemsMainContainerCategories'>
             <div className='StoreItemsMainContainerCategoriesHeader'>
@@ -27,6 +34,7 @@ function StoreItemsMain() {
                 
                 {StoreItemsProducts.map((product)=>{
                     return (
+                        <>
                         <div className='StoreItemsMainContainerItemsProduct'>
                             <img key={product.id} src={require("./"+product.src)} alt={product.alt} />
                             <div className="StoreItemsProductDetails">
@@ -34,7 +42,7 @@ function StoreItemsMain() {
                                 <div id="StoreItemsProductDetailsProductWeight">{product.weight}</div>
                                 <div id="StoreItemsProductDetailsProductPrice">{product.price}</div>
                             </div>
-                            <div className="StoreItemsMainContainerItemsProductControls">
+                            <div className="StoreItemsMainContainerItemsProductControls" onClick={()=>toggleQuantityCustomizationModal(product.id)}>
                                 <div className="StoreItemsMainContainerItemsProductAmountControls">
                                     <button><img src={require("./addQuantity.png")} alt="add quantity" height="17px"/></button>
                                     <div id="StoreItemsMainContainerItemsProductQuantity">{product.quantity}</div>
@@ -43,6 +51,38 @@ function StoreItemsMain() {
                                 <button><img src={require("./check availability button.png")} alt="check availability" height="30px"/></button>
                             </div>
                         </div>
+                        {quantityCustomizationModal===product.id? (
+                        <>
+                        <div className='quantityCustomizationModal'>
+                                <img src={require("./closeModalItemCustomization.png")} alt="close modal button" id="closeModalItemCustomization" onClick={()=>toggleQuantityCustomizationModal()}/>
+                                <div className='quantityCustomizationModalHeader'>Available Quantities</div>
+                                <div className='quantityCustomizationModalProductName'>{product.name}</div>
+                                <div className='quantityCustomizationModalMain'>
+                                    <div className='quantityCustomizationModalMainHeader'>Choose Quantity</div>
+                                    <div className='quantityCustomizationModalMainQuantities'>
+                                        <div id="quantityCustomizationModalMainQuantitiesList">
+                                            {product.availableQuantities.map((pair)=>{
+                                                return <div id="quantityCustomizationModalMainQuantitiesListItem" key={pair.id}>
+                                                    <input type="radio" id={pair.weight} name="itemWeight"/>
+                                                    <label for="50gm">{pair.weight} - {pair.cost}</label>
+                                                </div>
+                                            })}
+                                        </div>
+                                        <img id="quantitiesModalGraphic" src={require("./quantitiesModalGraphic.png")} alt="modal graphic" height="100px"/>
+                                    </div>
+                                    <hr />
+                                    <div className='quantityCustomizationModalMainFooter'>
+                                        <div className='quantityCustomizationModalMainItemTotal'>Item Total: $20</div>
+                                        <button id="addItemQuantityCustomizationModal" onClick={()=>toggleQuantityCustomizationModal()}>Add item</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='quantityCustomizationModalOverlay'></div>
+                            </>)
+                            :
+                            (<span></span>)
+                    }
+                        </>
                     )
                     })}
             </div>
@@ -61,7 +101,7 @@ function StoreItemsMain() {
                 <div className='StoreItemsMainContainerCartAmount'>{StoreItemsCart.length} items</div>
                 <div className="StoreItemsMainContainerCartContents">
                     {StoreItemsCart.map((item)=>{
-                        return(
+                        return(<>
                             <div className='StoreItemsMainContainerCartItem'>
                                 <div className="StoreItemsMainContainerCartItemDetails">
                                     <div id='StoreItemsMainContainerCartItemDetailsName'><b>{item.name}</b></div>
@@ -74,6 +114,7 @@ function StoreItemsMain() {
                                 </div>
                                 <div id='StoreItemsMainContainerCartItemDetailsPrice'>{item.price}</div>
                             </div>    
+                            </>
                         )
                     })}
                 </div>
@@ -83,6 +124,7 @@ function StoreItemsMain() {
             </div>
         </div>
     </div>
+    </>
   )
 }
 

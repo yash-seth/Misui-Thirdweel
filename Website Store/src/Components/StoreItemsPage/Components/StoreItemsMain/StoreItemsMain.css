@@ -239,3 +239,96 @@
         padding: 0;
     }
 }
+
+.quantityCustomizationModal{
+    background-color: white;
+    position: fixed;
+    top: 25%;
+    left: 40%;
+    padding: 20px;
+    z-index: 99;
+}
+
+#closeModalItemCustomization{
+    float: right;
+    height: 15px;
+}
+
+.quantityCustomizationModalHeader{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.quantityCustomizationModalProductName{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.quantityCustomizationModalMainHeader{
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.quantityCustomizationModalMainQuantities{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#quantityCustomizationModalMainQuantitiesList{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 80px;
+    font-size: 12px;
+}
+
+#quantityCustomizationModalMainQuantitiesListItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.quantityCustomizationModalMainItemTotal{
+    font-size: 14px;
+}
+
+.quantityCustomizationModalMainFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#addItemQuantityCustomizationModal{
+    background-color: #36BA7E;
+    color: white;
+    border-radius: 18px;
+    padding: 8px 20px;
+    font-weight: 14px;
+}
+
+.quantityCustomizationModalOverlay{
+    position: fixed;
+    right:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(103, 103, 103,0.8);
+    z-index: 98;
+    display: block;
+    transition: 0.4s;
+}
+
+@media screen and (max-width: 920px){
+    .quantityCustomizationModal{
+        top: 0%;
+        left: 0%;
+        height: 100%;
+        width: 90%;
+    }
+}

@@ -105,11 +105,31 @@
 
 .ProfileExtraDetails{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     background-color: white;   
     padding: 10px 25px 20px;
+}
+
+.ProfileExtraDetailsStories{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+#profileStory{
+    margin: 0 20px;
+}
+
+.profileStoryContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .ProfileExtraDetailsControlsContainer{
@@ -121,6 +141,7 @@
 
 .ProfileAbout{
     width: 70%;
+    margin-bottom: 10px;
 }
 
 .ProfileContacts{
@@ -199,13 +220,14 @@
         margin: 0 0;
     }
     #ProfileImage,#rewardImage{
-        padding: 10px;
-        height: 200px;
+        padding: 5px;
+        height: 75px;
     }
     .ImageGridImages{
-        flex-direction: column;
-        justify-content: flex-start;
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
+        padding: 10px 0px;
     }
     .ImageGridControlsBar{
         display: flex;
@@ -274,5 +296,560 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+    }
+}
+
+/* for the image/reward popup view */
+
+.imagePopup{
+    position: fixed;
+    left: 20%;
+    top:15%;
+    z-index: 94;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 60%;
+}
+
+.imagePopupContent{
+    margin: 20px;
+}
+
+.imagePopupContentHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.imagePopupContentCaption{
+    font-size: 12px;
+}
+
+#profilePopupName{
+    margin-left: 10px;
+}
+
+#profileImagePopupCrossButton{
+    position: fixed;
+    z-index: 94;
+    right: 10%;
+    top: 5%;
+}
+
+.imagePopupContentFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#profileImagePopupLikesContainer, #profileImagePopupLikesContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+}
+
+.profileImagePopupAddComment{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#profileImagePopupAddComment{
+    border: none;
+    margin: none;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    padding: 10px;
+}
+
+#profileImagePopupShareComment{
+    color: blue
+}
+
+#popupHR{
+    width: 100%;
+}
+
+
+.profileImagePopupComments{
+    height: 110px;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+.profileImagePopupComment{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profileImagePopupCommentUserinfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 30%;
+}
+
+#profileImagePopupCommentDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 5px;
+}
+
+#profileImagePopupCommentTime{
+    font-size: 10px;
+}
+
+#profileImagePopupCommentContent{
+    font-size: 10px;
+}
+
+#popupPostOverlay{
+    position: fixed;
+    right:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(103, 103, 103,0.8);
+    z-index: 93;
+    display: block;
+    transition: 0.4s;
+}
+
+.rewardImagePopup{
+    position: fixed;
+    left: 27%;
+    top:20%;
+    z-index: 94;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+}
+
+.rewardImagePopupContentMain{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.rewardImagePopupHeaderBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#leftArrowPopup{
+    padding: 10px;
+}
+
+#rewardImagePopupHeaderBarText{
+    font-size: 18px;
+}
+
+#rewardImagePopupContentMainName{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#rewardImagePopupContentMainAddr{
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+#rewardImagePopupContentMainExpiryDateContainerMessage{
+    font-weight: 600;
+}
+.rewardImagePopupContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#rewardImagePopupContentMainExpiry{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+#rewardImagePopupContentMainExpiryDateContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.rewardImagePopupContentMainBody{
+    font-size: 10px;
+    margin: 0 20px;
+    font-weight: 600;
+}
+
+#giftReward{
+    padding: 10px 30px;
+    background-color: #e0e0e0;
+    border-radius: 18px;
+    color: black;
+    margin-top: 20px;
+    border: 1px solid;
+}
+
+#giftOffer{
+    padding: 10px 50px;
+    background-color: #27c353;
+    border-radius: 18px;
+    color: white;
+    margin-top: 20px;
+}
+
+/*for new post popup */
+
+.newPostContainer{
+    position: fixed;
+    left: 30%;
+    top:15%;
+    z-index: 94;
+    background-color: white;
+    display: block;
+    width: 40%;
+}
+
+#popupNewPostOverlay{
+    position: fixed;
+    right:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(103, 103, 103,0.8);
+    z-index: 93;
+    display: block;
+    transition: 0.4s;
+}
+
+.newPostContainerMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 400px;
+}
+
+#newPostContainerHeader{
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+#selectFromComputer{
+    padding: 10px 40px;
+    border-radius: 18px;
+    background-color: #27c353;
+    color: white;
+    margin-top: 20px;
+}
+
+.createPostContainer{
+    position: fixed;
+    left: 27%;
+    top:15%;
+    z-index: 94;
+    background-color: white;
+    display: none;
+    width: 50%;
+}
+
+#popupcreatePostOverlay{
+    position: fixed;
+    right:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(103, 103, 103,0.8);
+    z-index: 93;
+    display: block;
+    transition: 0.4s;
+}
+
+.createPostContainerMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.createPostContainerHeader{
+    font-weight: 600;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#selectFromComputer{
+    padding: 10px 40px;
+    border-radius: 18px;
+    background-color: #27c353;
+    color: white;
+    margin-top: 20px;
+}
+
+#PopupCrossButton{
+    position: fixed;
+    z-index: 94;
+    right: 10%;
+    top: 5%;
+    display: block;
+}
+
+#createPostLeftArrow{
+    margin: 0 10px;
+}
+
+#postBtnCreatePost{
+    color: rgb(62, 62, 255);
+    margin: 0 10px;
+}
+
+.createPostContainerMainContent{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.createPostContainerMainContentDetails{
+    margin-left: 15px;
+}
+
+.createPostContainerMainContentUserDetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#createPostCaption{
+    border: none;
+    margin: none;
+    outline: none;
+    resize: none;
+    height: 200px;
+    margin-top: 10px;
+    width: auto;
+}
+
+.createHighlightContainer{
+    position: fixed;
+    left: 27%;
+    top:15%;
+    z-index: 95;
+    background-color: white;
+    display: block;
+    width: 45%;
+    height: 450px;
+    overflow-y: scroll;
+}
+
+.createHighLightHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#createHighLightHeaderText{
+    text-align: center;
+    font-weight: 600;
+}
+
+.hightlightGrid{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#highlightImg{
+    padding: 5px;
+    height: 200px;
+    width: 150px;
+}
+
+#hightlightFrame{
+    position: relative;
+}
+
+#hightlightDate{
+    position: absolute;
+    top: 5%;
+    background-color: rgb(255, 255, 255, 0.8);
+    border-radius: 18px;
+    padding: 2px;
+    left: 5%;
+}
+
+#selectHightlightOption{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+.mobileCreatePostContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.openCamera{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#openCamera{
+    position: absolute;
+    left:0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    margin: auto;
+}
+
+@media screen and (max-width: 920px){
+    .imagePopup{
+        left: 0%;
+        top:0%;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    .imagePopupContent{
+        height: 50%;
+        overflow-y: scroll;
+    }
+    #imagePopupImg{
+        height: 50%;
+        width: 100%;
+    }
+    .rewardImagePopup{
+        position: fixed;
+        left: 0%;
+        top:0%;
+        z-index: 94;
+        width: 100%;
+        height: 100%;
+    }
+    .rewardImagePopupContent{
+        left: 0%;
+        top:0%;
+        flex-direction: column;
+        width: 100%;
+        height: 90%;
+    }
+    #rewardImagePopupImg{
+        height: 50%;
+        width: 100%;
+    }
+    .rewardImagePopupContentMain{
+        height: 50%;
+        /* overflow-y: scroll; */
+    }
+    .newPostContainer{
+        left: 0%;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+    }
+    .createPostContainer{
+        left: 0%;
+        top: 0%;
+        width: 100%;
+        height: 100%;   
+    }
+    .createPostContainerMainContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+    }
+    #createPostSelectedPost{
+        width: 100%;
+        height: 50%;
+    }
+    .createPostContainerMainContentDetails{
+        height: 50%;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .mobileCreatePostContainer{
+        display: block;
+    }
+    #PopupCrossButton{
+        background-color: rgba(0,0,0,0.2);
+        height: 20px;
+        right: 5%;
+        top: 7%;
+    }
+    .createHighlightContainer{
+        left: 0%;
+        top:0%;
+        width: 100%;
+        height: 100%;
+    }
+    #profileImagePopupCrossButton{
+        background-color: rgba(0,0,0,0.2);
+        height: 20px;
+        right: 3%;
+        top: 1%;
+    }
+    #highlightImg{
+        padding: 2px;
+        height: 200px;
+        width: 100px;
+    }
+    .hightlightGrid{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
     }
 }

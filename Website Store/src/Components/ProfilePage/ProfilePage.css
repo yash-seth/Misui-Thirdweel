@@ -12,6 +12,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     background-color: #f2f2f2;
+    width: 80%;
 }
 
 @media screen and (max-width: 920px){
@@ -24,6 +25,7 @@
     .ProfilePageMainDetails{
         justify-content: center;
         align-items: center;
+        width: 100%;
     }
     .ProfilePageTopProducts{
         width: 100%;

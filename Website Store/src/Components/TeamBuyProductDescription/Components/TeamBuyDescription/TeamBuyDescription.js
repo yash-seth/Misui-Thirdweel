@@ -1,9 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import "./TeamBuyDescription.css";
-import { localStoresData, imageGalleryData, TeamBuyProductData, } from "../../../../Data";
+import {
+  localStoresData,
+  imageGalleryData,
+  TeamBuyProductData,
+} from "../../../../Data";
 import { Link } from "react-router-dom";
 
 function Description() {
+  const [TeamBuyBtnDropdownState, setTeamBuyBtnDropdown] = useState(false)
   return (
     <>
       <div className="DescriptionContainer">
@@ -37,32 +42,22 @@ function Description() {
                 alt="product big"
               />
               <div className="imageGalleryMobile">
-              {imageGalleryData.map((image) => {
-                return (
-                  <>
-                    <div className="imageGalleryImageFrame">
-                      <img
-                        id="imageGalleryImage"
-                        key={image.id}
-                        src={require("./" + image.src)}
-                        alt={image.alt}
-                      />
-                    </div>
-                  </>
-                );
-              })}
-            </div>
-              <div>
-                <button style={{ textDecoration: "none" }}>
-                  <img
-                    id="check_availability"
-                    src={require("./check availability button.png")}
-                    alt="check availability"
-                    height="40px"
-                  />
-                </button>
-                <div className="last_checked">Last checked 11:34am</div>
+                {imageGalleryData.map((image) => {
+                  return (
+                    <>
+                      <div className="imageGalleryImageFrame">
+                        <img
+                          id="imageGalleryImage"
+                          key={image.id}
+                          src={require("./" + image.src)}
+                          alt={image.alt}
+                        />
+                      </div>
+                    </>
+                  );
+                })}
               </div>
+              <div></div>
             </div>
             <div className="productDescriptionDetails">
               <div className="productDescriptionDetailsHeader">
@@ -88,15 +83,32 @@ function Description() {
                 adipisci, rem tempore perferendis vero inventore blanditiis
                 dolore modi odit minus distinctio quos dolor consequuntur
                 repudiandae eaque porro amet eligendi esse.
-                <button className="teamBuy">
-                  <label id="strikethrough">$75</label> $45 Team Buy
-                </button>
+                <div className="teamBuy">
+                  <div>
+                    <label id="teamBuyPrice">$40</label>
+                    <label id="strikethrough">$75</label>
+                  </div>
+                  <div id="teamBuyDiscount">45% off</div>
+                  <div className="teamBuyBtnContainer">
+                    <button id="teamBuyBtn" onClick={()=>setTeamBuyBtnDropdown(!TeamBuyBtnDropdownState)}>Team Buy <img src={require("./dropdown.png")} alt="dropdown" /></button>
+                    {TeamBuyBtnDropdownState && <div className="teamBuyBtnOptions">
+                      <button id="teamBuyBtnOption" onClick={()=>setTeamBuyBtnDropdown(!TeamBuyBtnDropdownState)}>Join with Friends</button>
+                      <button id="teamBuyBtnOption" onClick={()=>setTeamBuyBtnDropdown(!TeamBuyBtnDropdownState)}>Auto Join</button>
+                    </div>}
+                  </div>
+                </div>
               </div>
               <div className="TeamBuyContainer">
-                <div id="TeamBuyContainerHeader">Join teams</div>
+                <div className="TeamBuyContainerHeaderContainer">
+                  <div>
+                    <div id="TeamBuyContainerHeader">Team Buy with others</div>
+                    <div id="TeamBuyContainerHeaderText">94 others are making orders</div>
+                  </div>
+                  <button id="viewMoreBtn">View More <img src={require("./rightArrow.png")} alt="right arrow" /></button>
+                </div>
                 <div className="TeamBuyContainerContent">
                   {TeamBuyProductData.map((Team) => {
-                    return Team.id!==Object.keys(Team).length-1 ?(
+                    return Team.id !== Object.keys(Team).length - 1 ? (
                       <>
                         <div className="TeamBuyDetails">
                           <div className="TeamBuyDetailsInfo">
@@ -109,7 +121,7 @@ function Description() {
                             {Team.teamLeaderName}
                           </div>
                           <div className="TeamBuyControls">
-                            <button className="teamJoin">Join</button>
+                            <Link to="/teamBuyTeamAndItem" style={{textDecoration: "none"}}><button className="teamJoin">Team up</button></Link>
                             <div className="TeamBuyJoinDetails">
                               <div className="TeamBuyJoinIcons">
                                 {Team.numOfMembers.map((teamMember) => {
@@ -135,10 +147,8 @@ function Description() {
                             </div>
                           </div>
                         </div>
-                        <hr id="hr"/>
                       </>
-                    ):
-                    (
+                    ) : (
                       <>
                         <div className="TeamBuyDetails">
                           <div className="TeamBuyDetailsInfo">
@@ -185,6 +195,7 @@ function Description() {
             </div>
           </div>
         </div>
+        <div className="localStoresContainer">
         <div className="localStoresRecommendations">
           <div className="localStoresRecommendationsHeader">
             <section id="localStoresRecommendationsHeading">
@@ -197,17 +208,26 @@ function Description() {
               return (
                 <>
                   <div className="localStore">
-                    <Link to="/storeProfile" style={{ textDecoration: "none", color: "inherit" }}><img
-                      id="localStoreImage"
-                      key={localStore.id}
-                      src={require("./" + localStore.src)}
-                      alt={localStore.alt}
-                      height="100px"
-                    />
+                    <Link
+                      to="/storeProfile"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      <img
+                        id="localStoreImage"
+                        key={localStore.id}
+                        src={require("./" + localStore.src)}
+                        alt={localStore.alt}
+                        height="100px"
+                      />
                     </Link>
                     <div className="localStoreDetails">
                       <section id="localStoreHeader">
-                        <Link to="/storeProfile" style={{ textDecoration: "none", color: "inherit" }}>{localStore.name}</Link>
+                        <Link
+                          to="/storeProfile"
+                          style={{ textDecoration: "none", color: "inherit" }}
+                        >
+                          {localStore.name}
+                        </Link>
                         <img src={require("./instock.png")} alt="instock" />
                         <br />
                         <section id="localStoreDistance">
@@ -249,6 +269,18 @@ function Description() {
               );
             })}
           </div>
+        </div>
+        <div className="checkAvailContainer">
+        <button style={{ textDecoration: "none" }}>
+          <img
+            id="checkAvailability"
+            src={require("./check availability button.png")}
+            alt="check availability"
+            height="40px"
+          />
+        </button>
+        <div className="last_checked">Last checked 11:34am</div>
+        </div>
         </div>
       </div>
     </>

@@ -31,10 +31,14 @@ import AddAddress from './Components/AddAddress/AddAddress';
 import ChatRoulette from './Components/ChatRoulette/ChatRoulette';
 import ProductAvailability from './Components/ProductAvailability/ProductAvailability';
 import OrderHistory from './Components/OrderHistory/OrderHistory';
+import TeamBuyHistory from './Components/TeamBuyHistory/TeamBuyHistory';
+import GroupBuyTeamAndItem from './Components/GroupBuyTeamAndItem/GroupBuyTeamAndItem';
+import TeamBuyItemSearch from './Components/TeamBuyItemSearch/TeamBuyItemSearch';
 
 function App() {
     const [address, setAddress] = useState({label:"",addr:""})
     const [paymentView, setPaymentView] = useState("normal")
+    const [profileView, setProfileView] = useState(true)
   return (
     <>
       <Routes>
@@ -42,7 +46,7 @@ function App() {
         <Route path="/" element={<>
         <Header address={address} setAddress={setAddress}/>
         <div className='mobileView'>
-          <HeaderMenu />
+          <HeaderMenu setProfileView={setProfileView}/>
         </div>
         <Stories/>
         <DiscountBar/>
@@ -62,8 +66,8 @@ function App() {
         <Route path="/search" element={<StoreSearch address={address} setAddress={setAddress}/>} />
         <Route path="/productDescription" element={<ProductDescription address={address} setAddress={setAddress}/>} />
         <Route path="/teamBuyProductDescription" element={<TeamBuyProductDescription address={address} setAddress={setAddress}/>} />
-        <Route path="/storeProfile" element={<StoreProfilePage address={address} setAddress={setAddress}/>} />
-        <Route path="/profile" element={<ProfilePage address={address} setAddress={setAddress}/>} />
+        <Route path="/storeProfile" element={<StoreProfilePage address={address} setAddress={setAddress} profileView={profileView}/>} />
+        <Route path="/profile" element={<ProfilePage address={address} setAddress={setAddress} profileView={profileView}/>} />
         <Route path="/storeItems" element={<StoreItemsPage address={address} setAddress={setAddress}/>} />
         <Route path="/CartCheckout" element={<CartCheckout address={address} setAddress={setAddress}/>} />
         <Route path="/PaymentSuccessful" element={<PaymentSuccessful address={address} setAddress={setAddress} paymentView={paymentView}/>} />
@@ -73,6 +77,9 @@ function App() {
         <Route path="/chatRoulette" element={<ChatRoulette address={address} setAddress={setAddress}/>} />
         <Route path="/productAvailability" element={<ProductAvailability address={address} setAddress={setAddress}/>} />
         <Route path="/orderHistory" element={<OrderHistory address={address} setAddress={setAddress}/>} />
+        <Route path="/teamBuyHistory" element={<TeamBuyHistory address={address} setAddress={setAddress}/>} />
+        <Route path="/teamBuyTeamAndItem" element={<GroupBuyTeamAndItem address={address} setAddress={setAddress} setProfileView={setProfileView}/>} />
+        <Route path="/teamBuyItemSearch" element={<TeamBuyItemSearch address={address} setAddress={setAddress} setProfileView={setProfileView}/>} />
       </Routes>
     </>
   );

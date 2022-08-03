@@ -222,7 +222,8 @@
     .OrderHistoryItem{
         flex-direction: column;
         justify-content: flex-start;
-        align-items: flex-end;
+        align-items: center;
+        text-align: center;
     }
     .OrderHistoryItemDetails{
         display: flex;
@@ -252,5 +253,20 @@
     }
     #OrderHistoryItemImage{
         margin-top: 20px;
+    }
+    .OrderHistoryItemOnDropdown{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+    .orderType, .orderAddress, .orderMode, .orderAmountExtra{
+        padding: 10px;
+    }
+    .orderAddress{
+        width: 100%;
+    }
+    #orderAmountHeader, #orderStatusHeader, #orderIDHeader, #orderPlacedDetailsHeader,#orderAmountHeader{
+        border-right: none;
     }
 }

@@ -6,15 +6,15 @@ const StoreData = [
 ];
 
 const StoryData = [
-  { id: 0, src: "stories.jpg", alt: "stories circle" },
-  { id: 1, src: "stories.jpg", alt: "stories circle" },
-  { id: 2, src: "stories.jpg", alt: "stories circle" },
-  { id: 3, src: "stories.jpg", alt: "stories circle" },
-  { id: 4, src: "stories.jpg", alt: "stories circle" },
-  { id: 5, src: "stories.jpg", alt: "stories circle" },
-  { id: 6, src: "stories.jpg", alt: "stories circle" },
-  { id: 7, src: "stories.jpg", alt: "stories circle" },
-  { id: 8, src: "stories.jpg", alt: "stories circle" },
+  { id: 0, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores 1", type:"content" },
+  { id: 1, src: "post 1.png", alt: "stories circle", prodImg:"prod.png",price: "$75", discount: "$45", prodName: "Lays Potato Chips - Masala Magic", amount: "115gm/130gm (Weight May Vary)", peopleWatching: 102, addr:"2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102",  timeAgo: "12hrs ago", name: "Laxmi Stores 2" , type:"promo"},
+  { id: 2, src: "stories.jpg", alt: "stories circle", storyImg: "post 2.png", timeAgo: "12hrs ago", name: "Laxmi Stores 3" , type:"content"},
+  { id: 3, src: "post 2.png", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores 4" , type:"content"},
+  { id: 4, src: "stories.jpg", alt: "stories circle", prodImg:"prod.png",price: "$75", discount: "$45", prodName: "Lays Potato Chips - Masala Magic", amount: "115gm/130gm (Weight May Vary)", peopleWatching: 102, addr:"2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102",  timeAgo: "12hrs ago", name: "Laxmi Stores 5" , type:"promo"},
+  { id: 5, src: "post 1.png", alt: "stories circle", storyImg: "post 2.png", timeAgo: "12hrs ago", name: "Laxmi Stores 6" , type:"content"},
+  { id: 6, src: "stories.jpg", alt: "stories circle", storyImg: "storyImage.png", timeAgo: "12hrs ago", name: "Laxmi Stores 7" , type:"content"},
+  { id: 7, src: "post 2.png", alt: "stories circle", prodImg:"prod.png",price: "$75", discount: "$45", prodName: "Lays Potato Chips - Masala Magic", amount: "115gm/130gm (Weight May Vary)", peopleWatching: 102, addr:"2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102",  timeAgo: "12hrs ago", name: "Laxmi Stores 8" , type:"promo"},
+  { id: 8, src: "post 1.png", alt: "stories circle", storyImg: "post 1.png", timeAgo: "12hrs ago", name: "Laxmi Stores 9" , type:"content"},
 ];
 
 const TrendingData = [
@@ -26,7 +26,7 @@ const TrendingData = [
 ];
 
 const DiscountBarData = [
-  { id: 0, src: "appBanner.png", alt: "app banner" },
+  { id: 0, src: "learnMoreTeamBuy.png", alt: "app banner" },
   { id: 1, src: "discountBanner.png", alt: "app banner" },
 ];
 
@@ -465,10 +465,10 @@ const sortByData = [
 ]
 
 const TeamBuyData = [
-  { id: 0, src: "store1.png", alt: "store" },
-  { id: 1, src: "store2.png", alt: "store" },
-  { id: 2, src: "store1.png", alt: "store" },
-  { id: 3, src: "store2.png", alt: "store" },
+  { id: 0, src: "banner.png", alt: "store" },
+  { id: 1, src: "banner.png", alt: "store" },
+  { id: 2, src: "banner.png", alt: "store" },
+  { id: 3, src: "banner.png", alt: "store" },
 ];
 
 const TeamBuyProductData = [
@@ -494,12 +494,12 @@ const storeProfileData = [
 ]
 
 const storeProfileImages = [
-  {id:0, src:"post 1.png", alt:"store profile image"},
-  {id:1, src:"post 2.png", alt:"store profile image"},
-  {id:2, src:"post 1.png", alt:"store profile image"},
-  {id:3, src:"post 2.png", alt:"store profile image"},
-  {id:4, src:"post 1.png", alt:"store profile image"},
-  {id:5, src:"post 2.png", alt:"store profile image"},
+  {id:0, src:"newPost.png", alt:"store profile image", caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!", likes: 9111, comments: 92, commentsList:[{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}, {id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}]},
+  {id:1, src:"post 2.png", alt:"store profile image", caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!", likes: 9111, comments: 92, commentsList:[{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}, {id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}]},
+  {id:2, src:"post 1.png", alt:"store profile image", caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!", likes: 9111, comments: 92, commentsList:[{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}, {id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}]},
+  {id:3, src:"post 2.png", alt:"store profile image", caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!", likes: 9111, comments: 92, commentsList:[{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}, {id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}]},
+  {id:4, src:"post 1.png", alt:"store profile image", caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!", likes: 9111, comments: 92, commentsList:[{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}, {id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}]},
+  {id:5, src:"post 2.png", alt:"store profile image", caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!", likes: 9111, comments: 92, commentsList:[{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}, {id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}]},
 ]
 
 const storeProfileTopProducts = [
@@ -558,21 +558,21 @@ const ProfileData = [
 ]
 
 const ProfileImages = [
-  {id:0, src:"post 1.png", alt:"store profile image"},
-  {id:1, src:"post 2.png", alt:"store profile image"},
-  {id:2, src:"post 1.png", alt:"store profile image"},
-  {id:3, src:"post 2.png", alt:"store profile image"},
-  {id:4, src:"post 1.png", alt:"store profile image"},
-  {id:5, src:"post 2.png", alt:"store profile image"},
+  {id:0, src:"newPost.png", alt:"store profile image", caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!", likes: 9111, comments: 92, commentsList:[{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}, {id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}]},
+  {id:1, src:"post 2.png", alt:"store profile image", caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!", likes: 9111, comments: 92, commentsList:[{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}, {id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}]},
+  {id:2, src:"post 1.png", alt:"store profile image", caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!", likes: 9111, comments: 92, commentsList:[{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}, {id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}]},
+  {id:3, src:"post 2.png", alt:"store profile image", caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!", likes: 9111, comments: 92, commentsList:[{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}, {id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}]},
+  {id:4, src:"post 1.png", alt:"store profile image", caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!", likes: 9111, comments: 92, commentsList:[{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}, {id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}]},
+  {id:5, src:"post 2.png", alt:"store profile image", caption: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam beatae dolorum nemo, facilis animi incidunt repudiandae nesciunt expedita, dolor dolore nihil harum. Atque, nisi iusto impedit officia et maiores!", likes: 9111, comments: 92, commentsList:[{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}, {id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1},{id:0, comment: "Nice Post. This is a good post. What a great post", profileImg: "Ellipse 72.png", name:"name", timePosted:"5s ago", likes:1, comments: 1}]},
 ]
 
 const rewardsImages = [
-  {id:0, src:"reward.png", alt:"store profile image"},
-  {id:1, src:"reward.png", alt:"store profile image"},
-  {id:2, src:"reward.png", alt:"store profile image"},
-  {id:3, src:"reward.png", alt:"store profile image"},
-  {id:4, src:"reward.png", alt:"store profile image"},
-  {id:5, src:"reward.png", alt:"store profile image"},
+  {id:0, src:"reward.png", alt:"store profile image", offerExpiry: "July 24, 2022", storeName: "Laxmi Stores", storeAddr: "2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
+  {id:1, src:"reward.png", alt:"store profile image", offerExpiry: "July 24, 2022", storeName: "Laxmi Stores", storeAddr: "2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
+  {id:2, src:"reward.png", alt:"store profile image", offerExpiry: "July 24, 2022", storeName: "Laxmi Stores", storeAddr: "2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
+  {id:3, src:"reward.png", alt:"store profile image", offerExpiry: "July 24, 2022", storeName: "Laxmi Stores", storeAddr: "2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
+  {id:4, src:"reward.png", alt:"store profile image", offerExpiry: "July 24, 2022", storeName: "Laxmi Stores", storeAddr: "2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
+  {id:5, src:"reward.png", alt:"store profile image", offerExpiry: "July 24, 2022", storeName: "Laxmi Stores", storeAddr: "2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102"},
 ]
 
 const ProfileTopProducts = [
@@ -637,39 +637,44 @@ const StoreItemsProducts = [
     name: "Masala Lays",
     weight: "50 gm",
     price: "$20",
-    quantity: 1
+    quantity: 1,
+    availableQuantities: [{id: 0, weight: "50gm", cost: "$25"},{id: 0, weight: "100gm", cost: "$50"},{id: 2, weight: "150gm", cost: "$100"},{id: 3, weight: "200gm", cost: "$150"}]
   },
   {id: 1,
     src: "veggies.png",
     alt: "product",
-    name: "Masala Lays",
+    name: "Masala Lays 1",
     weight: "50 gm",
     price: "$20",
-    quantity: 1
+    quantity: 1,
+    availableQuantities: [{id: 0, weight: "750gm", cost: "$250"},{id: 0, weight: "100gm", cost: "$50"},{id: 2, weight: "150gm", cost: "$100"},{id: 3, weight: "200gm", cost: "$150"}]
   },
   {id: 2,
     src: "veggies.png",
     alt: "product",
-    name: "Masala Lays",
+    name: "Masala Lays 2",
     weight: "50 gm",
     price: "$20",
-    quantity: 1
+    quantity: 1,
+    availableQuantities: [{id: 0, weight: "1500gm", cost: "$250"},{id: 0, weight: "100gm", cost: "$50"},{id: 2, weight: "150gm", cost: "$100"},{id: 3, weight: "200gm", cost: "$150"}]
   },
   {id: 3,
     src: "veggies.png",
     alt: "product",
-    name: "Masala Lays",
+    name: "Masala Lays 3",
     weight: "50 gm",
     price: "$20",
-    quantity: 1
+    quantity: 1,
+    availableQuantities: [{id: 0, weight: "50gm", cost: "$25"},{id: 0, weight: "100gm", cost: "$50"},{id: 2, weight: "150gm", cost: "$100"},{id: 3, weight: "200gm", cost: "$150"}]
   },
   {id: 4,
     src: "veggies.png",
     alt: "product",
-    name: "Masala Lays",
+    name: "Masala Lays 4",
     weight: "50 gm",
     price: "$20",
-    quantity: 1
+    quantity: 1,
+    availableQuantities: [{id: 0, weight: "50gm", cost: "$25"},{id: 0, weight: "100gm", cost: "$50"},{id: 2, weight: "150gm", cost: "$100"},{id: 3, weight: "200gm", cost: "$150"}]
   },
   {id: 5,
     src: "veggies.png",
@@ -677,7 +682,8 @@ const StoreItemsProducts = [
     name: "Masala Lays",
     weight: "50 gm",
     price: "$20",
-    quantity: 1
+    quantity: 1,
+    availableQuantities: [{id: 0, weight: "50gm", cost: "$25"},{id: 0, weight: "100gm", cost: "$50"},{id: 2, weight: "150gm", cost: "$100"},{id: 3, weight: "200gm", cost: "$150"}]
   },
 ]
 
@@ -810,6 +816,147 @@ const OrderHistoryData = [
   {id: 4, status: "Complete", ID: 24245768, timestampPlaced: "17 Mar, Thu 4:00 PM - 7:00 PM", amount: "$1450", type: "Home Delivery", name: "Rohan Kumar", address: "2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102", paymentMode: "UPI", savings: "$245"},
 ]
 
+const TeamBuyHistoryData = [
+  {id: 0, status: "Complete", ID: 24245768, timestampPlaced: "17 Mar, Thu 4:00 PM - 7:00 PM", amount: "$1450", type: "Home Delivery", name: "Rohan Kumar", address: "2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102", paymentMode: "UPI", savings: "$245"},
+  {id: 1, status: "Complete", ID: 24245768, timestampPlaced: "17 Mar, Thu 4:00 PM - 7:00 PM", amount: "$1450", type: "Home Delivery", name: "Rohan Kumar", address: "2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102", paymentMode: "UPI", savings: "$245"},
+  {id: 2, status: "Complete", ID: 24245768, timestampPlaced: "17 Mar, Thu 4:00 PM - 7:00 PM", amount: "$1450", type: "Home Delivery", name: "Rohan Kumar", address: "2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102", paymentMode: "UPI", savings: "$245"},
+  {id: 3, status: "Complete", ID: 24245768, timestampPlaced: "17 Mar, Thu 4:00 PM - 7:00 PM", amount: "$1450", type: "Home Delivery", name: "Rohan Kumar", address: "2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102", paymentMode: "UPI", savings: "$245"},
+  {id: 4, status: "Complete", ID: 24245768, timestampPlaced: "17 Mar, Thu 4:00 PM - 7:00 PM", amount: "$1450", type: "Home Delivery", name: "Rohan Kumar", address: "2nd floor, K-Tech NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102", paymentMode: "UPI", savings: "$245"},
+]
+
+const profileStoryData = [
+  { id: 0, src: "Ellipse 875.png", alt: "stories circle", caption: "new"},
+  { id: 1, src: "stories.jpg", alt: "stories circle" , caption: "shop"},
+  { id: 2, src: "stories.jpg", alt: "stories circle" , caption: "shop"},
+  { id: 3, src: "stories.jpg", alt: "stories circle" , caption: "shop"},
+  { id: 4, src: "stories.jpg", alt: "stories circle" , caption: "shop"},
+  { id: 5, src: "stories.jpg", alt: "stories circle" , caption: "shop"},
+  { id: 6, src: "stories.jpg", alt: "stories circle" , caption: "shop"},
+  { id: 7, src: "stories.jpg", alt: "stories circle" , caption: "shop"},
+  { id: 8, src: "stories.jpg", alt: "stories circle" , caption: "shop"},
+];
+
+const storeStoryData = [
+  { id: 0, src: "Ellipse 875.png", alt: "stories circle", caption: "new"},
+  { id: 1, src: "stories.jpg", alt: "stories circle" , caption: "shop"},
+  { id: 2, src: "stories.jpg", alt: "stories circle" , caption: "shop"},
+  { id: 3, src: "stories.jpg", alt: "stories circle" , caption: "shop"},
+  { id: 4, src: "stories.jpg", alt: "stories circle" , caption: "shop"},
+  { id: 5, src: "stories.jpg", alt: "stories circle" , caption: "shop"},
+  { id: 6, src: "stories.jpg", alt: "stories circle" , caption: "shop"},
+  { id: 7, src: "stories.jpg", alt: "stories circle" , caption: "shop"},
+  { id: 8, src: "stories.jpg", alt: "stories circle" , caption: "shop"},
+];
+
+const highlightStoryData = [
+  {id:0, src:"highlight.png", alt:"highlight story", date: "23 Jun"},
+  {id:1, src:"highlight.png", alt:"highlight story", date: "23 Jun"},
+  {id:2, src:"highlight.png", alt:"highlight story", date: "23 Jun"},
+  {id:3, src:"highlight.png", alt:"highlight story", date: "23 Jun"},
+  {id:4, src:"highlight.png", alt:"highlight story", date: "23 Jun"},
+  {id:5, src:"highlight.png", alt:"highlight story", date: "23 Jun"},
+  {id:6, src:"highlight.png", alt:"highlight story", date: "23 Jun"},
+  {id:7, src:"highlight.png", alt:"highlight story", date: "23 Jun"},
+  {id:8, src:"highlight.png", alt:"highlight story", date: "23 Jun"},
+]
+
+const teamBuyTeamAndItemData =  {id:0, src:"prod1.png", name: "Lays Potato Chips - Masala Magic", price: "$75", teamBuy: "$256", deliveryCharges: "$60", total: "$45", discPrice: "$55", amount: "115gm/130gm (Weight May Vary)", purchasedFrom:"Laxman Stores", addr: "2nd Floor, K-Tech, NASSCOM, 67, Phase 3, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102", dist: "4.2km", orderID: "22222222", orderPlacedTS: "17 Mar, 2022 4:00 PM - 7:00 PM"}
+
+const teamBuyTeamDetails = [{id: 0, name: "Zoya", pfp:"Ellipse 82.png"}, {id: 1, name: "Jim", timeJoined:"2 hr ago", pfp:"Ellipse 83.png", state: true}, {id: 2, name: "Jim", timeJoined:"2 hr ago", pfp:"Ellipse 83.png", state: true}, {id: 3, name: "Jim", timeJoined:"2 hr ago", pfp:"Ellipse 83.png", state: false}]
+
+const teamBuyItems = [
+  {
+    id: 0,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },
+  {
+    id: 1,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },{
+    id: 2,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },{
+    id: 3,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },{
+    id: 4,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },{
+    id: 5,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },{
+    id: 6,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },{
+    id: 7,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },
+  {
+    id: 8,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },
+  {
+    id: 9,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },
+  {
+    id: 10,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },
+  {
+    id: 11,
+    src: "product1.png",
+    alt: "product",
+    name: "Lays Potato Chips Masala Magic ",
+    weight: "50 gm",
+    price: "$20",
+  },
+]
+
 export {
   TrendingData,
   StoryData,
@@ -850,4 +997,11 @@ export {
   ChatRouletteData,
   productAvailabilityData,
   OrderHistoryData,
+  TeamBuyHistoryData,
+  profileStoryData,
+  storeStoryData,
+  highlightStoryData,
+  teamBuyTeamAndItemData,
+  teamBuyTeamDetails,
+  teamBuyItems,
 };
