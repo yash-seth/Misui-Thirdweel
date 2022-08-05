@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Header from "../Header/Header";
 import HeaderMenu from "../HeaderMenu/HeaderMenu";
 import "./GroupBuyTeamAndItem.css";
@@ -6,6 +6,17 @@ import { teamBuyTeamAndItemData, teamBuyTeamDetails} from "../../Data";
 import {Link} from "react-router-dom"
 
 function GroupBuyTeamAndItem({ address, setAddress, setProfileView }) {
+  const [teamStatus, setTeamStatus] = useState(true)
+  const [teamMembersLeft, setTeamMembersLeft] = useState(0)
+  useEffect(() => {
+    teamBuyTeamDetails.forEach((teamMember)=>{
+      if(!teamMember.state){
+        setTeamStatus(false);
+        setTeamMembersLeft(teamMembersLeft+1);
+      }
+    })
+  }, [teamBuyTeamDetails])
+  
   return (
     <>
       <Header address={address} setAddress={setAddress} />
@@ -42,7 +53,7 @@ function GroupBuyTeamAndItem({ address, setAddress, setProfileView }) {
                         <>{teamMember.id===0?
                         (
                             <div className="teamBuyTeamMemberDetails">
-                                <img src={require("./orange tick.png")} alt="orange tick"/>
+                                <img src={require("./orange tick.png")} alt="orange tick" height="40px"/>
                                 <img id="pfp" src={require('./' + teamMember.pfp)} alt="profile pic"/>
                                 <div className="teamBuyTeamMemberDetailsInfo">
                                     <div id="teamMemberName">{teamMember.name}</div>
@@ -52,8 +63,8 @@ function GroupBuyTeamAndItem({ address, setAddress, setProfileView }) {
                         )
                         :
                         (
-                            <div className="teamBuyTeamMemberDetails">
-                                <img src={require("./orange tick.png")} alt="orange tick"/>
+                            teamMember.state ? (<div className="teamBuyTeamMemberDetails">
+                                <img src={require("./orange tick.png")} alt="orange tick" height="40px"/>
                                 <img id="pfp" src={require('./' + teamMember.pfp)} alt="profile pic"/>
                                 <div className="teamBuyTeamMemberDetailsInfo">
                                     <div id="teamMemberName">{teamMember.name}</div>
@@ -61,15 +72,38 @@ function GroupBuyTeamAndItem({ address, setAddress, setProfileView }) {
                                 </div>
                                 <Link to="/profile" style={{textDecoration: "none"}}><button id="viewProfileTeamBuy" onClick={setProfileView(false)}>View Profile</button></Link>
                                 <button id="followProfileTeamBuy">Follow</button>
-                            </div>
+                            </div>)
+                            :
+                            (<div className="teamBuyTeamMemberDetails">
+                              <div className="notReadyTick">
+                                <img src={require("./Ellipse 891.png")} alt="not ready tick" id="notReadyTickBackground" height="40px"/>
+                                <img src={require("./notReadyTick.png")} alt="not ready tick" id="notReadyTick"/>
+                              </div>
+                              <div className="notReadyProfile">
+                                <img src={require("./Ellipse 890.png")} alt="not ready tick" id="notReadyProfileBackground"/>
+                                <img src={require("./teamProfile.png")} alt="not ready profile" id="notReadyProfile"/>
+                              </div>
+                              <div id="inviteTeamMember">Invite</div>
+                              <img src={require("./share.png")} alt="share button" height="30px" id="inviteTeamMemberShare"/>
+                        </div>)
                         )
                     }
                     </>
                     )
                 })}
             </div>
-            <div className="groupBuyStatus">Confirmed</div>
-            <div className="groupBuyItemStoreDetails">
+            {teamStatus ? (<div className="groupBuyStatus">Confirmed</div>) 
+            : 
+            (
+              <>
+              <div className="groupBuyStatusNotConfirmed">
+                  <div id="groupBuyStatusNotConfirmed">Not Confirmed</div>
+                  <div id="groupBuyStatusNotConfirmedMembersLeft">
+                    {teamMembersLeft} members left
+                  </div>
+                </div>
+              </>)}
+            {teamStatus && <div className="groupBuyItemStoreDetails">
                 <div className="groupBuyItemStoreDetailsPurchasedFrom">
                     <div id="purchasedFrom">Purchased from</div>
                     <div className="purchasedFromDetailsAddr">
@@ -80,7 +114,7 @@ function GroupBuyTeamAndItem({ address, setAddress, setProfileView }) {
                 </div>
                 <div className="groupItemorderID">Order ID <div id="groupItemorderID">{teamBuyTeamAndItemData.orderID}</div></div>
                 <div className="groupItemTimeStamp">Order Placed<div id="groupItemTimeStamp">{teamBuyTeamAndItemData.orderPlacedTS}</div></div>
-            </div>
+            </div>}
           </div>
           <div className="GroupBuyTeamAndItemPriceBreakdown">
             <div id="GroupBuyTeamAndItemPriceBreakdownHeader">
