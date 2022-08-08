@@ -51,7 +51,7 @@ function App() {
         <Stories/>
         <DiscountBar/>
         <TopOffers/>
-        <Stores/>
+        <Stores setProfileView={setProfileView}/>
         <TeamBuy/>
         <Categories/>
         {/* <DiscountBanner/> */}

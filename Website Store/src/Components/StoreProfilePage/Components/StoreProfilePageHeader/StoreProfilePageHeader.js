@@ -126,6 +126,7 @@ function StoreProfilePageHeader({ profileView }) {
           </div>
         </div>
       </div>
+      {profileView && (
       <div className="ProfileExtraDetailsStories">
         {storeStoryData.map((story) => {
           return (
@@ -164,6 +165,7 @@ function StoreProfilePageHeader({ profileView }) {
           );
         })}
       </div>
+      )}
       <div className="ImageGrid">
         <div className="ImageGridImages">
           {ProfileImages.map((image) => {

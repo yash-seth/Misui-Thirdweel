@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { storeServiceUrl, websiteStoreUrl } from '../../api/urls';
 import axios from 'axios'
 
-function Stores() {
+function Stores({setProfileView}) {
 
     const [stores, setStores] = useState(null)
     const coordinates = {
@@ -36,7 +36,7 @@ function Stores() {
                 <section id="stores-heading">Nearby Stores</section>
                 <img id="arrow" src={require("./arrow.png")} alt="arrow" />
             </div>
-            <Link to="/storeProfile" style={{ textDecoration: "none", color: "inherit" }}>
+            <Link to="/storeProfile" style={{ textDecoration: "none", color: "inherit" }} onClick={()=>setProfileView(false)}>
                 <div className='stores'>
                     {stores && stores.map((store) => {
                         return <img id="store" key={store._id} src={store.image} alt={store.email} height="200px" />
