@@ -49,9 +49,9 @@ function TeamBuyItemSearch({ address, setAddress, setProfileView }) {
             return (
               <div className="groupBuySearchProductFrame">
                 <Link to="/teamBuyProductDescription"><img
+                  id="teamBuyItemSearchImg"
                   src={require("./" + product.src)}
                   alt={product.alt}
-                  height="200px"
                 />
                 </Link>
                 <div id="groupBuySearchProductName">{product.name}</div>

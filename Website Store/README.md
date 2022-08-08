@@ -19,7 +19,7 @@
 - [x] Product Search Page
 - [x] Product Description Page
 - [x] Team Buy page
-- [x] Team Buy Team and Item page
+- [x] Team Buy Team and Item page - team member status
 - [x] Storewise Cart
 - [x] Store Profile - Post Views & popups for posts/rewards, create post popup, story bar, create highlight
 - [x] User Profile - Post/Reward Views & popups for posts/rewards, create post popup, story bar, create highlight

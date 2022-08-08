@@ -136,6 +136,21 @@
     font-size: 24px;
 }
 
+.groupBuyStatusNotConfirmed{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#EDC7C4;
+    padding: 20px;
+    color: #B33031;
+    font-size: 24px;
+}
+
+#groupBuyStatusNotConfirmedMembersLeft{
+    font-size: 18px;
+}
+
 .groupBuyItemStoreDetailsPurchasedFrom{
     width: 33%;
 }
@@ -244,8 +259,18 @@
         padding: 0px;
         text-align: center;
     }
-    .groupBuyStatus{
+    .groupBuyStatus, .groupBuyStatusNotConfirmed{
         text-align: center;
+    }
+    .groupBuyStatusNotConfirmed{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    #groupBuyStatusNotConfirmedMembersLeft{
+        font-size: 14px;
     }
     .groupItemTimeStamp, .groupItemorderID, .purchasedFromDetailsAddr, .purchasedFromDetailsAddr{
         margin-top: 10px;
@@ -266,4 +291,41 @@
         margin-left: 10px;
         font-size: 10px;
     }
+}
+
+.notReadyTick{
+    position: relative;
+}
+
+#notReadyTickBackground{
+    position: relative;
+}
+
+#notReadyTick{
+    position: absolute;
+    top: 30%;
+    bottom: 50%;
+    right: 50%;
+    left: 30%;
+}
+
+.notReadyProfile{
+    margin-left: 20px;
+    position: relative;
+}
+
+#notReadyProfileBackground{
+    position: relative;
+}
+
+#notReadyProfile{
+    position: absolute;
+    top: 20%;
+    bottom: 50%;
+    right: 50%;
+    left: 22%;
+}
+
+#inviteTeamMember, #inviteTeamMemberShare{
+    margin-left: 20px;
 }
