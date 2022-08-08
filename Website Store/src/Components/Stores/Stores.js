@@ -8,7 +8,7 @@ import axios from 'axios'
 function Stores() {
 
     const [stores, setStores] = useState(null)
-    const location = {
+    const coordinates = {
         "long": "74.006",
         "lat": "40.7128"
     }
@@ -17,7 +17,7 @@ function Stores() {
             method: "POST",
             url: `${storeServiceUrl}/get-nearby-stores`,
             data: {
-                location
+                coordinates
             }
         }
         axios(options)
@@ -39,7 +39,7 @@ function Stores() {
             <Link to="/storeProfile" style={{ textDecoration: "none", color: "inherit" }}>
                 <div className='stores'>
                     {stores && stores.map((store) => {
-                        return <img id="store" key={store.uuid} src={store.src} alt={store.alt} height="200px" />
+                        return <img id="store" key={store._id} src={store.image} alt={store.email} height="200px" />
                     })}
                 </div>
             </Link>
