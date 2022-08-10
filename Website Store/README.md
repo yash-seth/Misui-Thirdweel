@@ -10,6 +10,7 @@
 
 
 ## Points to note
+- Hosted on AWS: https://dev-yash-frontend.d1kf75xx33yka6.amplifyapp.com/
 - Data.js contains dummy json data to use in the development stage
 - API consumption code has been implemented for the homepage components
 - [Link to Figma file](https://www.figma.com/file/2tnb0CqCapK5Je14nV6p3d/ThirdWeel-website-for-Devs?node-id=0%3A1)
