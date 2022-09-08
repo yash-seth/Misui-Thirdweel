@@ -1,7 +1,7 @@
 # Thirdweel Frontend
 ## Contents
-- Landing Page
-- Website Store
+- [Landing Page](https://dev-yash-frontend.d3b57r97sw4yz6.amplifyapp.com/)
+- [Website Store](http://ec2-54-160-215-84.compute-1.amazonaws.com:3000/)
 
 ## Key Features
 - Responsive Design
