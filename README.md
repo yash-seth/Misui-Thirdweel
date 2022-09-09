@@ -1,6 +1,6 @@
 # Thirdweel
 ## About
-Thirdweel is an E-Commerce platform that I built from scratch as part of my 2-month internship at Misui. The platform consists of a landing page and a website store. React JS was used to develop the frontend, Express JS and Node JS was used to develop the middleware and the backend and hosting is done using the AWS platform.
+Thirdweel is an E-Commerce platform that I built from scratch as part of my 2-month internship at Misui India Pvt Ltd. The platform consists of a landing page and a website store. React JS was used to develop the frontend, Express JS and Node JS was used to develop the middleware and the backend and hosting is done using the AWS platform.
    
 ## Contents
 - [Landing Page](https://dev-yash-frontend.d3b57r97sw4yz6.amplifyapp.com/)
@@ -68,7 +68,7 @@ Thirdweel is an E-Commerce platform that I built from scratch as part of my 2-mo
 ### **Customer Support**
 
 ![image](https://user-images.githubusercontent.com/71393551/189213385-969f54f4-6520-42a9-abbb-a5e192c7c0af.png)
-![image](https://user-images.githubusercontent.com/71393551/189213462-b2173471-5981-4554-ba3c-191e04fdf9ed.png)
+![image](https://user-images.githubusercontent.com/71393551/189358239-0633c247-f468-44d6-896a-6fecdb90e311.png)
 
 ---
 ### **Profile View**
