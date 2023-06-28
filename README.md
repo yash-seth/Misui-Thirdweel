@@ -4,7 +4,7 @@ Thirdweel is an E-Commerce platform that I built from scratch as part of my 2-mo
    
 ## Contents
 - [Landing Page](https://dev-yash-frontend.d3b57r97sw4yz6.amplifyapp.com/)
-- [Website Store](http://ec2-54-160-215-84.compute-1.amazonaws.com:3000/)
+- [Website Store](https://dev-yash-frontend.d1kf75xx33yka6.amplifyapp.com/)
 
 ## Key Features
 - Responsive Design
