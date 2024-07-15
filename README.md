@@ -3,7 +3,7 @@
 Thirdweel is an E-Commerce platform that I built from scratch as part of my 2-month internship at Misui India Pvt Ltd. The platform consists of a landing page and a website store. React JS was used to develop the frontend, Express JS and Node JS was used to develop the middleware and the backend and hosting is done using the AWS platform.
    
 ## Contents - Links to hosted webpages
-- [Landing Page](https://dev-yash-frontend.d3b57r97sw4yz6.amplifyapp.com/)
+- [Landing Page](https://misui-thirdweel-landing-page.vercel.app/)
 - [Website Store](https://dev-yash-frontend.d1kf75xx33yka6.amplifyapp.com/)
 
 ## Key Features
